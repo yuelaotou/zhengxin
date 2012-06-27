@@ -9,84 +9,91 @@ import org.xpup.hafmis.sysloan.common.dao.CreditDAO;
 import org.xpup.hafmis.sysloan.credit.report.bsinterface.ICreditBS;
 
 public class CreditBS implements ICreditBS {
-  private CreditDAO creditDAO = null;
+	private CreditDAO creditDAO = null;
 
-  public void setCreditDAO(CreditDAO creditDAO) {
-    this.creditDAO = creditDAO;
-  }
+	public void setCreditDAO(CreditDAO creditDAO) {
+		this.creditDAO = creditDAO;
+	}
 
-  public List getCredit(Pagination pagination) throws Exception,
-      BusinessException {
+	@Override
+	public List getCredit(Pagination pagination) throws Exception,
+			BusinessException {
 
-    String shujutiquriqi = (String) pagination.getQueryCriterions().get(
-        "shujutiquriqi");
-    if (shujutiquriqi == null || "".equals(shujutiquriqi)) {
-      return null;
-    }
-    String baowenshengchengriqi = (String) pagination.getQueryCriterions().get(
-        "baowenshengchengriqi");
-    String officeCode = (String) pagination.getQueryCriterions().get(
-        "officeCode");
-    String loanBankName = (String) pagination.getQueryCriterions().get(
-        "loanBankName");
-    String yewuhao = (String) pagination.getQueryCriterions().get("yewuhao");
-    String jiluzhuangtai = (String) pagination.getQueryCriterions().get(
-        "jiluzhuangtai");
+		String shujutiquriqi = (String) pagination.getQueryCriterions().get(
+				"shujutiquriqi");
+		if (shujutiquriqi == null || "".equals(shujutiquriqi)) {
+			return null;
+		}
+		String baowenshengchengriqi = (String) pagination.getQueryCriterions()
+				.get("baowenshengchengriqi");
+		String officeCode = (String) pagination.getQueryCriterions().get(
+				"officeCode");
+		String loanBankName = (String) pagination.getQueryCriterions().get(
+				"loanBankName");
+		String yewuhao = (String) pagination.getQueryCriterions()
+				.get("yewuhao");
+		String jiluzhuangtai = (String) pagination.getQueryCriterions().get(
+				"jiluzhuangtai");
 
-    String orderBy = (String) pagination.getOrderBy();
-    String order = (String) pagination.getOrderother();
-    int start = pagination.getFirstElementOnPage() - 1;
-    int pageSize = pagination.getPageSize();
-    int page = pagination.getPage();
-    List list = creditDAO.getCreditList(shujutiquriqi, baowenshengchengriqi,
-        officeCode, loanBankName, yewuhao, jiluzhuangtai, start, orderBy,
-        order, pageSize, page);
-    int n = creditDAO.getCreditListAll(shujutiquriqi, baowenshengchengriqi,
-        officeCode, loanBankName, yewuhao, jiluzhuangtai, start, orderBy,
-        order, pageSize, page);
-    pagination.setNrOfElements(n);
-    return list;
-  }
+		String orderBy = pagination.getOrderBy();
+		String order = pagination.getOrderother();
+		int start = pagination.getFirstElementOnPage() - 1;
+		int pageSize = pagination.getPageSize();
+		int page = pagination.getPage();
+		List list = creditDAO.getCreditList(shujutiquriqi,
+				baowenshengchengriqi, officeCode, loanBankName, yewuhao,
+				jiluzhuangtai, start, orderBy, order, pageSize, page);
+		int n = creditDAO.getCreditListAll(shujutiquriqi, baowenshengchengriqi,
+				officeCode, loanBankName, yewuhao, jiluzhuangtai, start,
+				orderBy, order, pageSize, page);
+		pagination.setNrOfElements(n);
+		return list;
+	}
 
-  public void createCredit(String shujutiquriqi) throws Exception,
-      BusinessException {
-    // ≈–∂œ±æ‘¬∑› «∑Ò…˙≥…π˝ ˝æ›£¨»Ù…˙≥…π˝£¨≤ª‘Ÿ¥¶¿Ì°£
-    if (creditDAO.getCreditCountByDate(shujutiquriqi) != 0) {
-      throw new BusinessException("¥À‘¬∑›“—æ≠…˙≥…π˝ ˝æ›£¨«Î÷±Ω”≤È—Ø°£");
-    }
-    creditDAO.createCredit(shujutiquriqi);
-  }
+	@Override
+	public void createCredit(String shujutiquriqi) throws Exception,
+			BusinessException {
+		// Âà§Êñ≠Êú¨Êúà‰ªΩÊòØÂê¶ÁîüÊàêËøáÊï∞ÊçÆÔºåËã•ÁîüÊàêËøáÔºå‰∏çÂÜçÂ§ÑÁêÜ„ÄÇ
+		if (creditDAO.getCreditCountByDate(shujutiquriqi) != 0) {
+			throw new BusinessException("Ê≠§Êúà‰ªΩÂ∑≤ÁªèÁîüÊàêËøáÊï∞ÊçÆÔºåËØ∑Áõ¥Êé•Êü•ËØ¢„ÄÇ");
+		}
+		creditDAO.createCredit(shujutiquriqi);
+	}
 
-  public void deleteCredit(String shujutiquriqi) throws Exception,
-      BusinessException {
-    creditDAO.deleteCredit(shujutiquriqi);
-  }
+	@Override
+	public void deleteCredit(String shujutiquriqi) throws Exception,
+			BusinessException {
+		creditDAO.deleteCredit(shujutiquriqi);
+	}
 
-  public ResultSet exportNormal(Pagination pagination) throws Exception,
-      BusinessException {
-    String shujutiquriqi = (String) pagination.getQueryCriterions().get(
-        "shujutiquriqi");
-    ResultSet rs = creditDAO.exportNormal(shujutiquriqi);
-    creditDAO.isContractExport(shujutiquriqi);
-    return rs;
-  }
+	@Override
+	public ResultSet exportNormal(Pagination pagination) throws Exception,
+			BusinessException {
+		String shujutiquriqi = (String) pagination.getQueryCriterions().get(
+				"shujutiquriqi");
+		ResultSet rs = creditDAO.exportNormal(shujutiquriqi);
+		creditDAO.isContractExport(shujutiquriqi);
+		return rs;
+	}
 
-  public ResultSet exportDelete(Pagination pagination) throws Exception,
-      BusinessException {
-    String shujutiquriqi = (String) pagination.getQueryCriterions().get(
-        "shujutiquriqi");
-    String[] rowArray = (String[]) pagination.getQueryCriterions().get(
-        "rowArray");
-    ResultSet rs = creditDAO.exportDelete(shujutiquriqi, rowArray);
-    return rs;
-  }
+	@Override
+	public ResultSet exportDelete(Pagination pagination) throws Exception,
+			BusinessException {
+		String shujutiquriqi = (String) pagination.getQueryCriterions().get(
+				"shujutiquriqi");
+		String[] rowArray = (String[]) pagination.getQueryCriterions().get(
+				"rowArray");
+		ResultSet rs = creditDAO.exportDelete(shujutiquriqi, rowArray);
+		return rs;
+	}
 
-  public void dealWithContract(Pagination pagination) throws Exception,
-      BusinessException {
-    String[] rowArray = (String[]) pagination.getQueryCriterions().get(
-        "rowArray");
-    String status = (String) pagination.getQueryCriterions().get("status");
-    creditDAO.dealWithContract(rowArray, status);
-  }
+	@Override
+	public void dealWithContract(Pagination pagination) throws Exception,
+			BusinessException {
+		String[] rowArray = (String[]) pagination.getQueryCriterions().get(
+				"rowArray");
+		String status = (String) pagination.getQueryCriterions().get("status");
+		creditDAO.dealWithContract(rowArray, status);
+	}
 
 }

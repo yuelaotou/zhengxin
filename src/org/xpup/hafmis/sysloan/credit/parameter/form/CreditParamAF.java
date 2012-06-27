@@ -3,87 +3,87 @@ package org.xpup.hafmis.sysloan.credit.parameter.form;
 import org.apache.struts.action.ActionForm;
 
 /**
- * @author Ñî¹â
+ * @author æ¨å…‰
  */
 public class CreditParamAF extends ActionForm {
 
-  private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-  /** Êı¾İ¸ñÊ½°æ±¾ºÅ */
-  private String sjgsbbh = null;
+	/** æ•°æ®æ ¼å¼ç‰ˆæœ¬å· */
+	private String sjgsbbh = null;
 
-  /** ½ğÈÚ»ú¹¹´úÂë */
-  private String jrjgdm = null;
+	/** é‡‘èæœºæ„ä»£ç  */
+	private String jrjgdm = null;
 
-  /** ÉÏ´«±¨ÎÄ°æ±¾ºÅ */
-  private String scbwbbh = null;
+	/** ä¸Šä¼ æŠ¥æ–‡ç‰ˆæœ¬å· */
+	private String scbwbbh = null;
 
-  /** ·¢ÉúµØµã */
-  private String fsdd = null;
+	/** å‘ç”Ÿåœ°ç‚¹ */
+	private String fsdd = null;
 
-  /** ±ÒÖÖ */
-  private String bz = null;
+	/** å¸ç§ */
+	private String bz = null;
 
-  /** ÁªÏµÈË */
-  private String lxr = null;
+	/** è”ç³»äºº */
+	private String lxr = null;
 
-  /** ÁªÏµµç»° */
-  private String lxdh = null;
+	/** è”ç³»ç”µè¯ */
+	private String lxdh = null;
 
-  public String getJrjgdm() {
-    return jrjgdm;
-  }
+	public String getJrjgdm() {
+		return jrjgdm;
+	}
 
-  public void setJrjgdm(String jrjgdm) {
-    this.jrjgdm = jrjgdm;
-  }
+	public void setJrjgdm(String jrjgdm) {
+		this.jrjgdm = jrjgdm;
+	}
 
-  public String getScbwbbh() {
-    return scbwbbh;
-  }
+	public String getScbwbbh() {
+		return scbwbbh;
+	}
 
-  public void setScbwbbh(String scbwbbh) {
-    this.scbwbbh = scbwbbh;
-  }
+	public void setScbwbbh(String scbwbbh) {
+		this.scbwbbh = scbwbbh;
+	}
 
-  public String getSjgsbbh() {
-    return sjgsbbh;
-  }
+	public String getSjgsbbh() {
+		return sjgsbbh;
+	}
 
-  public void setSjgsbbh(String sjgsbbh) {
-    this.sjgsbbh = sjgsbbh;
-  }
+	public void setSjgsbbh(String sjgsbbh) {
+		this.sjgsbbh = sjgsbbh;
+	}
 
-  public String getBz() {
-    return bz;
-  }
+	public String getBz() {
+		return bz;
+	}
 
-  public void setBz(String bz) {
-    this.bz = bz;
-  }
+	public void setBz(String bz) {
+		this.bz = bz;
+	}
 
-  public String getFsdd() {
-    return fsdd;
-  }
+	public String getFsdd() {
+		return fsdd;
+	}
 
-  public void setFsdd(String fsdd) {
-    this.fsdd = fsdd;
-  }
+	public void setFsdd(String fsdd) {
+		this.fsdd = fsdd;
+	}
 
-  public String getLxdh() {
-    return lxdh;
-  }
+	public String getLxdh() {
+		return lxdh;
+	}
 
-  public void setLxdh(String lxdh) {
-    this.lxdh = lxdh;
-  }
+	public void setLxdh(String lxdh) {
+		this.lxdh = lxdh;
+	}
 
-  public String getLxr() {
-    return lxr;
-  }
+	public String getLxr() {
+		return lxr;
+	}
 
-  public void setLxr(String lxr) {
-    this.lxr = lxr;
-  }
+	public void setLxr(String lxr) {
+		this.lxr = lxr;
+	}
 
 }

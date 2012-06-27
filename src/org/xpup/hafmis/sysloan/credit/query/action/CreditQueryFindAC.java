@@ -14,60 +14,62 @@ import org.xpup.hafmis.sysloan.credit.report.form.CreditAF;
 
 public class CreditQueryFindAC extends Action {
 
-  public ActionForward execute(ActionMapping mapping, ActionForm form,
-      HttpServletRequest request, HttpServletResponse response) {
-    try {
-      CreditAF creditAF = (CreditAF) form;
-      HashMap criterions = makeCriterionsMap(creditAF);
-      Pagination pagination = new Pagination(0, 1000, 1, "credit.id", "ASC",
-          criterions);
-      request.getSession()
-          .setAttribute(CreditQueryShowAC.PAGINATION_KEY, pagination);
-    } catch (Exception e) {
-      e.printStackTrace();
-    }
-    return mapping.findForward("creditQueryShowAC");
-  }
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response) {
+		try {
+			CreditAF creditAF = (CreditAF) form;
+			HashMap criterions = makeCriterionsMap(creditAF);
+			Pagination pagination = new Pagination(0, 1000, 1, "credit.id",
+					"ASC", criterions);
+			request.getSession().setAttribute(CreditQueryShowAC.PAGINATION_KEY,
+					pagination);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return mapping.findForward("creditQueryShowAC");
+	}
 
-  protected HashMap makeCriterionsMap(CreditAF form) {
-    HashMap m = new HashMap();
+	protected HashMap makeCriterionsMap(CreditAF form) {
+		HashMap m = new HashMap();
 
-    /** Êı¾İÌáÈ¡ÔÂ·İ */
-    String shujutiquriqi = form.getShujutiquriqi();
-    if (shujutiquriqi != null && !"".equals(shujutiquriqi.trim())) {
-      m.put("shujutiquriqi", shujutiquriqi.trim());
-    }
+		/** æ•°æ®æå–æœˆä»½ */
+		String shujutiquriqi = form.getShujutiquriqi();
+		if (shujutiquriqi != null && !"".equals(shujutiquriqi.trim())) {
+			m.put("shujutiquriqi", shujutiquriqi.trim());
+		}
 
-    /** ±¨ÎÄÉú³ÉÈÕÆÚ */
-    String baowenshengchengriqi = form.getBaowenshengchengriqi();
-    if (baowenshengchengriqi != null && !"".equals(baowenshengchengriqi.trim())) {
-      m.put("baowenshengchengriqi", baowenshengchengriqi.trim());
-    }
+		/** æŠ¥æ–‡ç”Ÿæˆæ—¥æœŸ */
+		String baowenshengchengriqi = form.getBaowenshengchengriqi();
+		if (baowenshengchengriqi != null
+				&& !"".equals(baowenshengchengriqi.trim())) {
+			m.put("baowenshengchengriqi", baowenshengchengriqi.trim());
+		}
 
-    /** °ìÊÂ´¦ */
-    String officeCode = form.getOfficeCode();
-    if (officeCode != null && !"".equals(officeCode.trim())) {
-      m.put("officeCode", officeCode.trim());
-    }
+		/** åŠäº‹å¤„ */
+		String officeCode = form.getOfficeCode();
+		if (officeCode != null && !"".equals(officeCode.trim())) {
+			m.put("officeCode", officeCode.trim());
+		}
 
-    /** ·Å¿îÒøĞĞ */
-    String loanBankName = form.getLoanBankName();
-    if (loanBankName != null && !"".equals(loanBankName.trim())) {
-      m.put("loanBankName", loanBankName.trim());
-    }
+		/** æ”¾æ¬¾é“¶è¡Œ */
+		String loanBankName = form.getLoanBankName();
+		if (loanBankName != null && !"".equals(loanBankName.trim())) {
+			m.put("loanBankName", loanBankName.trim());
+		}
 
-    /** ºÏÍ¬ÕËºÅ */
-    String yewuhao = form.getYewuhao();
-    if (yewuhao != null && !"".equals(yewuhao.trim())) {
-      m.put("yewuhao", yewuhao.trim());
-    }
+		/** åˆåŒè´¦å· */
+		String yewuhao = form.getYewuhao();
+		if (yewuhao != null && !"".equals(yewuhao.trim())) {
+			m.put("yewuhao", yewuhao.trim());
+		}
 
-    /** Êı¾İ×´Ì¬ */
-    String jiluzhuangtai = form.getJiluzhuangtai();
-    if (jiluzhuangtai != null && !"".equals(jiluzhuangtai.trim())) {
-      m.put("jiluzhuangtai", jiluzhuangtai.trim());
-    }
-    return m;
-  }
+		/** æ•°æ®çŠ¶æ€ */
+		String jiluzhuangtai = form.getJiluzhuangtai();
+		if (jiluzhuangtai != null && !"".equals(jiluzhuangtai.trim())) {
+			m.put("jiluzhuangtai", jiluzhuangtai.trim());
+		}
+		return m;
+	}
 
 }

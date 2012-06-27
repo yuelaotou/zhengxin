@@ -8,85 +8,85 @@ import org.xpup.hafmis.sysloan.common.domain.entity.Credit;
 
 public class CreditAF extends ActionForm {
 
-  private static final long serialVersionUID = 2531807195056023196L;
+	private static final long serialVersionUID = 2531807195056023196L;
 
-  private String shujutiquriqi = null;
+	private String shujutiquriqi = null;
 
-  private String baowenshengchengriqi = null;
+	private String baowenshengchengriqi = null;
 
-  private String officeCode = null;// ∞Ï ¬¥¶
+	private String officeCode = null;// Âäû‰∫ãÂ§Ñ
 
-  private String loanBankName = null;// ∑≈øÓ“¯––
+	private String loanBankName = null;// ÊîæÊ¨æÈì∂Ë°å
 
-  private String yewuhao = null;// ∫œÕ¨’À∫≈
+	private String yewuhao = null;// ÂêàÂêåË¥¶Âè∑
 
-  private String jiluzhuangtai = null;//  ˝æ›◊¥Ã¨£¨0’˝≥££¨1…æ≥˝
+	private String jiluzhuangtai = null;// Êï∞ÊçÆÁä∂ÊÄÅÔºå0Ê≠£Â∏∏Ôºå1Âà†Èô§
 
-  private Credit credit = new Credit();
+	private Credit credit = new Credit();
 
-  private List list = new ArrayList();
+	private List list = new ArrayList();
 
-  public Credit getCredit() {
-    return credit;
-  }
+	public Credit getCredit() {
+		return credit;
+	}
 
-  public void setCredit(Credit credit) {
-    this.credit = credit;
-  }
+	public void setCredit(Credit credit) {
+		this.credit = credit;
+	}
 
-  public List getList() {
-    return list;
-  }
+	public List getList() {
+		return list;
+	}
 
-  public void setList(List list) {
-    this.list = list;
-  }
+	public void setList(List list) {
+		this.list = list;
+	}
 
-  public String getBaowenshengchengriqi() {
-    return baowenshengchengriqi;
-  }
+	public String getBaowenshengchengriqi() {
+		return baowenshengchengriqi;
+	}
 
-  public void setBaowenshengchengriqi(String baowenshengchengriqi) {
-    this.baowenshengchengriqi = baowenshengchengriqi;
-  }
+	public void setBaowenshengchengriqi(String baowenshengchengriqi) {
+		this.baowenshengchengriqi = baowenshengchengriqi;
+	}
 
-  public String getShujutiquriqi() {
-    return shujutiquriqi;
-  }
+	public String getShujutiquriqi() {
+		return shujutiquriqi;
+	}
 
-  public void setShujutiquriqi(String shujutiquriqi) {
-    this.shujutiquriqi = shujutiquriqi;
-  }
+	public void setShujutiquriqi(String shujutiquriqi) {
+		this.shujutiquriqi = shujutiquriqi;
+	}
 
-  public String getLoanBankName() {
-    return loanBankName;
-  }
+	public String getLoanBankName() {
+		return loanBankName;
+	}
 
-  public void setLoanBankName(String loanBankName) {
-    this.loanBankName = loanBankName;
-  }
+	public void setLoanBankName(String loanBankName) {
+		this.loanBankName = loanBankName;
+	}
 
-  public String getOfficeCode() {
-    return officeCode;
-  }
+	public String getOfficeCode() {
+		return officeCode;
+	}
 
-  public void setOfficeCode(String officeCode) {
-    this.officeCode = officeCode;
-  }
+	public void setOfficeCode(String officeCode) {
+		this.officeCode = officeCode;
+	}
 
-  public String getYewuhao() {
-    return yewuhao;
-  }
+	public String getYewuhao() {
+		return yewuhao;
+	}
 
-  public void setYewuhao(String yewuhao) {
-    this.yewuhao = yewuhao;
-  }
+	public void setYewuhao(String yewuhao) {
+		this.yewuhao = yewuhao;
+	}
 
-  public String getJiluzhuangtai() {
-    return jiluzhuangtai;
-  }
+	public String getJiluzhuangtai() {
+		return jiluzhuangtai;
+	}
 
-  public void setJiluzhuangtai(String jiluzhuangtai) {
-    this.jiluzhuangtai = jiluzhuangtai;
-  }
+	public void setJiluzhuangtai(String jiluzhuangtai) {
+		this.jiluzhuangtai = jiluzhuangtai;
+	}
 }

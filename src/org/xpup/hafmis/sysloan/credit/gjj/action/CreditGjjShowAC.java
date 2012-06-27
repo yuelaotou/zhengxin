@@ -1,4 +1,4 @@
-package org.xpup.hafmis.sysloan.credit.query.action;
+package org.xpup.hafmis.sysloan.credit.gjj.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,8 +24,8 @@ import org.xpup.hafmis.sysloan.credit.report.bsinterface.ICreditBS;
 import org.xpup.hafmis.sysloan.credit.report.form.CreditAF;
 import org.xpup.security.common.domain.Userslogincollbank;
 
-public class CreditQueryShowAC extends Action {
-	public static final String PAGINATION_KEY = "org.xpup.hafmis.sysloan.credit.query.action.CreditQueryShowAC";
+public class CreditGjjShowAC extends Action {
+	public static final String PAGINATION_KEY = "org.xpup.hafmis.sysloan.credit.report.action.CreditShowAC";
 
 	@Override
 	public ActionForward execute(ActionMapping mapping, ActionForm form,
@@ -80,7 +80,7 @@ public class CreditQueryShowAC extends Action {
 			List list = creditBS.getCredit(pagination);
 			creditAF.setList(list);
 
-			request.setAttribute("creditAF", creditAF);
+			request.setAttribute("creditGjjAF", creditAF);
 		} catch (BusinessException bex) {
 			messages = new ActionMessages();
 			messages.add(ActionMessages.GLOBAL_MESSAGE,
@@ -89,7 +89,7 @@ public class CreditQueryShowAC extends Action {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return mapping.findForward("creditquery");
+		return mapping.findForward("creditgjj");
 	}
 
 	private Pagination getPagination(String paginationKey,

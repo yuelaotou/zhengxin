@@ -14,6 +14,8 @@
 
 	<!-- ============================================action config ========================================================-->
 	<action-mappings>
+	
+		<!-- 参数设置 -->
 		<action name="creditParamAF" path="/creditParamShowAC"
 			type="org.xpup.hafmis.sysloan.credit.parameter.action.CreditParamShowAC">
 			<forward name="creditparam"
@@ -24,6 +26,8 @@
 			<forward name="creditParamShowAC"
 				path="/creditParamShowAC.do" />
 		</action>
+		
+		<!-- 贷款征信上报 -->
 		<action name="creditAF" path="/creditForwardURLAC"
 			type="org.xpup.hafmis.sysloan.credit.report.action.CreditForwardURLAC">
 			<forward name="creditShowAC" path="/creditShowAC.do" />
@@ -44,6 +48,7 @@
 			<forward name="creditShowAC" path="/creditShowAC.do" />
 		</action>
 		
+		<!-- 贷款征信查询 -->
 		<action name="creditAF" path="/creditQueryForwardURLAC"
 			type="org.xpup.hafmis.sysloan.credit.query.action.CreditQueryForwardURLAC">
 			<forward name="creditQueryShowAC" path="/creditQueryShowAC.do" />
@@ -56,6 +61,27 @@
 		<action name="creditAF" path="/creditQueryShowAC"
 			type="org.xpup.hafmis.sysloan.credit.query.action.CreditQueryShowAC">
 			<forward name="creditquery" path="/credit/query/creditquery.jsp" />
+		</action>
+		
+		<!-- 归集征信上报 -->
+		<action name="creditGjjAF" path="/creditGjjForwardURLAC"
+			type="org.xpup.hafmis.sysloan.credit.gjj.action.CreditGjjForwardURLAC">
+			<forward name="creditGjjShowAC" path="/creditGjjShowAC.do" />
+		</action>
+		<action name="creditGjjAF" path="/creditGjjFindAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.credit.gjj.action.CreditGjjFindAC">
+			<forward name="creditGjjShowAC" path="/creditGjjShowAC.do" />
+		</action>
+		<action name="creditGjjAF" path="/creditGjjShowAC"
+			type="org.xpup.hafmis.sysloan.credit.gjj.action.CreditGjjShowAC">
+			<forward name="creditgjj" path="/credit/gjj/creditgjj.jsp" />
+		</action>
+		<action name="idAF" path="/creditGjjMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.credit.report.action.CreditGjjMaintainAC">
+			<forward name="creditgjj" path="/credit/gjj/creditgjj.jsp" />
+			<forward name="creditGjjShowAC" path="/creditGjjShowAC.do" />
 		</action>
 
 	</action-mappings>

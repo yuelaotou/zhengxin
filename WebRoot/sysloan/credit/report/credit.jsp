@@ -39,6 +39,7 @@ function checkFind(){
 		document.creditAF.shujutiquriqi.focus();
 		return false;
 	}
+	return true;
 }
 function checkDelete(){
 	var shujutiquriqi = document.creditAF.shujutiquriqi.value;
@@ -47,11 +48,7 @@ function checkDelete(){
 		document.creditAF.shujutiquriqi.focus();
 		return false;
 	}else{
-		if(confirm("确认删除本月份数据吗？")){
-			return true;
-		}else{
-			return false;
-		}
+		return confirm("确认删除本月份数据吗？");
 	}
 }
 </script>

@@ -1,4 +1,4 @@
-package org.xpup.hafmis.sysloan.credit.report.action;
+package org.xpup.hafmis.sysloan.credit.gjj.action;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -18,7 +18,7 @@ import org.xpup.common.util.Pagination;
 import org.xpup.hafmis.sysloan.credit.report.bsinterface.ICreditBS;
 import org.xpup.hafmis.sysloan.credit.report.form.CreditAF;
 
-public class CreditFindAC extends LookupDispatchAction {
+public class CreditGjjFindAC extends LookupDispatchAction {
 	@Override
 	protected Map getKeyMethodMap() {
 		Map map = new HashMap();
@@ -35,7 +35,7 @@ public class CreditFindAC extends LookupDispatchAction {
 			HashMap criterions = makeCriterionsMap(creditAF);
 			Pagination pagination = new Pagination(0, 1000, 1, "credit.id",
 					"ASC", criterions);
-			request.getSession().setAttribute(CreditShowAC.PAGINATION_KEY,
+			request.getSession().setAttribute(CreditGjjShowAC.PAGINATION_KEY,
 					pagination);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -51,15 +51,15 @@ public class CreditFindAC extends LookupDispatchAction {
 			HashMap criterions = makeCriterionsMap(creditAF);
 			Pagination pagination = new Pagination(0, 1000, 1, "credit.id",
 					"ASC", criterions);
-			request.getSession().setAttribute(CreditShowAC.PAGINATION_KEY,
+			request.getSession().setAttribute(CreditGjjShowAC.PAGINATION_KEY,
 					pagination);
 			String shujutiquriqi = creditAF.getShujutiquriqi();
 			ICreditBS creditBS = (ICreditBS) BSUtils.getBusinessService(
 					"creditBS", this, mapping.getModuleConfig());
 
 			creditBS.createCredit(shujutiquriqi);
-			request.getSession()
-					.setAttribute(CreditShowAC.PAGINATION_KEY, null);
+			request.getSession().setAttribute(CreditGjjShowAC.PAGINATION_KEY,
+					null);
 			messages = new ActionMessages();
 			messages.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
 					"生成数据成功，可以选择查询", false));
@@ -83,15 +83,15 @@ public class CreditFindAC extends LookupDispatchAction {
 			HashMap criterions = makeCriterionsMap(creditAF);
 			Pagination pagination = new Pagination(0, 1000, 1, "credit.id",
 					"ASC", criterions);
-			request.getSession().setAttribute(CreditShowAC.PAGINATION_KEY,
+			request.getSession().setAttribute(CreditGjjShowAC.PAGINATION_KEY,
 					pagination);
 			String shujutiquriqi = creditAF.getShujutiquriqi();
 			ICreditBS creditBS = (ICreditBS) BSUtils.getBusinessService(
 					"creditBS", this, mapping.getModuleConfig());
 
 			creditBS.deleteCredit(shujutiquriqi);
-			request.getSession()
-					.setAttribute(CreditShowAC.PAGINATION_KEY, null);
+			request.getSession().setAttribute(CreditGjjShowAC.PAGINATION_KEY,
+					null);
 			messages = new ActionMessages();
 			messages.add(ActionMessages.GLOBAL_MESSAGE, new ActionMessage(
 					"删除数据成功，可以选择重新生成", false));

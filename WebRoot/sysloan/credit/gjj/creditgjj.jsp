@@ -7,11 +7,11 @@
 <%@ taglib uri="/WEB-INF/taglib/xpup-security.tld" prefix="security"%>
 <%@ include file="/checkUrl.jsp"%>
 <%@ page
-	import="org.xpup.hafmis.sysloan.credit.report.action.CreditShowAC"%>
+	import="org.xpup.hafmis.sysloan.credit.gjj.action.CreditGjjShowAC"%>
 
 <%
 	String path = request.getContextPath();
-	Object pagination = request.getSession().getAttribute(CreditShowAC.PAGINATION_KEY);
+	Object pagination = request.getSession().getAttribute(CreditGjjShowAC.PAGINATION_KEY);
 	request.setAttribute("pagination", pagination);
 %>
 
@@ -33,32 +33,28 @@ function reportErrors() {
 	</logic:messagesPresent>
 }
 function checkFind(){
-	var shujutiquriqi = document.creditAF.shujutiquriqi.value;
+	var shujutiquriqi = document.creditGjjAF.shujutiquriqi.value;
 	if(shujutiquriqi ==null || shujutiquriqi==""){
 		alert("数据提取日期不能为空");
-		document.creditAF.shujutiquriqi.focus();
+		document.creditGjjAF.shujutiquriqi.focus();
 		return false;
 	}
 }
 function checkDelete(){
-	var shujutiquriqi = document.creditAF.shujutiquriqi.value;
+	var shujutiquriqi = document.creditGjjAF.shujutiquriqi.value;
 	if(shujutiquriqi ==null || shujutiquriqi==""){
 		alert("数据提取日期不能为空");
-		document.creditAF.shujutiquriqi.focus();
+		document.creditGjjAF.shujutiquriqi.focus();
 		return false;
 	}else{
-		if(confirm("确认删除本月份数据吗？")){
-			return true;
-		}else{
-			return false;
-		}
+		return confirm("确认删除本月份数据吗？");
 	}
 }
 </script>
 
 <body bgcolor="#FFFFFF" text="#000000" onload="reportErrors();">
 	<jsp:include page="../../../inc/sort.jsp">
-		<jsp:param name="url" value="creditShowAC.do" />
+		<jsp:param name="url" value="creditGjjShowAC.do" />
 	</jsp:include>
 	<table width="100%" border="0" cellspacing="0" cellpadding="0">
 		<tr>
@@ -151,7 +147,7 @@ function checkDelete(){
 									</td>
 								</tr>
 							</table>
-							<html:form action="/creditFindAC.do" method="post"
+							<html:form action="/creditGjjFindAC.do" method="post"
 								style="margin: 0">
 								<table border="0" width="95%" id="table1" cellspacing=1
 									cellpadding=0 align="center">

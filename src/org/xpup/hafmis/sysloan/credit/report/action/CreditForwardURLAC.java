@@ -10,9 +10,10 @@ import org.apache.struts.action.ActionMapping;
 
 public class CreditForwardURLAC extends Action {
 
-  public ActionForward execute(ActionMapping mapping, ActionForm form,
-      HttpServletRequest request, HttpServletResponse response) {
-    request.getSession().setAttribute(CreditShowAC.PAGINATION_KEY, null);
-    return mapping.findForward("creditShowAC");
-  }
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form,
+			HttpServletRequest request, HttpServletResponse response) {
+		request.getSession().setAttribute(CreditShowAC.PAGINATION_KEY, null);
+		return mapping.findForward("creditShowAC");
+	}
 }

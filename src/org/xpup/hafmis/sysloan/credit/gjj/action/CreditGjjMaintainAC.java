@@ -1,4 +1,4 @@
-package org.xpup.hafmis.sysloan.credit.report.action;
+package org.xpup.hafmis.sysloan.credit.gjj.action;
 
 import java.io.BufferedOutputStream;
 import java.io.OutputStream;
@@ -23,7 +23,7 @@ import org.xpup.hafmis.common.util.BusiTools;
 import org.xpup.hafmis.orgstrct.dto.SecurityInfo;
 import org.xpup.hafmis.sysloan.credit.report.bsinterface.ICreditBS;
 
-public class CreditMaintainAC extends LookupDispatchAction {
+public class CreditGjjMaintainAC extends LookupDispatchAction {
 
 	@Override
 	protected Map getKeyMethodMap() {
@@ -50,8 +50,8 @@ public class CreditMaintainAC extends LookupDispatchAction {
 			HttpServletResponse response) {
 		try {
 
-			Pagination pagination = getPagination(CreditShowAC.PAGINATION_KEY,
-					request);
+			Pagination pagination = getPagination(
+					CreditGjjShowAC.PAGINATION_KEY, request);
 			PaginationUtils.updatePagination(pagination, request);
 			ICreditBS creditBS = (ICreditBS) BSUtils.getBusinessService(
 					"creditBS", this, mapping.getModuleConfig());
@@ -94,8 +94,8 @@ public class CreditMaintainAC extends LookupDispatchAction {
 		String[] rowArray = idaf.getRowArray();
 		try {
 
-			Pagination pagination = getPagination(CreditShowAC.PAGINATION_KEY,
-					request);
+			Pagination pagination = getPagination(
+					CreditGjjShowAC.PAGINATION_KEY, request);
 			pagination.getQueryCriterions().put("rowArray", rowArray);
 			PaginationUtils.updatePagination(pagination, request);
 			ICreditBS creditBS = (ICreditBS) BSUtils.getBusinessService(
@@ -134,8 +134,8 @@ public class CreditMaintainAC extends LookupDispatchAction {
 	public ActionForward jiandujiancha(ActionMapping mapping, ActionForm form,
 			HttpServletRequest request, HttpServletResponse response) {
 		try {
-			Pagination pagination = getPagination(CreditShowAC.PAGINATION_KEY,
-					request);
+			Pagination pagination = getPagination(
+					CreditGjjShowAC.PAGINATION_KEY, request);
 			PaginationUtils.updatePagination(pagination, request);
 			if (pagination.getQueryCriterions().get("batchNum") != null) {
 				request.setAttribute("batchNum", pagination
@@ -165,8 +165,8 @@ public class CreditMaintainAC extends LookupDispatchAction {
 		IdAF idaf = (IdAF) form;
 		String[] rowArray = idaf.getRowArray();
 		try {
-			Pagination pagination = getPagination(CreditShowAC.PAGINATION_KEY,
-					request);
+			Pagination pagination = getPagination(
+					CreditGjjShowAC.PAGINATION_KEY, request);
 			pagination.getQueryCriterions().put("rowArray", rowArray);
 			pagination.getQueryCriterions().put("status", "1");
 			PaginationUtils.updatePagination(pagination, request);
@@ -193,8 +193,8 @@ public class CreditMaintainAC extends LookupDispatchAction {
 		IdAF idaf = (IdAF) form;
 		String[] rowArray = idaf.getRowArray();
 		try {
-			Pagination pagination = getPagination(CreditShowAC.PAGINATION_KEY,
-					request);
+			Pagination pagination = getPagination(
+					CreditGjjShowAC.PAGINATION_KEY, request);
 			pagination.getQueryCriterions().put("rowArray", rowArray);
 			pagination.getQueryCriterions().put("status", "0");
 			PaginationUtils.updatePagination(pagination, request);
