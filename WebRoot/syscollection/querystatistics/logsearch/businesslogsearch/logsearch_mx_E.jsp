@@ -38,7 +38,7 @@ function display(headid,url,type){
 </script>
 	<body bgcolor="#FFFFFF" text="#000000" onload="loads()"
 		onContextmenu="return false">
-		<jsp:include page="../../../inc/sort.jsp">
+		<jsp:include page="../../../../inc/sort.jsp">
 			<jsp:param name="url" value="logSearchTaWindowAC.do" />
 		</jsp:include>
 		<html:form action="/logSearchTaWindowAC.do">
@@ -287,7 +287,7 @@ function display(headid,url,type){
 												项
 											</td>
 											<td align="right">
-												<jsp:include page="../../../inc/pagination.jsp">
+												<jsp:include page="../../../../inc/pagination.jsp">
 													<jsp:param name="url" value="logSearchTaWindowAC.do" />
 												</jsp:include>
 											</td>

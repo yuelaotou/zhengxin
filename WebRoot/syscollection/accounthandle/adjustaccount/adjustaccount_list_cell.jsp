@@ -3,7 +3,7 @@
 <%@ taglib uri="/WEB-INF/taglib/struts-html.tld" prefix="logic" %>
 <%@ page import="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.dto.AdjustaccountReportDTO" %>
 <%@ include file="/checkUrl.jsp"%>
-
+<html:html>
 <%
    	String path=request.getContextPath();
     String url=(String)request.getAttribute("URL");

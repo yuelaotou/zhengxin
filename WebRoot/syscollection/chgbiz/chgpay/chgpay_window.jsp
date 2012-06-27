@@ -1,37 +1,42 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ taglib uri="/WEB-INF/taglib/struts-html.tld" prefix="html" %>
-<%@ taglib uri="/WEB-INF/taglib/struts-bean.tld" prefix="bean" %>
-<%@ taglib uri="/WEB-INF/taglib/struts-logic.tld" prefix="logic" %>
+<%@ taglib uri="/WEB-INF/taglib/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/taglib/struts-bean.tld" prefix="bean"%>
+<%@ taglib uri="/WEB-INF/taglib/struts-logic.tld" prefix="logic"%>
 <%@taglib uri="/WEB-INF/taglib/struts-nested.tld" prefix="nested"%>
-<%@ taglib uri="/WEB-INF/taglib/xpup-security.tld" prefix="security" %>
+<%@ taglib uri="/WEB-INF/taglib/xpup-security.tld" prefix="security"%>
 <%@ include file="/checkUrl.jsp"%>
-<%@ page import="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaWindowForwardAC" %>
+<%@ page
+	import="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaWindowForwardAC"%>
 <%
-String path = request.getContextPath();
-String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 %>
 <%
-   Object pagination= request.getSession(false).getAttribute(ChgpayTaWindowForwardAC.PAGINATION_KEY);
-   request.setAttribute("pagination",pagination);
+	Object pagination = request.getSession(false).getAttribute(
+			ChgpayTaWindowForwardAC.PAGINATION_KEY);
+	request.setAttribute("pagination", pagination);
 %>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html:html>
-  <head>
-    <base href="<%=basePath%>">
-    
-    <title>My JSP 'chgpay_window.jsp' starting page</title>
-    
-	<meta http-equiv="pragma" content="no-cache">
-	<meta http-equiv="cache-control" content="no-cache">
-	<meta http-equiv="expires" content="0">    
-	<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-	<meta http-equiv="description" content="This is my page">
-	<!--
+<head>
+<base href="<%=basePath%>">
+
+<title>My JSP 'chgpay_window.jsp' starting page</title>
+
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="This is my page">
+<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<link rel="stylesheet" href="<%=request.getContextPath()%>/css/index.css" type="text/css">
-  </head>
-  <script language="javascript" src="<%=request.getContextPath()%>/js/common.js">
+	<link rel="stylesheet" href="<%=path%>/css/index.css" type="text/css">
+	<script src="<%=path%>/js/common.js">
+</script>
+</head>
   <body bgcolor="#FFFFFF" text="#000000" onload="return reportErrors()" onContextmenu="return false">
 	<jsp:include page="/inc/sort.jsp"><jsp:param name="url" value="chgpayTaWindowForwardAC.do"/>	</jsp:include>
 <table width="95%" border="0" cellspacing="0" cellpadding="0" align="center">
@@ -168,10 +173,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </tr>
     	<logic:notEmpty name="chgpayListAF" property="list">
 		<logic:iterate name="chgpayListAF" property="list" id="element" indexId="i">
-        <tr id="tr<%=i%>" onClick='gotoClick("tr<%=i %>","s<%=i%>", idAF);' onMouseOver='this.style.background="#eaeaea"'  onMouseOut='gotoColor("tr<%=i %>","s<%=i %>", idAF);' class=td4  onDblClick=""> 
+        <tr id="tr<%=i%>" onClick='gotoClick("tr<%=i%>","s<%=i%>", idAF);' onMouseOver='this.style.background="#eaeaea"'  onMouseOut='gotoColor("tr<%=i%>","s<%=i%>", idAF);' class=td4  onDblClick=""> 
            <td valign="top">
           <p align="left">
-            <input id="s<%=i %>" type="hidden" name="id" value="<bean:write name="element" property="id"/>" <%if(new Integer(0).equals(i)) out.print("checked"); %>>
+            <input id="s<%=i%>" type="hidden" name="id" value="<bean:write name="element" property="id"/>" <%if (new Integer(0).equals(i))
+					out.print("checked");%>>
           </p>
           </td>
           <td valign="top"><p><bean:write name="element" property="empId" format="000000"/></p></td>

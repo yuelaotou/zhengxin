@@ -1,1 +1,1 @@
-<%@ include file="./syscommon/picture/testprobar.jsp"%>
+<%@ include file="../syscommon/picture/testprobar.jsp"%>

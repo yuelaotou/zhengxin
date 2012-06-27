@@ -6,6 +6,7 @@
 <%@ include file="/checkUrl.jsp"%>
 <%@ page
 	import="org.xpup.hafmis.syscollection.pickupmng.pickup.dto.ApplyBookDTO"%>
+<html:html>
 <%
    	String path=request.getContextPath();
    	List list = (List) request.getAttribute("employee");
