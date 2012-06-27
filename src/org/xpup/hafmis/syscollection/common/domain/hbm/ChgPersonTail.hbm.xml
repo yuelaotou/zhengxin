@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="ChgPersonTail" 
+    table="AA205"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_AA205</param>
+	</generator>
+    </id>
+	<property 
+		name="chgType"
+		type="string"
+		column="CHG_TYPE"
+		not-null="true"
+		length="10"
+	/>
+	<property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+	/>
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        length="50"
+    />
+    <property
+        name="cardKind"
+        type="java.lang.Integer"
+        column="CARD_KIND"
+        length="22"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARD_NUM"
+        length="20"
+    />
+    <property
+        name="birthday"
+        type="java.lang.String"
+        column="BIRTHDAY"
+        length="8"
+    />
+    <property
+        name="sex"
+        type="java.lang.Integer"
+        column="SEX"
+        length="22"
+    />
+    <property
+        name="dept"
+        type="java.lang.String"
+        column="DEPT"
+        length="20"
+    />
+    <property
+        name="tel"
+        type="java.lang.String"
+        column="TEL"
+        length="20"
+    />
+    <property
+        name="mobileTel"
+        type="java.lang.String"
+        column="MOBILE_TEL"
+        length="20"
+    />
+    <property
+        name="salaryBase"
+        type="java.math.BigDecimal"
+        column="SALARY_BASE"
+        length="18"
+    />
+    <property
+        name="monthIncome"
+        type="java.math.BigDecimal"
+        column="MONTH_INCOME"
+        length="18"
+    />
+    <property
+        name="orgPay"
+        type="java.math.BigDecimal"
+        column="ORG_PAY"
+        length="18"
+    />
+    <property
+        name="empPay"
+        type="java.math.BigDecimal"
+        column="EMP_PAY"
+        length="18"
+    />
+
+    <property
+        name="oldPayStatus"
+        type="java.lang.Integer"
+        column="OLD_PAY_STATUS"
+        not-null="true"
+        length="22"
+    />
+    
+    <property
+        name="newPayStatus"
+        type="java.lang.Integer"
+        column="NEW_PAY_STATUS"
+        not-null="true"
+        length="22"
+    />
+    <property 
+    	name="isNewUse"
+    	type="integer"
+    	column="IS_NEW_USE"
+    	length="22"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"    
+        length="50"
+    />
+    
+   <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"    
+        length="50"
+    />
+   <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"    
+        length="50"
+    />
+ 
+   <property
+        name="chgreason"
+        type="java.lang.String"
+        column="CHGREASON"    
+        length="100"
+    />
+    <property
+        name="standbyCardNum"
+        type="java.lang.String"
+        column="STANDBY_CARD_NUM"    
+        length="20"
+    />
+    <many-to-one name="chgPersonHead" column="CHG_HEAD_ID" class="org.xpup.hafmis.syscollection.common.domain.entity.ChgPersonHead" not-null="true" lazy="false"></many-to-one>
+	
+	<property name="sumPay" type="java.math.BigDecimal" formula="(select t.org_pay+t.emp_pay from aa205 t where t.id=id )"/>
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

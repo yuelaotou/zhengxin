@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<!-- 
+		Created by Middlegen Hibernate plugin
+		
+		http://boss.bekk.no/boss/middlegen/
+		http://hibernate.sourceforge.net/
+	-->
+
+	<class name="ChgPaymentHead" table="AA202">
+
+		<id name="id" type="integer" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_AA201</param>
+			</generator>
+		</id>
+
+		<discriminator column="CHG_TYPE" type="string" />
+
+
+		<property name="chgMonth" type="java.lang.String"
+			column="CHG_MONTH" not-null="true" length="6" />
+		<property name="bizDate" type="java.lang.String"
+			column="BIZ_DATE" not-null="true" length="8" />
+
+		<property name="chgStatus" type="java.lang.Integer"
+			column="CHG_STATUS" not-null="true" length="22" />
+
+		<property name="reserveaA" type="java.lang.String"
+			column="RESERVEA_A" length="50" />
+
+		<property name="reserveaB" type="java.lang.String"
+			column="RESERVEA_B" length="50" />
+		<property name="reserveaC" type="java.lang.String"
+			column="RESERVEA_C" length="50" />
+		<property name="oldSlarayBase" type="java.math.BigDecimal"
+			column="OLD_SALARYBASE" not-null="true" length="18" />
+		<property name="oldPayment" type="java.math.BigDecimal"
+			column="OLD_PAYMENT" not-null="true" length="18" />
+
+		<many-to-one name="org" column="ORG_ID" class="Org"
+			not-null="true" cascade="save-update" lazy="false">
+		</many-to-one>
+
+		<many-to-one name="paymentHead" column="PAY_HEAD_ID"
+			class="PaymentHead">
+		</many-to-one>
+
+
+
+		<!-- associations -->
+
+	</class>
+</hibernate-mapping>

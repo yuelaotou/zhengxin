@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.CollPara" 
+    table="AA500"
+>
+
+    <id
+        name="param_id"
+        type="integer"
+        column="PARAM_ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA500</param>
+		</generator>
+    </id>
+
+    <property
+        name="param_descrip"
+        type="java.lang.String"
+        column="PARAM_DESCRIP"
+       	not-null="true"
+        length="100"
+    />
+     <property
+        name="param_value"
+        type="java.lang.String"
+        column="PARAM_VALUE"
+        
+        length="20"
+    />
+    <property
+        name="param_num"
+        type="java.lang.String"
+        column="PARAM_NUM"
+       	not-null="true"
+        length="100"
+    />
+     <property
+        name="param_explain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN"
+        
+        length="100"
+    />
+	  <property
+        name="param_type"
+        type="java.lang.String"
+        column="PARAM_TYPE"
+        not-null="true"
+        length="100"
+    />
+      <property
+        name="reservea_a"
+        type="java.lang.String"
+        column="RESERVEA_A"
+       
+        length="100"
+    />
+     <property
+        name="reservea_b"
+        type="java.lang.String"
+        column="RESERVEA_B"
+       
+        length="100"
+    />
+     <property
+        name="reservea_c"
+        type="java.lang.String"
+        column="RESERVEA_C"
+       
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

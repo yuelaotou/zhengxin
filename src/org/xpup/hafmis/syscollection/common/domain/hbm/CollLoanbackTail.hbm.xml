@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.CollLoanbackTail" 
+    table="AA411"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA411</param>
+		</generator>
+    </id>
+
+    <property
+        name="headId"
+        type="java.lang.String"
+        column="HEAD_ID"
+        length="100"
+    />
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        length="100"
+    />
+    <property
+        name="loanKouAcc"
+        type="java.lang.String"
+        column="LOAN_KOU_ACC"
+        length="100"
+    />
+    <property
+        name="empId"
+        type="java.lang.String"
+        column="EMP_ID"
+        length="100"
+    />
+    <property
+        name="orgId"
+        type="java.lang.String"
+        column="ORG_ID"
+        length="100"
+    />
+    <property
+        name="yearMonth"
+        type="java.lang.String"
+        column="YEAR_MONTH"
+        length="6"
+    />
+    <property
+        name="shouldCorpus"
+        type="java.math.BigDecimal"
+        column="SHOULD_CORPUS"
+        length="15"
+    />
+    <property
+        name="preCorpus"
+        type="java.math.BigDecimal"
+        column="PRE_CORPUS"
+        length="15"
+    />
+    <property
+        name="currentCorpus"
+        type="java.math.BigDecimal"
+        column="CURRENT_CORPUS"
+        length="15"
+    />
+    <property
+        name="flag"
+        type="java.lang.String"
+        column="FLAG"
+        length="100"
+    />
+    <property
+        name="collflag"
+        type="java.lang.String"
+        column="COLLFLAG"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

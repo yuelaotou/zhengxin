@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.GatheringAcc" 
+    table="PL130"
+>
+
+    <id
+        name="receiveBankModifyId"
+        type="integer"
+        column="RECEIVE_BANK_MODIFY_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL130</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="oldBankAcc"
+        type="java.lang.String"
+        column="OLD_BANK_ACC"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="newBankAcc"
+        type="java.lang.String"
+        column="NEW_BANK_ACC"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="modifyDate"
+        type="java.lang.String"
+        column="MODIFY_DATE"
+        length="8"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="oprator"
+        type="java.lang.String"
+        column="OPRATOR"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

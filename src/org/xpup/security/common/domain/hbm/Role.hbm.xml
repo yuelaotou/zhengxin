@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xpup.security.common.domain">
+	<class name="Role" table="CA102">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="name" type="string" column="NAME" />
+
+		<property name="userCount" type="integer" update="false"
+			insert="false" access="field"
+			formula="(select count(*) from CA101 u,CA103 ur where u.id=ur.user_id and ur.role_id=id)" />
+
+		<set name="users" table="CA103" inverse="false" lazy="false"
+			cascade="save-update" access="field">
+			<key column="role_id" />
+			<many-to-many column="user_id" class="User" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

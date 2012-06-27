@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showRatemngListAC.do" location="50,150" dimension="478,88" />
+  <StrutsActivity path="/ratemngMaintainAC.do" location="650,50" dimension="472,88" />
+  <StrutsActivity path="/addRatemngMaintainAC.do" location="650,350" dimension="520,84" />
+  <StrutsActivity path="/rateTaFindAC.do" location="50,550" dimension="394,84" />
+  <StrutsActivity path="/ratemng_List.jsp" location="650,250" dimension="113,49" />
+  <StrutsActivity path="/ratemng_new.jsp" location="350,350" dimension="117,49" />
+  <StrutsActivity path="/clearaccount.jsp" location="183,376" dimension="112,49" />
+  <StrutsActivity path="/" location="950,250" dimension="33,49" />
+  <StrutsActivity path="/rateTaForwardUrlAC.do" location="650,550" dimension="508,84" />
+  <StrutsTransition id="/ratemngMaintainAC.do,to_ratemng_add,/ratemng_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="886,138" />
+      <AbsolutePoint location="886,374" />
+      <AbsolutePoint location="467,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTaFindAC.do,rateTaShowAC,/showRatemngListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="168,550" />
+      <AbsolutePoint location="168,238" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addRatemngMaintainAC.do,to_ratemng_add,/ratemng_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="408,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTaForwardUrlAC.do,rateTaShowAC,/showRatemngListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,592" />
+      <AbsolutePoint location="289,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addRatemngMaintainAC.do,showRatemngListAC,/showRatemngListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="289,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTaForwardUrlAC.do,rateTaShowAC,/rateTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,634" />
+      <AbsolutePoint location="904,786" />
+      <AbsolutePoint location="192,786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showRatemngListAC.do,to_ratemng_list,/ratemng_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="528,194" />
+      <AbsolutePoint location="706,194" />
+      <AbsolutePoint location="706,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ratemngMaintainAC.do,showRatemngListAC,/showRatemngListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,94" />
+      <AbsolutePoint location="289,94" />
+      <AbsolutePoint location="289,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

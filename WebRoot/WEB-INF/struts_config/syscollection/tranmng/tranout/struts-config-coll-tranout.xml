@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config  ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="tran_FindAFForm"
+			type="org.xpup.hafmis.form.Tran_FindAFForm" />
+		<form-bean name="tran_showFrom"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.dto.tran_showFrom">
+		</form-bean>
+		<form-bean name="tranAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.form.TranAF">
+		</form-bean>
+		<form-bean name="tranTbAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.form.TranTbAF">
+		</form-bean>
+
+		<form-bean name="tranAddAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.form.TranAddAF">
+		</form-bean>
+		<form-bean name="tranImportTaAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.form.TranImportTaAF" />
+
+	</form-beans>
+
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<!-- 转出单位Ajax -->
+		<action name="tranAF" path="/tran_FindAAC" scope="session"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_FindOutOrgNameAAC">
+			<forward name="to_tran_showAC" path="/tran_showAC.do">
+			</forward>
+		</action>
+
+		<!-- 添加查询 Ajax -->
+		<action name="tranAddAF" path="/tran_AddFindempinfoAAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_AddFindempinfoAAC">
+		</action>
+		<!-- 判断转入职工和转出职工的身份证号和姓名是否相同的 Ajax -->
+		<action name="tranAddAF" path="/tran_CheckEmpInfoAAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_CheckEmpInfoAAC">
+		</action>
+
+		<!-- 转入单位Ajax -->
+		<action name="tranAF" path="/tran_FindImpOrgNameAAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_FindImpOrgNameAAC">
+		</action>
+
+
+		<action name="tranAF" path="/tran_showAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_showAC"
+			scope="request">
+			<forward name="to_show_jsp" path="/tranout_show.jsp">
+			</forward>
+		</action>
+
+
+
+		<action name="idAF" path="/tran_MaintainAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_MaintainAC"
+			scope="request" parameter="method">
+			<forward name="to_add_jsp" path="/tran_add.jsp"></forward>
+			<forward name="to_tran_showAC" path="/tran_showAC.do"></forward>
+			<forward name="to_tranout_imports.jsp" path="/tranout_imports.jsp" />
+			<forward name="to_tran_print" path="/tranout_cell.jsp"></forward>	
+			<forward name="to_tran_print_yg" path="/tranout_cell_yg.jsp"></forward>	
+			<forward name="to_tran_print_yga" path="/tranout_cell_yga.jsp"></forward>	
+			<forward name="to_tran_print_ygb" path="/tranout_cell_ygb.jsp"></forward>	
+			<forward name="to_printCredence.jsp" path="/printCredence_cell.jsp"></forward>
+		</action>
+
+	<action name="tranImportTaAF" path="/tranTaImportAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranTaImportAC"
+			>
+			<forward name="tranout_imports" path="/tranout_imports.jsp" />
+			<forward name="to_tran_showAC" path="/tran_showAC.do" />
+		</action>
+
+
+		<action name="tranAddAF" path="/tran_addMaintainAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_addMaintainAC"
+			parameter="method">
+			<forward name="to_addjsp" path="/tran_add.jsp"></forward>
+			<forward name="to_showAC" path="/tran_showAC.do"></forward>
+		</action>
+
+
+
+		<action name="idAF" path="/tran_TbMaintainAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_TbMaintainAC"
+			parameter="method">
+			<forward name="to_tran_showTbAC" path="/tran_showFindTbAC.do"></forward>
+			<forward name="to_tran_showAC" path="/tran_showAC.do"></forward>
+			<forward name="to_tran_print" path="/tranout_cell.jsp"></forward>
+			<forward name="to_tran_print_yg" path="/tranout_cell_yg.jsp"></forward>
+			<forward name="to_printCredence.jsp" path="/printCredence_cell.jsp"></forward>
+			<forward name="to_printall.jsp" path="/printall_cell.jsp"></forward>
+			<forward name="tranoutlist" path="/tranoutlist.jsp"></forward>
+		</action>
+
+
+		<action name="tranTbAF" path="/tran_FindTbAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_FindTbAC"
+			scope="request">
+			<forward name="to_showFindAC"
+				path="/tran_showFindTbAC.do">
+			</forward>
+
+		</action>
+
+		<action name="tranTbAF" path="/tran_showFindTbAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_showFindTbAC">
+			<forward name="to_show_jsp" path="/tranout_showtb.jsp"></forward>
+		</action>
+
+		<action name="idAF" path="/tranOutMXPrintAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranOutMXPrintAC">
+			<forward name="to_print" path="/tranout_cell.jsp"></forward>
+			<forward name="to_print_one" path="/tranout_cell_yg.jsp"></forward>
+		</action>
+
+		<!-- 中间Action -->
+		<action name="tranAF" path="/tranoutTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranoutTaForwardURLAC">
+			<forward name="to_show" path="/tran_showAC.do"></forward>
+		</action>
+		
+		<action name="tranAF" path="/tranoutTbForwardURLAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranoutTbForwardURLAC">
+			<forward name="to_Tbshow" path="/tran_showFindTbAC.do"></forward>
+		</action>
+		
+		
+		<action name="tranAF" path="/tran_showTCAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.Tran_showTCAC"
+			scope="request">
+			<forward name="to_show_jsp" path="/tranout_showTC.jsp">
+			</forward>
+		</action>
+		
+		<action name="idAF" path="/tranoutTbBackAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranoutTbBackAC"
+			scope="request">
+			<forward name="to_tran_showTbAC" path="/tran_showFindTbAC.do">
+			</forward>
+		</action>
+		
+		
+		<action name="tranAF" path="/tranoutTcForwardURLAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranoutTcForwardURLAC">
+			<forward name="to_tcshow" path="/tran_showTCAC.do"></forward>
+		</action>
+    <action path="/inTran_AddFindempinfoAAC" type="org.xpup.hafmis.syscollection.tranmng.tranout.action.InTran_AddFindempinfoAAC" />
+    
+    <action path="/tranExportTaAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranout.action.TranExportTaAC"
+			scope="request" parameter="method">
+			<forward name="to_tran_showAC" path="/tran_showAC.do"></forward>
+		</action>
+		
+
+
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/tranmng/tranout/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>
+
+
+
+
+
+
+
+

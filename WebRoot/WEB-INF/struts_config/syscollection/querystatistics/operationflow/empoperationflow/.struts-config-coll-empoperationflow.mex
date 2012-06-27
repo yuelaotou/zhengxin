@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/empOperationFlowTaForwardURLAC.do" location="350,450" dimension="730,84" />
+  <StrutsActivity path="/empOperationFlowTaFindAC.do" location="950,50" dimension="694,84" />
+  <StrutsActivity path="/empOperationFlowTaShowAC.do" location="50,250" dimension="694,84" />
+  <StrutsActivity path="/empOperationFlowTaMaintainAC.do" location="950,250" dimension="718,84" />
+  <StrutsActivity path="/empoperationflow_lb.jsp" location="50,450" dimension="184,48" />
+  <StrutsActivity path="/empoperationflow_cell.jsp" location="350,150" dimension="196,48" />
+  <StrutsActivity path="toEmpOperationFlowTaShowAC;6" />
+  <StrutsTransition id="/empOperationFlowTaFindAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,92" />
+      <AbsolutePoint location="561,92" />
+      <AbsolutePoint location="561,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaShowAC.do,show_empOperationFlow,/empoperationflow_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="219,334" />
+      <AbsolutePoint location="219,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,292" />
+      <AbsolutePoint location="744,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_print,/empoperationflow_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1309,250" />
+      <AbsolutePoint location="1309,174" />
+      <AbsolutePoint location="546,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaForwardURLAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="715,450" />
+      <AbsolutePoint location="715,334" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="toEmpOperationFlowTaShowAC;6,null,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="397,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

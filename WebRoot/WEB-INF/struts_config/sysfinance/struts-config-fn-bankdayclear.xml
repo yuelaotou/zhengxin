@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- ============================================ta ========================================================-->
+	<!-- 直接跳到现金日记账的办理页面 -->
+	<action path="/bankDayClearTaForwardAC"
+	  		type="org.xpup.hafmis.sysfinance.treasurermng.bankdayclear.action.BankDayClearTaForwardAC">
+	  	<forward name="cashdayclearta_show" path="/cashDayClearTaShowAC.do"></forward>
+	 </action>
+	<!-- ============================================tb ========================================================-->
+	 <!-- 直接跳到现金日记账的转账页面 -->
+	 <action path="/bankDayClearTbForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.treasurermng.bankdayclear.action.BankDayClearTbForwardAC">
+	  	<forward name="cashdaycleartb_show" path="/cashDayClearTbShowAC.do"></forward>
+	 </action>
+	 <!-- ============================================tc ========================================================-->
+	 <!-- 直接跳到现金日记账的维护页面 -->
+	 <action path="/bankDayClearTcForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.treasurermng.bankdayclear.action.BankDayClearTcForwardAC">
+	  	<forward name="cashdaycleartc_show" path="/cashDayClearTcShowAC.do"></forward>
+	 </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

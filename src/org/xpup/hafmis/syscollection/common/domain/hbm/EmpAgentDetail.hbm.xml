@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="EmpAgentDetail" 
+    table="EA003"
+>
+
+    <id
+        name="empAgentId"
+        type="integer"
+        column="EMP_AGENT_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_EA003</param>
+	</generator>
+    </id>
+
+
+    <property
+        name="empAgentNum"
+        type="java.lang.String"
+        column="EMP_AGENT_NUM"
+        length="20"
+    />
+    <property
+        name="empName"
+        type="java.lang.String"
+        column="EMP_NAME"
+        length="20"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARDNUM"
+        length="20"
+    />
+    
+    <property
+        name="agentOrgPay"
+        type="java.math.BigDecimal"
+        column="AGENT_ORG_PAY"    
+        length="18"
+    />
+    
+   <property
+        name="agentEmpPay"
+        type="java.math.BigDecimal"
+        column="AGENT_EMP_PAY"    
+        length="18"
+    />
+   <property
+        name="agentEmpSalary"
+        type="java.math.BigDecimal"
+        column="AGENT_EMP_SALARY"    
+        length="18"
+    />
+ <property
+        name="orgAgentId"
+        type="java.lang.Integer"
+        column="ORG_AGENT_ID"
+    />
+
+
+</class>
+</hibernate-mapping>

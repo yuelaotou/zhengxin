@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="listaccAF"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.form.ListaccAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<action name="listaccAF" path="/listaccForwardAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.ListaccForwardAC">
+			<forward name="listaccShowAC" path="/listaccShowAC.do"></forward>
+		</action>
+
+		<action name="listaccAF" path="/listaccShowAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.ListaccShowAC">
+			<forward name="to_listacc_show"
+				path="/accmng/listacc/listaccShow.jsp">
+			</forward>
+		</action>
+		<!-- 对账导出action -->
+		<action name="listaccAF" path="/checkupAccForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.CheckupAccForwardURLAC">
+			<forward name="to_checkupaccexport"
+				path="/accmng/listacc/checkupaccexport.jsp">
+			</forward>
+		</action>
+		<action name="listaccAF" path="/checkupAccExportAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.CheckupAccExportAC">
+			<forward name="to_checkupaccexport"
+				path="/accmng/listacc/checkupaccexport.jsp">
+			</forward>
+		</action>
+		<!-- end -->
+		<action name="listaccAF" path="/listaccFindAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.ListaccFindAC">
+			<forward name="listaccShowAC" path="/listaccShowAC.do"></forward>
+		</action>
+
+		<action name="idAF" path="/listaccMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.ListaccMaintainAC">
+			<forward name="to_listacc_cell"
+				path="/accmng/listacc/listacc_cell.jsp">
+			</forward>
+		</action>
+
+
+		<action path="/checkSubjectcodeAAC"
+			type="org.xpup.hafmis.sysfinance.accmng.listacc.action.CheckSubjectcodeAAC">
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

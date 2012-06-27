@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.OrgBase" 
+    table="AA001"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA001</param>
+	</generator>
+    </id>
+
+    <property
+        name="payMode"
+        type="java.math.BigDecimal"
+        column="PAY_MODE"
+        length="22"
+    />
+    <property
+        name="orgRate"
+        type="java.math.BigDecimal"
+        column="ORG_RATE"
+        length="4"
+    />
+    <property
+        name="empRate"
+        type="java.math.BigDecimal"
+        column="EMP_RATE"
+        length="4"
+    />
+    <property
+        name="payPrecision"
+        type="integer"
+        column="PAY_PRECISION"
+        length="22"
+    />
+    <property
+        name="firstPayMonth"
+        type="java.lang.String"
+        column="FIRST_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="orgPayMonth"
+        type="java.lang.String"
+        column="ORG_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="empPayMonth"
+        type="java.lang.String"
+        column="EMP_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="oldOrgID"
+        type="integer"
+        column="ORG_ID_OLD"
+        length="18"
+    />
+	<many-to-one
+        name="orgInfo"
+        class="org.xpup.hafmis.syscommon.domain.entity.OrgInfo"
+        not-null="true"
+        lazy="false"
+        cascade="save-update">
+     	<column name="ORGINFO_ID" />
+    </many-to-one>
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

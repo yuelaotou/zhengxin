@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.AccountantCredence" 
+    table="FN201"
+>
+
+    <id
+        name="credenceId"
+        type="integer"
+        column="CREDENCE_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_FN201</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="credenceNum"
+        type="java.lang.String"
+        column="CREDENCE_NUM"
+        length="100"
+    />
+    <property
+        name="subjectCode"
+        type="java.lang.String"
+        column="SUBJECT_CODE"
+        length="100"
+    />
+    <property
+        name="summay"
+        type="java.lang.String"
+        column="SUMMAY"
+        length="100"
+    />
+    <property
+        name="freeSummay"
+        type="java.lang.String"
+        column="FREE_SUMMAY"
+        length="100"
+    />
+    <property
+        name="oldCredenceNum"
+        type="java.lang.String"
+        column="OLD_CREDENCE_NUM"
+        length="100"
+    />
+    <property
+        name="settNum"
+        type="java.lang.String"
+        column="SETT_NUM"
+        length="100"
+    />
+    <property
+        name="debit"
+        type="java.math.BigDecimal"
+        column="DEBIT"
+        length="15"
+    />
+    <property
+        name="credit"
+        type="java.math.BigDecimal"
+        column="CREDIT"
+        length="15"
+    />
+    <property
+        name="credenceDate"
+        type="java.lang.String"
+        column="CREDENCE_DATE"
+        length="8"
+    />
+    <property
+        name="credenceCharacter"
+        type="java.lang.String"
+        column="CREDENCE_CHARACTER"
+        length="100"
+    />
+    <property
+        name="makebill"
+        type="java.lang.String"
+        column="MAKEBILL"
+        length="100"
+    />
+    <property
+        name="checkpsn"
+        type="java.lang.String"
+        column="CHECKPSN"
+        length="100"
+    />
+    <property
+        name="accountpsn"
+        type="java.lang.String"
+        column="ACCOUNTPSN"
+        length="100"
+    />
+    <property
+        name="clearpsn"
+        type="java.lang.String"
+        column="CLEARPSN"
+        length="100"
+    />
+    <property
+        name="accountCharge"
+        type="java.lang.String"
+        column="ACCOUNT_CHARGE"
+        length="100"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="credenceSt"
+        type="java.lang.String"
+        column="CREDENCE_ST"
+        length="100"
+    />
+    <property
+        name="incDecSt"
+        type="java.lang.String"
+        column="INC_DEC_ST"
+        length="100"
+    />
+    <property
+        name="cashAccSt"
+        type="java.lang.String"
+        column="CASH_ACC_ST"
+        length="100"
+    />
+    <property
+        name="bankAccSt"
+        type="java.lang.String"
+        column="BANK_ACC_ST"
+        length="100"
+    />
+    <property
+        name="settType"
+        type="java.lang.String"
+        column="SETT_TYPE"
+        length="100"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

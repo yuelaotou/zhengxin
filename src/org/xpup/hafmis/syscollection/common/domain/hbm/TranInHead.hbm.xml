@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="TranInHead" 
+    table="AA311"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA311</param>
+			</generator>
+    </id>
+
+    <property
+        name="noteNum"
+        type="java.lang.String"
+        column="NOTE_NUM"
+        length="50"
+    />
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        length="50"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="tranOutHeadId"
+        type="java.math.BigDecimal"
+        column="TRAN_OUT_HEAD_ID"
+        length="22"
+    />
+    <property
+        name="tranStatus"
+        type="java.math.BigDecimal"
+        column="TRAN_STATUS"
+        not-null="true"
+        length="20"
+    />
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    
+    <property
+        name="tranOutOrgId"
+        type="java.lang.String"
+        column="OUT_ORG_ID"
+        length="50"
+    />
+    
+    <many-to-one name="tranInOrg"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.TranInOrg" not-null="true"  lazy="false">
+			<column name="IN_ORG_ID" />
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

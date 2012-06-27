@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="PartPickupCondition" 
+    table="AA401"
+>
+
+    <id
+        name="officeCode"
+        type="java.lang.String"
+        column="OFFICECODE"
+        
+    >
+    </id>
+    <property 
+		name="pickMoneyMax"
+		type="java.math.BigDecimal"
+		column="PICK_MONEY_MAX"
+		length="22"
+	/>
+    <property
+        name="pickTimeMax"
+        type="integer"
+        column="PICK_TIME_MAX"
+    />
+    <property
+        name="leavingsBalance"
+        type="java.math.BigDecimal"
+        column="LEAVINGS_BALANCE"
+        length="22"
+    />
+    <property
+        name="multiple"
+        type="integer"
+        column="MULTIPLE"
+    />
+</class>
+</hibernate-mapping>

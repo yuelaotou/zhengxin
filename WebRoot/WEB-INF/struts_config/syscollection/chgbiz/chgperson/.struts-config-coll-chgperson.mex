@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/chppersonForwardURLAC.do" location="1250,850" dimension="432,88" />
+  <StrutsActivity path="/showChgpersonDoListAC.do" location="950,50" dimension="268,88" />
+  <StrutsActivity path="/chgpersonFindEmpListAAC.do" location="350,150" dimension="436,88" />
+  <StrutsActivity path="/chgpersonFindEmpList_AjaxAAC.do" location="950,250" dimension="464,88" />
+  <StrutsActivity path="/maintainChgpersonDoListAC.do" location="50,350" dimension="464,88" />
+  <StrutsActivity path="/chgpersonDOSaveAC.do" location="650,450" dimension="412,88" />
+  <StrutsActivity path="/chgpersonFindEmpAAC.do" location="50,550" dimension="420,88" />
+  <StrutsActivity path="/saveChgpersonDoAC.do" location="350,1450" dimension="420,88" />
+  <StrutsActivity path="/chgpersonNewAC.do" location="650,650" dimension="394,88" />
+  <StrutsActivity path="/chgpersonImportAC.do" location="50,1250" dimension="270,88" />
+  <StrutsActivity path="/accountNewSumPayAAC.do" location="1250,450" dimension="419,88" />
+  <StrutsActivity path="/chgpersonSaveAC.do" location="1550,150" dimension="460,84" />
+  <StrutsActivity path="/chgPersonExportAC.do" location="1550,1050" dimension="472,84" />
+  <StrutsActivity path="/chgpersonMaintainForwardURLAC.do" location="1250,1350" dimension="472,88" />
+  <StrutsActivity path="/showChgpersonMaintainListAC.do" location="50,850" dimension="428,88" />
+  <StrutsActivity path="/maintainChgpersonMaintainListAC.do" location="650,850" dimension="442,88" />
+  <StrutsActivity path="/chgpersonCheckChgPersonAAC.do" location="350,1050" dimension="420,88" />
+  <StrutsActivity path="/deluseChgpersonAC.do" location="950,1050" dimension="455,88" />
+  <StrutsActivity path="/findChgpersonMaintainListAC.do" location="50,1650" dimension="449,88" />
+  <StrutsActivity path="/chgpersonWindowForwardURLAC.do" location="1250,650" dimension="449,88" />
+  <StrutsActivity path="/showChgpersonWindowAC.do" location="950,1550" dimension="437,88" />
+  <StrutsActivity path="/isCardNumSameAAC.do" location="1550,1550" dimension="466,84" />
+  <StrutsActivity path="/autoChangeAAC.do" location="650,1750" dimension="448,84" />
+  <StrutsActivity path="/autoChangePopShowAC.do" location="1250,1750" dimension="484,84" />
+  <StrutsActivity path="/autoChangeSaveAC.do" location="350,1950" dimension="466,84" />
+  <StrutsActivity path="/autoChangeSaveALLAC.do" location="50,2350" dimension="484,84" />
+  <StrutsActivity path="/chgPersonAutoopenShowAC.do" location="50,2150" dimension="508,84" />
+  <StrutsActivity path="/chgPersonAutoopenSaveAC.do" location="650,2150" dimension="508,84" />
+  <StrutsActivity path="/chgPersonAutoopenAllSaveAC.do" location="1550,2150" dimension="526,84" />
+  <StrutsActivity path="/chgpersonAAC.do" location="950,1950" dimension="442,84" />
+  <StrutsActivity path="/chgpersonDoList.jsp" location="50,150" dimension="130,49" />
+  <StrutsActivity path="/chgpersondo_imports.jsp" location="50,1150" dimension="154,49" />
+  <StrutsActivity path="/chgpersonList_cell.jsp" location="950,1250" dimension="178,48" />
+  <StrutsActivity path="/chgpersondo_new.jsp" location="650,350" dimension="139,49" />
+  <StrutsActivity path="/chgpersondo_choose.jsp" location="50,1450" dimension="153,49" />
+  <StrutsActivity path="/chgpersonWindow.jsp" location="650,1250" dimension="139,49" />
+  <StrutsActivity path="/chgpersonMaintainList.jsp" location="350,750" dimension="157,49" />
+  <StrutsActivity path="/autochangepop_show.jsp" location="1550,2050" dimension="178,48" />
+  <StrutsActivity path="/chgPersonAutoopenpop.jsp" location="1250,2250" dimension="190,48" />
+  <StrutsActivity path="/chgpersonquery.jsp" location="650,1350" dimension="154,48" />
+  <StrutsActivity path="/chgpersonOrgList.jsp" location="50,1950" dimension="135,49" />
+  <StrutsActivity path="/demoList.jsp" location="650,50" dimension="93,49" />
+  <StrutsActivity path="/chgpersonDo_new.jsp" location="50,250" dimension="140,49" />
+  <StrutsActivity path="/chgpersonNewAC" location="50,750" dimension="118,49" />
+  <StrutsActivity path="" location="50,1050" dimension="29,49" />
+  <StrutsActivity path="/chgpersonNewAC.jsp" location="950,1450" dimension="136,49" />
+  <StrutsActivity path="/showChgpersonDoListAC" location="1250,1250" dimension="153,49" />
+  <StrutsTransition id="/chgpersonDOSaveAC.do,to_chgperson_save,/chgpersonNewAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="826,538" />
+      <AbsolutePoint location="826,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chppersonForwardURLAC.do,to_chgpersonDo_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1466,850" />
+      <AbsolutePoint location="1466,765" />
+      <AbsolutePoint location="2433,765" />
+      <AbsolutePoint location="2433,94" />
+      <AbsolutePoint location="1218,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonDOSaveAC.do,to_chgperson_choose,/chgpersondo_choose.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,494" />
+      <AbsolutePoint location="-55,494" />
+      <AbsolutePoint location="-55,1474" />
+      <AbsolutePoint location="50,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonDoListAC.do,to_chgperson_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="282,350" />
+      <AbsolutePoint location="282,-25" />
+      <AbsolutePoint location="1084,-25" />
+      <AbsolutePoint location="1084,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonImportAC.do,to_chgperson_imports,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1294" />
+      <AbsolutePoint location="-370,1294" />
+      <AbsolutePoint location="-370,-190" />
+      <AbsolutePoint location="1024,-190" />
+      <AbsolutePoint location="1024,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/deluseChgpersonAC.do,to_chgperson_deluse,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1177,1138" />
+      <AbsolutePoint location="1177,1165" />
+      <AbsolutePoint location="264,1165" />
+      <AbsolutePoint location="264,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonMaintainListAC.do,to_chgperson_modify,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="871,938" />
+      <AbsolutePoint location="871,984" />
+      <AbsolutePoint location="-25,984" />
+      <AbsolutePoint location="-25,5" />
+      <AbsolutePoint location="1054,5" />
+      <AbsolutePoint location="1054,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonSaveAC.do,to_chgperson_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,192" />
+      <AbsolutePoint location="1084,192" />
+      <AbsolutePoint location="1084,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonSaveAC.do,to_chgperson_save,/chgpersonNewAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1780,234" />
+      <AbsolutePoint location="1780,595" />
+      <AbsolutePoint location="856,595" />
+      <AbsolutePoint location="856,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonDoListAC.do,to_chgperson_imports,/chgpersondo_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="514,374" />
+      <AbsolutePoint location="529,374" />
+      <AbsolutePoint location="529,954" />
+      <AbsolutePoint location="127,954" />
+      <AbsolutePoint location="127,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgpersonWindowAC.do,to_chgperson_window,/chgpersonWindow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1625" />
+      <AbsolutePoint location="901,1625" />
+      <AbsolutePoint location="901,1274" />
+      <AbsolutePoint location="789,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/saveChgpersonDoAC.do,to_chgperson_list,/chgpersonNewAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,1514" />
+      <AbsolutePoint location="35,1514" />
+      <AbsolutePoint location="35,724" />
+      <AbsolutePoint location="650,724" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonNewAC.do,to_chgperson_save,/chgpersondo_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,664" />
+      <AbsolutePoint location="589,664" />
+      <AbsolutePoint location="589,374" />
+      <AbsolutePoint location="650,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonMaintainForwardURLAC.do,to_chgpersonMaintain_list,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1486,1350" />
+      <AbsolutePoint location="1486,1314" />
+      <AbsolutePoint location="335,1314" />
+      <AbsolutePoint location="335,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonQueryShowAC.do,chgpersonquery,/chgpersonquery.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2095,1334" />
+      <AbsolutePoint location="2095,1695" />
+      <AbsolutePoint location="785,1695" />
+      <AbsolutePoint location="785,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgpersonDoListAC.do,to_chgpersonDo_list,/chgpersonDoList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,114" />
+      <AbsolutePoint location="115,114" />
+      <AbsolutePoint location="115,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgPersonExportAC.do,to_chgperson_window,/chgpersonWindow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1780,1050" />
+      <AbsolutePoint location="1780,954" />
+      <AbsolutePoint location="785,954" />
+      <AbsolutePoint location="785,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonDOSaveAC.do,to_chgperson_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="856,450" />
+      <AbsolutePoint location="856,84" />
+      <AbsolutePoint location="950,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonDOSaveAC.do,to_chgpersonsave_jsp,/chgpersondo_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="774,450" />
+      <AbsolutePoint location="774,399" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgpersonMaintainListAC.do,to_chgpersonMaintain_list,/chgpersonMaintainList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,850" />
+      <AbsolutePoint location="365,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgpersonDoListAC.do,to_chgpersonDoFail_list,/chppersonForwardURLAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1218,124" />
+      <AbsolutePoint location="2373,124" />
+      <AbsolutePoint location="2373,814" />
+      <AbsolutePoint location="1496,814" />
+      <AbsolutePoint location="1496,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonMaintainListAC.do,to_chgperson_deluse,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,924" />
+      <AbsolutePoint location="478,924" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/autoChangeSaveALLAC.do,to_showChgpersonDoListAC,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,2392" />
+      <AbsolutePoint location="-235,2392" />
+      <AbsolutePoint location="-235,-280" />
+      <AbsolutePoint location="994,-280" />
+      <AbsolutePoint location="994,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonMaintainListAC.do,to_chgperson_delete,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,894" />
+      <AbsolutePoint location="478,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgPersonAutoopenSaveAC.do,to_chgpersonDo_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,2150" />
+      <AbsolutePoint location="904,1879" />
+      <AbsolutePoint location="2463,1879" />
+      <AbsolutePoint location="2463,64" />
+      <AbsolutePoint location="1218,64" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonDoListAC.do,to_chgperson_save,/chgpersonNewAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="485,438" />
+      <AbsolutePoint location="485,694" />
+      <AbsolutePoint location="650,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findChgpersonMaintainListAC.do,to_chgpersonMaintain_list,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1694" />
+      <AbsolutePoint location="-85,1694" />
+      <AbsolutePoint location="-85,894" />
+      <AbsolutePoint location="50,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonDoListAC.do,to_chgpersonList_cell,/chgpersonList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,394" />
+      <AbsolutePoint location="-160,394" />
+      <AbsolutePoint location="-160,1214" />
+      <AbsolutePoint location="1039,1214" />
+      <AbsolutePoint location="1039,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonImportAC.do,to_chgperson_importsfail,/chgpersondo_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="185,1250" />
+      <AbsolutePoint location="185,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonQueryForwardAC.do,chgpersonQueryShowAC,/chgpersonQueryShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2358,692" />
+      <AbsolutePoint location="2493,692" />
+      <AbsolutePoint location="2493,1292" />
+      <AbsolutePoint location="2340,1292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgPersonAutoopenAllSaveAC.do,to_chgpersonDo_list,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2076,2192" />
+      <AbsolutePoint location="2403,2192" />
+      <AbsolutePoint location="2403,-355" />
+      <AbsolutePoint location="1144,-355" />
+      <AbsolutePoint location="1144,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/autoChangePopShowAC.do,to_autochangepop_show,/autochangepop_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1565,1834" />
+      <AbsolutePoint location="1565,2050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonQueryFindAC.do,chgpersonQueryShowAC,/chgpersonQueryShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2095,934" />
+      <AbsolutePoint location="2095,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonDOSaveAC.do,to_chgpersonList_cell,/chgpersonList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,464" />
+      <AbsolutePoint location="-310,464" />
+      <AbsolutePoint location="-310,1413" />
+      <AbsolutePoint location="1039,1413" />
+      <AbsolutePoint location="1039,1298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonMaintainListAC.do,to_chgperson_use,/showChgpersonMaintainListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,864" />
+      <AbsolutePoint location="478,864" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonSaveAC.do,to_chgperson_choose,/chgpersondo_choose.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1810,234" />
+      <AbsolutePoint location="1810,984" />
+      <AbsolutePoint location="931,984" />
+      <AbsolutePoint location="931,1595" />
+      <AbsolutePoint location="126,1595" />
+      <AbsolutePoint location="126,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainChgpersonMaintainListAC.do,to_chgpersonList_cell,/chgpersonList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="871,894" />
+      <AbsolutePoint location="1039,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgPersonAutoopenShowAC.do,to_chgPersonAutoopenpop,/chgPersonAutoopenpop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/autoChangeSaveAC.do,to_showChgpersonDoListAC,/showChgpersonDoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,2014" />
+      <AbsolutePoint location="5,2014" />
+      <AbsolutePoint location="5,-85" />
+      <AbsolutePoint location="1114,-85" />
+      <AbsolutePoint location="1114,50" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpersonWindowForwardURLAC.do,to_show_window,/showChgpersonWindowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1436,738" />
+      <AbsolutePoint location="1436,814" />
+      <AbsolutePoint location="-130,814" />
+      <AbsolutePoint location="-130,1565" />
+      <AbsolutePoint location="950,1565" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/saveChgpersonDoAC.do,to_chgperson_save,/chgpersonNewAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="770,1484" />
+      <AbsolutePoint location="834,1484" />
+      <AbsolutePoint location="834,1014" />
+      <AbsolutePoint location="1167,1014" />
+      <AbsolutePoint location="1167,694" />
+      <AbsolutePoint location="1044,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

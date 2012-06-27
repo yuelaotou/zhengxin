@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="personalloancalcFindAF"
+			type="org.xpup.hafmis.sysloan.loanapply.personalloancalc.form.PersonalloancalcFindAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<action path="/personalloancalcForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.personalloancalc.action.PersonalloancalcForwardURLAC">
+			<forward name="personalloancalcShowAC"
+				path="/personalloancalcShowAC.do" />
+		</action>
+
+		<action name="personalloancalcFindAF" path="/personalloancalcShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.personalloancalc.action.PersonalloancalcShowAC">
+			<forward name="to_personalloancalc_show"
+				path="/loanapply/personalloancalc/personalloancalc_show.jsp">
+			</forward>
+		</action>
+
+		<action name="personalloancalcFindAF" path="/personalloancalcFindAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.personalloancalc.action.PersonalloancalcFindAC">
+			<forward name="personalloancalcShowAC"
+				path="/personalloancalcShowAC.do" />
+		</action>
+
+		<action name="idAF" path="/personalloancalcMaintainAC"
+			scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.personalloancalc.action.PersonalloancalcMaintainAC">
+			<forward name="to_personalloancalc_cell"
+				path="/loanapply/personalloancalc/personalloancalc_cell.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<root file="2">
+
+	<file name="BuildExportHead" col="4" space="0" row="2">
+		<column>developerId</column>
+		<column>developerName</column>
+		<column>floorId</column>
+		<column>floorName</column>
+	</file>
+
+	<file name="BuildExport" col="5" space="2" row="-1">
+		<!--    <column>buildId</column>
+			<column>floorId</column>-->
+		<column>buildNum</column>
+		<column>buildAdd</column>
+		<column>build_s</column>
+		<column>fundStatus</column>
+		<column>reserved</column>
+
+	</file>
+</root>

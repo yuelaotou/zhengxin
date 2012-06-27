@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	 <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="empAccountAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.form.EmpAccountAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	<action name="empAccountAF" path="/findEmpAccountListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.FindEmpAccountListAC">
+			<forward name="to_empAccountshow_list" path="/showEmpAccountListAC.do"/>
+		</action>
+	 <action name="empAccountAF" path="/showEmpAccountDayListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.ShowEmpAccountDayListAC">
+			<forward name="to_empAccount_day_list" path="/empaccount_day_List.jsp"/>
+		</action>
+	    <action name="empAccountAF" path="/showEmpAccountMonthListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.ShowEmpAccountMonthListAC">
+			<forward name="to_empAccount_month_list" path="/empaccount_month_List.jsp"/>
+		</action>
+	     <action path="/showEmpAccountListURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.ShowEmpAccountListURLAC">
+			<forward name="to_showEmpAccount_list" path="/showEmpAccountListAC.do"/>
+		</action>
+	    <action name="empAccountAF" path="/showEmpAccountListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.ShowEmpAccountListAC">
+			<forward name="to_empAccount_list" path="/empaccount_List.jsp"/>
+		</action>
+		<action name="idAF" path="/empAccountMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.empaccountinfo.action.EmpAccountMaintainAC">
+			<forward name="to_empAccount_cell" path="/empaccount_cell.jsp"></forward>
+		</action>
+	
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/accountinfo/empaccountinfo/applicationContext.xml" />
+	</plug-in>
+</struts-config>

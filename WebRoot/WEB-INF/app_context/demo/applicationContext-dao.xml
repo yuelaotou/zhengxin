@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- ========== demo Dao config ========== -->
+	<bean id="demoDAO" class="org.xpup.hafmis.demo.dao.DemoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="demoDwDAO" class="org.xpup.hafmis.demo.dao.DemoDwDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+</beans>

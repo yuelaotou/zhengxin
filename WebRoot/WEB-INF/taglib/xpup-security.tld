@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd">
+<taglib>
+	<tlibversion>1.0</tlibversion>
+	<jspversion>1.1</jspversion>
+	<shortname>security</shortname>
+	<uri>http://www.xpup.org/security/tags-html</uri>
+
+	<tag>
+		<name>editorMenu</name>
+		<tagclass>
+			org.xpup.security.buildtime.taglib.EditorMenuTag
+		</tagclass>
+		<bodycontent>empty</bodycontent>
+		<attribute>
+			<name>drawerClass</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>authorize</name>
+		<tagclass>org.xpup.security.wsf.taglib.AuthorizeTag</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<attribute>
+			<name>operation</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+
+
+	<tag>
+		<name>menuSelector</name>
+		<tagclass>
+			org.xpup.security.wsf.taglib.MenuSelectorTag
+		</tagclass>
+		<bodycontent>empty</bodycontent>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>accordingTo</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>scope</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+<tag>
+		<name>orgcan</name>
+		<tagclass>org.xpup.common.util.taglib.orgtaglib.Orgcan</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<attribute>
+			<name>hlorgcan</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>orgcannot</name>
+		<tagclass>org.xpup.common.util.taglib.orgtaglib.Orgcannot</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<attribute>
+			<name>hlorgcannot</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>orghave</name>
+		<tagclass>org.xpup.common.util.taglib.orgtaglib.Orghave</tagclass>
+		<bodycontent>JSP</bodycontent>
+		<attribute>
+			<name>hlorghave</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>service</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>
+

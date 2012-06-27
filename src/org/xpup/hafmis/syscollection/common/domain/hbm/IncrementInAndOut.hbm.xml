@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="IncrementInAndOut" 
+    table="AA400"
+>
+
+    <id
+        name="subjectCode"
+        type="java.lang.String"
+        column="SUBJECT_CODE"
+    >
+    </id>
+    <property 
+		name="bookId"
+		type="java.lang.String"
+		column="BOOK_ID"
+		length="22"
+		not-null="true"
+	/>
+    <property
+        name="code"
+        type="java.lang.String"
+        column="CODE"
+        length="22"
+    />
+    <property
+        name="result"
+        type="java.math.BigDecimal"
+        column="RESULT"
+        length="22"
+    />
+</class>
+</hibernate-mapping>

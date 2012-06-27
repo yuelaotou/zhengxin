@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+		<!--	公共结束	-->		
+		<form-bean name="clearaccountAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.form.ClearaccountAF"/>		
+			<!-- 结算单查询 -->	
+		<form-bean name="clearAccountBalanceAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.form.ClearAccountBalanceAF"/>	
+		<form-bean name="clearAccountBalanceInfoAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.form.ClearAccountBalanceInfoAF"/>	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	    <action  path="/principalDayAccForwardAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.PrincipalDayAccForwardAC">
+			<forward name="principalDayAccShowAC" path="/principalDayAccShowAC.do"/>
+		</action>
+	    <action  path="/principalDayAccFindAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.PrincipalDayAccFindAC">
+			<forward name="principalDayAccShowAC" path="/principalDayAccShowAC.do"/>
+		</action>
+	    <action  path="/principalDayAccShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.PrincipalDayAccShowAC">
+			<forward name="principaldayacc" path="/accounthandle/clearaccount/principaldayacc.jsp"/>
+		</action>
+	    <action  path="/clearaccountTaForwardUrlAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTaForwardUrlAC">
+			<forward name="clearaccountTaShowAC" path="/clearaccountTaShowAC.do"/>
+		</action>
+		<action  path="/clearaccountTaShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTaShowAC">
+			<forward name="to_clearaccount_show" path="/accounthandle/clearaccount/clearaccount_show.jsp"/>
+		</action>
+		<action name="idAF" path="/clearaccountTaMaintainAC" parameter="method" type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTaMaintainAC">
+			<forward name="clearaccountTaShowAC" path="/clearaccountTaShowAC.do"/>
+		</action>
+		<action name="clearaccountAF" path="/clearaccountTaFindAC" 
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTaFindAC">
+			<forward name="clearaccountTaShowAC" path="/clearaccountTaShowAC.do"/>
+		</action>
+		<!-- 结算单查询 -->
+		
+	    <action  path="/clearaccountTbForwardURLAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbForwardURLAC">
+			<forward name="clearaccountTbShowAC" path="/clearaccountTbShowAC.do"/>
+		</action>
+	    <action name="clearAccountBalanceAF"  path="/clearaccountTbFindAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbFindAC">
+			<forward name="clearaccountTbShowAC" path="/clearaccountTbShowAC.do"/>
+		</action>
+	    <action  path="/clearaccountTbShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbShowAC">
+			<forward name="clearaccountbalance" path="/accounthandle/clearaccount/clearaccountbalance.jsp"/>
+		</action>
+		<action name="clearAccountBalanceInfoAF" path="/clearaccountTbMaintainAC" parameter="method" 
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbMaintainAC">
+			<forward name="clearaccountbalance_cell" path="/accounthandle/clearaccount/clearaccountbalance_cell.jsp"/>
+			<forward name="to_print_month" path="/accounthandle/clearaccount/clearaccountbalance_month_cell.jsp"/>
+		</action>
+		<!-- 弹出框 -->
+		
+		<action path="/clearaccountTbMXFindAAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbMXFindAAC">
+		</action>								
+		<action name="clearaccountAF" path="/clearaccountTbMXFindAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbMXFindAC" >
+			<forward name="clearaccountTbMXShowAC" path="/clearaccountTbMXShowAC.do"></forward>
+		</action>
+		<action path="/clearaccountTbMXShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbMXShowAC" >
+			<forward name="clearaccountbalanceWindow" path="/accounthandle/clearaccount/clearaccountbalanceWindow.jsp"></forward>
+		</action>
+		<action name="idAF" path="/clearaccountTbMXMaintainAC" 
+		parameter="method"
+			type="org.xpup.hafmis.sysloan.accounthandle.clearaccount.action.ClearaccountTbMXMaintainAC" >
+			<forward name="clearaccountbalanceWindow_cell" path="/accounthandle/clearaccount/clearaccountbalanceWindow_cell.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

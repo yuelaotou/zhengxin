@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="pickYearReportBS" parent="baseTransactionProxy">
+	 <property name="target">
+	  <bean class="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickyearreport.business.PickYearReportBS">
+	    <property name="pickHeadDAO">
+	      <ref bean="pickHeadDAO"/>
+	    </property>
+	  </bean>
+	 </property>
+	</bean>
+</beans>
+

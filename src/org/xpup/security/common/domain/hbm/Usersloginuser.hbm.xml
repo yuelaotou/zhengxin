@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.security.common.domain.Usersloginuser" 
+    table="CA115"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_CA115</param>
+	</generator>
+    </id>
+
+   
+    <property
+        name="subUsername"
+        type="integer"
+        column="SUBUSERNAME"
+        not-null="true"
+        length="100"
+    />
+
+    <property
+        name="username"
+        type="java.lang.String"
+        column="USERNAME"
+        not-null="true"
+        length="100"
+    />
+
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

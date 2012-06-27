@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	 <form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+	 <form-bean name="pickMonthReportFindAF" 
+	        type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.form.PickMonthReportFindAF"/>	
+	 <form-bean name="pickMonthReportBankPopAF" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.form.PickMonthReportBankPopAF"/>	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	
+	 <action name="pickMonthReportFindAF" 
+	         path="/pickMonthReportForwardURLAC"
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportForwardURLAC" >
+	 	<forward name="pickMonthReportShowAC" path="/pickMonthReportShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="pickMonthReportFindAF" 
+	         path="/pickMonthReportShowAC" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportShowAC">
+	 	<forward name="to_pickMonthReport.jsp" path="/pickMonthReport.jsp"></forward>
+	 </action>
+	 
+	 <action name="pickMonthReportFindAF" 
+	         path="/pickMonthReportFindAC" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportFindAC">
+	 	<forward name="pickMonthReportShowAC" path="/pickMonthReportShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" 
+	         path="/pickMonthReportMaintainAC" 
+	         parameter="method"
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportMaintainAC">
+	 	<forward name="to_pickMonthReport_cell.jsp" path="/pickMonthReport_cell.jsp"></forward>
+	 </action>
+	 
+	 <action  name="pickMonthReportBankPopAF" 
+	          path="/pickMonthReportBankPopShowAC" 
+	          type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportBankPopShowAC">
+	          <forward name="to_pickMonthReportBankPop.jsp" path="/pickMonthReportBankPop.jsp"></forward>
+	 </action>
+	 
+	 <action name="pickMonthReportBankPopAF" 
+	         path="/pickMonthReportBankPopFindAC" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.pickmonthreport.action.PickMonthReportBankPopFindAC">
+	         <forward name="pickMonthReportBankPopShowAC" path="/pickMonthReportBankPopShowAC.do"></forward>
+	 </action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickstatistics/pickmonthreport/applicationContext.xml" />
+	</plug-in>
+</struts-config>

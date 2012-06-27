@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.xpup.security.common.domain">
+
+	<class name="DuRelation" table="CA111">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="queryLevel" type="string" column="QUERY_LEVEL" />
+
+		<property name="operationLevel" type="string"
+			column="OPERATION_LEVEL" />
+
+		<many-to-one name="dataAccess" class="DataAccess" lazy="false">
+			<column name="DATA_ACCESS_ID" />
+		</many-to-one>
+
+		<many-to-one name="user" class="User" lazy="false">
+			<column name="USER_ID" />
+		</many-to-one>
+
+	</class>
+
+</hibernate-mapping>

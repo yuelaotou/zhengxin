@@ -1,0 +1,156 @@
+a {  font-size: 12px; color: #000000; text-decoration: none}
+.input {BORDER-RIGHT: #b3b3b3 1px solid; BORDER-TOP: #b3b3b3 1px solid; FONT-SIZE: 12px;BORDER-LEFT: #b3b3b3 1px solid; BORDER-BOTTOM: #b3b3b3 1px solid; BACKGROUND-COLOR: #DEEBF3;}
+
+.p {LINE-HEIGHT: 300%; TEXT-DECORATION: none}
+H1 {FONT-WEIGHT: bold; FONT-SIZE: 150%; TEXT-DECORATION: none}
+H2 {FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none}
+H3 {FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none}
+.h2 {FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none}
+.h3 {FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none}
+
+.ErrorStyle{font-size: 12px;font-weight: bold;color: #FF0000;}
+.PageTitle{font-size: 16px;font-weight: bold;color: #000000;}
+
+.ListTitle{background-color:#BAD1E8;font-size: 12px; text-decoration: none; font-weight: bold}
+.ListItem{background-color:#e6e6e6;font-size: 12px; text-decoration: none}
+
+.row1 {
+	background-color: #ECECEC;
+}
+.row2 {
+	background-color: #F5F5F5;
+}
+
+.row1Text{
+background-color:#ECECEC;
+text-align: right;
+border-width: 0px 0px 0px 0px;
+}
+.row2Text{
+background-color:#F5F5F5;
+text-align: right;
+border-width: 0px 0px 0px 0px;
+}
+.SumText{
+background-color:#BAD1E8;
+font-weight: bold;
+text-decoration: none;
+text-align: right;
+border-width: 0px 0px 0px 0px;
+}
+.Pagination
+{
+  font-family:"Webdings";
+  font-size:19px;
+  text-decoration:none;
+  text-align:center;
+  cursor:hand;
+}
+
+#msviHomePageLink {
+	PADDING-LEFT: 2px; WIDTH: 177px
+}
+#msviHomePageLink TD {
+	FONT-SIZE: 100%
+}
+#msviHomePageLink A {
+	BORDER-RIGHT: #f1f1f1 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #f1f1f1 1px solid; DISPLAY: block; PADDING-LEFT: 6px; BACKGROUND: #f1f1f1; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #f1f1f1 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #f1f1f1 1px solid; WHITE-SPACE: nowrap
+}
+#msviHomePageLink A:hover {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #999 1px solid; DISPLAY: block; PADDING-LEFT: 6px; BACKGROUND: #ccc; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
+}
+#msviLocalToolbar {
+	PADDING-RIGHT: 0px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 0px; FONT-SIZE: 100%; BACKGROUND: #f1f1f1; PADDING-BOTTOM: 1px; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
+}
+#msviLocalToolbar TD {
+	FONT-SIZE: 100%
+}
+#msviLocalToolbar A {
+	FONT: 70% Verdana; COLOR: black; TEXT-DECORATION: none
+}
+.lt0 {
+	BORDER-RIGHT: #f1f1f1 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #f1f1f1 1px solid; PADDING-LEFT: 6px; BACKGROUND: #f1f1f1; PADDING-BOTTOM: 0px; BORDER-LEFT: #f1f1f1 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #f1f1f1 1px solid
+}
+.lt1 {
+	BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 6px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 6px; BACKGROUND: #ccc; PADDING-BOTTOM: 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #999 1px solid
+}
+.PageClass
+{
+	background-color:#F1F1F1;
+}
+.linebox {
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 0px;
+
+}
+.IFrameBox {
+	border: 1px solid #000000;
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px;  PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: #000000; PADDING-TOP: 0px; FONT-FAMILY: "ËÎÌו"; BACKGROUND-COLOR: #FFFFFF
+}
+TD {
+	FONT-SIZE: 9pt; line-height:1.2;
+}
+
+A:link {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #003399; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff9900; TEXT-DECORATION: underline
+}
+.copyright {
+	FONT-WEIGHT: normal; FONT-SIZE: 12px; COLOR: #ffffff; FONT-FAMILY: "Arial", "Helvetica", "sans-serif"; TEXT-ALIGN: right
+}
+.contentbox {
+	OVERFLOW: auto; BACKGROUND-COLOR: #fcfcfc
+}
+.content {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+.tab-on {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; CURSOR: hand; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px; BACKGROUND-COLOR: #ffffff
+}
+.tab-off {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 120px; CURSOR: hand; COLOR: #666666; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #E8F1F7
+}
+.tab-none {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 2px; BORDER-TOP: #cccccc 1px; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc 1px solid
+}
+.tab-content {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px; VERTICAL-ALIGN: top; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+
+.td_heading {
+	BORDER-RIGHT: #cccccc 1px; PADDING-RIGHT: 3px; BORDER-TOP: #cccccc 1px; PADDING-LEFT: 10px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cccccc 1px; COLOR: #3A7CA9; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px dashed
+}
+.td_title {
+	BORDER-RIGHT: #e0e0e0 1px solid; BORDER-TOP: #e0e0e0 1px solid; BORDER-LEFT: #e0e0e0 1px solid; COLOR: #666666; BORDER-BOTTOM: #e0e0e0 1px solid; BACKGROUND-COLOR: #f6f6f6
+}
+.td_text {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; PADDING-TOP: 10px
+}
+.input-text {
+	font-family: "Courier New", "Courier", "mono";
+	font-size: 12px;
+	color: #0A6F9E;
+	background-color: #FFFFFF;
+	border: 1px solid #5A5A5A;
+}
+.title {
+	font-family: "ËÎÌו";
+	font-weight: bold;
+	font-size: 18px;
+	color: #0A6F9E;
+	MARGIN-top:60px;
+
+}

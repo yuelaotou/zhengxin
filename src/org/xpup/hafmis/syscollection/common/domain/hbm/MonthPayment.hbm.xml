@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<subclass name="MonthPayment"
+		extends="org.xpup.hafmis.syscollection.common.domain.entity.PaymentHead"
+		discriminator-value="A" dynamic-insert="true" dynamic-update="true"
+		select-before-update="true">
+		
+    <property
+        name="payModel"
+        type="integer"
+        column="PAY_MODEL"
+        not-null="false"
+        length="9"
+    />
+	<property name="minMaxMonth" type="java.lang.String" 
+          formula="(select min(a.pay_month)||'-'||max(a.pay_month) from aa302 a where a.pay_head_id=id)"
+			/>	
+	</subclass>
+</hibernate-mapping>

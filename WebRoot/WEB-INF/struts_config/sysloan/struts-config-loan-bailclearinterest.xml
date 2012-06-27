@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="bailClearInterestTaAF"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.form.BailClearInterestTaAF" />
+		<form-bean name="bailClearInterestTbAF"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.form.BailClearInterestTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	    <!-- =================================== ta ==========================================-->
+		<action path="/bailClearInterestTaForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTaForwardURLAC">
+			<forward name="bailClearInterestTaShowAC"
+				path="/bailClearInterestTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="bailClearInterestTaAF" path="/bailClearInterestTaShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTaShowAC">
+			<forward name="to_bailclearinterest_showta"
+				path="/specialbiz/bailclearinterest/bailclearinterest_showta.jsp">
+			</forward>
+		</action>
+
+		<action name="bailClearInterestTaAF" path="/bailClearInterestTaFindAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTaFindAC"
+			scope="request">
+			<forward name="bailClearInterestTaShowAC"
+				path="/bailClearInterestTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/bailClearInterestTaMaintainAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTaMaintainAC"
+			scope="request" parameter="method">
+			<forward name="bailClearInterestTaShowAC"
+				path="/bailClearInterestTaShowAC.do">
+			</forward>
+		</action>
+		
+		<!-- =================================== tb ==========================================-->
+		<action path="/bailClearInterestTbForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTbForwardURLAC">
+			<forward name="bailClearInterestTbShowAC"
+				path="/bailClearInterestTbShowAC.do">
+			</forward>
+		</action>
+
+		<action name="bailClearInterestTbAF" path="/bailClearInterestTbShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTbShowAC">
+			<forward name="to_bailclearinterest_showtb"
+				path="/specialbiz/bailclearinterest/bailclearinterest_showtb.jsp">
+			</forward>
+		</action>
+
+		<action name="bailClearInterestTbAF" path="/bailClearInterestTbFindAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTbFindAC"
+			scope="request">
+			<forward name="bailClearInterestTbShowAC"
+				path="/bailClearInterestTbShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/bailClearInterestTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.action.BailClearInterestTbMaintainAC"
+			scope="request" parameter="method">
+			<forward name="bailClearInterestTbShowAC"
+				path="/bailClearInterestTbShowAC.do">
+			</forward>
+			<forward name="to_bailclearinterest_printtb"
+				path="/specialbiz/bailclearinterest/bailclearinterest_celltb.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

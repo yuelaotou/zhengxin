@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="bizcheckAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.form.BizcheckAF">
+		</form-bean>
+	    <form-bean name="bizcheckDetailAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.form.BizcheckDetailAF">
+		</form-bean>
+		<form-bean name="orgkhAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.OrgkhAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+         <action name="bizcheckAF" path="/bizcheckTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaForwardURLAC">
+			<forward name="bizcheckTaShowAC.do" path="/bizcheckTaShowAC.do"/>
+		</action>
+		<action name="bizcheckAF" path="/bizcheckTaFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaFindAC">
+			<forward name="to_bizcheckTaShowAC.do" path="/bizcheckTaShowAC.do">
+			</forward>
+
+		</action>
+
+		<action name="bizcheckAF" path="/bizcheckTaShowAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaShowAC">
+			<forward name="to_bizcheck.jsp" path="/bizcheck_list.jsp">
+			</forward>
+		</action>
+		
+		  <action name="idAF" path="/bizcheckTaMaintainAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaMaintainAC">
+		<forward name="to_bizcheckTaShowAC.do" path="/bizcheckTaShowAC.do"></forward>
+		</action>
+		
+		<action path="/bizcheckTaWindowAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaWindowAC">
+		<forward name="to_bizcheck_windowlist.jsp" path="/bizcheck_windowlist.jsp"></forward>
+			<forward name="to_bizcheck_mx_A.jsp" path="/bizcheck_mx_A.jsp"></forward>
+		<forward name="to_bizcheck_mx_M.jsp" path="/bizcheck_mx_M.jsp"></forward>
+		<forward name="to_bizcheck_mx_E.jsp" path="/bizcheck_mx_E.jsp"></forward>
+		<forward name="to_bizcheck_mx_F.jsp" path="/bizcheck_mx_F.jsp"></forward>
+		<forward name="to_bizcheck_mx_D.jsp" path="/bizcheck_mx_D.jsp"></forward>
+		<forward name="to_orgover_windowlist.jsp" path="/orgoverpay_lb_detail.jsp"></forward>
+		</action>
+		
+		
+		<action path="/bizcheckTaRemotePrintAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaRemotePrintAAC">
+		</action>
+	 
+		<action name="bizcheckDetailAF" path="/bizcheckTaWindowPrintAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaWindowPrintAC" >
+			 <forward name="show_report" path="/bizcheck_mx_cell.jsp"></forward> 
+		</action>
+	
+		<action name="bizcheckDetailAF" path="/bizcheckTaWindowOrgoverPrintAC" 
+		    type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckTaWindowOrgoverPrintAC">
+		    <forward name="show_report" path="/bizcheck_mx_orgover_cell.jsp"></forward>
+		</action>
+		<action path="/bizCheckCheckAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizCheckCheckAAC">
+		</action>
+	 	<action name="orgkhAF" path="/bizCheckCheckAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizCheckCheckAC" >
+			 <forward name="to_show_modify" path="/bizcheckbankmodify.jsp"></forward> 
+		</action>
+		<action name="orgkhAF" path="/bizcheckModifyBankAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizcheckModifyBankAC" >
+			 <forward name="to_show_modify" path="/bizcheckTaShowAC.do"></forward>
+		</action>
+		<action path="/bizCheckCheckFindAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizCheckCheckFindAAC">
+		</action>
+		<action path="/bizCheckCheckModifyAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.action.BizCheckCheckModifyAAC">
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/bizcheck/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>
+

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/officeParaShowAC.do" location="50,650" dimension="526,84" />
+  <StrutsActivity path="/officeParaSaveAC.do" location="50,450" dimension="526,84" />
+  <StrutsActivity path="/officeparam_show.jsp" location="650,450" dimension="166,48" />
+  <StrutsActivity path="/organization_open_new.jsp" location="5331,282" dimension="196,48" />
+  <StrutsActivity path="/organization_open_list.jsp" location="3853,652" dimension="202,48" />
+  <StrutsActivity path="/orgagent_imports.jsp" location="3654,282" dimension="166,48" />
+  <StrutsActivity path="/emp_open_list.jsp" location="2820,486" dimension="148,48" />
+  <StrutsActivity path="/emp_open_new.jsp" location="1658,282" dimension="142,48" />
+  <StrutsActivity path="/empopendo_imports.jsp" location="534,282" dimension="172,48" />
+  <StrutsActivity path="/empagent_imports.jsp" location="209,282" dimension="166,48" />
+  <StrutsActivity path="/emp_choose.jsp" location="2245,282" dimension="130,48" />
+  <StrutsActivity path="/querystatistics/datareadyquery/paramquery/paramquery_show.jsp" location="950,450" dimension="412,48" />
+  <StrutsActivity path="/dataready/collloanbackpara/collloanbackpara_show.jsp" location="650,550" dimension="358,48" />
+  <StrutsTransition id="/officeParaSaveAC.do,to_officepara_show,/officeParaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="313,492" />
+      <AbsolutePoint location="313,692" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/officeParaSaveAC.do,officepara_show,/officeParaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="313,534" />
+      <AbsolutePoint location="313,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/officeParaShowAC.do,to_officepara_show,/officeparam_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="576,685" />
+      <AbsolutePoint location="621,685" />
+      <AbsolutePoint location="621,474" />
+      <AbsolutePoint location="650,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

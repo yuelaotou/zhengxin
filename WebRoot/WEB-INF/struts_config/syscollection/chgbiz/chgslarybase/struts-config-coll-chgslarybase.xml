@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="chgslarybaseListAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.form.ChgslarybaseListAF" />
+		<form-bean name="chgslarybaseNewAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.form.ChgslarybaseNewAF" />
+		<form-bean name="chgslarybaseImportTaAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.form.ChgslarybaseImportTaAF" />
+
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- ==TA==-->
+		<action name="chgslarybaseListAF"
+			path="/chgslarybaseTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaForwardURLAC">
+			<forward name="chgslarybaseTaShowAC.do"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+		<action name="chgslarybaseListAF" path="/chgslarybaseTaShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaShowAC">
+			<forward name="to_chgslarybase_list"
+				path="/chgslarybase_list.jsp">
+			</forward>
+		</action>
+		<action name="idAF" path="/chgslarybaseTaMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaMaintainAC">
+			<forward name="chgslarybaseTaShowAC"
+				path="/chgslarybaseTaShowAC.do" />
+			<forward name="to_chgslarybase_new.jsp"
+				path="/chgslarybase_new.jsp" />
+			<forward name="to_chgslarybase_imports.jsp"
+				path="/chgslarybase_imports.jsp" />
+		</action>
+		<action name="chgslarybaseListAF" path="/chgslarybaseTaFindAAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaFindAAC">
+			<forward name="chgslarybaseTaShowAC"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+		<action name="chgslarybaseNewAF" path="/chgslarybaseTaSaveAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaSaveAC">
+			<forward name="to_chgslarybase_new.jsp"
+				path="/chgslarybase_new.jsp" />
+			<forward name="chgslarybaseTaShowAC"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+		<action path="/chgslarybaseEmpTaFindAAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseEmpTaFindAAC">
+			<forward name="to_chgslarybase_new.jsp"
+				path="/chgslarybase_new.jsp" />
+		</action>
+
+		<action name="chgslarybaseImportTaAF"
+			path="/chgslarybaseTaImportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaImportAC">
+			<forward name="chgslarybaseTaShowAC.do"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+		<action path="/chgslarybaseTaCountAAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTaCountAAC">
+			<forward name="to_chgslarybase_new.jsp"
+				path="/chgslarybase_new.jsp" />
+		</action>
+		<action path="/chgChgslarybaseExportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgChgslarybaseExportAC">
+			<forward name="chgslarybaseTaShowAC"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+		<!-- ==TB==-->
+		<action name="chgslarybaseListAF"
+			path="/chgslarybaseTbForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbForwardURLAC">
+			<forward name="chgslarybaseTbShowAC.do"
+				path="/chgslarybaseTbShowAC.do" />
+		</action>
+		<action name="chgslarybaseListAF" path="/chgslarybaseTbShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbShowAC">
+			<forward name="to_chgslarybase_tblist.jsp"
+				path="/chgslarybase_tblist.jsp">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/chgslarybaseTbMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbMaintainAC">
+			<forward name="chgslarybaseTbShowAC.do"
+				path="/chgslarybaseTbShowAC.do" />
+			<forward name="chgslarybaseTaShowAC.do"
+				path="/chgslarybaseTaShowAC.do" />
+		</action>
+
+		<action name="chgslarybaseListAF" path="/chgslarybaseTbFindAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbFindAC">
+			<forward name="chgslarybaseTbShowAC.do"
+				path="/chgslarybaseTbShowAC.do" />
+		</action>
+		<!-- ==TBwindow==-->
+		<action path="/chgslarybaseTbWindowForwardAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbWindowForwardAC">
+			<forward name="chgslarybaseTbWindowShow"
+				path="/chgslarybaseTbWindowShow.do" />
+		</action>
+		<action name="chgslarybaseListAF"
+			path="/chgslarybaseTbWindowShow"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgslarybase.action.ChgslarybaseTbWindowShowAC">
+			<forward name="chgslarybasetbwindow"
+				path="/chgslarybase_tbwindow.jsp" />
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/chgbiz/chgslarybase/applicationContext.xml" />
+	</plug-in>
+
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

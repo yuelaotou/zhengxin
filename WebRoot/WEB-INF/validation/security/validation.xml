@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+	<formset>
+		<form name="operationAF">
+			<field property="operation.name"
+				depends="required,maxlength">
+				<arg key="operationAF.operation.name.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="operation.innerName"
+				depends="required,maxlength">
+				<arg key="operationAF.operation.innerName.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="operation.group" depends="maxlength">
+				<arg key="operationAF.operation.group.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="operation.description"
+				depends="maxlength">
+				<arg key="operationAF.operation.description.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="menuItemAF">
+			<field property="menuItem.caption"
+				depends="required,maxlength">
+				<arg key="menuItemAF.menuItem.caption.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="menuItem.url" depends="maxlength">
+				<arg key="menuItemAF.menuItem.url.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>200</var-value>
+				</var>
+			</field>
+			<field property="menuItem.position"
+				depends="required,maxlength">
+				<arg key="menuItemAF.menuItem.position.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>2</var-value>
+				</var>
+			</field>
+			<field property="menuItem.description"
+				depends="maxlength">
+				<arg key="menuItemAF.menuItem.description.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="dataAccessAF">
+			<field property="dataAccess.name"
+				depends="required,maxlength">
+				<arg key="dataAccessAF.dataAccess.name.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="dataAccess.innerName"
+				depends="required,maxlength">
+				<arg key="dataAccessAF.dataAccess.innerName.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+			<field property="dataAccess.queryLevelEnum"
+				depends="required,maxlength">
+				<arg
+					key="dataAccessAF.dataAccess.queryLevelEnum.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+			<field property="dataAccess.operationLevelEnum"
+				depends="required,maxlength">
+				<arg
+					key="dataAccessAF.dataAccess.operationLevelEnum.displayname"
+					position="0" bundle="security" />
+				<arg name="maxlength" key="${var:maxlength}"
+					resource="false" position="1" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
+</form-validation>

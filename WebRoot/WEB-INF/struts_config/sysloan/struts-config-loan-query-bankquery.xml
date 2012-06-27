@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="bankQueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.bankquery.form.BankQueryAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/bankQueryForwardAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.bankquery.action.BankQueryForwardAC">
+			<forward name="bankquery_show" path="/bankQueryShowAC.do" />
+		</action>
+		<action name="bankQueryAF" path="/bankQueryShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.bankquery.action.BankQueryShowAC">
+			<forward name="to_bankquery_show"
+				path="/querystatistics/datareadyquery/bankquery/bankquery_show.jsp" />
+		</action>
+		<action name="bankQueryAF" path="/bankQueryFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.bankquery.action.BankQueryFindAC">
+
+			<forward name="bankquery_show" path="/bankQueryShowAC.do" />
+		</action>
+		<action name="idAF" path="/bankQueryMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.bankquery.action.BankQueryMaintainAC">
+			<forward name="bankquery_print"
+				path="/querystatistics/datareadyquery/bankquery/bankquery_print.jsp" />
+			<forward name="bankquerylist_print"
+				path="/querystatistics/datareadyquery/bankquery/bankquerylist_print.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

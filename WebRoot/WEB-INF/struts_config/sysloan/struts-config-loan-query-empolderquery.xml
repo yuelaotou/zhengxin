@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="developFindAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.DevelopFindAF"></form-bean>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/empolderQueryForwardAC"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryForwardAC">
+				<forward name="empolderQueryShowAC" path="/empolderQueryShowAC.do"></forward>
+		</action>
+		<action path="/empolderQueryShowAC"
+				name="developFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryShowAC">
+				<forward name="to_empolderquery_find" path="/querystatistics/datareadyquery/empolderquery/empolderquery_find.jsp"></forward>
+		</action>
+		<action path="/empolderQueryFindAC"
+				name="developFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryFindAC">
+				<forward name="empolderQueryShowAC" path="/empolderQueryShowAC.do"></forward>
+		</action>
+		<action path="/empolderQueryPrintAC"
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryPrintAC">
+				<forward name="to_develop_print" path="/dataready/develop/develop_print.jsp"></forward>
+		</action>
+		<action path="/empolderQueryWindowForwardAC"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryWindowForwardAC">
+				<forward name="empolderQueryWindowShowAC" path="/empolderQueryWindowShowAC.do"></forward>
+		</action>
+		<action path="/empolderQueryWindowShowAC"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryWindowShowAC">
+				<forward name="to_empolderquery_window" path="/querystatistics/datareadyquery/empolderquery/empolderquery_window.jsp"></forward>
+		</action>
+		<action path="/empolderQueryWindowPrintAC"
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryWindowPrintAC">
+				<forward name="to_floor_print" path="/dataready/develop/floor_print.jsp"></forward>
+		</action>
+		<!-- 根据开发商带出楼盘下拉的Ajax -->
+		<action path="/empolderQueryFindFloorAAC"
+				type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.empolderquery.action.EmpolderQueryFindFloorAAC">
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

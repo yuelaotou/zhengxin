@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="totleaccAF"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.form.TotleaccAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<action name="totleaccAF" path="/totleaccForwardAC"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.action.TotleaccForwardAC">
+			<forward name="to_totleacc_show"
+				path="/totleaccShowAC.do">
+			</forward>
+		</action>
+
+		<action name="totleaccAF" path="/totleaccShowAC"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.action.TotleaccShowAC">
+			<forward name="to_totleacc_show"
+				path="/accmng/totleacc/totleacc_show.jsp">
+			</forward>
+		</action>
+
+		<action name="totleaccAF" path="/totleaccFindAC"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.action.TotleaccFindAC">
+			<forward name="to_totleacc_show"
+				path="/totleaccShowAC.do">
+			</forward>
+		</action>
+
+		<action path="/totleaccCheckSubjectcodeAAC"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.action.TotleaccCheckSubjectcodeAAC">
+		</action>
+		
+		<action path="/totleaccMaintainAC" 
+			name="idAF"
+			scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysfinance.accmng.totleacc.action.TotleaccMaintainAC">
+			<forward name="to_totleacc_cell"
+				path="/accmng/totleacc/totleacc_cell.jsp">
+			</forward>
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

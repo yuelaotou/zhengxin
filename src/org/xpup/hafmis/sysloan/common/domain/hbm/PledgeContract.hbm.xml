@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.PledgeContract" 
+    table="PL121"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL121</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="pledgeContractId"
+        type="java.lang.String"
+        column="PLEDGE_CONTRACT_ID"
+        length="100"
+    />
+
+    <property
+        name="pledgeMatterName"
+        type="java.lang.String"
+        column="PLEDGE_MATTER_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="pledgeValue"
+        type="java.math.BigDecimal"
+        column="PLEDGE_VALUE"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="paperNum"
+        type="java.lang.String"
+        column="PAPER_NUM"
+        length="100"
+    />
+    <property
+        name="paperName"
+        type="java.lang.String"
+        column="PAPER_NAME"
+        length="100"
+    />
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        length="20"
+    />
+    <property
+        name="cardKind"
+        type="java.lang.String"
+        column="CARD_KIND"
+        length="100"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARD_NUM"
+        length="100"
+    />
+    <property
+        name="tel"
+        type="java.lang.String"
+        column="TEL"
+        length="100"
+    />
+    <property
+        name="mobile"
+        type="java.lang.String"
+        column="MOBILE"
+        length="100"
+    />
+    <property
+        name="pledgeAddr"
+        type="java.lang.String"
+        column="PLEDGE_ADDR"
+        length="100"
+    />
+    <property
+        name="area"
+        type="java.math.BigDecimal"
+        column="AREA"
+        length="10"
+    />
+    <property
+        name="evaluateValue"
+        type="java.math.BigDecimal"
+        column="EVALUATE_VALUE"
+        length="10"
+    />
+    <property
+        name="reserved"
+        type="java.lang.String"
+        column="RESERVED"
+        length="20"
+    />
+    <property
+        name="status"
+        type="java.lang.String"
+        column="STATUS"
+        length="100"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        length="7"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+   <property
+        name="rebate"
+        type="java.lang.String"
+        column="REBATE"
+        length="10"
+    />
+    <property
+        name="photoUrl"
+        type="java.lang.String"
+        column="PHOTO_URL"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

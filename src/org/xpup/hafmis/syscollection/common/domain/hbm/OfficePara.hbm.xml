@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.OfficePara" 
+    table="AA412"
+>
+
+    <id
+        name="officeParamId"
+        type="integer"
+        column="OFFICE_PARAM_ID"
+    >
+    <generator class="sequence">
+		<param name="sequence">SEQ_AA412</param>
+	</generator>
+    </id>
+
+    <property
+        name="paramDescrip"
+        type="java.lang.String"
+        column="PARAM_DESCRIP"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramValue"
+        type="java.lang.String"
+        column="PARAM_VALUE"
+        length="100"
+    />
+    <property
+        name="paramNum"
+        type="java.lang.String"
+        column="PARAM_NUM"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramExplain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN"
+        length="100"
+    />
+    <property
+        name="paramExplainExplain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN_EXPLAIN"
+        length="100"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="bank"
+        type="java.lang.String"
+        column="BANK"
+        length="22"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+	 <property
+        name="settingType"
+        type="java.lang.String"
+        column="SETTING_TYPE"
+        length="1"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

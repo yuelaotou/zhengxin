@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="UC06OrgDrawOrgImp" col="4"  space="0" row="1">
+     <column>
+	     <name>id</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	  <column>
+	     <name>idText</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	     <column>
+	     <name>name</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	  <column>
+	     <name>nameText</name>
+		 <typle>java.lang.String</typle>
+		 
+	 </column>
+</file>
+  <file name="UC06OrgDrawEmpImp" col="6"  space="3" row="-1">
+	  <column>
+	     <name>id</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>name</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>cardNumber</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>drawType</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>drawMoney</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>drawReason</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+  </file>
+</root>

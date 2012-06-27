@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="empBaseExportsAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseexport.form.EmpBaseExportsAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/empBaseExportsForwardAC" name="empBaseExportsAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseexport.action.EmpBaseExportsForwardAC">
+			<forward name="empbaseexport" path="/empbaseexport.jsp"></forward>
+		</action>
+		<action path="/empBaseExportsExportsAC" name="empBaseExportsAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseexport.action.EmpBaseExportsExportsAC">
+			<forward name="empbaseexport" path="/empbaseexport.jsp"></forward>
+		</action>
+	</action-mappings>
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/baseinfosearch/empbaseexport/applicationContext.xml" />
+	</plug-in>
+</struts-config>

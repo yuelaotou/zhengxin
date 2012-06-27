@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!-- 公用 -->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="bankExportsTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.form.BankExportsTaAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="bankExportsTaAF" path="/bankExportsTaCreatDataAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.BankExportsTaCreatDataAC">
+			<forward name="bankExportsTaShowAC" path="/bankExportsTaShowAC.do" />
+		</action>
+		<action name="bankExportsTaAF" path="/bankExportsTaFindAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.BankExportsTaFindAC">
+			<forward name="bankExportsTaShowAC" path="/bankExportsTaShowAC.do" />
+		</action>
+		<action name="bankExportsTaAF" path="/bankExportsTaShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.BankExportsTaShowAC">
+			<forward name="bankexports" path="/loancallback/bankexports/bankexports.jsp" />
+		</action>
+		<action name="idAF" path="/bankExportsTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.BankExportsTaMaintainAC">
+			<forward name="bankExportsTaShowAC" path="/bankExportsTaShowAC.do" />
+			<forward name="bankexports_cell" path="/loancallback/bankexports/bankexports_cell.jsp" />
+		</action>
+
+		<action name="bankExportsTaAF" path="/getDayListAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.GetDayListAAC">			
+		</action>
+		<action path="/bankExportsTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankexports.action.BankExportsTaForwardURLAC">
+			<forward name="bankExportsTaShowAC" path="/bankExportsTaShowAC.do" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

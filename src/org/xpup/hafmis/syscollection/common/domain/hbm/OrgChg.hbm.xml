@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+
+	<class name="OrgChg" table="AA206">
+
+		<id name="id" type="integer" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_AA206</param>
+			</generator>
+		</id>
+		<many-to-one name="org" column="ORG_ID" class="org.xpup.hafmis.syscollection.common.domain.entity.Org"
+			not-null="true" lazy="false">
+		</many-to-one>
+		<property name="preRate" type="java.math.BigDecimal"
+			column="PRE_RATE" length="4" />
+		<property name="newRate" type="java.math.BigDecimal"
+			column="NEW_RATE" length="4" />
+		<property name="payRate" type="java.math.BigDecimal"
+			column="PAY_RATE" length="18" />
+		<property name="prePay" type="java.math.BigDecimal"
+			column="PRE_PAY" length="18" />
+		<property name="newPay" type="java.math.BigDecimal"
+			column="NEW_PAY" length="18" />
+		<property name="paySalary" type="java.math.BigDecimal"
+			column="PAY_SALARY" length="18" />
+		<property name="addMonth" type="java.lang.String"
+			column="ADD_MONTH" length="8" />
+		<property name="addStEndMonth" type="java.lang.String"
+			column="ADD_ST_END_MONTH" length="50" />
+		<property name="addCount" type="java.math.BigDecimal"
+			column="ADD_COUNT" length="18" />
+		<property name="addSum" type="java.math.BigDecimal"
+			column="ADD_SUM" length="18" />
+		<property name="addEmp" type="java.math.BigDecimal"
+			column="ADD_EMP" length="18" />
+		<property name="addOrg" type="java.math.BigDecimal"
+			column="ADD_ORG" length="18" />
+		<property name="status" type="java.lang.String" column="STATUS"
+			length="1" />
+		<property name="print" type="java.lang.String" column="PRINT"
+			length="1" />
+		<property name="make" type="java.lang.String" column="MAKE"
+			length="10" />
+		<property name="person" type="java.lang.String" column="PERSON"
+			length="10" />
+	</class>
+</hibernate-mapping>

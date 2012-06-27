@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.BaseGhgInfo" 
+    table="AA004"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA004</param>
+	</generator>
+    </id>
+
+	<property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+	/>
+    <property
+        name="chgColumn"
+        type="java.lang.String"
+        column="CHG_COLUMN"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="chgBefInfo"
+        type="java.lang.String"
+        column="CHG_BEF_INFO"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="chgEndInfo"
+        type="java.lang.String"
+        column="CHG_END_INFO"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="20"
+    />
+    <many-to-one name="org"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.Org" not-null="true" lazy="false">
+			<column name="ORG_ID" />
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

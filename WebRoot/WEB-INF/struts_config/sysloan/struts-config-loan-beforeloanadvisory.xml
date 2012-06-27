@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="beforeLoanAdvisoryFindAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.form.BeforeLoanAdvisoryFindAF" />
+		<form-bean name="beforeLoanAdvisoryShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.form.BeforeLoanAdvisoryShowAF" />
+		<form-bean name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.form.BeforeLoanApplyShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/caculateLoanRateForwardURLAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.CaculateLoanRateForwardURLAC">
+			<forward name="caculatecorpus"
+				path="/loanapply/beforeloanapply/caculatecorpus.jsp" />
+		</action>
+		<action path="/beforeLoanApplyForwardURLAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.BeforeLoanApplyForwardURLAC">
+			<forward name="beforeloanapply"
+				path="/loanapply/beforeloanapply/beforeloanapply.jsp" />
+		</action>
+		<action path="/beforeLoanApplyAAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.BeforeLoanApplyAAC">
+		</action>
+		<action path="/beforeLoanApplyAAAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.BeforeLoanApplyAAAC">
+		</action>
+		<action path="/beforeLoanApplyAAAAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.BeforeLoanApplyAAAAC">
+		</action>
+		<action path="/beforeLoanApplyShowAC" name="beforeLoanApplyShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanapply.action.BeforeLoanApplyShowAC">
+			<forward name="beforeloanapply"
+				path="/loanapply/beforeloanapply/beforeloanapplya.jsp" />
+		</action>
+		<action path="/beforeLoanAdvisoryForwardURLAC" name="beforeLoanAdvisoryShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.BeforeLoanAdvisoryForwardURLAC">
+			<forward name="to_beforeLoanAdvisoryShow"
+				path="/beforeLoanAdvisoryShowAC.do" />
+		</action>
+		<action name="beforeLoanAdvisoryShowAF" path="/beforeLoanAdvisoryShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.BeforeLoanAdvisoryShowAC">
+			<forward name="to_beforeLoanAdvisory"
+				path="/loanapply/beforeloanadvisory/beforeloanadvisory.jsp" />
+		</action>
+		<action name="beforeLoanAdvisoryFindAF" path="/beforeLoanAdvisoryFindAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.BeforeLoanAdvisoryFindAC">
+			<forward name="to_beforeLoanAdvisoryShow"
+				path="/beforeLoanAdvisoryShowAC.do" />
+		</action>
+		<action name="beforeLoanAdvisoryShowAF" path="/beforeLoanAdvisoryMaintainAC" 
+		        parameter="method" 
+		        type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.BeforeLoanAdvisoryMaintainAC" >
+		</action>
+		<action path="/queryLoanInfoAAC" name="beforeLoanAdvisoryShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.QueryLoanInfoAAC">
+		</action>
+	    <action path="/queryInputLoanInfoAAC" name="beforeLoanAdvisoryShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.beforeloanadvisory.action.QueryInputLoanInfoAAC">		
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

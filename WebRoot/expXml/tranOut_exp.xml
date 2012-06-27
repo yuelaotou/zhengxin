@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="TranoutHeadExport" col="6"  space="0" row="2">
+     <column>orgOutid</column>
+	 <column>orgOutName</column>     
+     <column>orgInid</column>     
+	 <column>orgInName</column>
+     <column>noteNum</column>
+     <column>expalanation</column>
+</file>
+<file name="TranoutListExport" col="7"  space="2" row="-1">
+     <column>empId</column>
+	 <column>empName</column>
+	 <column>card_king</column>
+	 <column>card_num</column>
+	 <column>Issettinrest</column>
+	 <column>tranReason</column>
+	 <column>tranin_empid</column>
+</file>
+</root>

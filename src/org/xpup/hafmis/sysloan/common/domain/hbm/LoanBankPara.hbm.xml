@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.LoanBankPara" 
+    table="PL003"
+>
+
+    <id
+        name="loanParamId"
+        type="integer"
+        column="LOAN_PARAM_ID"
+    >
+    <generator class="sequence">
+		<param name="sequence">SEQ_PL003</param>
+	</generator>
+    </id>
+
+    <property
+        name="paramDescrip"
+        type="java.lang.String"
+        column="PARAM_DESCRIP"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramValue"
+        type="java.lang.String"
+        column="PARAM_VALUE"
+        length="100"
+    />
+    <property
+        name="paramNum"
+        type="java.lang.String"
+        column="PARAM_NUM"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramExplain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN"
+        length="100"
+    />
+    <property
+        name="loanBankId"
+        type="java.math.BigDecimal"
+        column="LOAN_BANK_ID"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="paramType"
+        type="java.lang.String"
+        column="PARAM_TYPE"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

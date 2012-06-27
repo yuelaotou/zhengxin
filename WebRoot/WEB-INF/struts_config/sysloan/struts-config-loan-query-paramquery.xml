@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="paramQueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.paramquery.form.ParamQueryAF" />			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/paramQueryForwardAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.paramquery.action.ParamQueryForwardAC">
+      <forward name="paramquery_show" path="/paramQueryShowAC.do" />
+    </action>
+	<action name="paramQueryAF"
+			scope="request"
+		path="/paramQueryShowAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.paramquery.action.ParamQueryShowAC">
+      <forward name="to_paramquery_show" path="/querystatistics/datareadyquery/paramquery/paramquery_show.jsp" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

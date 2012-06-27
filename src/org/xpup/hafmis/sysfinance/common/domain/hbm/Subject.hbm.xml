@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.Subject" 
+    table="FN110"
+>
+
+    <id
+        name="subjectId"
+        type="integer"
+        column="SUBJECT_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_FN110</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="subjectCode"
+        type="java.lang.String"
+        column="SUBJECT_CODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="subjectName"
+        type="java.lang.String"
+        column="SUBJECT_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="parentSubjectCode"
+        type="java.lang.String"
+        column="PARENT_SUBJECT_CODE"
+        length="100"
+    />
+    <property
+        name="subjectLevel"
+        type="java.lang.String"
+        column="SUBJECT_LEVEL"
+        length="100"
+    />
+    <property
+        name="subjectSortCode"
+        type="java.lang.String"
+        column="SUBJECT_SORT_CODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="balanceDirection"
+        type="java.lang.String"
+        column="BALANCE_DIRECTION"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="subjectProperty"
+        type="java.lang.String"
+        column="SUBJECT_PROPERTY"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="subjectSt"
+        type="java.lang.String"
+        column="SUBJECT_ST"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+    <property
+        name="bizDate"
+        type="java.lang.String"
+        column="BIZDATE"
+        length="6"
+    />
+    <property
+        name="expireDate"
+        type="java.lang.String"
+        column="EXPIRE_DATE"
+        length="4"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

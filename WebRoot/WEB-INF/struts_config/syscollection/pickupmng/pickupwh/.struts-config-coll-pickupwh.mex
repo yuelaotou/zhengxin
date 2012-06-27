@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pickupWHShowAC.do" location="0,645" dimension="466,84" />
+  <StrutsActivity path="/pickupWHMiantainAC.do" location="0,129" dimension="490,84" />
+  <StrutsActivity path="/pickUpWHForwardAC.do" location="0,387" dimension="484,84" />
+  <StrutsActivity path="/queryPickUpForwardAC.do" location="0,0" dimension="502,84" />
+  <StrutsActivity path="/wehuwindowshowAC.do" location="0,516" dimension="478,84" />
+  <StrutsActivity path="/weihuprintAC.do" location="511,645" dimension="454,84" />
+  <StrutsActivity path="/whwindowMaintainAC.do" location="0,258" dimension="490,84" />
+</FlowViewLayout>
+

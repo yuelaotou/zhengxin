@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.DocNumMaintain" 
+    table="AA320"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+       <generator class="sequence">
+				<param name="sequence">SEQ_AA320</param>
+		</generator>
+    </id>
+
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="officeCode"
+        type="java.lang.String"
+        column="OFFICE_CODE"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="bizYearmonth"
+        type="java.lang.String"
+        column="BIZ_YEARMONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

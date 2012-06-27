@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="documentstopAF" type="org.xpup.hafmis.syscollection.peoplebank.documentstop.form.DocumentstopAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/documentstopForWardAC" 
+    	type="org.xpup.hafmis.syscollection.peoplebank.documentstop.action.DocumentstopForWardAC">
+    	<forward name="to_show_documentstop" path="/documentstopShowAC.do" />
+	</action>
+	
+    <action
+      path="/documentstopShowAC"
+      name="documentstopAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.peoplebank.documentstop.action.DocumentstopShowAC">
+    	<forward name="show_documentstop" path="/documentstop_show.jsp" />
+    </action>  
+    
+    <action
+      path="/documentstopNewAC"
+      name="documentstopAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.peoplebank.documentstop.action.DocumentstopNewAC">	
+		<forward name="to_forward" path="/documentstopForWardAC.do" />
+	</action>
+	
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/peoplebank/documentstop/applicationContext.xml" />
+	</plug-in>
+</struts-config>

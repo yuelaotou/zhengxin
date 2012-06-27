@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.SearchLackInfo" 
+    table="AA305"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA305</param>
+	</generator>
+    </id>
+
+    <property
+        name="yearMonth"
+        type="java.lang.String"
+        column="YEAR_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="oegPay"
+        type="java.math.BigDecimal"
+        column="ORG_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="empPay"
+        type="java.math.BigDecimal"
+        column="EMP_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="orgPayReal"
+        type="java.math.BigDecimal"
+        column="ORG_PAY_REAL"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="empPayReal"
+        type="java.math.BigDecimal"
+        column="EMP_PAY_REAL"
+        not-null="true"
+        length="18"
+    />
+    <many-to-one name="org"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.Org" not-null="true" >
+			<column name="ORG_ID" />
+	</many-to-one>
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

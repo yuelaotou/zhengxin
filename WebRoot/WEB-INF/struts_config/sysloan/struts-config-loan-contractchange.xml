@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+		<!--	公共结束	-->
+		<form-bean name="contractchangeAF"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.form.ContractchangeAF" />
+	</form-beans>	
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/contractchangeShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeForwardURLAC">
+			<forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do"></forward>
+		</action>
+		<action path="/contractchangeShowAC_1"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeForwardURLAC_1">
+			<forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do"></forward>
+		</action>
+		<action path="/contractchangeShowAC_2"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeForwardURLAC_2">
+			<forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do"></forward>
+		</action>
+		<action path="/contractchangeShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeForwardURLAC">
+			<forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do"></forward>
+		</action>
+		<action path="/to_contractchangeShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeShowAC">
+			<forward name="to_contractchange_show" path="/loancallback/contractchange/contractchange_show.jsp"></forward>
+			<forward name="to_contractchange_show_1" path="/loancallback/contractchange/contractchange_show_1.jsp"></forward>
+			<forward name="to_contractchange_show_2" path="/loancallback/contractchange/contractchange_show_2.jsp"></forward>
+		</action>
+		<action path="/contractchangeFindAC" 
+		        scope="request"
+		        name="contractchangeAF"
+			    type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeFindAC">
+			<forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do" />
+		</action>
+		<action path="/contractchangeMaintainAC"  
+		        scope="request"
+			    parameter="method"
+			    name="idAF"
+			    type="org.xpup.hafmis.sysloan.loancallback.contractchange.action.ContractchangeMaintainAC">
+			    <forward name="to_contractchange_cell1" path="/loancallback/contractchange/contractchange_cell1.jsp"></forward>
+			    <forward name="to_contractchange_cell2" path="/loancallback/contractchange/contractchange_cell2.jsp"></forward>
+			    <forward name="to_contractchange_cell3" path="/loancallback/contractchange/contractchange_cell3.jsp"></forward>
+			    <forward name="to_contractchange_cell4" path="/loancallback/contractchange/contractchange_cell4.jsp"></forward>
+			    <forward name="to_contractchange_cell5" path="/loancallback/contractchange/contractchange_cell5.jsp"></forward>
+			    <forward name="to_contractchangeShowAC" path="/to_contractchangeShowAC.do"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

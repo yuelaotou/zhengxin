@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="credencePopShowAF" type="org.xpup.hafmis.sysfinance.common.biz.credencepop.form.CredencePopShowAF"></form-bean>	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    	<action path="/queryFlowShowAC"
+    			type="org.xpup.hafmis.sysfinance.common.biz.queryflow.action.QueryFlowShowAC">
+    			<forward name="collectionFlowShowAC" path="/collectionFlowShowAC.do"></forward>
+    			<forward name="loanFlowShowAC" path="/loanFlowShowAC.do"></forward>
+    	</action>
+    	<action path="/collectionFlowShowAC"
+    			type="org.xpup.hafmis.sysfinance.common.biz.queryflow.action.CollectionFlowShowAC">
+    			<forward name="to_collectionflow_show" path="/common/biz/queryflow/collectionflow_show.jsp"></forward>
+    	</action>
+    	<action path="/loanFlowShowAC"
+    			type="org.xpup.hafmis.sysfinance.common.biz.queryflow.action.LoanFlowShowAC">
+    			<forward name="to_loanflow_show" path="/common/biz/queryflow/loanflow_show.jsp"></forward>
+    	</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

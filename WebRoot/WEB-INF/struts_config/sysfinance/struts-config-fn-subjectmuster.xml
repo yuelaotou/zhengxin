@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="subjectmusterAF" type="org.xpup.hafmis.sysfinance.accmng.subjectmuster.form.SubjectmusterAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/subjectmusterForWardAC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectmuster.action.SubjectmusterForWardAC">
+		<forward name="subjectmusterShowAC" path="/subjectmusterShowAC.do" />
+	</action>
+	
+    <action 
+    	path="/subjectmusterShowAC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectmuster.action.SubjectmusterShowAC">
+    	<forward name="to_subjectmuster_show" path="/accmng/subjectmuster/subjectmuster_show.jsp" />
+    </action>
+    
+    <action
+      path="/subjcetmusterFindAC"
+      name="subjectmusterAF"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.accmng.subjectmuster.action.SubjcetmusterFindAC">
+      <forward name="subjectmusterShowAC" path="/subjectmusterShowAC.do" />
+    </action>  
+    <action 
+    	path="/credenceMaxAAC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectmuster.action.CredenceMaxAAC">
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

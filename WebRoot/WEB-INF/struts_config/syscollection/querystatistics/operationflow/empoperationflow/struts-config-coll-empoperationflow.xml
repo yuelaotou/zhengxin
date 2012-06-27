@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="empOperationFlowAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.form.EmpOperationFlowAF" />
+	</form-beans>
+    <global-forwards>
+        <forward name="toEmpOperationFlowTaShowAC" path="/empOperationFlowTaShowAC.do"></forward>
+    </global-forwards>
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	
+		<action path="/empOperationFlowTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.action.EmpOperationFlowTaForwardURLAC">
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do" />
+		</action>
+		<action name="empOperationFlowAF"
+			path="/empOperationFlowTaFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.action.EmpOperationFlowTaFindAC">
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do">
+			</forward>
+		</action>
+		<action name="empOperationFlowAF" path="/empOperationFlowTaShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.action.EmpOperationFlowTaShowAC">
+			<forward name="show_empOperationFlow" path="/empoperationflow_lb.jsp" />
+		</action>
+		<action name="idAF" path="/empOperationFlowTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.action.EmpOperationFlowTaMaintainAC">
+			<forward name="show_print" path="/empoperationflow_cell.jsp" />
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do" />
+		</action>
+	
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/operationflow/empoperationflow/applicationContext.xml" />
+	</plug-in>
+</struts-config>

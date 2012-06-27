@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="adjustAccountPopFindAF" type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.form.AdjustAccountPopFindAF"></form-bean>
+		<form-bean name="adjustAccountAF" type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.form.AdjustAccountAF"></form-bean>
+		<form-bean name="adjustAccountFindAF" type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.form.AdjustAccountFindAF"></form-bean>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<!-- pop Action -->
+	<action-mappings>
+		<action path="/adjustAccountPopShowAC"
+				name="adjustAccountPopFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountPopShowAC">
+				<forward name="to_adjustaccountpop_find" path="/accounthandle/adjustaccount/adjustaccountpop_find.jsp"></forward>
+		</action>
+		<action path="/adjustAccountPopFindAC"
+				name="adjustAccountPopFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountPopFindAC">
+				<forward name="adjustAccountPopShowAC" path="/adjustAccountPopShowAC.do"></forward>
+		</action>
+	<!-- Ta Action -->	
+		<action path="/adjustAccountTaShowAC"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTaShowAC">
+				<forward name="to_adjustaccountta_show" path="/accounthandle/adjustaccount/adjustaccountta_show.jsp"></forward>
+		</action>
+		<action path="/adjustAccountTaNewAC"
+				name="adjustAccountAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTaNewAC">
+				<forward name="adjustAccountTaShowAC" path="/adjustAccountTaShowAC.do"></forward>
+				<forward name="to_adjustaccount_print" path="/accounthandle/adjustaccount/adjustaccount_print.jsp"></forward>
+				<forward name="to_adjustaccount_putout_print" path="/accounthandle/adjustaccount/adjustaccount_putout_print.jsp"></forward>
+		</action>
+		<action path="/adjustAccountDocNumShowAAC"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountDocNumShowAAC">
+		</action>
+		<action path="/adjustAccountLoanKouAccShowAAC"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountLoanKouAccShowAAC">
+		</action>
+		<action path="/adjustAccountYearMonthAAC"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountYearMonthAAC">
+		</action>
+	<!-- Tb Action -->
+		<action path="/adjustAccountTbForwardAC"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTbForwardAC">
+				<forward name="adjustAccountTbShowdAC" path="/adjustAccountTbShowdAC.do"></forward>
+		</action>
+		<action path="/adjustAccountTbShowdAC"
+				name="adjustAccountFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTbShowdAC">
+				<forward name="to_adjustaccounttb_show" path="/accounthandle/adjustaccount/adjustaccounttb_show.jsp"></forward>
+		</action>
+		<action path="/adjustAccountTbFindAC"
+				name="adjustAccountFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTbFindAC">
+				<forward name="adjustAccountTbShowdAC" path="/adjustAccountTbShowdAC.do"></forward>
+		</action>
+		<action path="/adjustAccountTbMainTainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysloan.accounthandle.adjustaccount.action.AdjustAccountTbMainTainAC">
+				<forward name="adjustAccountTbShowdAC" path="/adjustAccountTbShowdAC.do"></forward>
+				<forward name="to_adjustaccount_print" path="/accounthandle/adjustaccount/adjustaccount_print.jsp"></forward>
+				<forward name="to_adjustaccount_putout_print" path="/accounthandle/adjustaccount/adjustaccount_putout_print.jsp"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

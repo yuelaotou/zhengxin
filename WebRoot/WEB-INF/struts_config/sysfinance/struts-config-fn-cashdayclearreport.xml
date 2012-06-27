@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="cashDayClearTcAF"
+			type="org.xpup.hafmis.sysfinance.treasurermng.cashdayclear.form.CashDayClearTcAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/cashDayClearReportForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.accmng.cashdayclearreport.action.CashDayClearReportForwardAC">
+	  	<forward name="cashdayclearreport_show" path="/cashDayClearReportShowAC.do"></forward>
+	 </action>
+	 <action  name="cashDayClearTcAF"
+		scope="request"
+		path="/cashDayClearReportShowAC"
+	  	type="org.xpup.hafmis.sysfinance.accmng.cashdayclearreport.action.CashDayClearReportShowAC">
+	 	<forward name="to_cashdayclearreport_show" path="/accmng/cashdayclearreport/cashdayclearreport_show.jsp"></forward>
+	 </action>
+	 <action  name="cashDayClearTcAF"
+		scope="request"
+		path="/cashDayClearReportFindAC"
+	  	type="org.xpup.hafmis.sysfinance.accmng.cashdayclearreport.action.CashDayClearReportFindAC">
+	 	<forward name="cashdayclearreport_show" path="/cashDayClearReportShowAC.do"></forward>
+	 </action>
+	 <action name="cashDayClearTcAF"
+		scope="request"
+		path="/cashDayClearReportPrintAC"
+	  	type="org.xpup.hafmis.sysfinance.accmng.cashdayclearreport.action.CashDayClearReportPrintAC">
+	  	<forward name="to_cashdayclearreport_print" path="/accmng/cashdayclearreport/cashdayclearreport_print.jsp"></forward>
+	 </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

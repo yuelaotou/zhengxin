@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root file="2">
+	<file name="ListaccHead" col="6" space="0" row="1">
+		<column>credenceDate</column>
+		<column>credenceNum</column>
+		<column>summary</column>
+		<column>debit</column>
+		<column>credit</column>
+		<column>balance</column>
+	</file>
+	<file name="Listacc" col="6" space="1" row="-1">
+		<column>credenceDate</column>
+		<column>credenceNum</column>
+		<column>summay</column>
+		<column>debit</column>
+		<column>credit</column>
+		<column>money</column>
+	</file>
+</root>

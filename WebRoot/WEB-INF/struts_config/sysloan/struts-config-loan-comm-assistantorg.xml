@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+	 <form-bean name="assistantorgpopAF" 
+	     type="org.xpup.hafmis.sysloan.common.biz.assistantorgpop.form.AssistantorgpopAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="assistantorgpopAF" path="/assistantorgpopFind" scope="session" 
+	 type="org.xpup.hafmis.sysloan.common.biz.assistantorgpop.action.AssistantorgpopFindAC">
+	  <forward name="to_assistantorgpopShow" path="/assistantorgpopShow.do"></forward>
+	 </action>
+	 
+	 <action name="assistantorgpopAF" path="/assistantorgpopShow" scope="session"
+	  type="org.xpup.hafmis.sysloan.common.biz.assistantorgpop.action.AssistantorgpopShowAC">
+	 <forward name="to_assistantorgpop_list" path="/common/biz/assistantorgpop/assistantorgpop_list.jsp"></forward>
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+		
+</struts-config>

@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.PalindromeFormatTail" 
+    table="PL012"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_PL012</param>
+	</generator>
+    </id>
+
+   <property
+        name="flowHeadId"
+        type="integer"
+        column="FLOW_HEAD_ID"
+        not-null="true"
+    />
+  
+     <property
+        name="centerSet"
+        type="java.lang.String"
+        column="CENTER_SET"
+        length="100"
+    />
+    
+     <property
+        name="formula"
+        type="java.lang.String"
+        column="FORMULA"
+        length="100"
+    />
+    
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

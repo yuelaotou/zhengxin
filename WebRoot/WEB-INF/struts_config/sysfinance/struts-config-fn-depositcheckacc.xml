@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="depositCheckAccAF"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.form.DepositCheckAccAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/depositCheckAccForwardAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccForwardAC">
+			<forward name="depositcheckacc_show"
+				path="/depositCheckAccShowAC.do">
+			</forward>
+		</action>
+		<action name="depositCheckAccAF" 
+			scope="request"
+			path="/depositCheckAccShowAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccShowAC">
+			<forward name="to_depositcheckacc_show"
+				path="/treasurermng/depositcheckacc/depositcheckacc_show.jsp">
+			</forward>
+		</action>
+		<action name="depositCheckAccAF" 
+			scope="request"
+			path="/depositCheckAccFindAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccFindAC">
+			<forward name="depositcheckacc_show"
+				path="/depositCheckAccShowAC.do">
+			</forward>
+		</action>
+		<action name="depositCheckAccAF" 
+			parameter="method"
+			path="/depositCheckAccMaintainAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccMaintainAC">
+			<forward name="to_depositcheckacc_print"
+				path="/treasurermng/depositcheckacc/depositcheckacc_print.jsp">
+			</forward>
+			<forward name="depositcheckaccwindow_show"
+				path="/depositCheckAccWindowShowAC.do">
+			</forward>
+		</action>
+		<action path="/depositCheckAccWindowShowAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccWindowShowAC">
+			<forward name="to_depositcheckaccwindow_show"
+				path="/treasurermng/depositcheckacc/depositcheckaccwindow_show.jsp">
+			</forward>
+		</action>
+		<action name="depositCheckAccAF" 
+			scope="request"
+			path="/depositCheckAccWindowPrintAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.depositcheckacc.action.DepositCheckAccWindowPrintAC">
+			<forward name="to_depositcheckaccwindow_print"
+				path="/treasurermng/depositcheckacc/depositcheckaccwindow_print.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

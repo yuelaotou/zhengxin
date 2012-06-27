@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/collLoanbackTaShowAC.do" location="522,184" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTaForwardAC.do" location="566,0" dimension="484,84" />
+  <StrutsActivity path="/collLoanbackTaUpMaintainAC.do" location="1150,0" dimension="502,84" />
+  <StrutsActivity path="/officeAndBankAAC.do" location="0,1383" dimension="442,84" />
+  <StrutsActivity path="/collLoanbackTaDownAC.do" location="0,0" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTbForwardAC.do" location="0,461" dimension="484,84" />
+  <StrutsActivity path="/collLoanbackTbShowAC.do" location="584,645" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTbFindAC.do" location="584,461" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTbMaintainAC.do" location="1150,461" dimension="490,84" />
+  <StrutsActivity path="/collLoanbackTcForwardAC.do" location="0,922" dimension="484,84" />
+  <StrutsActivity path="/collLoanbackTcShowAC.do" location="584,1106" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTcFindAC.do" location="584,922" dimension="466,84" />
+  <StrutsActivity path="/collLoanbackTcMaintainAC.do" location="1150,922" dimension="490,84" />
+  <StrutsActivity path="/collloanbackta_show.jsp" location="1075,368" dimension="184,48" />
+  <StrutsActivity path="/collloanbacktb_show.jsp" location="725,829" dimension="184,48" />
+  <StrutsActivity path="/collloanbacktc_show.jsp" location="725,1290" dimension="184,48" />
+  <StrutsActivity path="/collloanbacktc_cell.jsp" location="1425,1124" dimension="184,48" />
+  <StrutsActivity path="/collLoanbackTbForwardUrlAC.do" />
+  <StrutsTransition id="/collLoanbackTbForwardUrlAC.do,collloanbacktb_show,/collLoanbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="817,687" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTcFindAC.do,collLoanbackTcShowAC,/collLoanbackTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="817,1006" />
+      <AbsolutePoint location="817,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTaDownAC.do,collloanbackta_show,/collLoanbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="233,84" />
+      <AbsolutePoint location="233,134" />
+      <AbsolutePoint location="600,134" />
+      <AbsolutePoint location="600,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTaShowAC.do,to_collloanbackta_show,/collloanbackta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="755,268" />
+      <AbsolutePoint location="755,318" />
+      <AbsolutePoint location="1121,318" />
+      <AbsolutePoint location="1121,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTbMaintainAC.do,collloanbacktb_show,/collLoanbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1395,545" />
+      <AbsolutePoint location="1395,595" />
+      <AbsolutePoint location="972,595" />
+      <AbsolutePoint location="972,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTcMaintainAC.do,to_collloanbacktc_cell,/collloanbacktc_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1517,1006" />
+      <AbsolutePoint location="1517,1124" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTaForwardAC.do,collloanbackta_show,/collLoanbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="808,84" />
+      <AbsolutePoint location="808,134" />
+      <AbsolutePoint location="755,134" />
+      <AbsolutePoint location="755,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTaUpMaintainAC.do,to_collloanbackta_show,/collloanbackta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1526,84" />
+      <AbsolutePoint location="1526,318" />
+      <AbsolutePoint location="1213,318" />
+      <AbsolutePoint location="1213,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTcForwardAC.do,collLoanbackTcShowAC,/collLoanbackTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,1006" />
+      <AbsolutePoint location="242,1056" />
+      <AbsolutePoint location="661,1056" />
+      <AbsolutePoint location="661,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTcMaintainAC.do,collLoanbackTcShowAC,/collLoanbackTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1272,1006" />
+      <AbsolutePoint location="1272,1056" />
+      <AbsolutePoint location="972,1056" />
+      <AbsolutePoint location="972,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTaUpMaintainAC.do,collloanbackta_show,/collLoanbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1275,84" />
+      <AbsolutePoint location="1275,134" />
+      <AbsolutePoint location="911,134" />
+      <AbsolutePoint location="911,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTcShowAC.do,to_collloanbacktc_show,/collloanbacktc_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="817,1190" />
+      <AbsolutePoint location="817,1290" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTbShowAC.do,to_collloanbacktb_show,/collloanbacktb_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="817,729" />
+      <AbsolutePoint location="817,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTbForwardAC.do,collloanbacktb_show,/collLoanbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,545" />
+      <AbsolutePoint location="242,595" />
+      <AbsolutePoint location="661,595" />
+      <AbsolutePoint location="661,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collLoanbackTbFindAC.do,collloanbacktb_show,/collLoanbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="817,545" />
+      <AbsolutePoint location="817,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

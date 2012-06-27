@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="preLoanRefrShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.preloanrefr.form.PreLoanRefrShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/preLoanRefrForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.preloanrefr.action.PreLoanRefrForwardURLAC">
+			<forward name="preLoanRefrShowAC"
+				path="/preLoanRefrShowAC.do">
+			</forward>
+		</action>
+
+		<action name="preLoanRefrShowAF" path="/preLoanRefrShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.preloanrefr.action.PreLoanRefrShowAC"
+			scope="request">
+			<forward name="to_preloanrefr_show"
+				path="/loanapply/preloanrefr/preloanrefr_show.jsp">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/preLoanRefrMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.preloanrefr.action.PreLoanRefrMaintainAC"
+			scope="request" parameter="method">
+			<forward name="preLoanRefrShowAC"
+				path="/preLoanRefrShowAC.do">
+			</forward>
+			<forward name="to_preloanrefr_cell"
+				path="/loanapply/preloanrefr/preloanrefr_cell.jsp">
+			</forward>
+		</action>
+
+		<action name="preLoanRefrShowAF" path="/preLoanRefrFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.preloanrefr.action.PreLoanRefrFindAC"
+			scope="request">
+			<forward name="preLoanRefrShowAC"
+				path="/preLoanRefrShowAC.do">
+			</forward>
+			<forward name="to_preloanrefr_show"
+				path="/loanapply/preloanrefr/preloanrefr_show.jsp">
+			</forward>
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="fiveLevelQueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.fivelevelquery.form.FiveLevelQueryAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/fiveLevelQueryForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.fivelevelquery.action.FiveLevelQueryForwardURLAC">
+			<forward name="fiveLevelQueryShowAC"
+				path="/fiveLevelQueryShowAC.do">
+			</forward>
+		</action>
+
+		<action name="fiveLevelQueryAF" path="/fiveLevelQueryShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.fivelevelquery.action.FiveLevelQueryShowAC">
+			<forward name="to_fivelevelquery_show"
+				path="/querystatistics/querystatistics/fivelevelquery/fivelevelquery_show.jsp">
+			</forward>
+		</action>
+
+		<action name="fiveLevelQueryAF" path="/fiveLevelQueryFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.fivelevelquery.action.FiveLevelQueryFindAC"
+			scope="request">
+			<forward name="fiveLevelQueryShowAC"
+				path="/fiveLevelQueryShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/fiveLevelQueryMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.fivelevelquery.action.FiveLevelQueryMaintainAC"
+			scope="request" parameter="method">
+			<forward name="fiveLevelQueryShowAC"
+				path="/fiveLevelQueryShowAC.do">
+			</forward>
+			<forward name="to_fivelevelquery_print"
+				path="/querystatistics/querystatistics/fivelevelquery/fivelevelquery_cell.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

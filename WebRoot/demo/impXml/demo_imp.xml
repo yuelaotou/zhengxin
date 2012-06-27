@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<root file="1">
+  <file name="DemoImport" col="6"  space="3" row="-1">
+	  <column>
+	     <name>Id</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>Name</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>Idcard</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>Birthday</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>Sex</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Salary</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+  </file>
+</root>

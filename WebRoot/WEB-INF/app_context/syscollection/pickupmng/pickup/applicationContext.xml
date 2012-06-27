@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="pickupBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.pickupmng.pickup.business.PickBS">
+				<property name="headDao">
+					<ref bean="pickHeadDAO" />
+				</property>
+				<property name="tailDao">
+					<ref bean="pickTailDAO" />
+				</property>
+				<property name="orgInfoDao">
+					<ref bean="orgInfoDAO" />
+				</property>
+				<property name="orgDao">
+					<ref bean="orgDAO" />
+				</property>
+				<property name="specialPickDao">
+					<ref bean="specialPickDAO" />
+				</property>
+				<property name="empDao">
+					<ref bean="empDAO" />
+				</property>
+				<property name="hafDao">
+					<ref bean="hafOperateLogDAO" />
+				</property>
+				<property name="pickBizDao">
+					<ref bean="pickBizActivityLogDAO" />
+				</property>
+				<property name="insertDao">
+					<ref bean="docNumCancelDAO" />
+				</property>
+				<property name="maintainDao">
+					<ref bean="docNumMaintainDAO" />
+				</property>
+				<property name="orgFlowDao">
+					<ref bean="orgHAFAccountFlowDrawingDAO" />
+				</property>
+				<property name="adjustWrongAccountHeadDAO">
+					<ref bean="adjustWrongAccountHeadDAO" />
+				</property>
+				<property name="empFlowDao">
+					<ref bean="empHAFAccountFlowDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property>
+				<property name="partPickupConditionDAO">
+					<ref bean="partPickupConditionDAO" />
+				</property>
+				<property name="autoInfoPickDAO">
+					<ref bean="autoInfoPickDAO" />
+				</property>
+				<property name="autoInfoPickDAODW">
+					<ref bean="autoInfoPickDAODW" />
+				</property>
+				<property name="hafOperateLogDAO">
+					<ref bean="hafOperateLogDAO" />
+				</property>
+				<property name="tailDaoDW">
+					<ref bean="tailDaoDW" />
+				</property>
+				<property name="pickupheadDaoDW">
+					<ref bean="pickupheadDaoDW" />
+				</property>
+				<property name="empDAODW">
+					<ref bean="empDAODW" />
+				</property>
+				<property name="orgHAFAccountFlowDAO">
+					<ref bean="orgHAFAccountFlowDAO" />
+				</property>
+				<property name="bizActivityLogDAO">
+					<ref bean="bizActivityLogDAO"/>
+			    </property>
+			    <property name="collParaDAO">
+					<ref bean="collParaDAO"/>
+			    </property>
+			    <property name="drawRuleDAO">
+		          	<ref bean="drawRuleDAO" />
+		        </property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="allPick"
+		class="org.xpup.hafmis.syscollection.pickupmng.pickup.pickrule.AllPick">
+		<property name="drawRuleDAO">
+			<ref bean="drawRuleDAO" />
+		</property>
+	</bean>
+	<bean id="somePick"
+		class="org.xpup.hafmis.syscollection.pickupmng.pickup.pickrule.SomePick">
+		<property name="drawRuleDAO">
+			<ref bean="drawRuleDAO" />
+		</property>
+		<property name="empDAO">
+			<ref bean="empDAO" />
+		</property>
+	</bean>
+	<bean id="loanDocNumDesignBS" 
+				class="org.xpup.hafmis.syscollection.systemmaintain.loanpara.business.LoanDocNumDesignBS">
+				<property name="collParaDAO">
+					<ref bean="collParaDAO" />
+				</property>
+	</bean>
+	
+</beans>
+

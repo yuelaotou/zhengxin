@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/clearaccountsForwardURLAC.do" location="350,550" dimension="499,88" />
+  <StrutsActivity path="/showClearAccountAC.do" location="50,50" dimension="474,88" />
+  <StrutsActivity path="/maintainClearAccountAC.do" location="650,50" dimension="476,88" />
+  <StrutsActivity path="/findClearAccountAC.do" location="50,250" dimension="466,88" />
+  <StrutsActivity path="/clearaccountForwardURLAC.do" location="1250,50" dimension="494,88" />
+  <StrutsActivity path="/clearAccountTaWindowAC.do" location="650,250" dimension="486,88" />
+  <StrutsActivity path="/clearAccountOrgoverPrintAC.do" location="350,1350" dimension="496,88" />
+  <StrutsActivity path="/clearAccountMXFindAAC.do" location="1250,1350" dimension="477,88" />
+  <StrutsActivity path="/clearAccountWindowPrintAC.do" location="950,450" dimension="496,88" />
+  <StrutsActivity path="/clearAccountTaBalanceForwardURLAC.do" location="50,950" dimension="628,84" />
+  <StrutsActivity path="/showClearAccountBalanceAC.do" location="950,650" dimension="511,88" />
+  <StrutsActivity path="/findClearAccountBalanceAC.do" location="350,750" dimension="505,88" />
+  <StrutsActivity path="/maintainClearAccountBalanceAC.do" location="950,850" dimension="513,88" />
+  <StrutsActivity path="/clearAccountBalanceMXFindAAC.do" location="50,1150" dimension="532,84" />
+  <StrutsActivity path="/clearaccountTacheckAAC.do" location="350,1550" dimension="481,88" />
+  <StrutsActivity path="/showOrgbusinessflowListAC.do" location="1550,250" dimension="493,88" />
+  <StrutsActivity path="/findOrgbusinessflowListAC.do" location="1550,650" dimension="487,88" />
+  <StrutsActivity path="/maintainOrgbusinessflowListAC.do" location="1550,850" dimension="598,88" />
+  <StrutsActivity path="/empOperationFlowTaFindAC.do" location="950,1550" dimension="589,88" />
+  <StrutsActivity path="/empOperationFlowTaShowAC.do" location="50,1750" dimension="595,88" />
+  <StrutsActivity path="/empOperationFlowTaMaintainAC.do" location="950,1750" dimension="609,88" />
+  <StrutsActivity path="/empOperationFlowTaForwardURLAC.do" location="950,1950" dimension="610,84" />
+  <StrutsActivity path="toEmpOperationFlowTaShowAC;6" location="50,1950" dimension="201,75" />
+  <StrutsActivity path="/clearaccount_list.jsp" location="50,450" dimension="131,49" />
+  <StrutsActivity path="/orgoverpay_lb_detail.jsp" location="1250,250" dimension="153,49" />
+  <StrutsActivity path="/clearaccount_mx_A.jsp" location="950,1150" dimension="145,49" />
+  <StrutsActivity path="/clearaccount_mx.jsp" location="350,450" dimension="132,49" />
+  <StrutsActivity path="/clearaccount_mx_D.jsp" location="1250,1150" dimension="145,49" />
+  <StrutsActivity path="/clearaccount_mx_E.jsp" location="1250,1050" dimension="144,49" />
+  <StrutsActivity path="/clearaccount_mx_M.jsp" location="950,1250" dimension="146,49" />
+  <StrutsActivity path="/clearaccount_mx_F.jsp" location="50,1350" dimension="144,49" />
+  <StrutsActivity path="/clearaccount_mx_orgover_cell.jsp" location="950,1350" dimension="197,49" />
+  <StrutsActivity path="/clearaccount_mx_cell.jsp" location="50,550" dimension="153,49" />
+  <StrutsActivity path="/clearaccountbalance_list.jsp" location="50,750" dimension="168,49" />
+  <StrutsActivity path="/clearaccountbalance_mx.jsp" location="950,1050" dimension="202,48" />
+  <StrutsActivity path="/clearaccountbalance_cell.jsp" location="50,850" dimension="214,48" />
+  <StrutsActivity path="/clearaccountbalance_month_cell.jsp" location="50,1450" dimension="206,49" />
+  <StrutsActivity path="/orgbusinessflow_show.jsp" location="1550,550" dimension="159,49" />
+  <StrutsActivity path="/orgbusinessflow_cell.jsp" location="1550,1150" dimension="149,49" />
+  <StrutsActivity path="/empoperationflow_lb.jsp" location="350,1950" dimension="151,49" />
+  <StrutsActivity path="/empoperationflow1_cell.jsp" location="1550,1050" dimension="164,49" />
+  <StrutsActivity path="/showClearAccountAC" location="50,650" dimension="136,49" />
+  <StrutsActivity path="/clearaccount_mx_print.jsp" location="650,450" dimension="160,49" />
+  <StrutsActivity path="/bizcheck_windowlist.jsp" location="650,1150" dimension="146,49" />
+  <StrutsActivity path="/clearaccount_mx_B.jsp" location="650,1250" dimension="144,49" />
+  <StrutsActivity path="/orgover_windowlist.jsp" location="1250,1250" dimension="144,49" />
+  <StrutsActivity path="/empoperationflow_cell.jsp" location="650,1950" dimension="158,49" />
+  <StrutsActivity path="/chenYanDSBForwardAC.do" location="1850,1050" dimension="544,84" />
+  <StrutsActivity path="/chenYanDSBShowAC.do" location="1850,1250" dimension="526,84" />
+  <StrutsActivity path="/chenYanDSBFindAC.do" location="1850,1450" dimension="526,84" />
+  <StrutsActivity path="/chenYanDSBPrintAC.do" location="1850,1650" dimension="532,84" />
+  <StrutsActivity path="/chenyandsb.jsp" location="1850,1850" dimension="130,48" />
+  <StrutsActivity path="/chenyandsb_cell.jsp" location="1850,1950" dimension="160,48" />
+  <StrutsTransition id="/maintainClearAccountBalanceAC.do,showOrgFlow,/clearaccountbalance_mx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1137,938" />
+      <AbsolutePoint location="1137,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chenYanDSBPrintAC.do,chenyandsb_cell,/chenyandsb_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1995,1734" />
+      <AbsolutePoint location="1995,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chenYanDSBForwardAC.do,chenYanDSBShowAC,/chenYanDSBShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2122,1134" />
+      <AbsolutePoint location="2122,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountWindowPrintAC.do,show_report,/clearaccount_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findClearAccountAC.do,showClearAccountAC,/showClearAccountAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="283,250" />
+      <AbsolutePoint location="283,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showClearAccountBalanceAC.do,to_clearAccountbalance_list,/clearaccountbalance_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,714" />
+      <AbsolutePoint location="134,714" />
+      <AbsolutePoint location="134,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showOrgbusinessflowListAC.do,to_orgbusinessflow_list,/orgbusinessflow_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1694,338" />
+      <AbsolutePoint location="1694,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_clearaccount_mx_A.jsp,/clearaccount_mx_A.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="923,338" />
+      <AbsolutePoint location="923,1174" />
+      <AbsolutePoint location="950,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_clearaccount_mx_E.jsp,/clearaccount_mx_E.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="834,338" />
+      <AbsolutePoint location="834,384" />
+      <AbsolutePoint location="1508,384" />
+      <AbsolutePoint location="1508,1074" />
+      <AbsolutePoint location="1394,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaFindAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1244,1638" />
+      <AbsolutePoint location="1244,1683" />
+      <AbsolutePoint location="335,1683" />
+      <AbsolutePoint location="335,1750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1794" />
+      <AbsolutePoint location="645,1794" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainOrgbusinessflowListAC.do,to_orgbusinessflow_report,/orgbusinessflow_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chenYanDSBShowAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2113,1334" />
+      <AbsolutePoint location="2113,2109" />
+      <AbsolutePoint location="335,2109" />
+      <AbsolutePoint location="335,1838" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaForwardURLAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="347,1794" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findOrgbusinessflowListAC.do,to_orgbusinessflow_list,/showOrgbusinessflowListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1793,650" />
+      <AbsolutePoint location="1793,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountOrgoverPrintAC.do,show_report,/clearaccount_mx_orgover_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="598,1394" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_clearaccount_mx_D.jsp,/clearaccount_mx_D.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1136,324" />
+      <AbsolutePoint location="1478,324" />
+      <AbsolutePoint location="1478,1174" />
+      <AbsolutePoint location="1395,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearaccountForwardURLAC.do,show_window,/clearAccountTaWindowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="893,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_clearaccount_mx_F.jsp,/clearaccount_mx_F.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="863,250" />
+      <AbsolutePoint location="863,183" />
+      <AbsolutePoint location="-100,183" />
+      <AbsolutePoint location="-100,1374" />
+      <AbsolutePoint location="50,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_clearaccount_mx_M.jsp,/clearaccount_mx_M.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="893,338" />
+      <AbsolutePoint location="893,1274" />
+      <AbsolutePoint location="950,1274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showClearAccountAC.do,to_clearAccount_list,/clearaccount_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,94" />
+      <AbsolutePoint location="-25,94" />
+      <AbsolutePoint location="-25,474" />
+      <AbsolutePoint location="50,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chenYanDSBShowAC.do,chenyandsb,/chenyandsb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2376,1292" />
+      <AbsolutePoint location="2469,1292" />
+      <AbsolutePoint location="2469,1874" />
+      <AbsolutePoint location="1980,1874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainClearAccountBalanceAC.do,to_print,/clearaccountbalance_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,883" />
+      <AbsolutePoint location="264,883" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaShowAC.do,show_empOperationFlow,/empoperationflow_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,1838" />
+      <AbsolutePoint location="365,1950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findClearAccountBalanceAC.do,to_clearAccountbalance_list,/showClearAccountBalanceAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="855,794" />
+      <AbsolutePoint location="1175,794" />
+      <AbsolutePoint location="1175,738" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainClearAccountAC.do,showClearAccountAC,/showClearAccountAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,94" />
+      <AbsolutePoint location="524,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chenYanDSBFindAC.do,chenYanDSBShowAC,/chenYanDSBShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2113,1450" />
+      <AbsolutePoint location="2113,1334" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,to_orgover_windowlist.jsp,/orgoverpay_lb_detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="893,294" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearaccountsForwardURLAC.do,to_clearaccount_list,/showClearAccountAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="599,594" />
+      <AbsolutePoint location="287,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaWindowAC.do,show_window,/clearaccount_mx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,294" />
+      <AbsolutePoint location="599,294" />
+      <AbsolutePoint location="599,474" />
+      <AbsolutePoint location="482,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/clearAccountTaBalanceForwardURLAC.do,to_clearaccount_list,/showClearAccountBalanceAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="335,950" />
+      <AbsolutePoint location="335,684" />
+      <AbsolutePoint location="950,684" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_print,/empoperationflow1_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1559,1794" />
+      <AbsolutePoint location="1802,1794" />
+      <AbsolutePoint location="1802,1074" />
+      <AbsolutePoint location="1714,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainClearAccountBalanceAC.do,to_print_month,/clearaccountbalance_month_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1206,938" />
+      <AbsolutePoint location="1206,1474" />
+      <AbsolutePoint location="256,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="toEmpOperationFlowTaShowAC;6,null,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="150,1950" />
+      <AbsolutePoint location="150,1838" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<root file="3">
+	<file name="TraninExportExplain" col="1" space="0" row="1">
+		<column>explain</column>
+	</file>
+	<file name="TraninExportHead" col="3" space="1" row="2">
+		<column>inOrgId</column>
+		<column>inOrgName</column>
+		<column>noteNum</column>
+	</file>
+	<file name="TraninExport" col="14" space="4" row="-1">
+		<column>name</column>
+		<column>cardKind</column>
+		<column>cardNum</column>
+		<column>birthday</column>
+		<column>sex</column>
+		<column>salaryBase</column>
+		<column>preBalance</column>
+		<column>curBalance</column>
+		<column>monthIncome</column>
+		<column>curInterest</column>
+		<column>tel</column>
+		<column>mobileTel</column>
+		<column>orgPay</column>
+		<column>empPay</column>
+	</file>
+</root>

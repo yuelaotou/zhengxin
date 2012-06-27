@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<root file="2">
+<!-- 头表占用Excel col=3列 行是2行 space空两行-->
+<!-- name属性的值是Map的key 也是DTO的前边的名字 -->
+<file name="PickHeadImport" col="5"  space="0" row="2">
+	<column>
+		<name>OrgId</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>OrgName</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>OrgNoteNumber</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>Orgunitcode</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>Orgunitname</name>
+		<typle>java.lang.String</typle>
+	</column>
+</file>
+<file name="PickTailImport" col="9"  space="2" row="-1">
+	<column>
+		<name>EmpId</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>EmpName</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>CardKind</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>CardNumber</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>PickType</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>PickReason</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>PickBalance</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>MaxPickBalance</name>
+		<typle>java.lang.String</typle>
+	</column>
+	<column>
+		<name>HouseNum</name>
+		<typle>java.lang.String</typle>
+	</column>
+</file>
+</root>

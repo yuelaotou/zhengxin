@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<root file="3">
+	<file name="EmpBaseExportsOrg" col="2" space="0" row="2">
+		<column>orgId</column>
+		<column>orgName</column>
+	</file>
+	<file name="EmpBaseExportsEmp" col="11" space="2" row="1">
+		<column>empId</column>
+		<column>empName</column>
+		<column>cardNum</column>
+		<column>salaryBase</column>
+		<column>orgPay</column>
+		<column>empPay</column>
+		<column>allPay</column>
+		<column>payStatus</column>
+		<column>org_pay_month</column>
+		<column>emp_pay_month</column>
+		<column>balance</column>
+	</file>
+	<file name="EmpBaseExports" col="11" space="3" row="-1">
+		<column>empId</column>
+		<column>empName</column>
+		<column>cardNum</column>
+		<column>salaryBase</column>
+		<column>orgPay</column>
+		<column>empPay</column>
+		<column>allPay</column>
+		<column>payStatus</column>
+		<column>org_pay_month</column>
+		<column>emp_pay_month</column>
+		<column>balance</column>
+	</file>
+</root>

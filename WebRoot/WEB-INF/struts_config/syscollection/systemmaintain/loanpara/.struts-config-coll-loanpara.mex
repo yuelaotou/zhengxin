@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loanDocNumDesignForwardUrlAC.do" location="0,0" dimension="514,84" />
+  <StrutsActivity path="/loanDocNumDesignShowAC.do" location="316,184" dimension="478,84" />
+  <StrutsActivity path="/loanDocNumDesignSaveAC.do" location="614,0" dimension="478,84" />
+  <StrutsActivity path="/dataready/loanpara/loandocnumdesign.jsp" location="415,368" dimension="280,48" />
+  <StrutsActivity path="/loandocnumdesign.jsp" location="50,150" dimension="166,48" />
+  <StrutsTransition id="/loanDocNumDesignShowAC.do,to_loandocnumdesign,/loandocnumdesign.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="316,226" />
+      <AbsolutePoint location="133,226" />
+      <AbsolutePoint location="133,198" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanDocNumDesignShowAC.do,to_loandocnumdesign,/dataready/loanpara/loandocnumdesign.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="555,268" />
+      <AbsolutePoint location="555,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanDocNumDesignSaveAC.do,to_loanDocNumDesignShowAC,/loanDocNumDesignShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="853,84" />
+      <AbsolutePoint location="853,134" />
+      <AbsolutePoint location="674,134" />
+      <AbsolutePoint location="674,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanDocNumDesignForwardUrlAC.do,to_LoanDocNumDesignShowAC,/loanDocNumDesignShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="257,84" />
+      <AbsolutePoint location="257,134" />
+      <AbsolutePoint location="435,134" />
+      <AbsolutePoint location="435,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

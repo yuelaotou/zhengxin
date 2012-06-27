@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showDemoListAC.do" location="950,50" dimension="445,88" />
+  <StrutsActivity path="/demoMaintainAC.do" location="350,150" dimension="370,88" />
+  <StrutsActivity path="/demoFindInforAAC.do" location="950,250" dimension="307,88" />
+  <StrutsActivity path="/addDemoMaintainAC.do" location="50,350" dimension="310,84" />
+  <StrutsActivity path="/demoTaImportAC.do" location="650,450" dimension="270,88" />
+  <StrutsActivity path="/forwardChildXmlAction.do" location="950,650" dimension="294,88" />
+  <StrutsActivity path="/childXmlAAC.do" location="50,650" dimension="238,88" />
+  <StrutsActivity path="/getAjaxListValueAC.do" location="350,750" dimension="280,88" />
+  <StrutsActivity path="/demoList.jsp" location="350,50" dimension="93,49" />
+  <StrutsActivity path="/demo_imports.jsp" location="50,550" dimension="118,49" />
+  <StrutsActivity path="/demoadd.jsp" location="650,350" dimension="112,48" />
+  <StrutsActivity path="/demo_cell.jsp" location="350,550" dimension="124,48" />
+  <StrutsActivity path="/todel.jsp" location="950,850" dimension="100,48" />
+  <StrutsActivity path="/ajaxList.jsp" location="650,650" dimension="88,49" />
+  <StrutsActivity path="/syscommon/picture/testprobar.jsp" location="350,650" dimension="198,49" />
+  <StrutsActivity path="/uc06_organization_drawing_emp_new.jsp" location="50,250" dimension="235,49" />
+  <StrutsActivity path="/demo/demoList.jsp" location="650,50" dimension="123,49" />
+  <StrutsActivity path="demo/demoList.jsp" location="50,150" dimension="119,49" />
+  <StrutsActivity path="/demoDwInsert.jsp" location="50,950" dimension="121,49" />
+  <StrutsActivity path="syscommon/picture/testprobar.jsp" location="50,850" dimension="194,49" />
+  <StrutsTransition id="/forwardChildXmlAction.do,ajaxList,/ajaxList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,684" />
+      <AbsolutePoint location="738,684" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/demoMaintainAC.do,showDemoListAC,/showDemoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="720,194" />
+      <AbsolutePoint location="1202,194" />
+      <AbsolutePoint location="1202,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/demoMaintainAC.do,to_demo_imports,/demo_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="535,194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addDemoMaintainAC.do,to_demo_add,/demoadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="360,383" />
+      <AbsolutePoint location="650,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addDemoMaintainAC.do,showDemoListAC,/showDemoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="360,413" />
+      <AbsolutePoint location="1272,413" />
+      <AbsolutePoint location="1272,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/demoMaintainAC.do,to_demo_add,/demoadd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="665,238" />
+      <AbsolutePoint location="665,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/demoTaImportAC.do,showDemoListAC,/showDemoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="788,450" />
+      <AbsolutePoint location="788,84" />
+      <AbsolutePoint location="950,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addDemoMaintainAC.do,delToUrl,/todel.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="205,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/demoMaintainAC.do,to_demo_report,/demo_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="535,194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showDemoListAC.do,to_demo_list,/demoList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,114" />
+      <AbsolutePoint location="396,114" />
+      <AbsolutePoint location="396,99" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

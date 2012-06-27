@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<bean id="orgbusinessflowBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.business.OrgbusinessflowBS">
+				<property name="orgHAFAccountFlowDAO">
+					<ref bean="orgHAFAccountFlowDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property>
+				<property name="securityDAO">
+					<ref bean="securityDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

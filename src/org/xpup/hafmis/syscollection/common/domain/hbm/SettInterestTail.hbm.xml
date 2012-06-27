@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="SettInterestTail" 
+    table="AA317"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA317</param>
+		</generator>
+    </id>
+	<property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+    <property
+        name="preIntegral"
+        type="java.math.BigDecimal"
+        column="PRE_INTEGRAL"
+        length="18"
+    />
+    <property
+        name="curIntegral"
+        type="java.math.BigDecimal"
+        column="CUR_INTEGRAL"
+        length="18"
+    />
+    <property
+        name="curRate"
+        type="java.math.BigDecimal"
+        column="CUR_RATE"
+        length="4"
+    />
+    <property
+        name="preRate"
+        type="java.math.BigDecimal"
+        column="PRE_RATE"
+        length="4"
+    />
+    <property
+        name="preInterest"
+        type="java.math.BigDecimal"
+        column="PRE_INTEREST"
+        length="18"
+    />
+    <property
+        name="curInterest"
+        type="java.math.BigDecimal"
+        column="CUR_INTEREST"
+        length="18"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <many-to-one name="settInterestHead"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.SettInterestHead" not-null="true" >
+			<column name="SETT_HEAD_ID" />
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

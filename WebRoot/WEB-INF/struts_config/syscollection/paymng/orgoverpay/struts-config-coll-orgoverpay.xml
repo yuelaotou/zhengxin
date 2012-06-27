@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="orgoverpayAF" type="org.xpup.hafmis.syscollection.paymng.orgoverpay.form.OrgoverpayAF" />
+	<form-bean name="orgoverpayTbAF" type="org.xpup.hafmis.syscollection.paymng.orgoverpay.form.OrgoverpayTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	<action path="/orgoverpayTaShowAC"
+	        name="orgoverpayAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTaShowAC">
+			<forward name="to_orgoverpay.jsp"
+				path="/orgoverpay_show.jsp">
+			</forward>
+	</action>
+	<action path="/orgoverpayConfirmAC"
+            name="orgoverpayAF"	
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayConfirmAC">
+			<forward name="to_orgoverpay.jsp"
+				path="/orgoverpayTaForwardUrlAC.do">
+			</forward>
+	</action>
+	
+	<action path="/orgoverpayTbFindAC"
+            name="orgoverpayTbAF"	
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTbFindAC">
+			<forward name="orgoverpayTbShowAC"
+				path="/orgoverpayTbShowAC.do">
+			</forward>
+	</action>
+	<action path="/orgoverpayTbShowAC"
+	        name="orgoverpayTbAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTbShowAC">
+			<forward name="to_orgoverpay_lb.jsp"
+				path="/orgoverpay_lb.jsp">
+			</forward>
+	</action>
+	<action path="/orgoverpayMaintainAC"
+	        name="idAF"
+	        parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayMaintainAC">
+			<forward name="orgoverpayTbShowAC"
+				path="/orgoverpayTbShowAC.do">
+			</forward>
+			<forward name="to_print.jsp"
+				path="/orgoverpay_mx_cell.jsp">
+			</forward>
+
+			<forward name="orgoverpayTaShowAC"
+				path="/orgoverpayTaShowAC.do">
+			</forward>
+	</action>
+	<action path="/orgoverpayTbWindowShowAC"
+	        name="orgoverpayAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTbWindowShowAC">
+			<forward name="to_orgoverpay_lb_detail.jsp"
+				path="/orgoverpay_lb_detail.jsp">
+			</forward>
+
+	</action>
+	
+	<action path="/orgoverpayTbMXPrintAC"
+	        name="orgoverpayAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTbMXPrintAC">
+			<forward name="to_print.jsp"
+				path="/orgoverpay_mx_cell.jsp">
+			</forward>
+
+	</action>
+	<action path="/orgoverpayTaFindAAC"
+	        name="orgoverpayAF"    
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTaFindAAC">
+	</action> 
+	<action path="/orgoverpayTaForwardUrlAC"	        
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTaForwardUrlAC">
+			<forward name="orgoverpayTaShow"
+				path="/orgoverpayTaShowAC.do">
+			</forward>
+	</action>
+	<action path="/orgoverpayTbForwardUrlAC"	        
+			type="org.xpup.hafmis.syscollection.paymng.orgoverpay.action.OrgoverpayTbForwardUrlAC">
+			<forward name="orgoverpayTbShow"
+				path="/orgoverpayTbShowAC.do">
+			</forward>
+	</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/paymng/orgoverpay/applicationContext.xml" />
+	</plug-in>
+</struts-config>

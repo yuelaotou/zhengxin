@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscommon.domain.entity.EmpInfo" 
+    table="BA002"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        	<generator class="sequence">
+				<param name="sequence">SEQ_BA002</param>
+			</generator>
+    </id>
+
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="cardKind"
+        type="java.math.BigDecimal"
+        column="CARD_KIND"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARD_NUM"
+        not-null="true"
+        length="30"
+    />
+    <property
+        name="birthday"
+        type="java.lang.String"
+        column="BIRTHDAY"
+        length="7"
+    />
+    <property
+        name="sex"
+        type="java.math.BigDecimal"
+        column="SEX"
+        length="22"
+    />
+    <property
+        name="department"
+        type="java.lang.String"
+        column="DEPARTMENT"
+        length="20"
+    />
+    <property
+        name="tel"
+        type="java.lang.String"
+        column="TEL"
+        length="20"
+    />
+    <property
+        name="mobileTle"
+        type="java.lang.String"
+        column="MOBILE_TLE"
+        length="20"
+    />
+    <property
+        name="monthIncome"
+        type="java.math.BigDecimal"
+        column="MONTH_INCOME"
+        length="18"
+    />
+    <property
+        name="opendate"
+        type="java.lang.String"
+        column="OPENDATE"
+        not-null="true"
+        length="8"
+    />
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="standbyCardNum"
+        type="java.lang.String"
+        column="STANDBY_CARD_NUM"
+        length="20"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

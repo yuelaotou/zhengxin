@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/monthpayTaFindAAC.do" location="541,1383" dimension="466,84" />
+  <StrutsActivity path="/monthpayTaForwardUrlAC.do" location="0,184" dimension="496,84" />
+  <StrutsActivity path="/monthpayTaShowAC.do" location="18,368" dimension="460,84" />
+  <StrutsActivity path="/monthpayTaMaintainAC.do" location="264,0" dimension="484,84" />
+  <StrutsActivity path="/monthpayTbFindAC.do" location="2648,0" dimension="460,84" />
+  <StrutsActivity path="/monthpayTbForwardUrlAC.do" location="2052,0" dimension="496,84" />
+  <StrutsActivity path="/monthpayTbShowAC.do" location="2090,184" dimension="460,84" />
+  <StrutsActivity path="/monthpayTbMaintainAC.do" location="1468,0" dimension="484,84" />
+  <StrutsActivity path="/monthpayTbWindowShowAC.do" location="559,1106" dimension="496,84" />
+  <StrutsActivity path="/monthpayTbWindowMaintainAC.do" location="848,0" dimension="520,84" />
+  <StrutsActivity path="/monthpayTbWindowMXShowAC.do" location="334,829" dimension="508,84" />
+  <StrutsActivity path="/monthpayTbWindowMXPrintAC.do" location="0,1106" dimension="514,84" />
+  <StrutsActivity path="/monthpayTbWindowMXForwardURLAC.do" location="0,645" dimension="544,84" />
+  <StrutsActivity path="/monthpayAutoOverPayAAC.do" location="0,1383" dimension="496,84" />
+  <StrutsActivity path="/monthpayTbWindowMXExportAC.do" location="644,645" dimension="520,84" />
+  <StrutsActivity path="/monthpay_jy.jsp" location="329,552" dimension="136,48" />
+  <StrutsActivity path="/monthpay_cell.jsp" location="907,202" dimension="148,48" />
+  <StrutsActivity path="/monthpay_lb.jsp" location="2252,386" dimension="136,48" />
+  <StrutsActivity path="/modify_monthPay.jsp" location="650,450" dimension="160,48" />
+  <StrutsActivity path="/monthpay_lb_cell.jsp" location="1627,202" dimension="166,48" />
+  <StrutsActivity path="/monthpay_org.jsp" location="736,1290" dimension="142,48" />
+  <StrutsActivity path="/monthpay_cell_1.jsp" location="1155,202" dimension="160,48" />
+  <StrutsActivity path="/monthpay_lb_mx.jsp" location="511,1013" dimension="154,48" />
+  <StrutsActivity path="/monthpay_mx_cell.jsp" location="174,1290" dimension="166,48" />
+  <StrutsActivity path="/monthpayModifyAC.do" />
+  <StrutsTransition id="/monthpayTbMaintainAC.do,show_print,/monthpay_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1549,84" />
+      <AbsolutePoint location="1549,149" />
+      <AbsolutePoint location="1031,149" />
+      <AbsolutePoint location="1031,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayModifyAC.do,show_paymentList,/monthpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="2320,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbForwardUrlAC.do,show_monthpay,/monthpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2300,84" />
+      <AbsolutePoint location="2300,119" />
+      <AbsolutePoint location="2320,119" />
+      <AbsolutePoint location="2320,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTaShowAC.do,show_monthpay,/monthpay_jy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,452" />
+      <AbsolutePoint location="248,502" />
+      <AbsolutePoint location="363,502" />
+      <AbsolutePoint location="363,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTaMaintainAC.do,show_monthpay,/monthpayTaForwardUrlAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="345,84" />
+      <AbsolutePoint location="345,119" />
+      <AbsolutePoint location="248,119" />
+      <AbsolutePoint location="248,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbMaintainAC.do,show_paymentList,/monthpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1872,84" />
+      <AbsolutePoint location="1872,119" />
+      <AbsolutePoint location="2167,119" />
+      <AbsolutePoint location="2167,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTaMaintainAC.do,show_print,/monthpay_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="668,84" />
+      <AbsolutePoint location="668,119" />
+      <AbsolutePoint location="932,119" />
+      <AbsolutePoint location="932,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowShowAC.do,show_monthpay,/monthpay_org.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="807,1190" />
+      <AbsolutePoint location="807,1290" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTaForwardUrlAC.do,show_monthpay,/monthpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,268" />
+      <AbsolutePoint location="248,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMXForwardURLAC.do,show_monthpay,/monthpayTbWindowMXShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,729" />
+      <AbsolutePoint location="272,779" />
+      <AbsolutePoint location="461,779" />
+      <AbsolutePoint location="461,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMaintainAC.do,show_print_1,/monthpay_cell_1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1238,84" />
+      <AbsolutePoint location="1238,119" />
+      <AbsolutePoint location="1235,119" />
+      <AbsolutePoint location="1235,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMaintainAC.do,show_print,/monthpay_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="978,84" />
+      <AbsolutePoint location="978,119" />
+      <AbsolutePoint location="981,119" />
+      <AbsolutePoint location="981,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMXPrintAC.do,show_print,/monthpay_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="257,1190" />
+      <AbsolutePoint location="257,1290" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTaMaintainAC.do,show_monthpay_jsp,/monthpay_jy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="506,84" />
+      <AbsolutePoint location="506,119" />
+      <AbsolutePoint location="526,119" />
+      <AbsolutePoint location="526,502" />
+      <AbsolutePoint location="431,502" />
+      <AbsolutePoint location="431,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbMaintainAC.do,monthpay_lb_cell,/monthpay_lb_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1710,84" />
+      <AbsolutePoint location="1710,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMXShowAC.do,show_tail,/monthpay_lb_mx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="588,913" />
+      <AbsolutePoint location="588,1013" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbShowAC.do,show_paymentList,/monthpay_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2320,268" />
+      <AbsolutePoint location="2320,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbWindowMXExportAC.do,monthpayTbWindowMXShowAC,/monthpayTbWindowMXShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="904,729" />
+      <AbsolutePoint location="904,779" />
+      <AbsolutePoint location="715,779" />
+      <AbsolutePoint location="715,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbFindAC.do,show_payment,/monthpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2878,84" />
+      <AbsolutePoint location="2878,119" />
+      <AbsolutePoint location="2473,119" />
+      <AbsolutePoint location="2473,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayTbMaintainAC.do,modify_monthPay,/modify_monthPay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1710,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

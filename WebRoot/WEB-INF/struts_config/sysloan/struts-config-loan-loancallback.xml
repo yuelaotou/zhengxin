@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!-- 公用 -->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+			<!-- 办理 -->
+		<form-bean name="loancallbackTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.form.LoancallbackTaAF" />
+		<form-bean name="loancallbackTaImportAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.form.LoancallbackTaImportAF" />
+			<!-- 维护 -->
+		<form-bean name="loancallbackTbAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.form.LoancallbackTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- 办理 -->
+		<action path="/loancallbackTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaFindAAC">
+		</action>
+		<action path="/loancallbackTaAheadAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaAheadAAC">
+		</action>
+		<action path="/loancallbackTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaForwardURLAC">
+			<forward name="loancallbackTaShowAC" path="/loancallbackTaShowAC.do" />
+		</action>
+		<action path="/loanSpecallbackTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoanSpecallbackTaForwardURLAC">
+			<forward name="loancallbackTaShowAC" path="/loancallbackTaShowAC.do" />
+		</action>
+		<action name="loancallbackTaAF" path="/loancallbackTaShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaShowAC">
+			<forward name="loancallback_jy" path="/loancallback/loancallback/loancallback_jy.jsp" />
+		</action>
+		<action name="loancallbackTaAF" path="/loancallbackTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaMaintainAC">
+			<forward name="loancallback_import" path="/loancallback/loancallback/loancallback_import.jsp" />
+			<forward name="loancallbackTaShowAC" path="/loancallbackTaShowAC.do" />
+			<forward name="loancallback_cell" path="/loancallback/loancallback/loancallback_cell.jsp" />
+		</action>
+		<action path="/loancallbackTaChangeMonthAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaChangeMonthAC">
+			<forward name="loancallback_jy" path="/loancallback/loancallback/loancallback_jy.jsp" />
+		</action>
+		<action name="loancallbackTaImportAF" path="/loancallbackTaImportAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTaImportAC">
+			<forward name="loancallbackTaShowAC" path="/loancallbackTaShowAC.do" />
+		</action>
+		<!-- 维护 -->
+		<action path="/loancallbackTbForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbForwardURLAC">
+			<forward name="loancallbackTbShowAC" path="/loancallbackTbShowAC.do" />
+		</action>
+		<action name="loancallbackTbAF" path="/loancallbackTbFindAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbFindAC">
+			<forward name="loancallbackTbShowAC" path="/loancallbackTbShowAC.do" />
+		</action>
+		<action name="loancallbackTbAF" path="/loancallbackTbShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbShowAC">
+			<forward name="loancallback_lb" path="/loancallback/loancallback/loancallback_lb.jsp" />
+		</action>
+		<action name="idAF" path="/loancallbackTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbMaintainAC">
+			<forward name="loancallbackTbShowAC" path="/loancallbackTbShowAC.do" />
+			<forward name="loancallback_cell" path="/loancallback/loancallback/loancallback_cell.jsp" />
+		</action>
+		<!-- 弹出窗口 -->
+		<action path="/loancallbackTbForwardURLWindowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbForwardURLWindowAC">
+			<forward name="loancallbackTbShowWindowAC" path="/loancallbackTbShowWindowAC.do" />
+		</action>
+		<action path="/loancallbackTbShowWindowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbShowWindowAC">
+			<forward name="loancallbackTbShowAC" path="/loancallbackTbShowAC.do" />
+			<forward name="loancallback_jy" path="/loancallback/loancallback/loancallback_windowD.jsp" />
+			<forward name="loancallback_lb" path="/loancallback/loancallback/loancallback_windowP.jsp" />
+		</action>
+		<action  name="loancallbackTaAF" path="/loancallbackTbPrintWindowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackTbPrintWindowAC">
+			<forward name="loancallback_cell" path="/loancallback/loancallback/loancallback_cell.jsp" />
+			<forward name="loancallbackList_cell" path="/loancallback/loancallback/loancallbackList_cell.jsp" />
+		</action>
+		<action path="/loancallbackSomeBackAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.action.LoancallbackSomeBackAAC">
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

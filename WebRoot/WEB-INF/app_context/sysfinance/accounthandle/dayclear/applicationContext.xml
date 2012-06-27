@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="dayclearBS_f" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysfinance.accounthandle.dayclear.business.DayclearBS">
+				<property name="relaUserAndBookDAO">
+					<ref bean="relaUserAndBookDAO" />
+				</property>				
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

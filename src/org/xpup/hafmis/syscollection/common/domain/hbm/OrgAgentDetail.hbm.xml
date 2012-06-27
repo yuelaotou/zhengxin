@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="OrgAgentDetail" 
+    table="EA002"
+>
+
+    <id
+        name="orgAgentId"
+        type="integer"
+        column="ORG_AGENT_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_EA002</param>
+	</generator>
+    </id>
+    <property
+        name="orgAgentNum"
+        type="java.lang.String"
+        column="ORG_AGENT_NUM"
+        length="20"
+    />
+    <property
+        name="agentHeadId"
+        type="java.lang.Integer"
+        column="AGENT_HEAD_ID"
+    />
+
+</class>
+</hibernate-mapping>

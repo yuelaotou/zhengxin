@@ -1,0 +1,84 @@
+BODY
+{
+	font-family:Verdana;
+	cursor:default;
+	font-size:9pt;
+}
+TD
+{
+	font-size:9pt;
+}
+INPUT.BUTTON
+{
+    BORDER-STYLE: solid;
+    BORDER-COLOR: #a0a070;
+    BORDER-WIDTH: 1px;
+	FONT-SIZE: 9pt;
+	HEIGHT: 20px;
+	FONT-FAMILY:Verdana;
+	BACKGROUND-COLOR: #edefe0
+}
+
+span
+{
+	padding:2px 3px;
+	position:relative;
+	display:inline;
+	top:2px;
+	height:17px;
+	border: solid 1px #CEE7F4;
+}
+
+span.clsLabel
+{
+}
+
+SPAN.clsMouseOver
+{
+	background-color:#e8f4ff;
+	border:1px solid #0099CC;
+}
+
+SPAN.clsMouseDown
+{
+	background-color:#99ccff;
+	border:1px solid #0099CC;
+}
+
+SPAN.clsCurrentFocus
+{
+	background-color:#ffffff;
+	border:1px solid #0099cc;
+}
+
+SPAN.clsCurrentNoFocus
+{
+	background-color:#f2f8ff;
+	border:1px solid #0099cc;
+}
+
+SPAN.Link
+{
+	padding:0px 0px;
+	border: solid 0px #ffffff;
+	top:1px;
+	margin:0px;
+	cursor:hand;
+	height:14px;
+}
+
+.hide
+{
+	display:none;
+}
+
+.shown
+{
+	display:block;
+	margin-left:17px;
+}
+
+.clsItem
+{
+	white-space:nowrap;
+}

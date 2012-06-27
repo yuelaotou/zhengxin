@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="AddPayTail" 
+    table="AA304"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA304</param>
+		</generator>
+    </id>
+    <property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+    <property
+        name="addMonht"
+        type="java.lang.String"
+        column="ADD_MONHT"
+        not-null="true"
+        length="6"
+    />
+    
+     <property
+        name="beginMonth"
+        type="java.lang.String"
+        formula="(select  min(ADD_MONHT) from AA301 aa301 where aa301.id=PAY_HEAD_ID ) "
+    />
+    
+    <property
+        name="endMonth"
+        type="java.lang.String"
+        formula="(select max(ADD_MONHT) from AA301 aa301  where  aa301.id=PAY_HEAD_ID  )"
+    />
+    <property
+        name="orgAddMoney"
+        type="java.math.BigDecimal"
+        column="ORG_ADD_MONEY"
+        length="18"
+    />
+    <property
+        name="empAddMoney"
+        type="java.math.BigDecimal"
+        column="EMP_ADD_MONEY"
+        length="18"
+    />
+    <property
+        name="addReason"
+        type="java.lang.String"
+        column="ADD_REASON"
+        length="50"
+    />
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    
+ 
+     <property
+        name="salaryBase"
+        type="java.math.BigDecimal"
+        column="SALARY_BASE"
+        length="18"
+    />
+    <property
+        name="orgRate"
+        type="java.math.BigDecimal"
+        column="ORG_RATE"
+        length="4"
+    />
+    <property
+        name="empRate"
+        type="java.math.BigDecimal"
+        column="EMP_RATE"
+        length="4"
+    />
+   <property
+        name="addPaySum"
+        type="java.math.BigDecimal"
+        formula="(ORG_ADD_MONEY+EMP_ADD_MONEY)" 
+    />
+
+   <property name="empName" type="java.lang.String" 
+		formula="(select distinct ba002.name from BA002 ba002,AA002 aa002  where aa002.emp_info_id=ba002.id and aa002.id=EMP_ID )"/>
+
+    <many-to-one name="paymentHead"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.PaymentHead" not-null="true" >
+			<column name="PAY_HEAD_ID" />
+	</many-to-one>
+	
+</class>
+</hibernate-mapping>

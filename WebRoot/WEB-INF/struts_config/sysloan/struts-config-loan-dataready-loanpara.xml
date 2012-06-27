@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="loanDocNumDesignAF"
+			type="org.xpup.hafmis.sysloan.dataready.loanpara.form.LoanDocNumDesignAF" />
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- ============================================ta ========================================================-->
+		<action path="/loanDocNumDesignForwardUrlAC" name="loanDocNumDesignAF"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.dataready.loanpara.action.LoanDocNumDesignForwardUrlAC">
+			<forward name="to_LoanDocNumDesignShowAC"
+				path="/loanDocNumDesignShowAC.do">
+			</forward>
+		</action>
+		<action path="/loanDocNumDesignShowAC" name="loanDocNumDesignAF"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.dataready.loanpara.action.LoanDocNumDesignShowAC">
+			<forward name="to_loandocnumdesign"
+				path="/dataready/loanpara/loandocnumdesign.jsp">
+			</forward>
+		</action>
+		<action path="/loanDocNumDesignSaveAC" name="loanDocNumDesignAF"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.dataready.loanpara.action.LoanDocNumDesignSaveAC">
+			<forward name="to_loanDocNumDesignShowAC"
+				path="/loanDocNumDesignShowAC.do">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	
+</struts-config>

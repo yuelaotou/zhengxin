@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/spepickshowAC.do" location="950,50" dimension="490,84" />
+  <StrutsActivity path="/spePickSaveAC.do" location="350,150" dimension="490,84" />
+  <StrutsActivity path="/spePickfindAAC.do" location="950,250" dimension="490,84" />
+  <StrutsActivity path="/spePickfindempAAC.do" location="50,350" dimension="496,84" />
+  <StrutsActivity path="/spePickShowListAC.do" location="50,750" dimension="514,84" />
+  <StrutsActivity path="/spePickFindListAC.do" location="50,550" dimension="514,84" />
+  <StrutsActivity path="/spepickmaintainac.do" location="950,650" dimension="508,84" />
+  <StrutsActivity path="/specialpickup_transaction.jsp" location="50,150" dimension="220,48" />
+  <StrutsActivity path="/specialpickup_vindicate.jsp" location="50,250" dimension="208,48" />
+  <StrutsActivity path="/spepickupshowlistac" location="650,450" dimension="490,84" />
+  <StrutsActivity path="/organization_open_new.jsp" location="650,50" dimension="196,48" />
+  <StrutsActivity path="/spepickshowAC。" location="650,350" dimension="136,48" />
+  <StrutsActivity path="/spepickshowAC" location="650,650" dimension="124,48" />
+  <StrutsTransition id="/spePickSaveAC.do,to_spe_pick_show,/spepickshowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="595,192" />
+      <AbsolutePoint location="1195,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spePickFindListAC.do,show_organizations,/spePickShowListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,634" />
+      <AbsolutePoint location="307,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spePickShowListAC.do,spe_pick_list,/specialpickup_vindicate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,792" />
+      <AbsolutePoint location="-25,792" />
+      <AbsolutePoint location="-25,274" />
+      <AbsolutePoint location="50,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spepickmaintainac.do,show_list,/spePickShowListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1204,692" />
+      <AbsolutePoint location="307,792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spePickSaveAC.do,to_spe_pick_new,/specialpickup_transaction.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,183" />
+      <AbsolutePoint location="270,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/spepickshowAC.do,to_spe_pick_new,/specialpickup_transaction.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,113" />
+      <AbsolutePoint location="160,113" />
+      <AbsolutePoint location="160,150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

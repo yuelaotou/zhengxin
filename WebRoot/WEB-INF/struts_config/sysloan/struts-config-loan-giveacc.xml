@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="giveaccModifyAF"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.form.GiveaccModifyAF" />
+			<form-bean name="houseAF"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.form.HouseAccAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="idAF" path="/giveAccForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.GiveAccForwardURLAC">
+			<forward name="to_giveacc_modify"
+				path="/giveaccTaShowAC.do" />
+		</action>
+		<action name="giveaccModifyAF" path="/giveaccTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.GiveaccTaShowAC">
+			<forward name="to_show_giveacc"
+				path="/loanapply/giveacc/giveacc_modify.jsp" />
+		</action>
+		<action path="/giveaccTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.GiveaccTaFindAAC">
+		</action>
+		<action name="giveaccModifyAF" path="/giveaccTaModifyAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.GiveaccTaModifyAC">
+			<forward name="to_show_giveacc"
+				path="/giveaccTaShowAC.do" />
+		</action>
+		<action name="idAF" path="/houseForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.HouseAccForwardURLAC">
+			<forward name="to_house_list"
+				path="/houseTbShowAC.do" />
+		</action>
+		<action name="idAF" path="/houseTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.HouseTbShowAC">
+			<forward name="to_house_show"
+				path="/loanapply/giveacc/house_show.jsp" />
+		</action>
+		<action name="houseAF" path="/houseTbFindAC"
+type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.HouseTbFindAC">
+			<forward name="to_house_show"
+				path="/houseTbShowAC.do" />
+		</action>
+		<action name="idAF" path="/housePrintAC"
+			type="org.xpup.hafmis.sysloan.loanapply.giveacc.action.HousePrintAC">
+			<forward name="to_houselist_print"
+				path="/loanapply/giveacc/house_print.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

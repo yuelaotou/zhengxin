@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.ReportMng" 
+    table="FN400"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+<generator class="sequence">
+	   <param name="sequence">SEQ_FN400</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="tailtableName"
+        type="java.lang.String"
+        column="TAILTABLE_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="tailtableNameChinese"
+        type="java.lang.String"
+        column="TAILTABLE_NAME_CHINESE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="colspan"
+        type="java.lang.String"
+        column="COLSPAN"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="rowspan"
+        type="java.lang.String"
+        column="ROWSPAN"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="querymode"
+        type="java.lang.String"
+        column="QUERYMODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="urlid"
+        type="java.lang.String"
+        column="URLID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="createtime"
+        type="java.sql.Timestamp"
+        column="CREATETIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="createperson"
+        type="java.lang.String"
+        column="CREATEPERSON"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

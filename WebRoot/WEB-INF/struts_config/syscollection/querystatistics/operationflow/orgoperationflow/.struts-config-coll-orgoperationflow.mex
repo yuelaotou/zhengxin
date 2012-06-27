@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgbusinessflowForwardURLAC.do" location="50,50" dimension="591,88" />
+  <StrutsActivity path="/showOrgbusinessflowListAC.do" location="950,50" dimension="574,88" />
+  <StrutsActivity path="/findOrgbusinessflowListAC.do" location="50,250" dimension="568,88" />
+  <StrutsActivity path="/maintainOrgbusinessflowListAC.do" location="950,250" dimension="588,88" />
+  <StrutsActivity path="/empOperationFlowTaForwardURLAC.do" location="350,1150" dimension="730,84" />
+  <StrutsActivity path="/empOperationFlowTaFindAC.do" location="650,450" dimension="694,84" />
+  <StrutsActivity path="/empOperationFlowTaShowAC.do" location="50,950" dimension="694,84" />
+  <StrutsActivity path="/empOperationFlowTaMaintainAC.do" location="950,950" dimension="718,84" />
+  <StrutsActivity path="/orgbusinessflow_show.jsp" location="50,450" dimension="159,49" />
+  <StrutsActivity path="/orgbusinessflow_cell.jsp" location="350,450" dimension="149,49" />
+  <StrutsActivity path="/empoperationflow_lb.jsp" location="950,750" dimension="151,49" />
+  <StrutsActivity path="/empoperationflow_print.jsp" location="650,750" dimension="202,48" />
+  <StrutsActivity path="/empoperationflow_cell.jsp" location="50,1150" dimension="196,48" />
+  <StrutsActivity path="/" location="50,550" dimension="33,49" />
+  <StrutsActivity path="/toEmpOperationFlowTaShowAC" location="950,650" dimension="185,49" />
+  <StrutsActivity path="toEmpOperationFlowTaShowAC" location="350,550" dimension="181,49" />
+  <StrutsActivity path="/syscollection/querystatistics/operationflow/empoperationflow/empOperationFlowTaShowAC" location="50,650" dimension="473,49" />
+  <StrutsActivity path="/syscollection/querystatistics/operationflow/empoperationflow/" location="50,750" dimension="331,49" />
+  <StrutsActivity path="/syscollection/querystatistics/operationflow/empoperationflow" location="50,850" dimension="327,49" />
+  <StrutsActivity path="/syscollection/querystatistics/operationflow/orgoperationflow" location="650,850" dimension="323,49" />
+  <StrutsActivity path="/syscollection/paymng/monthpay/monthpay_mx_cell.jsp" location="50,1350" dimension="346,48" />
+  <StrutsActivity path="empoperationflow_print.jsp" location="650,650" dimension="196,48" />
+  <StrutsTransition id="/empOperationFlowTaFindAC.do,empOperationFlowTaShowAC,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,484" />
+      <AbsolutePoint location="546,484" />
+      <AbsolutePoint location="546,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_print,/empoperationflow_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1309,950" />
+      <AbsolutePoint location="1309,714" />
+      <AbsolutePoint location="751,714" />
+      <AbsolutePoint location="751,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaMaintainAC.do,show_empOperationFlow,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,992" />
+      <AbsolutePoint location="744,992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainOrgbusinessflowListAC.do,to_orgbusinessflow_report,/orgbusinessflow_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1244,338" />
+      <AbsolutePoint location="1244,413" />
+      <AbsolutePoint location="424,413" />
+      <AbsolutePoint location="424,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findOrgbusinessflowListAC.do,to_orgbusinessflow_list,/showOrgbusinessflowListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="334,250" />
+      <AbsolutePoint location="334,184" />
+      <AbsolutePoint location="1237,184" />
+      <AbsolutePoint location="1237,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaForwardURLAC.do,empOperationFlowTaShowAC,/empOperationFlowTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="397,992" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgbusinessflowForwardURLAC.do,to_orgbusinessflow_list,/showOrgbusinessflowListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="641,94" />
+      <AbsolutePoint location="950,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empOperationFlowTaShowAC.do,empOperationFlowTaShowAC,/empoperationflow_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="397,950" />
+      <AbsolutePoint location="397,814" />
+      <AbsolutePoint location="1025,814" />
+      <AbsolutePoint location="1025,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showOrgbusinessflowListAC.do,to_orgbusinessflow_list,/orgbusinessflow_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,124" />
+      <AbsolutePoint location="785,124" />
+      <AbsolutePoint location="785,383" />
+      <AbsolutePoint location="129,383" />
+      <AbsolutePoint location="129,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="issuenoticeTaAF"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.form.IssuenoticeTaAF" />
+		<form-bean name="issuenoticeTbAF"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.form.IssuenoticeTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- ================================================Ta====================================================== -->
+		<action name="issuenoticeTaAF" path="/issuenoticeTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTaShowAC">
+			<forward name="to_loanerlogoutta_show"
+				path="/loanapply/issuenotice/issuenoticeta_show.jsp" />
+		</action>
+		<action path="/issuenoticeTaForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTaForwardAC">
+			<forward name="issuenoticeta_show"
+				path="/issuenoticeTaShowAC.do" />
+		</action>
+		<action name="issuenoticeTaAF" path="/issuenoticeTaSaveAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTaSaveAC">
+			<forward name="issuenotice_show"
+				path="/loanapply/issuenotice/issuenoticeta_show.jsp" />
+		</action>
+		<action path="/issuenoticeTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTaFindAAC">
+		</action>
+		<action name="issuenoticeTaAF" path="/issuenoticeTaPrintAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTaPrintAC">
+			<forward name="issuenotice_show"
+				path="/loanapply/issuenotice/issuenoticeta_show.jsp" />
+			<forward name="issuenoticeta_print"
+				path="/loanapply/issuenotice/issuenoticeta_print.jsp" />
+		</action>
+		<!-- ================================================Tb====================================================== -->
+		<action path="/issuenoticeTbForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTbForwardAC">
+			<forward name="issuenoticetb_show"
+				path="/issuenoticeTbShowAC.do" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTbShowAC">
+			<forward name="to_issuenoticetb_show"
+				path="/loanapply/issuenotice/issuenoticetb_show.jsp" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTbFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTbFindAC">
+			<forward name="issuenoticetb_show"
+				path="/issuenoticeTbShowAC.do" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTbDeleteAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IissuenoticeTbDeleteAC">
+			<forward name="issuenoticetb_show"
+				path="/issuenoticeTbShowAC.do" />
+		</action>
+		<action name="idAF" path="/issuenoticeTbMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTbMaintainAC">
+			<forward name="issuenoticeTaShowAC"
+				path="/issuenoticeTaShowAC.do" />
+			<forward name="issuenoticetb_show"
+				path="/issuenoticeTbShowAC.do" />
+			<forward name="to_issuenoticetb_print"
+				path="/loanapply/issuenotice/issuenoticetb_print.jsp" />
+			<forward name="to_issuenoticetblist_print"
+				path="/loanapply/issuenotice/issuenoticetblist_print.jsp" />
+		</action>
+		<!-- ================================================Tc====================================================== -->
+		<action path="/issuenoticeTcForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTcForwardAC">
+			<forward name="issuenoticetc_show"
+				path="/issuenoticeTcShowAC.do" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTcShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTcShowAC">
+			<forward name="to_issuenoticetc_show"
+				path="/loanapply/issuenotice/issuenoticefin_show.jsp" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTcFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTcFindAC">
+			<forward name="issuenoticetc_show"
+				path="/issuenoticeTcShowAC.do" />
+		</action>
+		<action name="idAF" path="/issuenoticeTcMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTcMaintainAC">
+			<forward name="issuenoticetc_show"
+				path="/issuenoticeTcShowAC.do" />
+		</action>
+		<!-- ================================================Td====================================================== -->
+		<action path="/issuenoticeTdForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTdForwardAC">
+			<forward name="issuenoticetd_show"
+				path="/issuenoticeTdShowAC.do" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTdShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTdShowAC">
+			<forward name="to_issuenoticetd_show"
+				path="/loanapply/issuenotice/issuenoticefin_chen_show.jsp" />
+		</action>
+		<action name="issuenoticeTbAF" path="/issuenoticeTdFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTdFindAC">
+			<forward name="issuenoticetd_show"
+				path="/issuenoticeTdShowAC.do" />
+		</action>
+		<action name="idAF" path="/issuenoticeTdMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.issuenotice.action.IssuenoticeTdMaintainAC">
+			<forward name="to_issuenoticetd_print"
+				path="/loanapply/issuenotice/issuenoticefin_chen_print.jsp" />
+			<forward name="issuenoticetd_show"
+				path="/issuenoticeTdShowAC.do" />
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

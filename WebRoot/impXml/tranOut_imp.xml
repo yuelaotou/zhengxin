@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<root file="2">
+  <file name="TranoutHeadImport" col="6"  space="0" row="2">
+	 <column>
+	     <name>OrgOutid</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>OrgOutName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>OrgInid</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	  <column>
+	     <name>OrgInName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	  <column>
+	     <name>NoteNum</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Expalanation</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 
+	
+  </file>
+  <file name="TranoutListImport" col="7"  space="2" row="-1">
+      <column>
+	     <name>EmpId</name>
+		 <typle>java.lang.String</typle>
+	  </column>
+      <column>
+	     <name>EmpName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Card_king</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Card_num</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>Issettinrest</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>TranReason</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Tranin_empid</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	   
+  </file>
+</root>

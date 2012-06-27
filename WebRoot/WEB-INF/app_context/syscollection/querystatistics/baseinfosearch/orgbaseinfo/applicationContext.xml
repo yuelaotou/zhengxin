@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+   <bean id="orgBaseInfoBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.orgbaseinfo.business.OrgBaseInfoBS">
+				<property name="orgDAO">
+					<ref bean="orgDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

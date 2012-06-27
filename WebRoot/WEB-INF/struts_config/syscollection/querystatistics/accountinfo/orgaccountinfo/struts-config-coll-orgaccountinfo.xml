@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="orgAccountInfoAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.form.OrgAccountInfoAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	 <action name="orgAccountInfoAF" path="/orgAccountInfoTaFindAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTaFindAC">
+			<forward name="to_showOrgAccountInfo" path="/orgAccountInfoTaShowAC.do"/>
+		</action>
+	     <action path="/orgAccountInfoTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTaForwardURLAC">
+			<forward name="to_showOrgAccountInfo" path="/orgAccountInfoTaShowAC.do"/>
+		</action>
+	    <action name="orgAccountInfoAF" path="/orgAccountInfoTaShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTaShowAC">
+			<forward name="to_showOrgAccountInfo" path="/orgaccountinfo_lb.jsp"/>
+		</action>
+		<action name="idAF" path="/orgAccountInfoTaMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTaMaintainAC">
+			<forward name="to_orgAccountprint" path="/orgaccountinfo_cell.jsp"></forward>
+		</action>
+		<action name="idAF" path="/orgAccountInfoTbMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTbMaintainAC">
+			<forward name="to_orgAccountprint" path="/orgaccountinfo_cell.jsp"></forward>
+		</action>
+		<action name="idAF" path="/orgAccountInfoTcMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTcMaintainAC">
+			<forward name="to_orgAccountprint" path="/orgaccountinfo_cell.jsp"></forward>
+		</action>
+	    <action name="orgAccountInfoAF" path="/orgAccountInfoTbShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTbShowAC">
+			<forward name="to_showOrgAccountInfo" path="/orgaccountinfomonth_lb.jsp"/>
+		</action>
+	    <action name="orgAccountInfoAF" path="/orgAccountInfoTcShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTcShowAC">
+			<forward name="to_showOrgAccountInfo" path="/orgaccountinfoday_lb.jsp"/>
+		</action>
+	
+	     <action path="/orgAccountInfoTbForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTbForwardURLAC">
+			<forward name="to_showOrgAccountInfo" path="/orgAccountInfoTbShowAC.do"/>
+		</action>
+		
+	     <action path="/orgAccountInfoTcForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.accountinfo.orgaccountinfo.action.OrgAccountInfoTcForwardURLAC">
+			<forward name="to_showOrgAccountInfo" path="/orgAccountInfoTcShowAC.do"/>
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/accountinfo/orgaccountinfo/applicationContext.xml" />
+	</plug-in>
+</struts-config>

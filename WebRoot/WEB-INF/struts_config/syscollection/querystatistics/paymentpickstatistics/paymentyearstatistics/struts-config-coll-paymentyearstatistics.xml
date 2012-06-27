@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	 <form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+	 <form-bean name="paymentyearstatisticsAF" 
+	        type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearstatistics.form.PaymentyearstatisticsAF"/>	
+	 	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	
+	 <action name="paymentyearstatisticsAF" 
+	         path="/paymentyearShowAC" scope="session" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearstatistics.action.PaymentyearstatisticsForwardUrlAC">
+	   <forward name="to_paymentyearstatisticsShowAC" path="/to_paymentyearstatisticsShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="paymentyearstatisticsAF" 
+	         path="/to_paymentyearstatisticsShowAC" 
+	         scope="session" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearstatistics.action.PaymentyearstatisticsShowAC">
+	    <forward name="to_paymentyearstatistics1.jsp" path="/paymentyearstatistics1.jsp"></forward>
+	    <forward name="to_paymentyearstatistics2.jsp" path="/paymentyearstatistics2.jsp"></forward>
+	    <forward name="to_paymentyearstatistics3.jsp" path="/paymentyearstatistics3.jsp"></forward>
+	    <forward name="to_paymentyearstatistics4.jsp" path="/paymentyearstatistics4.jsp"></forward>
+	 </action>
+	 
+	 <action name="paymentyearstatisticsAF" 
+	         path="/paymentyearstatisticsFindAC" 
+	         scope="session"
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearstatistics.action.PaymentyearstatisticsFindAC">
+	    <forward name="to_paymentyearstatisticsShowAC" path="/to_paymentyearstatisticsShowAC.do"></forward>
+	 </action>
+	 
+	 <action path="/paymentyearstatisticsPrintAC" 
+	         name="paymentyearstatisticsAF"
+	         scope="session" 
+	         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearstatistics.action.PaymentyearstatisticsPrintAC">
+	     <forward name="to_paymentyearstatistics1_cell.jsp" path="/paymentyearstatistics1_cell.jsp"></forward>
+	     <forward name="to_paymentyearstatistics2_cell.jsp" path="/paymentyearstatistics2_cell.jsp"></forward>
+	     <forward name="to_paymentyearstatistics3_cell.jsp" path="/paymentyearstatistics3_cell.jsp"></forward>
+	     <forward name="to_paymentyearstatistics4_cell.jsp" path="/paymentyearstatistics4_cell.jsp"></forward>
+	 </action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickstatistics/paymentyearstatistics/applicationContext.xml" />
+	</plug-in>
+</struts-config>

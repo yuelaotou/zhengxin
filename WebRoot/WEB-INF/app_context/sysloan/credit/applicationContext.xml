@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="creditParamBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.credit.parameter.business.CreditParamBS">
+				<property name="creditParamDAO">
+					<ref bean="creditParamDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="creditBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.credit.report.business.CreditBS">
+				<property name="creditDAO">
+					<ref bean="creditDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

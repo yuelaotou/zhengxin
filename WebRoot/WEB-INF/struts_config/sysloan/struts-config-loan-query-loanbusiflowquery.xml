@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanBusiFlowQueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.form.LoanBusiFlowQueryAF" />
+		<!-- =============================== window ============================-->
+		<form-bean name="loanBusiFlowQueryClearAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.form.LoanBusiFlowQueryClearAF" />
+		<form-bean name="loanBusiFlowQueryBailClearAF"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailclearinterest.form.BailClearInterestTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loanBusiFlowQueryForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryForwardURLAC">
+			<forward name="loanBusiFlowQueryShowAC"
+				path="/loanBusiFlowQueryShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanBusiFlowQueryAF"
+			path="/loanBusiFlowQueryShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryShowAC">
+			<forward name="to_loanbusiflowquery_show"
+				path="/querystatistics/loanbusiquery/loanbusiflowquery/loanbusiflowquery_show.jsp">
+			</forward>
+		</action>
+
+		<action name="loanBusiFlowQueryAF"
+			path="/loanBusiFlowQueryFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryFindAC"
+			scope="request">
+			<forward name="loanBusiFlowQueryShowAC"
+				path="/loanBusiFlowQueryShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/loanBusiFlowQueryMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryMaintainAC">
+			<forward name="loanBusiFlowQueryShowAC"
+				path="/loanBusiFlowQueryShowAC.do">
+			</forward>
+			<forward name="to_loanbusiflowquery_print"
+				path="/querystatistics/loanbusiquery/loanbusiflowquery/loanbusiflowquery_cell.jsp">
+			</forward>
+		</action>
+
+		<!-- =============================== window ============================-->
+		<action path="/loanBusiFlowQueryClearForwardURLWindowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryClearForwardURLWindowAC">
+			<forward name="loanBusiFlowQueryClearShowWindowAC"
+				path="/loanBusiFlowQueryClearShowWindowAC.do" />
+		</action>
+
+		<action path="/loanBusiFlowQueryClearShowWindowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryClearShowWindowAC">
+			<forward name="to_loanbusiflowqueryclear_show"
+				path="/querystatistics/loanbusiquery/loanbusiflowquery/loanbusiflowqueryclear_window.jsp" />
+		</action>
+
+		<action name="loanBusiFlowQueryClearAF"
+			path="/loanBusiFlowQueryClearPrintAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryClearPrintAC">
+			<forward name="to_loanbusiflowqueryclear_print"
+				path="/querystatistics/loanbusiquery/loanbusiflowquery/loanbusiflowqueryclearwindow_cell.jsp">
+			</forward>
+		</action>
+
+		<action path="/loanBusiFlowQueryBailClearForwardURLWindowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryBailClearForwardURLWindowAC">
+			<forward name="loanBusiFlowQueryBailClearShowWindowAC"
+				path="/loanBusiFlowQueryBailClearShowWindowAC.do" />
+		</action>
+
+		<action name="loanBusiFlowQueryBailClearAF"
+			path="/loanBusiFlowQueryBailClearShowWindowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.action.LoanBusiFlowQueryBailClearShowWindowAC">
+			<forward name="to_loanbusiflowquerybailclear_show"
+				path="/querystatistics/loanbusiquery/loanbusiflowquery/loanbusiflowquerybailclear_window.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

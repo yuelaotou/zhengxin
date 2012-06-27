@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+ <bean id="chgpayBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.business.ChgpayBS">
+ 	             <property name="orgDAO">
+					<ref bean="orgDAO" />
+				</property>
+				 <property name="chgPaymentPaymentDAO">
+					<ref bean="chgPaymentPaymentDAO" />
+				</property>
+		 	    <property name="chgPaymentTailDAO">
+					<ref bean="chgPaymentTailDAO" />
+				</property>
+                <property name="chgPaymentHeadDAO">
+					<ref bean="chgPaymentHeadDAO" />
+				</property> 
+                <property name="empDAO">
+					<ref bean="empDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property> 
+                <property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+  
+			</bean>
+		</property>
+	</bean>
+</beans>
+

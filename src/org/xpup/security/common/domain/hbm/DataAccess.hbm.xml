@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.xpup.security.common.domain">
+
+	<class name="DataAccess" table="CA110">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="name" type="string" column="NAME" />
+
+		<property name="innerName" type="string" column="INNER_NAME" />
+
+		<property name="queryLevelEnum" type="string"
+			column="QUERY_LEVEL_ENUM" />
+
+		<property name="queryValueOrder" type="string"
+			column="QUERY_VALUE_ORDER" />
+
+		<property name="queryDefauldLevel" type="string"
+			column="QUERY_DEFAULT_LEVEL" />
+
+		<property name="operationLevelEnum" type="string"
+			column="OPERATION_LEVEL_ENUM" />
+
+		<property name="operationValueOder" type="string"
+			column="OPERATION_VALUE_ORDER" />
+
+		<property name="operationDefaultLevel" type="string"
+			column="OPERATION_DEFAULT_LEVEL" />
+
+	</class>
+
+	<sql-query name="unusedDataAccessesDu">
+		<return alias="dataAccess" class="DataAccess" />
+		SELECT {dataAccess.*} FROM (SELECT t1.* FROM ca110 t1 MINUS
+		SELECT t2.* FROM ca110 t2 INNER JOIN ca111 t3 ON t2.id =
+		t3.data_access_id WHERE t3.user_id = :userId) dataAccess
+	</sql-query>
+	
+	<sql-query name="unusedDataAccessesDu_">
+		<return alias="dataAccess" class="DataAccess" />
+		SELECT {dataAccess.*} FROM (SELECT t1.* FROM ca110 t1 where not exists
+		(SELECT t2.* FROM ca110 t2 INNER JOIN ca111 t3 ON t2.id =
+		t3.data_access_id WHERE t3.user_id = :userId and t1.id = t2.id)) dataAccess
+	</sql-query>
+
+	<sql-query name="unusedDataAccessesDr">
+		<return alias="dataAccess" class="DataAccess" />
+		SELECT {dataAccess.*} FROM (SELECT t1.* FROM ca110 t1 MINUS
+		SELECT t2.* FROM ca110 t2 INNER JOIN ca112 t3 ON t2.id =
+		t3.data_access_id WHERE t3.role_id = :roleId) dataAccess
+	</sql-query>
+	
+	<sql-query name="unusedDataAccessesDr_">
+		<return alias="dataAccess" class="DataAccess" />
+		SELECT {dataAccess.*} FROM (SELECT t1.* FROM ca110 t1 where not exists
+		(SELECT t2.* FROM ca110 t2 INNER JOIN ca112 t3 ON t2.id =
+		t3.data_access_id WHERE t3.role_id = :roleId and t1.id=t2.id)) dataAccess
+	</sql-query>
+
+</hibernate-mapping>

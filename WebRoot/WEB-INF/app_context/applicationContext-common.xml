@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="params"
+		class="org.xpup.paramsys.FileParams">
+		<constructor-arg>
+			<list>
+				<value>
+					/org/xpup/security/wsf/parameters.properties
+				</value>
+				<value>
+					/parameters.properties
+				</value>
+			</list>
+		</constructor-arg>
+	</bean>
+</beans>

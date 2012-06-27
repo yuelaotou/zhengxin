@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="createReportAF"
+			type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.form.CreateReportAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="createReportAF" path="/createReportForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportForwardAC">
+	  <forward name="createReportShowAC" path="/createReportShowAC.do"></forward>
+	 </action>
+	
+	 <action name="createReportAF" path="/createReportShowAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportShowAC">
+	  <forward name="to_createreport_show" path="/reportmng/financereport/createreport/createReportShow.jsp"></forward>
+	 </action>
+	
+	 <action name="createReportAF" path="/createReportSaveAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportSaveAC">
+	  <forward name="createReportShowAC" path="/createReportShowAC.do"></forward>
+	 </action>
+	
+	 <action name="createReportAF" path="/createReportUpdateAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportUpdateAC">
+	  <forward name="createReportShowAC" path="/createReportShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="createReportAF" path="/createReportFindAC"
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportFindAC">
+	  <forward name="createReportShowAC" path="/createReportShowAC.do"/>
+	 </action>
+	 
+	 <action name="idAF" path="/createReportMaintainAC" scope="request"
+		parameter="method"
+		type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportMaintainAC">
+		<forward name="to_createtable_modify" path="/createReportShowAC.do"></forward>
+	  <forward name="to_createtable_delete" path="/createReportShowAC.do"></forward>
+	  <forward name="to_createtable_report" path="/reportmng/financereport/createreport/createReportList_cell.jsp"></forward>
+	 </action>
+	 
+	 <action path="/createReportCheckDeleteAAC"
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportCheckDeleteAAC">
+	 </action>
+	 
+	 <action path="/createReportCheckModifyAAC"
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.createreport.action.CreateReportCheckModifyAAC">
+	 </action>
+	 
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

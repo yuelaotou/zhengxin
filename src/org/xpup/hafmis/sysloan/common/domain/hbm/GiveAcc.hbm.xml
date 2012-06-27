@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.GiveAcc" 
+    table="PL131"
+>
+
+    <id
+        name="pokeBankModifyId"
+        type="integer"
+        column="POKE_BANK_MODIFY_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL131</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="oldPokeBank"
+        type="java.lang.String"
+        column="OLD_POKE_BANK"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="oldPokeBankAcc"
+        type="java.lang.String"
+        column="OLD_POKE_BANK_ACC"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="newPokeBank"
+        type="java.lang.String"
+        column="NEW_POKE_BANK"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="newPokeBankAcc"
+        type="java.lang.String"
+        column="NEW_POKE_BANK_ACC"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="modifyDate"
+        type="java.lang.String"
+        column="MODIFY_DATE"
+        length="8"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="oprator"
+        type="java.lang.String"
+        column="OPRATOR"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

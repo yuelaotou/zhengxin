@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="credencemodleAF"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.form.CredencemodleAF" />			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/credencemodleForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleForwardURLAC">
+			<forward name="to_show_credencemodle"
+				path="/credencemodleShowAC.do" />
+		</action>
+		<action name="credencemodleAF"
+			path="/credencemodleShowAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleShowAC">
+			<forward name="to_show_credencemodle"
+				path="/bookmng/credencemodle/credencemodle_show.jsp" />
+		</action>						
+		<action name="credencemodleAF" path="/credencemodleSaveAC" 
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleSaveAC">
+			<forward name="to_show_credencemodle"
+				path="/credencemodleShowAC.do" />
+		</action>	
+		<action path="/credencemodleFindAAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleFindAAC">
+		</action>
+		<action path="/credencemodleFindInfoAAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleFindInfoAAC">
+		</action>
+		
+		<action name="idAF" path="/credencemodleDeleteAC" 
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleDeleteAC">
+			<forward name="to_show_credencemodle"
+				path="/credencemodleShowAC.do" />
+		</action>	
+		<action name="credencemodleAF" path="/credencemodleFindAC" 
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleFindAC">
+			<forward name="to_show_credencemodle"
+				path="/credencemodleShowAC.do" />
+		</action>		
+		<action path="/credencemodleUpdate1AAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.credencemodle.action.CredencemodleUpdate1AAC">
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

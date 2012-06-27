@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="queryOperationLogAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.queryoperationlog.form.QueryOperationLogAF" />
+</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>						  
+	<action path="/queryOperationLogTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.queryoperationlog.action.QueryOperationLogTaForwardURLAC">
+			<forward name="queryOperationLogTaShow"
+				path="/queryOperationLogTaShow.do">
+			</forward>
+		</action>
+		<action name="queryOperationLogAF" path="/queryOperationLogTaShow"
+			type="org.xpup.hafmis.sysloan.querystatistics.queryoperationlog.action.QueryOperationLogTaShow">
+			<forward name="to_jsp" path="/querystatistics/queryoperationlog/queryoperationlog_show.jsp">
+			</forward>
+		</action>
+		<action name="queryOperationLogAF" path="/queryOperatorLogTaFind"
+			type="org.xpup.hafmis.sysloan.querystatistics.queryoperationlog.action.QueryOperatorLogTaFind">
+			<forward name="queryOperationLogTaShow" path="/queryOperationLogTaShow.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/queryOperationLogTaMaintainAC" parameter="method" 
+			type="org.xpup.hafmis.sysloan.querystatistics.queryoperationlog.action.QueryOperationLogTaMaintainAC">
+			<forward name="to_print" path="/querystatistics/queryoperationlog/queryoperationlogprint.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection"/>
+
+</struts-config>

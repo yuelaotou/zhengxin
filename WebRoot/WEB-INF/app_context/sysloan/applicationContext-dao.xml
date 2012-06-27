@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="assistantBorrowerDAO" class="org.xpup.hafmis.sysloan.common.dao.AssistantBorrowerDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="assistantOrgDAO" class="org.xpup.hafmis.sysloan.common.dao.AssistantOrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="assurerDAO" class="org.xpup.hafmis.sysloan.common.dao.AssurerDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="borrowerDAO" class="org.xpup.hafmis.sysloan.common.dao.BorrowerDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="borrowerAccDAO" class="org.xpup.hafmis.sysloan.common.dao.BorrowerAccDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="borrowerLoanInfoDAO" class="org.xpup.hafmis.sysloan.common.dao.BorrowerLoanInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="centerRestoreLoanPlanDAO" class="org.xpup.hafmis.sysloan.common.dao.CenterRestoreLoanPlanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="congealInfoDAO" class="org.xpup.hafmis.sysloan.common.dao.CongealInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="contractChgDAO" class="org.xpup.hafmis.sysloan.common.dao.ContractChgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="contractNumCancelDAO" class="org.xpup.hafmis.sysloan.common.dao.ContractNumCancelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="contractNumMngDAO" class="org.xpup.hafmis.sysloan.common.dao.ContractNumMngDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="developerDAO" class="org.xpup.hafmis.sysloan.common.dao.DeveloperDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="developProjectDAO" class="org.xpup.hafmis.sysloan.common.dao.DevelopProjectDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="gatheringAccDAO" class="org.xpup.hafmis.sysloan.common.dao.GatheringAccDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="giveAccDAO" class="org.xpup.hafmis.sysloan.common.dao.GiveAccDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="housesDAO" class="org.xpup.hafmis.sysloan.common.dao.HousesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="impawnContractDAO" class="org.xpup.hafmis.sysloan.common.dao.ImpawnContractDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanBankDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanBankDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanBankParaDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanBankParaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanContractDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanContractDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanContractParaDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanContractParaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanFlowHeadDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanFlowHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanFlowTailDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanFlowTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanRateDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanRateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanRateTypeDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanRateTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="plBizActiveLogDAO" class="org.xpup.hafmis.sysloan.common.dao.PlBizActiveLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="plDocNumCancelDAO" class="org.xpup.hafmis.sysloan.common.dao.PlDocNumCancelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="plDocNumMaintainDAO" class="org.xpup.hafmis.sysloan.common.dao.PlDocNumMaintainDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="pledgeContractDAO" class="org.xpup.hafmis.sysloan.common.dao.PledgeContractDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="plOperateLogDAO" class="org.xpup.hafmis.sysloan.common.dao.PlOperateLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="restoreLoanDAO" class="org.xpup.hafmis.sysloan.common.dao.RestoreLoanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="specialBorrowerDAO" class="org.xpup.hafmis.sysloan.common.dao.SpecialBorrowerDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="overdueInfoDAO" class="org.xpup.hafmis.sysloan.common.dao.OverdueInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="loanConditionsSetDAO" class="org.xpup.hafmis.sysloan.common.dao.LoanConditionsSetDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bankpalindromeDAO" class="org.xpup.hafmis.sysloan.common.dao.BankpalindromeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="palindromFormatHeadDAO" class="org.xpup.hafmis.sysloan.common.dao.PalindromFormatHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="palindromeFormatTailDAO" class="org.xpup.hafmis.sysloan.common.dao.PalindromeFormatTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="collLoanbackParaDAO" class="org.xpup.hafmis.sysloan.common.dao.CollLoanbackParaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="fundloanInfoDAO" class="org.xpup.hafmis.sysloan.common.dao.FundloanInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="collParaDAO" class="org.xpup.hafmis.syscollection.common.dao.CollParaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="beforeLoanAdvisoryDAO" class="org.xpup.hafmis.sysloan.common.dao.BeforeLoanAdvisoryDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="xieYiNumDAO" class="org.xpup.hafmis.sysloan.common.dao.XieYiNumDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="othersLoanDAO" class="org.xpup.hafmis.sysloan.common.dao.OthersLoanDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="creditParamDAO" class="org.xpup.hafmis.sysloan.common.dao.CreditParamDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="creditDAO" class="org.xpup.hafmis.sysloan.common.dao.CreditDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="creditIdentityDAO" class="org.xpup.hafmis.sysloan.common.dao.CreditIdentityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+</beans>

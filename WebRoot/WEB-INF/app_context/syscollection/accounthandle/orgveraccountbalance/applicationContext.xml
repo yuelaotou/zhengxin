@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="docNumBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.paymng.paysure.business.DocNumBS">
+				<property name="docNumCancelDAO">
+					<ref bean="docNumCancelDAO" />
+				</property>
+				<property name="docNumMaintainDAO">
+					<ref bean="docNumMaintainDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<bean id="orgVerAccountBalanceBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.business.OrgVerAccountBalanceBS">
+				<property name="settInterestHeadDAO">
+			   		<ref bean="settInterestHeadDAO"/>
+				</property>
+				<property name="settInterestHeadDAODW">
+			   		<ref bean="settInterestHeadDAODW"/>
+				</property>
+				<property name="orgDAO">
+			   		<ref bean="orgDAO"/>
+				</property>
+				<property name="orgHAFAccountFlowEndAccrualDAO">
+			   		<ref bean="orgHAFAccountFlowEndAccrualDAO"/>
+				</property>
+				<property name="empHAFAccountFlowDAO">
+			   		<ref bean="empHAFAccountFlowDAO"/>
+				</property>
+				<property name="autoInfoPickDAODW">
+			   		<ref bean="autoInfoPickDAODW"/>
+				</property>
+				<property name="settInterestResultDAO">
+			   		<ref bean="settInterestResultDAO"/>
+				</property>
+				<property name="empDAO">
+			   		<ref bean="empDAO"/>
+				</property>
+				<property name="searchLackInfoDAO">
+			   		<ref bean="searchLackInfoDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

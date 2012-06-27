@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="developNewAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.DevelopNewAF"></form-bean>
+		<form-bean name="developFindAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.DevelopFindAF"></form-bean>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="floorFindAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.FloorFindAF"></form-bean>
+		<form-bean name="floorNewAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.FloorNewAF"></form-bean>
+    	<form-bean name="buildAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.BuildAF" />
+    	<form-bean name="buildFindAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.BuildFindAF" />
+    	<form-bean name="buildNewAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.BuildNewAF" />
+    	<form-bean name="buildMainTainAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.BuildMainTainAF" />
+    	<form-bean name="buildImportAF" type="org.xpup.hafmis.sysloan.dataready.develop.form.BuildImportAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- Ta Action -->
+		<action path="/developTaForwardAC"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTaForwardAC">
+				<forward name="developTaShowAC" path="/developTaShowAC.do"></forward>
+		</action>
+		<action path="/developTaShowAC"
+				name="developNewAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTaShowAC">
+				<forward name="to_develop_new" path="/dataready/develop/develop_new.jsp"></forward>
+		</action>
+		<action path="/developTaMainTainAC"
+				name="developNewAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTaMainTainAC">
+				<forward name="to_develop_modify" path="/dataready/develop/develop_new.jsp"></forward>
+				<forward name="developTbShowAC" path="/developTbShowAC.do"></forward>
+				<forward name="developTaShowAC" path="/developTaShowAC.do"></forward>
+				<forward name="developTaForwardAC" path="/developTaShowAC.do"></forward>
+		</action>
+		
+	<!-- Tb Action -->	
+		<action path="/developTbForwardAC"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTbForwardAC">
+				<forward name="developTbShowAC" path="/developTbShowAC.do"></forward>
+		</action>
+		<action path="/developTbShowAC"
+				name="developFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTbShowAC">
+				<forward name="to_develop_find" path="/dataready/develop/develop_find.jsp"></forward>
+		</action>
+		<action path="/developTbFindAC"
+				name="developFindAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTbFindAC">
+				<forward name="developTbShowAC" path="/developTbShowAC.do"></forward>
+		</action>
+		<action path="/developTbMainTainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTbMainTainAC">
+				<forward name="to_develop_modify" path="/dataready/develop/develop_new.jsp"></forward>
+				<forward name="developTbShowAC" path="/developTbShowAC.do"></forward>
+				<forward name="to_develop_print" path="/dataready/develop/develop_print.jsp"></forward>
+				<forward name="floorShowAC" path="/floorShowAC.do"></forward>
+				<forward name="developTaForwardAC" path="/developTaForwardAC.do"></forward>
+		</action>
+		<action path="/developTbWindowAC"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.DevelopTbWindowAC">
+				<forward name="to_develop_find" path="/dataready/develop/develop_new.jsp"></forward>
+		</action>
+	 <!-- floor Action -->
+	 	<action path="/floorShowAC"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.FloorShowAC">
+				<forward name="to_floor_find" path="/dataready/develop/floor_find.jsp"></forward>
+		</action>
+		<action path="/floorMainTainAC"
+				parameter="method"
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.FloorMainTainAC">
+				<forward name="to_floor_new" path="/dataready/develop/floor_new.jsp"></forward>
+				<forward name="developTbShowAC" path="/developTbShowAC.do"></forward>
+				<forward name="to_floor_print" path="/dataready/develop/floor_print.jsp"></forward>
+				<forward name="floorShowAC" path="/floorShowAC.do"></forward>
+				<forward name="buildShowAC" path="/buildShowAC.do"></forward>
+		</action>
+		<action path="/floorSaveAC"
+				parameter="method"
+				name="floorNewAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.dataready.develop.action.FloorSaveAC">
+				<forward name="floorShowAC" path="/floorShowAC.do"></forward>
+				<forward name="to_floor_new" path="/dataready/develop/floor_new.jsp"></forward>
+		</action>
+    
+	 <!-- build Action -->
+	 	<action path="/buildShowAC" 
+	 			name="buildAF"
+	 			scope="request"
+	 			type="org.xpup.hafmis.sysloan.dataready.develop.action.BuildShowAC">
+	 			<forward name="buildShowAC" path="/dataready/develop/build_show.jsp"></forward>
+		</action>
+	    <action
+	      path="/buildMainTainAC"
+	      parameter="method"
+	      name="buildMainTainAF"
+	      scope="request"
+	      type="org.xpup.hafmis.sysloan.dataready.develop.action.BuildMainTainAC">
+	    	<forward name="to_build_new" path="/dataready/develop/build_new.jsp"></forward>
+	    	<forward name="buildShowAC" path="/buildShowAC.do"></forward>
+	    	<forward name="floorShowAC" path="/floorShowAC.do"></forward>
+	    	<forward name="to_build_import" path="/dataready/develop/build_imports.jsp"></forward>
+	    </action>
+	    <action
+	      path="/buildFindAC"
+	      name="buildFindAF"
+	      scope="request"
+	      type="org.xpup.hafmis.sysloan.dataready.develop.action.BuildFindAC">
+	      <forward name="buildShowAC" path="/buildShowAC.do"></forward>
+	    </action>
+    <action
+      path="/buildNewAC"
+      name="buildNewAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.sysloan.dataready.develop.action.BuildNewAC">
+      	<forward name="buildShowAC" path="/buildShowAC.do"></forward>
+		<forward name="to_build_new" path="/dataready/develop/build_new.jsp"></forward>
+	</action>
+    <action
+      name="buildImportAF"
+      path="/buildImprotAC"
+      scope="request"
+      type="org.xpup.hafmis.sysloan.dataready.develop.action.BuildImprotAC">
+		<forward name="buildShowAC" path="/buildShowAC.do"></forward>
+	</action>
+
+</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

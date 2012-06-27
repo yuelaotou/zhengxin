@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== --> 
+	<bean id="SignjointBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean class="org.xpup.hafmis.signjoint.bussiness.SignjointBS">
+				<property name="signdao">
+					<ref bean="SignDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!--====================定时任务====================-->
+    <bean id="sendjob" class="org.xpup.hafmis.signjoint.quartz.SendJob">
+	    <property name="ibs">
+	        <ref bean="SignjointBS"/>
+	    </property>
+	</bean>
+	<bean id="receivejob" class="org.xpup.hafmis.signjoint.quartz.ReceiveJob">
+	    <property name="ibs">
+	        <ref bean="SignjointBS"/>
+	    </property>
+	</bean>
+	
+	<bean id="jobDetail1" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject">
+            <ref bean="sendjob"/>
+	     </property>
+	     <property name="targetMethod">
+	       <value>doSendJob</value>
+	     </property>
+	</bean>
+	
+	
+	<bean id="jobDetail2" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+	     <property name="targetObject">
+            <ref bean="receivejob"/>
+	     </property>
+	     <property name="targetMethod">
+	       <value>doReceiveJob</value>
+	     </property>
+	</bean>
+	
+	
+	<bean id="sendTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	     <property name="jobDetail">
+	        <ref bean="jobDetail1"/>
+	     </property>
+	     <property name="cronExpression">
+	        <value>0 0 10 * * ?</value>
+	     </property>
+	</bean>
+	<bean id="receiveTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+	     <property name="jobDetail">
+	        <ref bean="jobDetail2"/>
+	     </property>
+	     <property name="cronExpression">
+	        <value>0 40 14 * * ?</value>
+	     </property>
+	</bean>
+	
+	<bean id="scheduler" class="org.springframework.scheduling.quartz.SchedulerFactoryBean" >
+	     <property name="triggers">
+	        <list>
+	          <ref bean="sendTrigger"/>
+	          <ref bean="receiveTrigger"/>
+	        </list>
+	     </property>
+	</bean>
+</beans>
+

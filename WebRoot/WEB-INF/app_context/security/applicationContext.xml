@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for june's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+
+	<bean id="securityControlBS" parent="baseTransactionProxy">
+		<property name="target">
+			<ref bean="internalSecurityControlBS" />
+		</property>
+	</bean>
+
+	<bean id="internalSecurityControlBS"
+		class="org.xpup.security.wsf.bizsrvc.impl.SecurityControlBS">
+		<property name="menuItemDAO">
+			<ref bean="menuItemDAO" />
+		</property>
+		<property name="userDAO">
+			<ref bean="userDAO" />
+		</property>
+		<property name="roleDAO">
+			<ref bean="roleDAO" />
+		</property>
+		<property name="operationDAO">
+			<ref bean="operationDAO" />
+		</property>
+		<property name="muRelationDAO">
+			<ref bean="muRelationDAO" />
+		</property>
+		<property name="ouRelationDAO">
+			<ref bean="ouRelationDAO" />
+		</property>
+		<property name="mrRelationDAO">
+			<ref bean="mrRelationDAO" />
+		</property>
+		<property name="orRelationDAO">
+			<ref bean="orRelationDAO" />
+		</property>
+		<property name="dataAccessDAO">
+			<ref bean="dataAccessDAO" />
+		</property>
+		<property name="drRelationDAO">
+			<ref bean="drRelationDAO" />
+		</property>
+		<property name="duRelationDAO">
+			<ref bean="duRelationDAO" />
+		</property>
+		<property name="userCache">
+			<ref bean="userCache" />
+		</property>
+		<property name="passwordEncoder">
+			<ref bean="passwordEncoder" />
+		</property>
+		<property name="saltSource">
+			<ref bean="saltSource" />
+		</property>
+		<property name="securityDAO">
+			<ref bean="securityDAO" />
+		</property>	
+		<property name="overdueInfoDAO">
+			<ref bean="overdueInfoDAO" />
+		</property>
+		<property name="borrowerAccDAO">
+			<ref bean="borrowerAccDAO" />
+		</property>	
+		<property name="restoreLoanDAO">
+			<ref bean="restoreLoanDAO" />
+		</property>
+		<property name="loanBankParaDAO">
+			<ref bean="loanBankParaDAO" />
+		</property>
+		<property name="relaUserAndBookDAO">
+			<ref bean="relaUserAndBookDAO" />
+		</property>
+		<property name="bookDAO">
+			<ref bean="bookDAO" />
+		</property>
+		<property name="accountantCredenceDAO">
+			<ref bean="accountantCredenceDAO" />
+		</property>
+	</bean>
+</beans>

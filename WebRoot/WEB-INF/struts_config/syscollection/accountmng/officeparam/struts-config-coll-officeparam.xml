@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="officeParaAF"
+			type="org.xpup.hafmis.syscollection.accountmng.officeparam.form.OfficeParaAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="officeParaAF" 
+		scope="request"
+		path="/officeParaShowAC" type="org.xpup.hafmis.syscollection.accountmng.officeparam.action.OfficeParaShowAC">
+      <forward name="to_officepara_show" path="/officeparam_show.jsp" />
+    </action>
+    <action name="officeParaAF" 
+		scope="request"
+		path="/officeParaSaveAC" type="org.xpup.hafmis.syscollection.accountmng.officeparam.action.OfficeParaSaveAC">
+      <forward name="to_officepara_show" path="/officeParaShowAC.do" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+		<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accountmng/officeparam/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.security.buildtime.form.IdAF" />
+		<form-bean name="operationCriterionsAF"
+			type="org.xpup.security.buildtime.form.OperationCriterionsAF" />
+		<form-bean name="operationAF"
+			type="org.xpup.security.buildtime.form.OperationAF" />
+		<form-bean name="menuItemAF"
+			type="org.xpup.security.buildtime.form.MenuItemAF" />
+		<form-bean name="dataAccessAF"
+			type="org.xpup.security.buildtime.form.DataAccessAF" />
+		<form-bean name="dataAccessCriterionsAF"
+			type="org.xpup.security.buildtime.form.DataAccessCriterionsAF" />
+
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards>
+
+	</global-forwards>
+
+	<action-mappings>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/bt_maintain_operation" scope="request"
+			type="org.xpup.security.buildtime.action.MaintainOperationAC"
+			validate="false">
+			<forward name="show_operations"
+				path="/bt_show_operations.do" />
+			<forward name="operation" path="/operation.jsp" />
+		</action>
+		<action path="/bt_show_operations"
+			type="org.xpup.security.buildtime.action.ShowOperationsAC"
+			validate="false">
+			<forward name="operations" path="/operations.jsp" />
+		</action>
+		<action attribute="operationCriterionsAF"
+			name="operationCriterionsAF" path="/bt_find_operations"
+			scope="session"
+			type="org.xpup.security.buildtime.action.FindOperationsAC"
+			validate="false">
+			<forward name="show_operations"
+				path="/bt_show_operations.do" />
+		</action>
+		<action attribute="operationAF" input="/operation.jsp"
+			name="operationAF" path="/bt_create_operation" scope="request"
+			type="org.xpup.security.buildtime.action.CreateOperationAC"
+			validate="true">
+			<forward name="show_operations"
+				path="/bt_show_operations.do" />
+			<forward name="operation" path="/operation.jsp" />
+		</action>
+
+		<action forward="/menu_editor.jsp" path="/bt_show_menuitems" />
+		<action parameter="method" path="/bt_maintain_menuitem"
+			scope="request"
+			type="org.xpup.security.buildtime.action.MaintainMenuItemAC">
+			<forward name="menuitem" path="/menu_editor_menuitem.jsp" />
+			<forward name="editor_right" path="/menu_editor_right.jsp" />
+		</action>
+		<action input="/menu_editor_menuitem.jsp" name="menuItemAF"
+			path="/bt_create_menuitem" scope="request" validate="true"
+			type="org.xpup.security.buildtime.action.CreateMenuItemAC">
+			<forward name="menuitem" path="/menu_editor_menuitem.jsp" />
+			<forward name="editor_right" path="/menu_editor_right.jsp" />
+		</action>
+
+		<action attribute="dataAccessAF" input="/data_access.jsp"
+			name="dataAccessAF" path="/bt_create_data_access" scope="request"
+			type="org.xpup.security.buildtime.action.CreateDataAccessAC"
+			validate="true">
+			<forward name="show_data_accesses"
+				path="/bt_show_data_accesses.do" />
+			<forward name="data_access" path="/data_access.jsp" />
+		</action>
+		<action path="/bt_show_data_accesses"
+			type="org.xpup.security.buildtime.action.ShowDataAccessesAC"
+			validate="false">
+			<forward name="data_accesses" path="/data_accesses.jsp" />
+		</action>
+		<action attribute="dataAccessCriterionsAF"
+			name="dataAccessCriterionsAF" path="/bt_find_data_accesses"
+			type="org.xpup.security.buildtime.action.FindDataAccessesAC"
+			validate="false">
+			<forward name="show_data_accesses"
+				path="/bt_show_data_accesses.do" />
+		</action>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/bt_maintain_data_access" scope="request"
+			type="org.xpup.security.buildtime.action.MaintainDataAccessAC"
+			validate="false">
+			<forward name="show_data_accesses"
+				path="/bt_show_data_accesses.do" />
+			<forward name="data_access" path="/data_access.jsp" />
+		</action>
+		
+	</action-mappings>
+
+	<controller nocache="true"></controller>
+
+	<message-resources
+		parameter="org.xpup.security.message-resources-security"
+		key="security" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/security/buildtime/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/security/validation.xml,/WEB-INF/validation/validator-rules.xml" />
+	</plug-in>
+</struts-config>
+

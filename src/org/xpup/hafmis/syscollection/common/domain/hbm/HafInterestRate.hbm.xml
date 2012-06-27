@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.HafInterestRate" 
+    table="AA313"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA313</param>
+		</generator>
+    </id>
+
+    <property
+        name="curRate"
+        type="java.math.BigDecimal"
+        column="CUR_RATE"
+        not-null="true"
+        length="4"
+    />
+    <property
+        name="preRate"
+        type="java.math.BigDecimal"
+        column="PRE_RATE"
+        not-null="true"
+        length="4"
+    />
+    <property
+        name="isStart"
+        type="java.math.BigDecimal"
+        column="IS_START"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="bizDate"
+        type="java.lang.String"
+        column="BIZ_DATE"
+        not-null="true"
+        length="8"
+    />
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="isSubDemand"
+        type="integer"
+        column="IS_SUB_DEMAND"
+        length="22"
+    />
+    <property
+        name="isSubtRegular"
+        type="integer"
+        column="IS_SUB_REGULAR"
+        length="22"
+    />
+    <property
+        name="officecode"
+        type="java.lang.String"
+        column="OFFICECODE"
+        length="50"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

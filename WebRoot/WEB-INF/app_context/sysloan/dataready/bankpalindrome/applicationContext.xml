@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="bankpalindromeBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.bankpalindrome.business.BankpalindromeBS">
+				<property name="palindromFormatHeadDAO">
+				  <ref bean="palindromFormatHeadDAO"/>
+				</property>
+				<property name="bankpalindromeDAO">
+				 <ref bean="bankpalindromeDAO"/>
+				</property>
+				<property name="plOperateLogDAO">
+				 <ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+ 	
+</beans>
+

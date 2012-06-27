@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="bankAF"
+			type="org.xpup.hafmis.sysloan.dataready.bank.form.BankAF"/>
+    <form-bean name="bankListAF" type="org.xpup.hafmis.sysloan.dataready.bank.form.BankListAF"/>
+    <form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- 清空PAGINATION -->
+    <action name="bankAF" 
+    path="/bankForwardAC" 
+    type="org.xpup.hafmis.sysloan.dataready.bank.action.BankForwardAC">       
+      <forward name="showBankAC" path="/showBankAC.do" />
+
+    </action>
+
+    <!-- 显示列表 -->
+    <action path="/showBankAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.bank.action.ShowBankAC">
+      <forward name="to_bank_show" path="/dataready/bank/bank_show.jsp"/>
+    </action>
+    <!-- 分发ACTION -->
+    <action path="/bankMaintainAC"         
+    name="idAF"
+    parameter="method"
+    type="org.xpup.hafmis.sysloan.dataready.bank.action.BankMaintainAC">
+      <forward name="to_bank_add" path="/dataready/bank/bank_add.jsp"/>
+      <forward name="showBankAC" path="/showBankAC.do"/>
+      <forward name="to_bank_show" path="/dataready/bank/bank_show.jsp"/>
+    
+    </action>
+    <!--  添加信息 -->
+    <action path="/bankAddAC" 
+    parameter="method"
+    name="bankAF"
+    type="org.xpup.hafmis.sysloan.dataready.bank.action.BankAddAC">
+    <forward name="showBankAC" path="/showBankAC.do"/>
+    <forward name="to_bank_add" path="/dataready/bank/bank_add.jsp"/>
+    </action>
+    <!-- 办事处 银行联动 -->
+    <action path="/bankOfficeAC" 
+    type="org.xpup.hafmis.sysloan.dataready.bank.action.BankOfficeAC">
+    <forward name="to_bank_add" path="/dataready/bank/bank_add.jsp"/>
+    </action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection"/>
+</struts-config>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+ 		<form-bean name="chgpayListAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.from.ChgpayListAF" />
+			<form-bean name="chgpayTbListAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.from.ChgpayTbListAF" />
+ 
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <!-- ==TA==-->
+	     <action name="chgpayListAF" path="/chgpayTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTaForwardURLAC">
+			<forward name="chgpayTaShowAC.do" path="/chgpayTaShowAC.do"/>
+		</action>
+		<action name="chgpayListAF" path="/chgpayTaShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTaShowAC">
+			<forward name="to_chgpay_list.jsp" path="/chgpay_list.jsp"></forward>
+		</action>
+	   <action name="idAF" path="/chgpayTaMaintainAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTaMaintainAC">
+	    <forward name="to_chgpay_list_cell.jsp" path="/chgpay_list_cell.jsp" />
+		</action>
+		<action name="chgpayListAF" path="/chgpayTaFindAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTaFindAAC">
+			<forward name="chgpayTaShowAC.do" path="/chgpayTaShowAC.do" />
+		</action>
+				<!-- ==TB==-->
+	    <action name="chgpayTbListAF" path="/chgpayTbForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTbForwardURLAC">
+			<forward name="chgpayTbShowAC.do" path="/chgpayTbShowAC.do"/>
+		</action>
+		<action name="chgpayTbListAF" path="/chgpayTbShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTbShowAC">
+			<forward name="to_chgpay_tblist.jsp" path="/chgpay_tblist.jsp"></forward>
+		</action>
+	  <action name="idAF" path="/chgpayTbMaintainAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTbMaintainAC">
+	    <forward name="to_chgpay_tblist_cell.jsp" path="/chgpay_tblist_cell.jsp" />
+		</action>
+		<action name="chgpayTbListAF" path="/chgpayTbFindAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgpay.action.ChgpayTbFindAAC">
+			<forward name="chgpayTbShowAC.do" path="/chgpayTbShowAC.do" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/chgbiz/chgpay/applicationContext.xml" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

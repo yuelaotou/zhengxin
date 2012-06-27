@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="interestTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.form.InterestTaAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- 年账 -->
+		<action path="/interestTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTaForwardURLAC">
+			<forward name="interestTaShowAC"
+				path="/interestTaShowAC.do">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTaShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTaShowAC">
+			<forward name="to_interestta_show"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interestta_show.jsp">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTaFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTaFindAC">
+			<forward name="interestTaShowAC"
+				path="/interestTaShowAC.do">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTaMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTaMaintainAC">
+			<forward name="to_interestta_cell"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interestta_cell.jsp">
+			</forward>
+		</action>
+		
+		<!-- 月账 -->
+		<action path="/interestTbForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTbForwardURLAC">
+			<forward name="interestTbShowAC"
+				path="/interestTbShowAC.do">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTbShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTbShowAC">
+			<forward name="to_interesttb_show"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interesttb_show.jsp">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTbMaintainAC">
+			<forward name="to_interesttb_cell"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interesttb_cell.jsp">
+			</forward>
+			<forward name="interestTaShowAC"
+				path="/interestTaShowAC.do">
+			</forward>
+		</action>
+		
+		<!-- 日账 -->
+		<action path="/interestTcForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTcForwardURLAC">
+			<forward name="interestTcShowAC"
+				path="/interestTcShowAC.do">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTcShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTcShowAC">
+			<forward name="to_interesttc_show"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interesttc_show.jsp">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTcFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTcFindAC">
+			<forward name="interestTcShowAC"
+				path="/interestTcShowAC.do">
+			</forward>
+		</action>
+		<action name="interestTaAF" path="/interestTcMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.interesttotalacc.action.InterestTcMaintainAC">
+			<forward name="to_interesttc_cell"
+				path="/querystatistics/loanaccountquery/interesttotalacc/interesttc_cell.jsp">
+			</forward>
+			<forward name="interestTcShowAC"
+				path="/interestTcShowAC.do">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/sysloan/querystatistics/loanaccountquery/interesttotalacc/applicationContext.xml" />
+	</plug-in>
+</struts-config>

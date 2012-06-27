@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="chgpersonDoListAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.form.ChgpersonDoListAF" />
+		<form-bean name="chgpersonEmpAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.form.ChgpersonEmpAF" />
+		<form-bean name="chgpersonDoIdAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.form.ChgpersonDoIdAF" />
+		<form-bean name="chgpersonMaintainListAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.form.ChgpersonMaintainListAF" />
+		<form-bean name="autoChangePopAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.form.AutoChangePopAF">
+		</form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<!-- 人员变更－办理变更 -->
+	<action-mappings>
+		<action name="chgpersonDoListAF" path="/chppersonForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChppersonForwardURLAC">
+			<forward name="to_chgpersonDo_list"
+				path="/showChgpersonDoListAC.do" />
+		</action>
+		<action name="chgpersonDoListAF" path="/showChgpersonDoListAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ShowChgpersonDoListAC">
+			<forward name="to_chgpersonDo_list"
+				path="/chgpersonDoList.jsp" />
+			<forward name="to_chgpersonDoFail_list"
+				path="/chppersonForwardURLAC.do" />
+		</action>
+		<action name="chgpersonDoListAF" path="/chgpersonFindEmpListAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonFindEmpListAAC">
+		</action>
+		<action name="chgpersonDoListAF"
+			path="/chgpersonFindEmpList_AjaxAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonFindEmpList_AjaxAAC">
+		</action>
+		<action name="chgpersonDoIdAF" path="/maintainChgpersonDoListAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.MaintainChgpersonDoListAC">
+			<forward name="to_chgperson_save" path="/chgpersonNewAC.do" />
+			<forward name="to_chgperson_list"
+				path="/showChgpersonDoListAC.do" />
+			<forward name="to_chgperson_imports"
+				path="/chgpersondo_imports.jsp" />
+			<forward name="to_chgpersonList_cell"
+				path="/chgpersonList_cell.jsp" />
+
+		</action>
+		<action name="chgpersonEmpAF" path="/chgpersonDOSaveAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonDOSaveAC">
+			<forward name="to_chgperson_save" path="/chgpersonNewAC.do" />
+			<forward name="to_chgpersonsave_jsp"
+				path="/chgpersondo_new.jsp" />
+			<forward name="to_chgperson_choose"
+				path="/chgpersondo_choose.jsp" />
+			<forward name="to_chgperson_list"
+				path="/showChgpersonDoListAC.do" />
+			<forward name="to_chgpersonList_cell"
+				path="/chgpersonList_cell.jsp" />
+		</action>
+		<action name="chgpersonEmpAF" path="/chgpersonFindEmpAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonFindEmpAAC">
+		</action>
+		<action name="chgpersonDoIdAF" path="/saveChgpersonDoAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.SaveChgpersonDoAC">
+			<forward name="to_chgperson_save" path="/chgpersonNewAC.do" />
+			<forward name="to_chgperson_list" path="/chgpersonNewAC.do" />
+		</action>
+		<action name="chgpersonDoIdAF" path="/chgpersonNewAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonNewAC">
+			<forward name="to_chgperson_save"
+				path="/chgpersondo_new.jsp" />
+		</action>
+		<action name="chgpersonDoListAF" path="/chgpersonImportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonImportAC">
+			<forward name="to_chgperson_importsfail"
+				path="/chgpersondo_imports.jsp" />
+			<forward name="to_chgperson_imports"
+				path="/showChgpersonDoListAC.do" />
+		</action>
+		<action path="/accountNewSumPayAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.AccountNewSumPayAAC">
+		</action>
+		<action name="chgpersonEmpAF" path="/chgpersonSaveAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonSaveAC">
+			<forward name="to_chgperson_save" path="/chgpersonNewAC.do" />
+			<forward name="to_chgperson_choose"
+				path="/chgpersondo_choose.jsp" />
+			<forward name="to_chgperson_list"
+				path="/showChgpersonDoListAC.do" />
+		</action>
+		<action path="/chgPersonExportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgPersonExportAC">
+			<forward name="to_chgperson_window"
+				path="/chgpersonWindow.jsp" />
+		</action>
+
+
+
+		<action name="chgpersonDoListAF"
+			path="/chgpersonMaintainForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonMaintainForwardURLAC">
+			<forward name="to_chgpersonMaintain_list"
+				path="/showChgpersonMaintainListAC.do" />
+		</action>
+		<action name="chgpersonMaintainListAF"
+			path="/showChgpersonMaintainListAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ShowChgpersonMaintainListAC">
+			<forward name="to_chgpersonMaintain_list"
+				path="/chgpersonMaintainList.jsp" />
+		</action>
+		<action name="idAF" path="/maintainChgpersonMaintainListAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.MaintainChgpersonMaintainListAC">
+			<forward name="to_chgperson_modify"
+				path="/showChgpersonDoListAC.do">
+			</forward>
+			<forward name="to_chgperson_delete"
+				path="/showChgpersonMaintainListAC.do">
+			</forward>
+			<forward name="to_chgperson_use"
+				path="/showChgpersonMaintainListAC.do">
+			</forward>
+			<forward name="to_chgperson_deluse"
+				path="/showChgpersonMaintainListAC.do">
+			</forward>
+			<forward name="to_chgpersonList_cell"
+				path="/chgpersonList_cell.jsp" />
+		</action>
+		<action path="/chgpersonCheckChgPersonAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonCheckChgPersonAAC">
+		</action>
+		<action path="/deluseChgpersonAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.DeluseChgpersonAC">
+			<forward name="to_chgperson_deluse"
+				path="/showChgpersonMaintainListAC.do">
+			</forward>
+		</action>
+		<action name="chgpersonMaintainListAF"
+			path="/findChgpersonMaintainListAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.FindChgpersonMaintainListAC">
+			<forward name="to_chgpersonMaintain_list"
+				path="/showChgpersonMaintainListAC.do" />
+		</action>
+
+		<action name="chgpersonDoListAF"
+			path="/chgpersonWindowForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonWindowForwardURLAC">
+			<forward name="to_show_window"
+				path="/showChgpersonWindowAC.do" />
+		</action>
+		<action name="chgpersonDoListAF" path="/showChgpersonWindowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ShowChgpersonWindowAC">
+			<forward name="to_chgperson_window"
+				path="/chgpersonWindow.jsp" />
+		</action>
+		<action path="/isCardNumSameAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.IsCardNumSameAAC">
+		</action>
+
+		<action path="/autoChangeAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.AutoChangeAAC">
+		</action>
+		<action path="/autoChangePopShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.AutoChangePopShowAC">
+			<forward name="to_autochangepop_show"
+				path="/autochangepop_show.jsp">
+			</forward>
+		</action>
+		<action path="/autoChangeSaveAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.AutoChangeSaveAC"
+			name="idAF" scope="request">
+			<forward name="to_showChgpersonDoListAC"
+				path="/showChgpersonDoListAC.do">
+			</forward>
+		</action>
+		<action path="/autoChangeSaveALLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.AutoChangeSaveALLAC"
+			name="idAF" scope="request">
+			<forward name="to_showChgpersonDoListAC"
+				path="/showChgpersonDoListAC.do">
+			</forward>
+		</action>
+		<action path="/chgPersonAutoopenShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgPersonAutoopenShowAC">
+			<forward name="to_chgPersonAutoopenpop"
+				path="/chgPersonAutoopenpop.jsp">
+			</forward>
+		</action>
+		<action name="idAF" path="/chgPersonAutoopenSaveAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgPersonAutoopenSaveAC">
+			<forward name="to_chgpersonDo_list"
+				path="/showChgpersonDoListAC.do" />
+
+		</action>
+		<action name="idAF" path="/chgPersonAutoopenAllSaveAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgPersonAutoopenAllSaveAC">
+			<forward name="to_chgpersonDo_list"
+				path="/showChgpersonDoListAC.do" />
+
+		</action>
+
+		<action path="/chgpersonAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgperson.action.ChgpersonAAC" />
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/chgbiz/chgperson/applicationContext.xml" />
+	</plug-in>
+</struts-config>

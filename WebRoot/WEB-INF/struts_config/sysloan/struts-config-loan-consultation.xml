@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="loancallbackTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loancallback.form.LoancallbackTaAF" />
+	</form-beans>	
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/consultationTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaFindAAC">
+		</action>
+		<action path="/consultationTaAheadAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaAheadAAC">
+		</action>
+		<action path="/consultationTaChangeMonthAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaChangeMonthAC">
+			<forward name="consultation_jy" path="/loancallback/consultation/consultation_jy.jsp" />
+		</action>
+		<action name="loancallbackTaAF" path="/consultationTaShowAC"  scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaShowAC">
+			<forward name="consultation_jy" path="/loancallback/consultation/consultation_jy.jsp" />
+		</action>
+		<action path="/consultationTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaForwardURLAC">
+			<forward name="consultationTaShowAC" path="/consultationTaShowAC.do" />
+		</action>
+		<action  name="loancallbackTaAF" path="/consultationTaMaintainAC"  scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.consultation.action.ConsultationTaMaintainAC">
+			<forward name="consultation_cell" path="/loancallback/consultation/consultation_cell.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

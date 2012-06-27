@@ -1,0 +1,59 @@
+td {  font-size: 12px}
+.input1 {  border-color: black #000000 black black; height: 18px; background-color: #BBE6F2; font-size: 12px; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px}
+.input2 {  border-color: black black 66BEE3; background-color: #BBEEFD; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px}
+.h4 {FONT-WEIGHT: bold; FONT-SIZE: 14px; TEXT-DECORATION: none}
+/*简约文本框样式*/ 
+.input3 {  height: 16px; border: solid; border-color: #666666 #FFFFFF 66BEE3 #666666; border-width: 0px 0px 1px; width: 100%}
+/*信息添加文本框样式*/ 
+.input4 {  border: 0px #368ECF none; width: 98%}
+.input6 {  width: 97px; background-image: url(../img/bg_cwline.gif); height: 23px; font-size: 11px; text-align: right; border-style: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.input7 {  height: 16px; border: solid; border-color: black black #000000; border-width: 0px 0px 1px; width: 100%; background-color: C4F0FF}
+.input8 {  background-color: #FFFFFF; border: #FFFFFF; border-style: solid; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; height: 25px; width: 80%;font-size: 12px}
+/*14号字体大小*/ 
+.font14 {  font-size: 14px}
+/*链接文本样式*/ 
+a:link {  color: #000000; text-decoration: underline}
+a:visited {  color: #000000; text-decoration: underline}
+a:hover {  color: #CC0000; text-decoration: underline}
+/*链接文本样式2*/ 
+a.a1:link {  color: #00B5DB; text-decoration: underline}
+a.a1:visited {  color: #00B5DB; text-decoration: underline}
+a.a1:hover {  color: #00B5DB; text-decoration: underline}
+/*链接文本样式3*/ 
+a.a2:link {  color: #000000; text-decoration: none}
+a.a2:visited {  color: #000000; text-decoration: none}
+a.a2:hover {  color: #FF0000; text-decoration: none}
+/*滚动条样式*/ 
+BODY {  OVERFLOW-Y: scroll; OVERFLOW-X: scroll;SCROLLBAR-FACE-COLOR: #009ace; FONT-SIZE: 12px;  MARGIN: 0px 0px; SCROLLBAR-HIGHLIGHT-COLOR: #b8e9fa; SCROLLBAR-SHADOW-COLOR: #009aaa; SCROLLBAR-3DLIGHT-COLOR: #000000; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #79D1F7; FONT-FAMILY: "宋体"; SCROLLBAR-DARKSHADOW-COLOR: #000000; 
+}
+/*简约表格样式*/ 
+.td1 {  background-color: C4F0FF; height="20"; height: 23px}
+/*列表标题表格样式*/ 
+.td2 {  background-image: url(../img/bg3.gif); height: 23px; background-image: url(../img/bg3.gif)}
+/*白色表格样式*/ 
+.td3 {  background-color: #FFFFFF; height="20"; border-color: black 00B5DB 00B5DB; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px}
+/*列表表格样式*/ 
+.td4 {  height: 23px}
+/*按钮样式*/ 
+.buttona {  background-image: url(../img/buttona.gif); height: 20px; width: 58px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.buttonb {  background-image: url(../img/buttonb.gif); height: 20px; width: 80px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.buttonc {  background-image: url(../img/buttonc.gif); height: 20px; width: 100px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.buttond {  background-image: url(../img/buttond.gif); height: 20px; width: 58px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.buttone {  background-image: url(../img/buttone.gif); height: 20px; width: 80px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.buttonf {  background-image: url(../img/buttonf.gif); height: 20px; width: 100px; background-color: #9AD5ED; font-size: 12px; padding-top: 2px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+
+.td5 {  background-color: #EFEFEF; border-color: black black #999999; height: 2px; background-image: url(../img/bg2.gif); border-style: none; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px}
+.td6 {  background-color: #F0F0F0; height: 23px; border-color: black black #999999; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px}
+.td7 {  border-color: black black 66BEE3; border-style: solid; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 1px; border-left-width: 0px}
+.td8 {  background-color: #FFFFFF; height="20"}
+.td9 {  background-color: #F2FFE5; height="20"}
+/*设置提示连接的样式表*/
+.suggest_link {
+	background-color: #FFFFFF;
+	padding: 2px 6px 2px 6px;
+}
+/*设置当鼠标移动到提示上的样式表*/
+.suggest_link_over {
+	background-color: #E8F2FE;
+	padding: 2px 6px 2px 6px;
+}

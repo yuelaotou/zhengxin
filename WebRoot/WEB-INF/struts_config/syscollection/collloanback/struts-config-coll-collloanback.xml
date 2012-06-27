@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="collLoanbackTaAF"
+			type="org.xpup.hafmis.syscollection.collloanback.form.CollLoanbackTaAF" />
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="collLoanbackTcAF" type="org.xpup.hafmis.syscollection.collloanback.form.CollLoanbackTcAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- ============================================ta ========================================================-->
+		<action path="/collLoanbackTaShowAC" name="collLoanbackTaAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTaShowAC">
+			<forward name="to_collloanbackta_show"
+				path="/collloanbackta_show.jsp">
+			</forward>
+		</action>
+		<action path="/collLoanbackTaForwardAC" scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTaForwardAC">
+			<forward name="collloanbackta_show"
+				path="/collLoanbackTaShowAC.do">
+			</forward>
+		</action>
+		<action path="/collLoanbackTaUpMaintainAC"
+			name="collLoanbackTaAF" scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTaUpMaintainAC"
+			parameter="method">
+			<forward name="collloanbackta_show"
+				path="/collLoanbackTaShowAC.do">
+			</forward>
+			<forward name="to_collloanbackta_show"
+				path="/collloanbackta_show.jsp">
+			</forward>
+		</action>
+		<action path="/officeAndBankAAC"
+			type="org.xpup.hafmis.syscollection.collloanback.action.OfficeAndBankAAC">
+		</action>
+		<action path="/collLoanbackTaDownAC" name="idAF" scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTaDownAC">
+			<forward name="collloanbackta_show"
+				path="/collLoanbackTaShowAC.do">
+			</forward>
+		</action>
+		<!-- ============================================tb ========================================================-->
+		<action path="/collLoanbackTbForwardAC" scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTbForwardAC">
+			<forward name="collloanbacktb_show"
+				path="/collLoanbackTbShowAC.do">
+			</forward>
+		</action>
+		<action path="/collLoanbackTbForwardUrlAC" scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTbForwardUrlAC">
+			<forward name="collloanbacktb_show"
+				path="/collLoanbackTbShowAC.do">
+			</forward>
+		</action>
+		<action path="/collLoanbackTbShowAC" name="collLoanbackTaAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTbShowAC">
+			<forward name="to_collloanbacktb_show"
+				path="/collloanbacktb_show.jsp">
+			</forward>
+		</action>
+		<action path="/collLoanbackTbFindAC" name="collLoanbackTaAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTbFindAC">
+			<forward name="collloanbacktb_show"
+				path="/collLoanbackTbShowAC.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/collLoanbackTbMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTbMaintainAC">
+			<forward name="collloanbacktb_show"
+				path="/collLoanbackTbShowAC.do">
+			</forward>
+		</action>
+    
+		<!-- ============================================tc ========================================================-->
+		<action 
+			path="/collLoanbackTcForwardAC" 
+			type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTcForwardAC">
+			<forward name="collLoanbackTcShowAC" path="/collLoanbackTcShowAC.do" />
+		</action>
+    	<action 
+    		path="/collLoanbackTcShowAC" 
+    		name="idAF"
+    		parameter="method"
+    		scope="request"
+    		type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTcShowAC">
+    		<forward name="to_collloanbacktc_show" path="/collloanbacktc_show.jsp" />
+    	</action>
+    <action
+      name="collLoanbackTcAF"
+      path="/collLoanbackTcFindAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTcFindAC">
+    	<forward name="collLoanbackTcShowAC" path="/collLoanbackTcShowAC.do" />
+    </action>
+    <action
+      name="idAF"
+      path="/collLoanbackTcMaintainAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.collloanback.action.CollLoanbackTcMaintainAC">
+    	<forward name="collLoanbackTcShowAC" path="/collLoanbackTcShowAC.do" />
+    	<forward name="to_collloanbacktc_cell" path="/collloanbacktc_cell.jsp" />
+    </action>	
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/collloanback/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

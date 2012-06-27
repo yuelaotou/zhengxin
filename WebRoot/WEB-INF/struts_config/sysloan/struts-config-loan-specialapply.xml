@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	
+    <form-bean name="SpecialapplyNewAF" type="org.xpup.hafmis.sysloan.loanapply.specialapply.form.SpecialapplyNewAF" />
+    <form-bean name="specialapplyTbAF" type="org.xpup.hafmis.sysloan.loanapply.specialapply.form.SpecialapplyTbAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/specialapplyTaForwardAC" 
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTaForwardAC">
+      <forward name="specialapplyTaForwardAC" path="/loanapply/specialapply/specialapply_new.jsp" />
+    </action>
+    
+    <action
+	    name="SpecialapplyNewAF"
+	    path="/specialapplyTaNewAC"
+	   	scope="request"
+	    type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTaNewAC">
+      <forward name="to_specialapply_new" path="/loanapply/specialapply/specialapply_new.jsp" />
+      <forward name="specialapplyTaShowAC" path="/specialapplyTaShowAC.do"></forward>
+      </action>
+      
+    <action 
+    	path="/specialapplyTaFindACC" 
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTaFindACC">
+    </action>
+    <action 
+    	path="/specialapplyTaFindFloorAAC" 
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTaFindFloorAAC">
+    </action>
+    
+    <action 
+    	path="/specialapplyTbForwardAC" 
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTbForwardAC">
+    	<forward name="specialapplyTbForwardAC" path="/specialapplyTbShowAC.do" />
+    </action>
+    
+    <action
+      	name="specialapplyTbAF"
+      	path="/specialapplyTbFindAC"
+      	scope="request"
+      	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTbFindAC" >
+      <forward name="specialapplyTbForwardAC" path="/specialapplyTbShowAC.do" />  
+    </action>
+      
+    <action
+      	name="idAF"
+      	path="/specialapplyTbShowAC"
+      	scope="request"
+      	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTbShowAC">
+      <forward name="to_specialapply_show" path="/loanapply/specialapply/specialapply_show.jsp" />
+    </action>
+      
+    <action
+      	name="idAF"
+      	parameter="method"
+      	path="/specialapplyTbModifyAC"
+     	scope="request"
+      	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTbModifyAC">
+	  <forward name="specialapplyTbForwardAC" path="/specialapplyTbShowAC.do" />
+	  <forward name="tospecialapplyTaShow" path="/specialapplyTaShowAC.do" />
+    </action>
+    <!-- 维护页面删除时如果没有职工编号时的action -->
+    <action
+      	path="/specialapplyTbDeleteAC" 
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTbDeleteAC">
+      	<forward name="specialapplyTbShowAC" path="/specialapplyTbShowAC.do" />
+    </action>
+    <action name="SpecialapplyNewAF" 
+    	path="/specialapplyTaShowAC"
+    	scope="request"
+    	type="org.xpup.hafmis.sysloan.loanapply.specialapply.action.SpecialapplyTaShowAC">
+    	<forward name="to_specialapply_new" path="/loanapply/specialapply/specialapply_new.jsp" />
+    </action>
+        
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

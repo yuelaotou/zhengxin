@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="carryforwardShowAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.form.CarryforwardShowAF" />
+		<form-bean name="carryforwardTbShowAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.form.CarryforwardTbShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/carryforwardTaForwardUrlAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTaForwardUrlAC">
+			<forward name="carryforwardTaShowAC"
+				path="/carryforwardTaShowAC.do" />
+		</action>
+		<action path="/carryforwardTaShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTaShowAC">
+			<forward name="to_carryforwardTa_show"
+				path="/accounthandle/carryforward/carryforward_jy_show.jsp" />
+		</action>
+		<action name="carryforwardShowAF" path="/carryforwardTaFindAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTaFindAC">
+			<forward name="carryforwardTaShowAC"
+				path="/carryforwardTaShowAC.do" />
+		</action>
+		<action name="carryforwardShowAF" path="/carryforwardTaMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTaMaintainAC">
+			<forward name="carryforwardTaShowAC"
+				path="/carryforwardTaForwardUrlAC.do" />
+		</action>
+		<action path="/carryforwardTbForwardUrlAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTbForwardUrlAC">
+		</action>
+		<action path="/carryforwardTbShowAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTbShowAC">
+			<forward name="to_carryforwardTb_show"
+				path="/accounthandle/carryforward/carryforward_lb_show.jsp" />
+		</action>
+		<action name="carryforwardShowAF" path="/carryforwardTbFindAC"
+			type="org.xpup.hafmis.sysloan.accounthandle.carryforward.action.CarryforwardTbFindAC">
+			<forward name="carryforwardTbShowAC"
+				path="/carryforwardTbShowAC.do" />
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

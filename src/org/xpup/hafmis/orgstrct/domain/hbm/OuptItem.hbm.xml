@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.xpup.hafmis.orgstrct.domain">
+
+	<class name="OuptItem" table="BB104">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="name" type="string" column="NAME" />
+
+		<property name="innerName" type="string" column="INNER_NAME" />
+
+		<property name="value" type="string" column="VALUE" />
+
+		<property name="valueType" type="integer" column="VALUE_TYPE"
+			access="field" />
+
+		<property name="enumValue" type="string" column="ENUM_VALUE" />
+
+		<property name="type" type="integer" column="TYPE"
+			access="field" />
+
+		<property name="nullable" type="boolean" column="NULLABLE" />
+
+		<many-to-one name="orgUnitPropTemplate"
+			class="OrgUnitPropTemplate">
+			<column name="TEMPLATE_ID" />
+		</many-to-one>
+
+	</class>
+
+	<sql-query name="unusedOuptItems">
+		<return alias="ouptItem" class="OuptItem" />
+		SELECT {ouptItem.*} FROM (SELECT t1.* FROM bb104 t1 WHERE
+		t1.template_id = (SELECT t2.oupt_id FROM bb101 t2 WHERE
+		t2.id=:orgUnitId1) MINUS SELECT t1.* FROM bb104 t1 INNER JOIN
+		bb102 t2 ON t1.id=t2.oup_item_id WHERE
+		t2.org_unit_id=:orgUnitId2) ouptItem WHERE ouptItem.type = :type
+	</sql-query>
+	
+	<sql-query name="unusedOuptItems_">
+		<return alias="ouptItem" class="OuptItem" />
+		SELECT {ouptItem.*} FROM (SELECT t1.* FROM bb104 t1 WHERE
+		t1.template_id = (SELECT t2.oupt_id FROM bb101 t2 WHERE
+		t2.id=:orgUnitId1) and not exists (SELECT t11.* FROM bb104 t11 INNER JOIN
+		bb102 t2 ON t11.id=t2.oup_item_id WHERE
+		t2.org_unit_id=:orgUnitId2 and t1.id = t11.id)) ouptItem WHERE ouptItem.type = :type
+	</sql-query>
+
+</hibernate-mapping>

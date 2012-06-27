@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="employeesAF"
+			type="org.xpup.hafmis.syscollection.common.biz.emppop.form.EmployeesAF" />
+</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="employeesAF" path="/findEmployeesListAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.common.biz.emppop.action.EmployeesFindAC">
+			<forward name="show_employees"
+				path="/showEmployeesListAC.do">
+			</forward>
+		</action>
+		<action path="/showEmployeesListAC"
+			type="org.xpup.hafmis.syscollection.common.biz.emppop.action.EmployeesShowAC">
+			<forward name="employees" path="/emppop.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.demo.message-resources-demo" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/common/biz/emppop/applicationContext.xml" />
+	</plug-in>
+</struts-config>

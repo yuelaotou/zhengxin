@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.OverdueInfo" 
+    table="PL205"
+>
+<id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_PL205</param>
+	</generator>
+    </id>
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+    />
+        
+
+    
+    <property
+        name="loanBankId"
+        type="integer"
+        column="LOAN_BANK_ID"
+        length="22"
+    />
+    
+    
+    <property
+        name="oweCorpus"
+        type="java.math.BigDecimal"
+        column="OWE_CORPUS"
+        length="22"
+    />
+    <property
+        name="oweInterest"
+        type="java.math.BigDecimal"
+        column="OWE_INTEREST"
+        length="22"
+    />
+    
+    <property
+        name="punishInterest"
+        type="java.math.BigDecimal"
+        column="PUNISH_INTEREST"
+        length="22"
+    />
+    <property
+        name="oweMonth"
+        type="java.lang.String"
+        column="OWE_MONTH"
+        length="20"
+    />
+    
+    <property
+        name="oweDate"
+        type="java.lang.String"
+        column="OWE_DATE"
+        length="8"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

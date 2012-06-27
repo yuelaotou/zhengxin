@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="accountantCredenceDAO" class="org.xpup.hafmis.sysfinance.common.dao.AccountantCredenceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bankCredenceDAO" class="org.xpup.hafmis.sysfinance.common.dao.BankCredenceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="fnBizActivityLogDAO" class="org.xpup.hafmis.sysfinance.common.dao.FnBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bookDAO" class="org.xpup.hafmis.sysfinance.common.dao.BookDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bookParameterDAO" class="org.xpup.hafmis.sysfinance.common.dao.BookParameterDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="credenceModleDAO" class="org.xpup.hafmis.sysfinance.common.dao.CredenceModleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="fnDocNumCancelDAO" class="org.xpup.hafmis.sysfinance.common.dao.FnDocNumCancelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="fnDocNumMaintainDAO" class="org.xpup.hafmis.sysfinance.common.dao.FnDocNumMaintainDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="fnOperateLogDAO" class="org.xpup.hafmis.sysfinance.common.dao.FnOperateLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="reportMngDAO" class="org.xpup.hafmis.sysfinance.common.dao.ReportMngDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settleIncAndDecDAO" class="org.xpup.hafmis.sysfinance.common.dao.SettleIncAndDecDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="subjectDAO" class="org.xpup.hafmis.sysfinance.common.dao.SubjectDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="subjectRelationDAO" class="org.xpup.hafmis.sysfinance.common.dao.SubjectRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="treasurerCredenceDAO" class="org.xpup.hafmis.sysfinance.common.dao.TreasurerCredenceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+</beans>

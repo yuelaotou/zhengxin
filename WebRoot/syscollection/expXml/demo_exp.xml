@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<root file="1">
+<file name="DemoExport" col="6"  space="2" row="-1">
+     <column>id</column>
+	 <column>name</column>
+	  <column>idcard</column>
+	   <column>birthday</column>
+	    <column>sex</column>
+	     <column>salary</column>
+</file>
+</root>

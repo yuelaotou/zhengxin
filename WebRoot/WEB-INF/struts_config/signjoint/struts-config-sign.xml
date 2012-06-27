@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="signAF"
+			type="org.xpup.hafmis.signjoint.form.SignAF" />
+		<form-bean name="signAddAF"
+			type="org.xpup.hafmis.signjoint.form.SignAddAF" />
+		<form-bean name="signImportAF"
+			type="org.xpup.hafmis.signjoint.form.SignImportAF" />
+		<form-bean name="historyAF" type="org.xpup.hafmis.signjoint.form.HistoryQueryAF" />
+		<form-bean name="logAF" type="org.xpup.hafmis.signjoint.form.LogQueryAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="signAF" path="/showSignListAC"
+			type="org.xpup.hafmis.signjoint.action.CompanyShowAC">
+			<forward name="to_list" path="/showSignList.jsp"></forward>
+		</action>
+		<action name="idAF" path="/signMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.signjoint.action.SignMaintainAC">
+			<forward name="showSignListAC" path="/showSignListAC.do" />
+			<forward name="to_add" path="/signadd.jsp" />
+			<forward name="to_imports" path="/signImport.jsp" />
+		</action>
+
+		<action name="signAF" path="/companyFindAAC"
+			type="org.xpup.hafmis.signjoint.action.CompanyFindAAC">
+		</action>
+
+		<action name="signAddAF" path="/addSignMaintainAC"
+			type="org.xpup.hafmis.signjoint.action.SignEditMaintainAC"
+			parameter="method">
+			<forward name="showSignListAC" path="/showSignListAC.do" />
+			<forward name="to_add" path="/signadd.jsp" />
+		</action>
+		<action name="historyAF" path="/showHistoryListAC" type="org.xpup.hafmis.signjoint.action.ShowSignHistoryAC" >
+					<forward name="to_list" path="/historylist.jsp"></forward>
+		</action>
+		<action name="logAF" path="/showLogListAC" type="org.xpup.hafmis.signjoint.action.ShowLogListAC" >
+					<forward name="to_list" path="/loglist.jsp"></forward>
+		</action>
+		
+		
+		<action name="signImportAF" path="/signImportAC"
+			type="org.xpup.hafmis.signjoint.action.SignImportAC"
+			>
+			<forward name="showSignListAC" path="/showSignListAC.do" />
+			<forward name="importAC" path="/signImport.jsp"/>
+		</action>
+	    <!--action name="demoImportAF" path="/forwardChildXmlAction"
+			type="org.xpup.hafmis.demo.action.ForwardChildXmlAction"
+			>			
+			<forward name="ajaxList" path="/ajaxList.jsp" />
+		</action>
+		<action name="demoImportAF" path="/childXmlAAC"
+			type="org.xpup.hafmis.demo.action.ChildXmlAAC">			
+		</action>
+		<action name="demoImportAF" path="/getAjaxListValueAC"
+			type="org.xpup.hafmis.demo.action.GetAjaxListValueAC">			
+		</action>-->
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.signjoint.conf.message-resources" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/signjoint/applicationContext.xml" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="specialInfoChgAF"
+			type="org.xpup.hafmis.sysloan.contractchg.specialinfochg.form.SpecialInfoChgAF" />			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="specialInfoChgAF"
+		scope="request"
+		path="/specialInfoChgShowAC" type="org.xpup.hafmis.sysloan.contractchg.specialinfochg.action.SpecialInfoChgShowAC">
+      <forward name="to_specialinfochg_show" path="/contractchg/specialinfochg/specialinfochg_show.jsp" />
+    </action>
+    <action path="/specialInfoChgFindAAC" scope="request"
+	  	type="org.xpup.hafmis.sysloan.contractchg.specialinfochg.action.SpecialInfoChgFindAAC">
+	 </action>
+	 <action name="specialInfoChgAF"
+		scope="request"
+		path="/specialInfoChgSaveAC" type="org.xpup.hafmis.sysloan.contractchg.specialinfochg.action.SpecialInfoChgSaveAC">
+      <forward name="specialinfochg_show" path="/specialInfoChgShowAC.do" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

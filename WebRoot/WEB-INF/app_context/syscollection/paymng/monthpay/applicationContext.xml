@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="monthpayBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.paymng.monthpay.business.MonthpayBS">
+				<property name="orgDAO">
+					<ref bean="orgDAO" />
+				</property>
+				<property name="empDAO">
+					<ref bean="empDAO" />
+				</property>
+				<property name="monthPaymentHeadDAO">
+					<ref bean="monthPaymentHeadDAO" />
+				</property>
+				<property name="chgPersonTailDAO">
+					<ref bean="chgPersonTailDAO" />
+				</property>
+				<property name="chgOrgRateDAO">
+					<ref bean="chgOrgRateDAO" />
+				</property>
+				<property name="chgPaymentTailDAO">
+					<ref bean="chgPaymentTailDAO" />
+				</property>
+				<property name="monthPaymentDAO">
+					<ref bean="monthPaymentDAO" />
+				</property>
+				<property name="monthPaymentTailDAO">
+					<ref bean="monthPaymentTailDAO" />
+				</property>
+				<property name="chgPaymentHeadDAO">
+					<ref bean="chgPaymentHeadDAO" />
+				</property>
+				<property name="chgPersonHeadDAO">
+					<ref bean="chgPersonHeadDAO" />
+				</property>
+				<property name="monthPaymentBizActivityLogDAO">
+					<ref bean="monthPaymentBizActivityLogDAO" />
+				</property>
+				<property name="hafOperateLogDAO">
+					<ref bean="hafOperateLogDAO" />
+				</property>
+				<property name="chgPaymentPaymentDAO">
+					<ref bean="chgPaymentPaymentDAO" />
+				</property>
+				<property name="chgPaymentSalaryBaseDAO">
+					<ref bean="chgPaymentSalaryBaseDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property>
+				<property name="autoInfoPickDAODW">
+					<ref bean="autoInfoPickDAODW" /> 
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+				<property name="orgHAFAccountFlowDAO">
+					<ref bean="orgHAFAccountFlowDAO" />
+				</property>
+				<property name="searchLackInfoDAO">
+					<ref bean="searchLackInfoDAO" />
+				</property>
+				<property name="orgExcessPaymentDAO">
+					<ref bean="orgExcessPaymentDAO" />
+				</property>
+				<property name="orgExcessPaymentBizActivityLogDAO">
+					<ref bean="orgExcessPaymentBizActivityLogDAO" />
+				</property>
+			</bean>
+			
+		</property>
+	</bean>
+	<bean id="orgaddpayBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.syscollection.paymng.orgaddpay.business.OrgaddpayBS">
+				
+				<property name="orgDAO">
+					<ref bean="orgDAO" />
+				</property>
+				<property name="empDAO">
+					<ref bean="empDAO" />
+				</property>
+				<property name="monthPaymentHeadDAO">
+					<ref bean="monthPaymentHeadDAO" />
+				</property>
+				<property name="monthPaymentTailDAO">
+					<ref bean="monthPaymentTailDAO" />
+				</property>
+				<property name="orgAddPayDAO">
+					<ref bean="orgAddPayDAO" />
+				</property>
+				<property name="orgAddPayBizActivityLogDAO">
+					<ref bean="orgAddPayBizActivityLogDAO" />
+				</property>
+				<property name="hafOperateLogDAO">
+					<ref bean="hafOperateLogDAO" />
+				</property>
+				<property name="monthPaymentDAO">
+					<ref bean="monthPaymentDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property>
+				<property name="autoInfoPickDAODW">
+					<ref bean="autoInfoPickDAODW" />
+				</property>
+				<property name="orgAddPayTailDAODW">
+					<ref bean="orgAddPayTailDAODW" />
+				</property>
+				<property name="autoInfoPickDAO">
+					<ref bean="autoInfoPickDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+				<property name="orgHAFAccountFlowDAO">
+					<ref bean="orgHAFAccountFlowDAO" />
+				</property>
+				<!--
+				<property name="chgOrgRateDAO">
+					<ref bean="chgOrgRateDAO" />
+				</property>
+				<property name="chgPaymentTailDAO">
+					<ref bean="chgPaymentTailDAO" />
+				</property>
+				<property name="monthPaymentDAO">
+					<ref bean="monthPaymentDAO" />
+				</property>
+				<property name="chgPaymentHeadDAO">
+					<ref bean="chgPaymentHeadDAO" />
+				</property>
+				<property name="chgPersonHeadDAO">
+					<ref bean="chgPersonHeadDAO" />
+				</property>
+				<property name="monthPaymentBizActivityLogDAO">
+					<ref bean="monthPaymentBizActivityLogDAO" />
+				</property>
+				<property name="chgPaymentPaymentDAO">
+					<ref bean="chgPaymentPaymentDAO" />
+				</property>
+				<property name="chgPaymentSalaryBaseDAO">
+					<ref bean="chgPaymentSalaryBaseDAO" />
+				</property>-->
+			</bean>
+		</property>
+	</bean>
+</beans>
+

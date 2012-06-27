@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="hafoperateLogAF"
+			type="org.xpup.hafmis.sysloan.systemmaintain.hafoperateLog.form.HafoperateLogAF" />
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	
+	<action name="hafoperateLogAF" path="/hafoperatorLogForwardAC"
+			type="org.xpup.hafmis.sysloan.systemmaintain.hafoperateLog.action.HafoperatorLogForwardAC">
+			<forward name="goto" path="/hafoperatorLogShowAC.do" />
+		</action>
+		
+	<action name="hafoperateLogAF" path="/hafoperatorLogShowAC"
+			type="org.xpup.hafmis.sysloan.systemmaintain.hafoperateLog.action.HafoperatorLogShowAC">
+			<forward name="success" path="/systemmaintain/hafoperateLog/hafoperatorLog.jsp" />
+		</action>
+	
+	<action name="hafoperateLogAF" path="/hafoperatorLogFindAC"
+			type="org.xpup.hafmis.sysloan.systemmaintain.hafoperateLog.action.HafoperatorLogFindAC">
+			<forward name="goto_showAC" path="/hafoperatorLogShowAC.do" />
+		</action>
+	
+	<action name="idAF" path="/hafoperatorLogMaintainAC"
+			type="org.xpup.hafmis.sysloan.systemmaintain.hafoperateLog.action.HafoperatorLogMaintainAC">
+			<forward name="goto_print" path="/systemmaintain/hafoperateLog/hafoperatorLogPrintList.jsp" />
+		</action>
+		
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

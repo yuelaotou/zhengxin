@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="bailenRolTaAF"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.form.BailenRolTaAF" />
+		<form-bean name="bailenRolTbAF"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.form.BailenRolTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/bailenRolTaShowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTaShowAC">
+			<forward name="to_bailenrol_new"
+				path="/specialbiz/bailenrol/bailenrol_new.jsp">
+			</forward>
+		</action>
+
+		<action name="bailenRolTaAF" path="/bailenRolTaFindAAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTaFindAAC">
+		</action>
+
+		<action name="bailenRolTaAF" path="/bailenRolTaFindBankAccAAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTaFindBankAccAAC">
+		</action>
+
+		<action name="bailenRolTaAF" path="/bailenRolTaSaveAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTaSaveAC"
+			scope="request">
+			<forward name="bailenRolTaShowAC"
+				path="/bailenRolTaShowAC.do">
+			</forward>
+		</action>
+
+		<action path="/bailenRolTaPrintAC" scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTaPrintAC">
+			<forward name="to_bailenrol_printta"
+				path="/specialbiz/bailenrol/bailenrol_cellta.jsp">
+			</forward>
+		</action>
+
+		<action path="/bailenRolTbForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTbForwardURLAC">
+			<forward name="bailenRolTbShowAC"
+				path="/bailenRolTbShowAC.do">
+			</forward>
+		</action>
+
+		<action name="bailenRolTbAF" path="/bailenRolTbShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTbShowAC">
+			<forward name="to_bailenrol_showtb"
+				path="/specialbiz/bailenrol/bailenrol_showtb.jsp">
+			</forward>
+		</action>
+
+		<action name="bailenRolTbAF" path="/bailenRolTbFindAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTbFindAC"
+			scope="request">
+			<forward name="bailenRolTbShowAC"
+				path="/bailenRolTbShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/bailenRolTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.specialbiz.bailenrol.action.BailenRolTbMaintainAC"
+			scope="request" parameter="method">
+			<forward name="bailenRolTbShowAC"
+				path="/bailenRolTbShowAC.do">
+			</forward>
+			<forward name="to_bailenrol_printtb"
+				path="/specialbiz/bailenrol/bailenrol_celltb.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

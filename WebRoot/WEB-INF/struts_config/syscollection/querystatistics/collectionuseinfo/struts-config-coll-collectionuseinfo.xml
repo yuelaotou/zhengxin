@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="collectionuseinfoFindAF" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.form.CollectionuseinfoFindAF"></form-bean>
+		<form-bean name="defineFormulaFindAF" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.form.DefineFormulaFindAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	<action name="collectionuseinfoFindAF" path="/cumulativeinfoAjaxAC" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.action.CumulativeinfoAjaxAC">
+			<forward name="to_cumulativeinfo_find" path="/to_collectionuseinfo_find.jsp"></forward>
+		</action>
+		<action name="collectionuseinfoFindAF" path="/collectionuseinfoFindAC" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.action.CollectionuseinfoFindAC">
+			<forward name="to_collectionuseinfo_find" path="/to_collectionuseinfo_find.jsp"></forward>
+		</action>
+		<action name="collectionuseinfoFindAF" path="/collectionuseinfoForwardAC" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.action.CollectionuseinfoForwardAC">
+			<forward name="to_collectionuseinfo_find" path="/to_collectionuseinfo_find.jsp"></forward>
+		</action>
+		<action name="defineFormulaFindAF" path="/defineFormulaForwardAC" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.action.DefineFormulaForwardAC">
+			<forward name="defineFormula" path="/defineFormula.jsp"></forward>
+		</action>
+		<action name="defineFormulaFindAF" path="/defineFormulaSaveAC" type="org.xpup.hafmis.syscollection.querystatistics.collectionuseinfo.action.DefineFormulaSaveAC">
+			<forward name="defineFormula" path="/defineFormula.jsp"></forward>
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/collectionuseinfo/applicationContext.xml" />
+	</plug-in>
+</struts-config>

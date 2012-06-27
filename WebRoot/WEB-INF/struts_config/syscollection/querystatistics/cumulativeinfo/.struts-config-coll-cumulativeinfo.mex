@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cumulativeinfoAjaxAC.do" location="0,0" dimension="574,84" />
+  <StrutsActivity path="/cumulativeinfoFindAC.do" location="674,0" dimension="574,84" />
+  <StrutsActivity path="/cumulativeinfoForwardAC.do" location="1348,0" dimension="592,84" />
+  <StrutsActivity path="/to_cumulativeinfo_find.jsp" location="860,184" dimension="202,48" />
+  <StrutsActivity path="/fundbankmonthofyearFindAC.do" location="50,150" dimension="509,88" />
+  <StrutsActivity path="/fundbankmonthofyear_find.jsp" location="50,350" dimension="182,49" />
+  <StrutsActivity path="/fundbankmonthofyearForwardAC.do" location="350,350" dimension="529,88" />
+  <StrutsActivity path="/fundbankmonthofyearAjaxAC.do" />
+  <StrutsTransition id="/cumulativeinfoForwardAC.do,to_cumulativeinfo_find,/to_cumulativeinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1644,84" />
+      <AbsolutePoint location="1644,134" />
+      <AbsolutePoint location="1028,134" />
+      <AbsolutePoint location="1028,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cumulativeinfoAjaxAC.do,to_cumulativeinfo_find,/to_cumulativeinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="287,84" />
+      <AbsolutePoint location="287,134" />
+      <AbsolutePoint location="893,134" />
+      <AbsolutePoint location="893,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fundbankmonthofyearForwardAC.do,fundbankmonthofyear_find,/fundbankmonthofyear_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,384" />
+      <AbsolutePoint location="232,384" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fundbankmonthofyearAjaxAC.do,fundbankmonthofyear_find,/fundbankmonthofyear_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="141,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fundbankmonthofyearFindAC.do,fundbankmonthofyear_find,/fundbankmonthofyear_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="217,238" />
+      <AbsolutePoint location="217,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cumulativeinfoFindAC.do,to_cumulativeinfo_find,/to_cumulativeinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="961,84" />
+      <AbsolutePoint location="961,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/fundbankmonthofyearForwardAC.do,to_cumulativeinfo_find,/to_cumulativeinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="875,350" />
+      <AbsolutePoint location="875,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

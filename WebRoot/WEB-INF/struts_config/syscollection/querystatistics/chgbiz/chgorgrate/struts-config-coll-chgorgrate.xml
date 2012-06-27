@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="chgorgrateAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgorgrate.form.ChgorgrateAF">
+		</form-bean>
+		<!--	公共结束	-->
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	    <action name="chgorgrateAF" path="/showChgorgrateListAC" scope="session" 
+	        type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgorgrate.action.ForwardUrlChgorgrateListAC">
+	        <forward name="to_showChgorgrateListAC" path="/to_showChgorgrateListAC.do"></forward>
+	    </action>
+	    
+		<action name="chgorgrateAF" path="/to_showChgorgrateListAC" scope="session"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgorgrate.action.ShowChgorgrateListAC">
+			<forward name="to_ChgorgrateList.jsp"
+				path="/chgorgrateList.jsp">
+			</forward>
+		</action>
+
+		<action name="chgorgrateAF" path="/findChgorgrateListAC" scope="session" 
+		    type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgorgrate.action.FindChgorgrateListAC" >
+		    <forward name="to_ShowChgorgrateListAC" path="/to_showChgorgrateListAC.do"></forward>
+		</action>
+		
+		<action name="idAF" path="/printChgorgrateListAC" scope="session" 
+		    type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgorgrate.action.PrintChgorgrateListAC">
+		    <forward name="to_chgorgrateList_cell.jsp" path="/chgorgrateList_cell.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/chgbiz/chgorgrate/applicationContext.xml" />
+	</plug-in>
+</struts-config>

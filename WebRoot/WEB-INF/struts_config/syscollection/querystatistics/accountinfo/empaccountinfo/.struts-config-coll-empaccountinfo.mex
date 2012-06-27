@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showEmpAccountDayListAC.do" location="0,738" dimension="664,84" />
+  <StrutsActivity path="/showEmpAccountMonthListAC.do" location="0,461" dimension="676,84" />
+  <StrutsActivity path="/showEmpAccountListURLAC.do" location="0,0" dimension="664,84" />
+  <StrutsActivity path="/showEmpAccountListAC.do" location="9,184" dimension="646,84" />
+  <StrutsActivity path="/empAccountMaintainAC.do" location="709,738" dimension="646,84" />
+  <StrutsActivity path="/empaccount_day_List.jsp" location="240,922" dimension="184,48" />
+  <StrutsActivity path="/empaccount_month_List.jsp" location="240,645" dimension="196,48" />
+  <StrutsActivity path="/empaccount_List.jsp" location="252,368" dimension="160,48" />
+  <StrutsActivity path="/empaccount_cell.jsp" location="952,922" dimension="160,48" />
+  <StrutsTransition id="/empAccountMaintainAC.do,to_empAccount_cell,/empaccount_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1032,822" />
+      <AbsolutePoint location="1032,922" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showEmpAccountListURLAC.do,to_showEmpAccount_list,/showEmpAccountListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="332,84" />
+      <AbsolutePoint location="332,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showEmpAccountMonthListAC.do,to_empAccount_month_list,/empaccount_month_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="338,545" />
+      <AbsolutePoint location="338,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showEmpAccountDayListAC.do,to_empAccount_day_list,/empaccount_day_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="332,822" />
+      <AbsolutePoint location="332,922" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showEmpAccountListAC.do,to_empAccount_list,/empaccount_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="332,268" />
+      <AbsolutePoint location="332,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

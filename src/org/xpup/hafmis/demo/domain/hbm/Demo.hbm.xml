@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.xpup.hafmis.demo.domain.entity">
+
+	<class name="Demo" table="DEMO">
+
+		<id name="id" type="integer" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_DEMO_ID</param>
+			</generator>
+		</id>
+
+		<property name="name" type="java.lang.String"
+			column="NAME" />
+			
+		<property name="idcard" type="java.lang.String"
+			column="IDCARD" />
+
+
+		<property name="birthday" type="java.lang.String"
+			column="BIRTHDAY" />
+		
+		<property name="sex" type="java.lang.String"
+			column="SEX" />	
+			
+		<property name="salary" type="java.math.BigDecimal"
+			column="SALARY" />	
+			
+        <property name="balance" type="java.math.BigDecimal" formula="(select sum(demoAccount.addmoney) from DEMO_ACCOUNT demoAccount where demoAccount.empid=id )"
+			/>
+			
+		<property name="photoUrl" type="java.lang.String"
+			column="PHOTO_URL" />	
+        
+	</class>
+</hibernate-mapping>

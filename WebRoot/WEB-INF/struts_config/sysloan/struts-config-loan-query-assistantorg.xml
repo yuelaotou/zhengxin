@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="assistantorgQueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.form.AssistantorgQueryAF" />	
+			<form-bean name="assistantorgQueryTbAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.form.AssistantorgQueryTbAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/assistantorgQueryForwardAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantorgQueryForwardAC">
+      <forward name="assistantorg_show" path="/assistantorgQueryShowAC.do" />
+    </action>
+     <action name="assistantorgQueryAF" path="/assistantorgQueryShowAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantorgQueryShowAC">
+    	<forward name="to_assistantorg_show" path="/querystatistics/datareadyquery/assistantorg/assistantorg_show.jsp" />
+    </action>
+    <action name="assistantorgQueryAF" path="/assistantorgQueryFindAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantorgFindQueryAC">    	                                   
+    	
+    	<forward name="assistantorg_show" path="/assistantorgQueryShowAC.do" />
+    </action>
+     <action name="assistantorgQueryTbAF" path="/assistantOrgInfoShowAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantOrgInfoShowAC">   
+                                                                               	                                                                                                       
+    	<forward name="assistantorgInfo_show" path="/querystatistics/datareadyquery/assistantorg/assistantorginfo_show.jsp" />
+    </action>
+     <action name="assistantorgQueryTbAF" path="/assistantOrgInfoPrintAC" type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantOrgInfoPrintAC">                                                                              
+    	<forward name="assistantorgInfo_print" path="/querystatistics/datareadyquery/assistantorg/assistantorginfo_print.jsp" />
+    </action>     
+    <action name="idAF" path="/assistantorgPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.datareadyquery.assistantorg.action.AssistantorgPrintAC">
+			<forward name="to_assistantorglist_print"
+				path="/querystatistics/datareadyquery/assistantorg/assistantorglist_print.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

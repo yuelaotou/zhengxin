@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/paramShowAC.do" location="0,645" dimension="394,84" />
+  <StrutsActivity path="/paramSaveAC.do" location="0,461" dimension="394,84" />
+  <StrutsActivity path="/paramCheckLoanFlowAAC.do" location="439,461" dimension="454,84" />
+  <StrutsActivity path="/aheadReturnParamShowAC.do" location="0,184" dimension="460,84" />
+  <StrutsActivity path="/aheadReturnParamSaveAC.do" location="0,0" dimension="460,84" />
+  <StrutsActivity path="/dataready/param/param_show.jsp" location="84,829" dimension="226,48" />
+  <StrutsActivity path="/dataready/param/aheadreturnparam_show.jsp" location="84,368" dimension="292,48" />
+  <StrutsTransition id="/aheadReturnParamShowAC.do,to_aheadreturnparam_show,/dataready/param/aheadreturnparam_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,268" />
+      <AbsolutePoint location="230,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paramSaveAC.do,param_show,/paramShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,545" />
+      <AbsolutePoint location="197,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paramShowAC.do,to_param_show,/dataready/param/param_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,729" />
+      <AbsolutePoint location="197,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/aheadReturnParamSaveAC.do,aheadreturnparam_show,/aheadReturnParamShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,84" />
+      <AbsolutePoint location="230,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="EmpAgentImportTitle" col="2"  space="0" row="2">
+     <column>
+			<name>OrgId</name>
+			<typle>java.lang.String</typle>
+	 </column>
+	 <column>
+			<name>OrgName</name>
+			<typle>java.lang.String</typle>
+	 </column>
+</file>
+<file name="EmpAgentImport" col="10"  space="2" row="-1">
+     <column>
+			<name>EmpId</name>
+			<typle>java.lang.String</typle>
+		</column>
+	 <column>
+			<name>EmpName</name>
+			<typle>java.lang.String</typle>
+		</column>
+	  <column>
+			<name>CardNum</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>Sex</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>Birthday</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>CardKind</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>Tel</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>MobileTle</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>MonthIncome</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>Department</name>
+			<typle>java.lang.String</typle>
+		</column>
+		
+		
+</file>
+</root>

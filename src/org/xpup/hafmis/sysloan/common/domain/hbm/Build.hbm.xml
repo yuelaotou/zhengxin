@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.Build" 
+    table="PL006_1"
+>
+
+    <id
+        name="buildId"
+        type="integer"
+        column="build_id"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_PL006_1</param>
+	</generator>
+    </id>
+
+    <property
+        name="floorId"
+        type="java.math.BigDecimal"
+        column="FLOOR_ID"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="buildAdd"
+        type="java.lang.String"
+        column="build_add"
+        length="100"
+    />
+    <property
+        name="buildNum"
+        type="java.lang.String"
+        column="build_num"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="build_s"
+        type="java.math.BigDecimal"
+        column="build_s"
+        length="15"
+    />
+    <property
+        name="fundStatus"
+        type="java.lang.String"
+        column="fund_status"
+        not-null="true"
+        length="1"
+    />
+    <property
+        name="reserved"
+        type="java.lang.String"
+        column="reserved"
+        length="100"
+    />
+     <property
+        name="build_status"
+        type="java.lang.String"
+        column="build_status"
+        length="2"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

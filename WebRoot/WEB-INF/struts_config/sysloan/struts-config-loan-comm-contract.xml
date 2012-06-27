@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+	 <form-bean name="contractpopAF"
+	     type="org.xpup.hafmis.sysloan.common.biz.contractpop.form.ContractpopAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="contractpopAF" path="/contractpopFind" scope="session"
+	   type="org.xpup.hafmis.sysloan.common.biz.contractpop.action.ContractpopFindAC">
+	  <forward name="to_contractpopShow" path="/contractpopShow.do"></forward>
+	 </action>
+	 
+	 <action name="contractpopAF" path="/contractpopShow" scope="session"
+	  type="org.xpup.hafmis.sysloan.common.biz.contractpop.action.ContractpopShowAC">
+	 <forward name="to_contractpop_list" path="/common/biz/contractpop/contractpop_list.jsp"></forward>
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+		
+</struts-config>

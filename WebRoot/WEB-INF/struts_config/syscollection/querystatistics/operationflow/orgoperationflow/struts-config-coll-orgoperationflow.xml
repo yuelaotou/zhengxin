@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	鍏叡寮€濮?-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	鍏叡缁撴潫	-->		
+		<form-bean name="orgbusinessflowAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.form.OrgbusinessflowAF" />
+			<form-bean name="empOperationFlowAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.form.EmpOperationFlowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+		<action name="orgbusinessflowAF" path="/orgbusinessflowForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.OrgbusinessflowForwardURLAC">
+			<forward name="to_orgbusinessflow_list" path="/showOrgbusinessflowListAC.do"/>
+		</action>
+		<action name="orgbusinessflowAF" path="/showOrgbusinessflowListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.ShowOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_list" path="/orgbusinessflow_show.jsp"/>
+		</action>
+		<action name="orgbusinessflowAF" path="/findOrgbusinessflowListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.FindOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_list" path="/showOrgbusinessflowListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainOrgbusinessflowListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.MaintainOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_report" path="/orgbusinessflow_cell.jsp"/>
+		</action>
+		<!--	鑱屽伐寮瑰嚭妗?-->
+		<action path="/empOperationFlowTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.EmpOperationFlowTaForwardURLAC">
+			<forward name="empOperationFlowTaShowAC" path="/empOperationFlowTaShowAC.do" />
+		</action>
+		<action name="empOperationFlowAF"
+			path="/empOperationFlowTaFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.EmpOperationFlowTaFindAC">
+			<forward name="empOperationFlowTaShowAC" path="/empOperationFlowTaShowAC.do">
+			</forward>
+		</action>
+		<action name="empOperationFlowAF" path="/empOperationFlowTaShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.EmpOperationFlowTaShowAC">
+			<forward name="empOperationFlowTaShowAC" path="/empoperationflow_lb.jsp" />
+		</action>
+		<action name="idAF" path="/empOperationFlowTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.action.EmpOperationFlowTaMaintainAC">
+			<forward name="show_print" path="/empoperationflow_print.jsp" />
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do" />
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/operationflow/orgoperationflow/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/paymng/monthpay/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/paymng/orgaddpay/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/paymng/personaddpay/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/paymng/orgoverpay/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/pickupmng/pickup/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/tranmng/tranin/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/tranmng/tranout/applicationContext.xml,
+			/WEB-INF/app_context/syscollection/accounthandle/adjustaccount/applicationContext.xml" />
+	</plug-in>
+</struts-config>

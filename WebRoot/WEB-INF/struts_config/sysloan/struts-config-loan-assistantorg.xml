@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="assistantorgShowListAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.AssistantorgShowListAF" />
+    <form-bean name="assistantorgAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.AssistantorgAF"/>
+    <form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="surrogateShowListAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.SurrogateShowListAF" />
+    <form-bean name="surrogateAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.SurrogateAF" />
+    <form-bean name="insuranceAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.InsuranceAF" />
+    <form-bean name="insuranceShowListAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.InsuranceShowListAF" />
+    <form-bean name="evaluateAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.EvaluateAF" />
+    <form-bean name="evaluateShowListAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.EvaluateShowListAF" />
+    <form-bean name="notarialAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.NotarialAF" />
+    <form-bean name="notarialShowListAF" type="org.xpup.hafmis.sysloan.dataready.assistantorg.form.NotarialShowListAF" />	
+    	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- 清空PAGINATION -->
+    <action path="/assistantorgForwardAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.AssistantorgForwardAC">
+      <forward name="assistantorgShowAC" path="/assistantorgShowAC.do"/>
+    
+    </action>
+    <!-- 显示列表 -->
+    <action path="/assistantorgShowAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.AssistantorgShowAC">
+      <forward name="to_assistantorg_show" path="/dataready/assistantorg/assistantorg_show.jsp"/>
+    </action>
+    <!-- 分发  -->
+    <action path="/assistantorgMaintainAC" 
+    name="idAF"
+    parameter="method"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.AssistantorgMaintainAC">
+    <forward name="assistantorgShowAC" path="/assistantorgShowAC.do"/>
+      <forward name="to_assistantorg_addupdate" path="/dataready/assistantorg/assistantorg_addupdate.jsp"/>
+    </action>
+    <!--添加 修改   -->
+    <action
+      name="assistantorgAF"
+      path="/assistantorgAddUpdateAC"
+		parameter="method"
+      type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.AssistantorgAddUpdateAC">
+      <forward name="to_assistantorg_addupdate" path="/dataready/assistantorg/assistantorg_addupdate.jsp"/>
+      <forward name="assistantorgShowAC" path="/assistantorgShowAC.do"/>
+    </action>
+    <!-- 代理模块节点 -->
+    <action path="/surrogateForwardAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.SurrogateForwardAC">
+	<forward name="surrogateShowAC" path="/surrogateShowAC.do"/>
+    </action>
+    <action path="/surrogateShowAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.SurrogateShowAC">
+    <forward name="to_surrogate_show" path="/dataready/assistantorg/surrogate_show.jsp"/>
+    </action>
+    <action path="/surrogateMaintainAC" 
+    name="idAF"
+    parameter="method"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.SurrogateMaintainAC">
+    <forward name="surrogateShowAC" path="/surrogateShowAC.do"/>
+    <forward name="to_surrogate_addupdate" path="/dataready/assistantorg/surrogate_addupdate.jsp"/>
+    </action>
+    <action path="/surrogateAddUpdateAC" 
+    name="surrogateAF"
+    parameter="method"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.SurrogateAddUpdateAC">
+    <forward name="to_surrogate_addupdate" path="/dataready/assistantorg/surrogate_addupdate.jsp"/>
+    <forward name="surrogateShowAC" path="/surrogateShowAC.do"/>
+    </action>
+    
+    <!-- 代理模块节点到此结束 -->
+    <!-- 保险公司维护节点 -->
+    <action path="/insuranceForwardAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.InsuranceForwardAC">
+    <forward name="insuranceShowAC" path="/insuranceShowAC.do"/>
+    </action>
+    <action path="/insuranceShowAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.InsuranceShowAC">
+    <forward name="to_insurance_show" path="/dataready/assistantorg/insurance_show.jsp"/>
+    </action>
+    <action path="/insuranceMaintainAC"
+    name="idAF" 
+    parameter="method"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.InsuranceMaintainAC">
+    <forward name="insuranceShowAC" path="/insuranceShowAC.do"/>
+    <forward name="to_insurance_addupdate" path="/dataready/assistantorg/insurance_addupdate.jsp"/>
+    </action>
+    <action path="/insuranceAddUpdateAC" 
+    parameter="method"
+    name="insuranceAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.InsuranceAddUpdateAC">
+    <forward name="to_insurance_addupdate" path="/dataready/assistantorg/insurance_addupdate.jsp"/>
+    <forward name="insuranceShowAC" path="/insuranceShowAC.do"/>
+    </action>
+
+    <!-- 保险公司维护到此结束 -->
+    
+    
+    <!-- 评估公司维护 节点  -->
+        <action path="/evaluateForwardAC" 
+        name="idAF"
+        type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.EvaluateForwardAC">
+        <forward name="evaluateShowAC" path="/evaluateShowAC.do"/>
+        </action>
+    <action path="/evaluateShowAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.EvaluateShowAC">
+    <forward name="to_evaluate_show" path="/dataready/assistantorg/evaluate_show.jsp"/>
+    </action>
+    <action path="/evaluateMaintainAC" 
+    parameter="method"
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.EvaluateMaintainAC">
+    <forward name="evaluateShowAC" path="/evaluateShowAC.do"/>
+    <forward name="to_evaluate_addupdate" path="/dataready/assistantorg/evaluate_addupdate.jsp"/>
+    </action>
+    <action path="/evaluateAddUpdateAC"
+     parameter="method"
+     name="evaluateAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.EvaluateAddUpdateAC">
+   <forward name="evaluateShowAC" path="/evaluateShowAC.do"/>
+    <forward name="to_evaluate_addupdate" path="/dataready/assistantorg/evaluate_addupdate.jsp"/>
+    </action>
+    <!-- 评估公司节点结束 -->
+    
+    <!-- 公证处维护 -->
+    <action path="/notarialForwardAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.NotarialForwardAC">
+    <forward name="notarialShowAC" path="/notarialShowAC.do"/>
+    </action>
+    <action path="/notarialShowAC" 
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.NotarialShowAC">
+    <forward name="to_notarial_show" path="/dataready/assistantorg/notarial_show.jsp"/>
+    </action>
+    <action path="/notarialMaintainAC" 
+    parameter="method"
+    name="idAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.NotarialMaintainAC">
+    <forward name="notarialShowAC" path="/notarialShowAC.do"/>
+    <forward name="to_notarial_addupdate" path="/dataready/assistantorg/notarial_addupdate.jsp"/>
+    <forward name="notarialForwardAC" path="/notarialForwardAC"></forward>
+    </action>
+    <action path="/notarialAddUpdateAC"
+    parameter="method"
+    name="notarialAF"
+    type="org.xpup.hafmis.sysloan.dataready.assistantorg.action.NotarialAddUpdateAC">
+    <forward name="notarialShowAC" path="/notarialShowAC.do"/>
+    <forward name="to_notarial_addupdate" path="/dataready/assistantorg/notarial_addupdate.jsp"/>
+    </action>
+    <!-- 公证处节点到此结束 -->
+    
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection"/>
+</struts-config>

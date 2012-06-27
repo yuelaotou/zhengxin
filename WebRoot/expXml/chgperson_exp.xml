@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<root file="3">
+<file name="ChgpersonExpTitle" col="6"  space="0" row="2">
+     <column>orgunitcode</column>
+     <column>orgunitcodecontent</column>
+	 <column>orgunitname</column>
+	 <column>orgunitnamecontent</column>
+	 <column>orgunitchgmonth</column>
+	 <column>orgunitchgmonthcontent</column>
+</file>
+<file name="ChgpersonExpNote" col="1"  space="2" row="1">
+     <column>note</column>
+</file>
+  <file name="ChgpersonExpContent" col="14"  space="4" row="-1">
+     <column>empcode</column>
+	 <column>empname</column>
+	 <column>cardkind</column>
+	 <column>cardnum</column>
+	 <column>birthday</column>
+	 <column>sex</column>
+	 <column>dept</column>
+	 <column>salarybase</column>
+	 <column>chgtype</column>
+	 <column>partin</column>
+	 <column>chgreason</column>
+	 <column>payStatus</column>
+	 <column>orgpay</column>
+	 <column>emppay</column>
+  </file>
+</root>

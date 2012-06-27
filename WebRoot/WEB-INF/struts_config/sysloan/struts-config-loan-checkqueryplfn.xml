@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />	
+	<form-bean name="checkQueryPlFnAF" type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.form.CheckQueryPlFnAF" />
+	<form-bean name="checkQueryPlFnTBAF" type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.form.CheckQueryPlFnTBAF" />
+    <form-bean name="loanBusiFlowQueryAF" type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loanbusiflowquery.form.LoanBusiFlowQueryAF" />
+    <form-bean name="particularglTaAF" type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.particulargl.form.ParticularglTaAF" />
+    <form-bean name="collFnComparisonOrgAccountShowAF" type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.form.CollFnComparisonOrgAccountShowAF" />
+    
+   
+    </form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<!-- pop Action -->
+	<action-mappings>
+		<action path="/checkQueryPlFnForwardAC"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnForwardAC">
+				<forward name="checkQueryPlFn_show" path="/checkQueryPlFnShowAC.do"></forward>
+		</action>
+		<action path="/checkQueryPlFnShowAC" name="checkQueryPlFnAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnShowAC">
+				<forward name="to_checkQueryPlFn_show" path="/querystatistics/checkqueryplfn/checkqueryplfn_show.jsp"></forward>
+		</action>
+		<action path="/checkQueryPlFnFindAC" name="checkQueryPlFnAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnFindAC">
+				<forward name="checkQueryPlFn_show" path="/checkQueryPlFnShowAC.do"></forward>
+		</action>
+		<action path="/checkQueryPlFnSureAC" name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnSureAC">
+				<forward name="checkQueryPlFntb_find" path="/checkQueryPlFnTBFindAC.do"></forward>
+		</action>
+		<!-- ============================================tb ========================================================-->
+		<action path="/checkQueryPlFnTBShowAC" name="particularglTaAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnTBShowAC">
+				<forward name="to_checkQueryPlFntb_show" path="/querystatistics/checkqueryplfn/checkqueryplfntb_show.jsp"></forward>
+		</action>
+		<action path="/checkQueryPlFnTBFindAC" name="checkQueryPlFnTBAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnTBFindAC">
+				<forward name="checkQueryPlFntb_show" path="/checkQueryPlFnTBShowAC.do"></forward>
+		</action>
+		<action path="/checkQueryPlFnTBSureAC" name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnTBSureAC">
+				<forward name="checkQueryPlFntc_show" path="/checkQueryPlFnTCShowAC.do"></forward>
+		</action>
+		<!-- ============================================tb ========================================================-->
+		<action path="/checkQueryPlFnTCShowAC" name="loanBusiFlowQueryAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnTCShowAC">
+				<forward name="to_checkQueryPlFntc_show" path="/querystatistics/checkqueryplfn/checkqueryplfntc_show.jsp"></forward>
+		</action>
+		<action path="/checkQueryPlFnFindAAC"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnFindAAC">
+		</action>
+		
+		 <action name="checkQueryPlFnTBAF" path="/checkQueryPlFnWindowFindAC" scope="session"
+	   type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnWindowFindAC">
+	  <forward name="to_contractpopShow" path="/checkQueryPlFnWindowShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="checkQueryPlFnTBAF" path="/checkQueryPlFnWindowShowAC" scope="session"
+	  type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnWindowShowAC">
+	 <forward name="to_contractpop_list" path="/querystatistics/checkqueryplfn/contractpop_list.jsp"></forward>
+	 </action>
+	 <action path="/checkQueryPlFnWindow2AC" name="collFnComparisonOrgAccountShowAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CheckQueryPlFnWindow2AC">
+				<forward name="checkQueryPlFnWindow2_show" path="/querystatistics/checkqueryplfn/chooseCondition.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonOrgAccountPrintAC" name="collFnComparisonOrgAccountShowAF"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.querystatistics.checkqueryplfn.action.CollFnComparisonOrgAccountPrintAC">
+				<forward name="checkQueryPlFnprint" path="/querystatistics/checkqueryplfn/print.jsp"></forward>
+		</action>
+		
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

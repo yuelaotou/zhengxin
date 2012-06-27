@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.FnDocNumCancel" 
+    table="FN302"
+>
+
+    <id
+        name="credenceid"
+        type="integer"
+        column="CREDENCEID"
+    >
+       <generator class="sequence">
+	   <param name="sequence">SEQ_FN302</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="cancelcredenceid"
+        type="java.lang.String"
+        column="CANCELCREDENCEID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        length="100"
+    />
+    <property
+        name="bizYearmonth"
+        type="java.lang.String"
+        column="BIZ_YEARMONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="credenceNumType"
+        type="java.lang.String"
+        column="CREDENCE_NUM_TYPE"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

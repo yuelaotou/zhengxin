@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+			<form-bean name="paramAF"
+			type="org.xpup.hafmis.syscollection.peoplebank.param.form.ParamAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="paramAF" 
+		scope="request"
+		path="/paramShowAC" type="org.xpup.hafmis.syscollection.peoplebank.param.action.ParamShowAC">
+      <forward name="to_param_show" path="/param_show.jsp" />
+    </action>
+    <action name="paramAF" 
+    	scope="request"
+    	path="/paramSaveAC" type="org.xpup.hafmis.syscollection.peoplebank.param.action.ParamSaveAC">
+      <forward name="param_show" path="/paramShowAC.do" />
+    </action>
+    <action name="paramAF" 
+		scope="request"
+		path="/paramCheckLoanFlowAAC" type="org.xpup.hafmis.syscollection.peoplebank.param.action.ParamCheckLoanFlowAAC">
+    </action>	
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/peoplebank/param/applicationContext.xml" />
+	</plug-in>
+</struts-config>

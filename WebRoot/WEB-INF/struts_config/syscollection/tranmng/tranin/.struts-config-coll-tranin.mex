@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showTraninListPrintAC.do" location="50,50" dimension="403,88" />
+  <StrutsActivity path="/findTraninStayMaintainListAC.do" location="650,50" dimension="437,88" />
+  <StrutsActivity path="/findTraninVidMaintainListAC.do" location="1250,50" dimension="429,88" />
+  <StrutsActivity path="/showTraninListAAC.do" location="50,250" dimension="388,88" />
+  <StrutsActivity path="/showTraninListURLAC.do" location="650,250" dimension="400,88" />
+  <StrutsActivity path="/showTraninStayListURLAC.do" location="1250,250" dimension="422,88" />
+  <StrutsActivity path="/showTraninVidListURLAC.do" location="50,450" dimension="414,88" />
+  <StrutsActivity path="/traninBaseTaCountAAC.do" location="650,450" dimension="410,88" />
+  <StrutsActivity path="/addTraninMaintainAC2.do" location="1250,450" dimension="404,88" />
+  <StrutsActivity path="/traninVidMaintainAC.do" location="50,650" dimension="393,88" />
+  <StrutsActivity path="/showTraninVidListAC.do" location="650,650" dimension="395,88" />
+  <StrutsActivity path="/traninStayMaintainAC.do" location="1250,650" dimension="401,88" />
+  <StrutsActivity path="/showTraninStayListAC.do" location="50,850" dimension="403,88" />
+  <StrutsActivity path="/traninTaImportAC.do" location="650,850" dimension="383,88" />
+  <StrutsActivity path="/addTraninMaintainAC.do" location="1250,850" dimension="398,88" />
+  <StrutsActivity path="/traninFindInforAAC.do" location="50,1050" dimension="390,88" />
+  <StrutsActivity path="/showTraninListAC.do" location="650,1050" dimension="381,88" />
+  <StrutsActivity path="/traninMaintainAC.do" location="1250,1050" dimension="379,88" />
+  <StrutsActivity path="/isCardNumSameAAC.do" location="50,1250" dimension="395,88" />
+  <StrutsActivity path="/traninSaveAC.do" location="650,1250" dimension="363,88" />
+  <StrutsActivity path="/traninUpdateAC.do" location="1250,1250" dimension="374,88" />
+  <StrutsActivity path="/tranin_cell.jsp" location="50,1450" dimension="100,49" />
+  <StrutsActivity path="/tranin_AAC_List.jsp" location="350,1450" dimension="128,49" />
+  <StrutsActivity path="/tranin_cell_yga.jsp" location="650,1650" dimension="124,49" />
+  <StrutsActivity path="/tranin_cell_ygb.jsp" location="950,1650" dimension="124,49" />
+  <StrutsActivity path="/tranin_cell_yg.jsp" location="350,1650" dimension="118,49" />
+  <StrutsActivity path="/tranin_add.jsp" location="650,1450" dimension="103,49" />
+  <StrutsActivity path="/printall_cell.jsp" location="950,1450" dimension="104,49" />
+  <StrutsActivity path="/tranin_cell_ygc.jsp" location="1550,1450" dimension="123,49" />
+  <StrutsActivity path="/printCredence_cell.jsp" location="1250,1450" dimension="140,49" />
+  <StrutsActivity path="/traninTb_List.jsp" location="50,1550" dimension="113,49" />
+  <StrutsActivity path="/traninStay_List.jsp" location="350,1550" dimension="123,49" />
+  <StrutsActivity path="/emppop.jsp" location="650,1550" dimension="89,49" />
+  <StrutsActivity path="/tranin_new.jsp" location="950,1550" dimension="105,49" />
+  <StrutsActivity path="/tranin_List.jsp" location="1250,1550" dimension="101,49" />
+  <StrutsActivity path="/tranin_imports.jsp" location="50,1650" dimension="120,49" />
+  <StrutsActivity path="/traninlist_yg.jsp" location="1550,1550" dimension="110,49" />
+  <StrutsActivity path="/printCredence_cella.jsp" location="1250,1650" dimension="146,49" />
+  <StrutsTransition id="/addTraninMaintainAC.do,to_traninnew_jsp,/tranin_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1648,894" />
+      <AbsolutePoint location="1784,894" />
+      <AbsolutePoint location="1784,1614" />
+      <AbsolutePoint location="1032,1614" />
+      <AbsolutePoint location="1032,1599" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAAC.do,tranin_tail_cell_yga,/tranin_cell_yga.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,294" />
+      <AbsolutePoint location="712,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,tranin_tail_cell_yg,/tranin_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,664" />
+      <AbsolutePoint location="-160,664" />
+      <AbsolutePoint location="-160,1614" />
+      <AbsolutePoint location="409,1614" />
+      <AbsolutePoint location="409,1650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,to_tranin_imports,/tranin_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1629,1094" />
+      <AbsolutePoint location="1904,1094" />
+      <AbsolutePoint location="1904,1864" />
+      <AbsolutePoint location="110,1864" />
+      <AbsolutePoint location="110,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,tranin_tail_cell,/tranin_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1094" />
+      <AbsolutePoint location="1192,1094" />
+      <AbsolutePoint location="1192,1514" />
+      <AbsolutePoint location="100,1514" />
+      <AbsolutePoint location="100,1499" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addTraninMaintainAC2.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,494" />
+      <AbsolutePoint location="1222,494" />
+      <AbsolutePoint location="1222,1064" />
+      <AbsolutePoint location="1031,1064" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninFindInforAAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="440,1124" />
+      <AbsolutePoint location="650,1124" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,to_printCredencea,/printCredence_cella.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="246,694" />
+      <AbsolutePoint location="1323,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,1124" />
+      <AbsolutePoint location="1031,1124" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,traninlist_yg,/traninlist_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="443,664" />
+      <AbsolutePoint location="613,664" />
+      <AbsolutePoint location="613,-25" />
+      <AbsolutePoint location="2174,-25" />
+      <AbsolutePoint location="2174,1574" />
+      <AbsolutePoint location="1660,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListURLAC.do,to_showTranin_list,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,294" />
+      <AbsolutePoint location="553,294" />
+      <AbsolutePoint location="553,1094" />
+      <AbsolutePoint location="650,1094" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addTraninMaintainAC.do,to_tranin_add,/tranin_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,894" />
+      <AbsolutePoint location="1075,894" />
+      <AbsolutePoint location="1075,1413" />
+      <AbsolutePoint location="731,1413" />
+      <AbsolutePoint location="731,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninSaveAC.do,showemppop,/emppop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="798,1338" />
+      <AbsolutePoint location="798,1574" />
+      <AbsolutePoint location="739,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="443,724" />
+      <AbsolutePoint location="613,724" />
+      <AbsolutePoint location="613,1064" />
+      <AbsolutePoint location="650,1064" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninStayMaintainAC.do,to_printCredence.jsp,/printCredence_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1450,694" />
+      <AbsolutePoint location="1320,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,showTraninVidListAC,/showTraninVidListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="443,694" />
+      <AbsolutePoint location="650,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninStayListAC.do,to_tranin_stay_show,/traninStay_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="453,924" />
+      <AbsolutePoint location="493,924" />
+      <AbsolutePoint location="493,1574" />
+      <AbsolutePoint location="473,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAC.do,to_tranin_list,/tranin_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1031,1094" />
+      <AbsolutePoint location="1162,1094" />
+      <AbsolutePoint location="1162,1574" />
+      <AbsolutePoint location="1250,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninUpdateAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1437,1250" />
+      <AbsolutePoint location="1437,1184" />
+      <AbsolutePoint location="861,1184" />
+      <AbsolutePoint location="861,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninStayListURLAC.do,to_showTranin_stay_list,/showTraninStayListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1461,338" />
+      <AbsolutePoint location="1461,383" />
+      <AbsolutePoint location="583,383" />
+      <AbsolutePoint location="583,894" />
+      <AbsolutePoint location="453,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,to_printCredence.jsp,/printCredence_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="317,650" />
+      <AbsolutePoint location="317,613" />
+      <AbsolutePoint location="2084,613" />
+      <AbsolutePoint location="2084,1353" />
+      <AbsolutePoint location="1320,1353" />
+      <AbsolutePoint location="1320,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,to_tranin_add,/tranin_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1629,1064" />
+      <AbsolutePoint location="1994,1064" />
+      <AbsolutePoint location="1994,1954" />
+      <AbsolutePoint location="1132,1954" />
+      <AbsolutePoint location="1132,1574" />
+      <AbsolutePoint location="1055,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninSaveAC.do,to_tranin_add,/tranin_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="671,1338" />
+      <AbsolutePoint location="671,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAAC.do,tranin_tail_cell_ygb,/tranin_cell_ygb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,294" />
+      <AbsolutePoint location="1012,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAAC.do,tranin_tail_cell,/tranin_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,294" />
+      <AbsolutePoint location="5,294" />
+      <AbsolutePoint location="5,1383" />
+      <AbsolutePoint location="100,1383" />
+      <AbsolutePoint location="100,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,showTraninListURLAC,/showTraninListURLAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1449,1050" />
+      <AbsolutePoint location="1449,1013" />
+      <AbsolutePoint location="1192,1013" />
+      <AbsolutePoint location="1192,294" />
+      <AbsolutePoint location="1050,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninBaseTaCountAAC.do,to_tranin_add,/tranin_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1060,494" />
+      <AbsolutePoint location="1132,494" />
+      <AbsolutePoint location="1132,1383" />
+      <AbsolutePoint location="701,1383" />
+      <AbsolutePoint location="701,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninStayMaintainAC.do,showTraninStayListAC,/showTraninStayListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1450,738" />
+      <AbsolutePoint location="1450,813" />
+      <AbsolutePoint location="251,813" />
+      <AbsolutePoint location="251,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListPrintAC.do,tranin_tail_cell,/tranin_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,94" />
+      <AbsolutePoint location="-25,94" />
+      <AbsolutePoint location="-25,1474" />
+      <AbsolutePoint location="50,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addTraninMaintainAC.do,showemppop,/emppop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1449,938" />
+      <AbsolutePoint location="1449,954" />
+      <AbsolutePoint location="583,954" />
+      <AbsolutePoint location="583,1574" />
+      <AbsolutePoint location="650,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,to_printCredence.jsp,/printCredence_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1629,1124" />
+      <AbsolutePoint location="2264,1124" />
+      <AbsolutePoint location="2264,1383" />
+      <AbsolutePoint location="1290,1383" />
+      <AbsolutePoint location="1290,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninStayMaintainAC.do,tranin_tail_cell_yg,/tranin_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1450,694" />
+      <AbsolutePoint location="409,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,tranin_tail_cell_yga,/tranin_cell_yga.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="227,650" />
+      <AbsolutePoint location="227,613" />
+      <AbsolutePoint location="-235,613" />
+      <AbsolutePoint location="-235,1714" />
+      <AbsolutePoint location="712,1714" />
+      <AbsolutePoint location="712,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAAC.do,tranin_AAC_List,/tranin_AAC_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,338" />
+      <AbsolutePoint location="244,413" />
+      <AbsolutePoint location="1814,413" />
+      <AbsolutePoint location="1814,1154" />
+      <AbsolutePoint location="523,1154" />
+      <AbsolutePoint location="523,1474" />
+      <AbsolutePoint location="478,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,to_printCredence.jsp,/printCredence_cella.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1629,1124" />
+      <AbsolutePoint location="2264,1124" />
+      <AbsolutePoint location="2264,1674" />
+      <AbsolutePoint location="1396,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninSaveAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="831,1250" />
+      <AbsolutePoint location="831,1138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/addTraninMaintainAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1479,938" />
+      <AbsolutePoint location="1479,983" />
+      <AbsolutePoint location="841,983" />
+      <AbsolutePoint location="841,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,tranin_tail_cell_ygb,/tranin_cell_ygb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1439,1094" />
+      <AbsolutePoint location="1012,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninSaveAC.do,to_traninnew_jsp,/tranin_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="828,1338" />
+      <AbsolutePoint location="828,1574" />
+      <AbsolutePoint location="950,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findTraninStayMaintainListAC.do,to_traninStayMaintain_list,/showTraninStayListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,94" />
+      <AbsolutePoint location="523,94" />
+      <AbsolutePoint location="523,864" />
+      <AbsolutePoint location="453,864" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninMaintainAC.do,tranin_tail_cell_yga,/tranin_cell_yga.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1439,1094" />
+      <AbsolutePoint location="712,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findTraninVidMaintainListAC.do,to_traninMaintain_list,/showTraninVidListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,94" />
+      <AbsolutePoint location="1162,94" />
+      <AbsolutePoint location="1162,724" />
+      <AbsolutePoint location="1045,724" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninStayMaintainAC.do,tranin_tail_cell,/tranin_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,694" />
+      <AbsolutePoint location="1102,694" />
+      <AbsolutePoint location="1102,1353" />
+      <AbsolutePoint location="130,1353" />
+      <AbsolutePoint location="130,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,to_printall.jsp,/printall_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,724" />
+      <AbsolutePoint location="-55,724" />
+      <AbsolutePoint location="-55,1214" />
+      <AbsolutePoint location="1222,1214" />
+      <AbsolutePoint location="1222,1474" />
+      <AbsolutePoint location="1054,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninListAAC.do,tranin_tail_cell_yg,/tranin_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="244,294" />
+      <AbsolutePoint location="409,1674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninVidListURLAC.do,to_showTranin_vid_list,/showTraninVidListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="257,538" />
+      <AbsolutePoint location="257,583" />
+      <AbsolutePoint location="847,583" />
+      <AbsolutePoint location="847,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,tranin_tail_cell_ygc,/tranin_cell_ygc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="443,664" />
+      <AbsolutePoint location="613,664" />
+      <AbsolutePoint location="613,-25" />
+      <AbsolutePoint location="1724,-25" />
+      <AbsolutePoint location="1724,1474" />
+      <AbsolutePoint location="1673,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showTraninVidListAC.do,to_tranin_vid_list,/traninTb_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="847,738" />
+      <AbsolutePoint location="847,783" />
+      <AbsolutePoint location="35,783" />
+      <AbsolutePoint location="35,1574" />
+      <AbsolutePoint location="50,1574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,tranin_tail_cell_ygb,/tranin_cell_ygb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="287,650" />
+      <AbsolutePoint location="287,553" />
+      <AbsolutePoint location="-310,553" />
+      <AbsolutePoint location="-310,2044" />
+      <AbsolutePoint location="1012,2044" />
+      <AbsolutePoint location="1012,1699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninVidMaintainAC.do,tranin_tail_cell,/tranin_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,694" />
+      <AbsolutePoint location="-85,694" />
+      <AbsolutePoint location="-85,1413" />
+      <AbsolutePoint location="70,1413" />
+      <AbsolutePoint location="70,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninTaImportAC.do,showTraninListAC,/showTraninListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,938" />
+      <AbsolutePoint location="811,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/traninUpdateAC.do,to_tranin_add,/tranin_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1437,1338" />
+      <AbsolutePoint location="1437,1774" />
+      <AbsolutePoint location="858,1774" />
+      <AbsolutePoint location="858,1474" />
+      <AbsolutePoint location="753,1474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

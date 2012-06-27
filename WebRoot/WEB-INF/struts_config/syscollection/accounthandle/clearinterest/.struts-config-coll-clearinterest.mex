@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showClearAccountListAC.do" location="287,188" dimension="477,88" />
+  <StrutsActivity path="/findClearAccountListAC.do" location="0,0" dimension="471,88" />
+  <StrutsActivity path="/maintainClearAccountListAC.do" location="571,0" dimension="491,88" />
+  <StrutsActivity path="/clearaccount.jsp" location="470,376" dimension="112,49" />
+  <StrutsActivity path="/clearAccountForwardURLAC.do" />
+  <StrutsTransition id="/clearAccountForwardURLAC.do,to_clearaccount_list,/showClearAccountListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="525,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainClearAccountListAC.do,to_clearaccount_list,/showClearAccountListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="816,88" />
+      <AbsolutePoint location="816,138" />
+      <AbsolutePoint location="645,138" />
+      <AbsolutePoint location="645,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showClearAccountListAC.do,to_clearaccount_list,/clearaccount.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="526,276" />
+      <AbsolutePoint location="526,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findClearAccountListAC.do,to_clearaccount_list,/showClearAccountListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="235,88" />
+      <AbsolutePoint location="235,138" />
+      <AbsolutePoint location="406,138" />
+      <AbsolutePoint location="406,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chppersonForwardURLAC.do,to_clearaccount_list,/showClearAccountListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1166,194" />
+      <AbsolutePoint location="525,232" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

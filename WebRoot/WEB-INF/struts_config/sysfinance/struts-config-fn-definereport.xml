@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="defineReportAF"
+			type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.form.DefineReportAF" /> 
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="defineReportAF" path="/defineReportForwardURLAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.action.DefineReportForwardURLAC">
+	  <forward name="defineReportShowAC" path="/defineReportShowAC.do"></forward>
+	 </action>
+	
+	 <action name="defineReportAF" path="/defineReportShowAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.action.DefineReportShowAC">
+	  <forward name="to_definereport_show" path="/reportmng/financereport/definereport/defineReportShow.jsp"></forward>
+	 </action>
+	
+	 <action name="defineReportAF" path="/defineReportSaveAC" 
+	  parameter="method" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.action.DefineReportSaveAC">
+	  <forward name="defineReportShowAC" path="/defineReportShowAC.do"></forward>
+	 </action>
+	 
+	 <action path="/loadMessageAAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.action.LoadMessageAAC">
+	 </action>
+	 
+	 <action path="/getFormlaCharAAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.definereport.action.GetFormlaCharAAC">
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

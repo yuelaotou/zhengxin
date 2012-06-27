@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.DevelopProject" 
+    table="PL006"
+>
+
+    <id
+        name="floorId"
+        type="integer"
+        column="FLOOR_ID"
+    >
+        <generator class="sequence" >
+        <param name="sequence">SEQ_PL006</param>
+        </generator>
+    </id>
+
+    <property
+        name="headId"
+        type="java.lang.String"
+        column="HEAD_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="floorName"
+        type="java.lang.String"
+        column="FLOOR_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="floorNum"
+        type="java.lang.String"
+        column="FLOOR_NUM"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="region"
+        type="java.lang.String"
+        column="REGION"
+        length="100"
+    />
+    <property
+        name="itemTotleAmnt"
+        type="java.math.BigDecimal"
+        column="ITEM_TOTLE_AMNT"
+        length="15"
+    />
+    <property
+        name="itemFinishDegree"
+        type="java.lang.String"
+        column="ITEM_FINISH_DEGREE"
+        length="100"
+    />
+    <property
+        name="housePrice"
+        type="java.math.BigDecimal"
+        column="HOUSE_PRICE"
+        length="10"
+    />
+    <property
+        name="buildingArea"
+        type="java.math.BigDecimal"
+        column="BUILDING_AREA"
+        length="10"
+    />
+    <property
+        name="floorSt"
+        type="java.lang.String"
+        column="FLOOR_ST"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="floorAddr"
+        type="java.lang.String"
+        column="FLOOR_ADDR"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    <property
+        name="fundStatus"
+        type="java.lang.String"
+        column="FUND_STATUS"
+        length="1"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

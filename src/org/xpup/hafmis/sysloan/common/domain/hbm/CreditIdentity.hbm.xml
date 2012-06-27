@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.CreditIdentity" 
+    table="CR102"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_CR102</param>
+	</generator>
+    </id>
+
+    <property
+        name="contract_id"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="40"
+    />
+    <property
+        name="sex"
+        type="java.math.BigDecimal"
+        column="SEX"
+        not-null="true"
+        length="1"
+    />
+    <property
+        name="birthday"
+        type="java.math.BigDecimal"
+        column="BIRTHDAY"
+        not-null="true"
+        length="8"
+    />
+    <property
+        name="marriage_st"
+        type="java.math.BigDecimal"
+        column="MARRIAGE_ST"
+        not-null="true"
+        length="2"
+    />
+    <property
+        name="degree"
+        type="java.math.BigDecimal"
+        column="DEGREE"
+        not-null="true"
+        length="2"
+    />
+    <property
+        name="house_tel"
+        type="java.lang.String"
+        column="HOUSE_TEL"
+        length="25"
+    />
+    <property
+        name="home_mobile"
+        type="java.lang.String"
+        column="HOME_MOBILE"
+        length="16"
+    />
+    <property
+        name="org_tel"
+        type="java.lang.String"
+        column="ORG_TEL"
+        length="25"
+    />
+    <property
+        name="home_addr"
+        type="java.lang.String"
+        column="HOME_ADDR"
+        not-null="true"
+        length="60"
+    />
+    <property
+        name="home_mail"
+        type="java.math.BigDecimal"
+        column="HOME_MAIL"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="native_place"
+        type="java.lang.String"
+        column="NATIVE_PLACE"
+        length="60"
+    />
+    <property
+        name="p_name"
+        type="java.lang.String"
+        column="P_NAME"
+        length="30"
+    />
+    <property
+        name="p_card_kind"
+        type="java.lang.String"
+        column="P_CARD_KIND"
+        length="1"
+    />
+    <property
+        name="p_card_num"
+        type="java.lang.String"
+        column="P_CARD_NUM"
+        length="18"
+    />
+    <property
+        name="p_org_name"
+        type="java.lang.String"
+        column="P_ORG_NAME"
+        length="60"
+    />
+    <property
+        name="p_home_mobile"
+        type="java.lang.String"
+        column="P_HOME_MOBILE"
+        length="25"
+    />
+    <property
+        name="org_name"
+        type="java.lang.String"
+        column="ORG_NAME"
+        not-null="true"
+        length="60"
+    />
+    <property
+        name="org_addr"
+        type="java.lang.String"
+        column="ORG_ADDR"
+        length="60"
+    />
+    <property
+        name="org_mail"
+        type="java.math.BigDecimal"
+        column="ORG_MAIL"
+        length="6"
+    />
+    <property
+        name="title"
+        type="java.math.BigDecimal"
+        column="TITLE"
+        not-null="true"
+        length="1"
+    />
+    <property
+        name="year_salary"
+        type="java.math.BigDecimal"
+        column="YEAR_SALARY"
+        not-null="true"
+        length="10"
+    />
+    
+</class>
+</hibernate-mapping>

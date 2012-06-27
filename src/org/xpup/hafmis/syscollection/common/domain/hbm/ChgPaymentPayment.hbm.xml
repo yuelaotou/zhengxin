@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<subclass name="ChgPaymentPayment"
+		extends="org.xpup.hafmis.syscollection.common.domain.entity.ChgPaymentHead"
+		discriminator-value="B" dynamic-insert="true" dynamic-update="true"
+		select-before-update="true">
+		
+			<!--  //合计：调整人数oldPaymenSum //调整前单位缴额oldOrgPaySum;//调整后单位缴额OrgPaySum;//调整前职工缴额oldEmpPaySum;//调整后职工缴额EmpPaySum;//调整后应汇缴额:-->
+	
+		<property name="oldPaymenSum" type="integer"
+			formula="(select count(*) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+			  	
+		<property name="oldOrgPaySum" type="java.lang.Double"
+			formula="(select sum(e.OLD_ORG_PAY) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+		
+		<property name="orgPaySum" type="java.lang.Double"
+			formula="(select sum(e.ORG_PAY) from AA203 e where e.CHNG_HEAD_ID=ID  )" />
+		
+		<property name="oldEmpPaySum" type="java.lang.Double"
+			formula="(select sum(e.OLD_EMP_PAY) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+		
+		<property name="empPaySum" type="java.lang.Double"
+			formula="(select sum(e.EMP_PAY) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+		
+		
+		  <property name="paySum" type="java.lang.Double"
+			formula="(select (nvl(sum(OLD_PAYMENT+sum(e.ORG_PAY+e.EMP_PAY-e.OLD_ORG_PAY-e.OLD_EMP_PAY)),0)) from AA203 e where (e.PAY_STATUS=1 or e.PAY_STATUS=3 or e.PAY_STATUS=4 ) and e.CHNG_HEAD_ID=ID group by OLD_PAYMENT )" />
+		<!-- 合计字段结束 -->
+	</subclass>
+</hibernate-mapping>

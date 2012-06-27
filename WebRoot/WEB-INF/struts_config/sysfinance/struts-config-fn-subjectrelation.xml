@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="subjectrelationTaAF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.form.SubjectrelationTaAF" />
+			<form-bean name="subjectrelationTbAF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.form.SubjectrelationTbAF" />
+		<form-bean name="subjectrelationTaPop1AF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.form.SubjectrelationTaPop1AF" />
+		<form-bean name="subjectrelationTaPop2AF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.form.SubjectrelationTaPop2AF" />
+		<form-bean name="subjectrelationTaPop3AF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.form.SubjectrelationTaPop3AF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<!-- ================================================== Ta ============================================================-->
+	<action-mappings>
+		<action path="/subjectrelationTaForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaForwardURLAC">
+			<forward name="to_show_subjectrelationta"
+				path="/subjectrelationTaShowAC.do" />
+		</action>
+		<action name="subjectrelationTaAF"
+			path="/subjectrelationTaShowAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaShowAC">
+			<forward name="to_show_subjectrelationta"
+				path="/bookmng/subjectrelation/subjectrelationta_show.jsp" />
+		</action>		
+		<action path="/subjectrelationTaFindAAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaFindAAC">
+		</action>
+		<action name="subjectrelationTaPop1AF"
+			path="/subjectRelationTaPop1AC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaPop1AC">
+			<forward name="to_pop_subjectrelationta"
+				path="/bookmng/subjectrelation/subjectrelationta_pop1.jsp" />
+		</action>
+		<action name="subjectrelationTaPop2AF"
+			path="/subjectRelationTaPop2AC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaPop2AC">
+			<forward name="to_pop_subjectrelationta"
+				path="/bookmng/subjectrelation/subjectrelationta_pop2.jsp" />
+		</action>
+		<action name="subjectrelationTaPop3AF"
+			path="/subjectRelationTaPop3AC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaPop3AC">
+			<forward name="to_pop_subjectrelationta"
+				path="/bookmng/subjectrelation/subjectrelationta_pop3.jsp" />
+		</action>
+		<action name="subjectrelationTaPop3AF"
+			path="/subjectRelationTaPop4AC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaPop4AC">
+			<forward name="to_pop_subjectrelationta"
+				path="/bookmng/subjectrelation/subjectrelationta_pop4.jsp" />
+		</action>
+		<action name="idAF" path="/subjectrelationTaSave1AC" parameter="method" 
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaSave1AC">
+			<forward name="to_save_subjectrelationta"
+				path="/subjectRelationTaPop1AC.do" />
+		</action>
+		<action name="idAF" path="/subjectrelationTaSave2AC" parameter="method" 
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaSave2AC">
+			<forward name="to_save_subjectrelationta"
+				path="/subjectRelationTaPop2AC.do" />
+		</action>
+		<action name="idAF" path="/subjectrelationTaSave3AC" parameter="method" 
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaSave3AC">
+			<forward name="to_save_subjectrelationta"
+				path="/subjectRelationTaPop3AC.do" />
+		</action>
+		<action name="idAF" path="/subjectrelationTaSave4AC" parameter="method" 
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaSave4AC">
+			<forward name="to_save_subjectrelationta"
+				path="/subjectRelationTaPop4AC.do" />
+		</action>
+		<action path="/subjectrelationTaPopCheckAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTaPopCheckAC">
+			<forward name="to_pop_subjecttapop1"
+				path="/subjectRelationTaPop1AC.do" />
+			<forward name="to_pop_subjecttapop2"
+				path="/subjectRelationTaPop2AC.do" />
+			<forward name="to_pop_subjecttapop3"
+				path="/subjectRelationTaPop3AC.do" />
+			<forward name="to_pop_subjecttapop4"
+				path="/subjectRelationTaPop4AC.do" />
+		</action>
+		<action name="subjectrelationTaPop3AF"
+			path="/subjectRelationPop3FindAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationPop3FindAC">
+			<forward name="to_pop_subjectrelationta3"
+				path="/subjectRelationTaPop3AC.do" />
+		</action>
+		<action path="/subjectRelationTaCheckAAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTaCheckAAC">
+		</action>
+		<!-- ================================================== Ta ============================================================-->
+		<!-- ================================================== Tb ============================================================-->
+		<action path="/subjectrelationTbForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTbForwardURLAC">																			
+			<forward name="to_show_subjectrelationtb"
+				path="/subjectrelationTbShowAC.do" />
+		</action>	                               
+    <action name="subjectrelationTbAF"
+			path="/subjectRelationTbFindAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTbFindAC">
+			<forward name="to_show_subjectrelationtb"
+				path="/subjectrelationTbShowAC.do" />
+		</action>
+		<action name="subjectrelationTbAF"
+			path="/subjectrelationTbShowAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectrelationTbShowAC">
+			<forward name="to_show_subjectrelationtb"
+				path="/bookmng/subjectrelation/subjectrelationtb_show.jsp" />
+		</action>
+		<action name="idAF" path="/subjectRelationTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysfinance.bookmng.subjectrelation.action.SubjectRelationTbMaintainAC">
+			<forward name="to_show_subjectrelationtb" path="/subjectrelationTbShowAC.do" />			
+		</action>	
+		
+		<!-- ================================================== Tb ============================================================-->
+		
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

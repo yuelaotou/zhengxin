@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="dayclearAF"
+			type="org.xpup.hafmis.sysfinance.accounthandle.dayclear.form.DayclearAF" />
+		<form-bean name="monthclearAF"
+			type="org.xpup.hafmis.sysfinance.accounthandle.monthclear.form.MonthclearAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+		<action name="dayclearAF" path="/dayclearShowAC"
+			type="org.xpup.hafmis.sysfinance.accounthandle.dayclear.action.DayclearShowAC">
+			<forward name="dayclear" path="/accounthandle/dayclear/dayclear.jsp"/>
+		</action>
+		<action name="dayclearAF" path="/dayclearDoAC"
+			type="org.xpup.hafmis.sysfinance.accounthandle.dayclear.action.DayclearDoAC">
+			<forward name="dayclearShowAC" path="/dayclearShowAC.do"/>
+		</action>	
+	 	
+		<action name="monthclearAF" path="/monthclearShowAC"
+			type="org.xpup.hafmis.sysfinance.accounthandle.monthclear.action.MonthclearShowAC">
+			<forward name="monthclear" path="/accounthandle/monthclear/monthclear.jsp"/>
+		</action>
+		<action name="monthclearAF" path="/monthclearDoAC"
+			type="org.xpup.hafmis.sysfinance.accounthandle.monthclear.action.MonthclearDoAC">
+			<forward name="monthclearShowAC" path="/monthclearShowAC.do"/>
+		</action>	
+		
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

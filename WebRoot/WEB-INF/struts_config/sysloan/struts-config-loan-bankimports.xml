@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!-- 公用 -->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="bankImportsTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.form.BankImportsTaAF" />
+		<form-bean name="bankImportsTaImportAF"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.form.BankImportsTaImportAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="bankImportsTaAF" path="/bankImportsTaFindAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.action.BankImportsTaFindAC">
+			<forward name="bankImportsTaShowAC" path="/bankImportsTaShowAC.do" />
+		</action>
+		<action name="bankImportsTaAF" path="/bankImportsTaShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.action.BankImportsTaShowAC">
+			<forward name="bankimports" path="/loancallback/bankimports/bankimports.jsp" />
+		</action>
+		<action name="idAF" path="/bankImportsTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.action.BankImportsTaMaintainAC">
+			<forward name="bankImportsTaShowAC" path="/bankImportsTaShowAC.do" />
+		</action>
+		<action name="bankImportsTaImportAF" path="/bankImportsTaImportAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.action.BankImportsTaImportAC">
+			<forward name="bankImportsTaShowAC" path="/bankImportsTaShowAC.do" />
+		</action>
+		<action path="/bankImportsTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.bankimports.action.BankImportsTaForwardURLAC">
+			<forward name="bankImportsTaShowAC" path="/bankImportsTaShowAC.do" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

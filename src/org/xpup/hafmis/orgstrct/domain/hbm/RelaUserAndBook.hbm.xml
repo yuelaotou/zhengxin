@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.orgstrct.domain.RelaUserAndBook" 
+    table="BB113"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+	   <param name="sequence">SEQ_BB113</param>
+	</generator>
+    </id>
+
+    <property
+        name="username"
+        type="java.lang.String"
+        column="USERNAME"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+	<property
+        name="bizDate"
+        type="java.lang.String"
+        column="biz_date"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

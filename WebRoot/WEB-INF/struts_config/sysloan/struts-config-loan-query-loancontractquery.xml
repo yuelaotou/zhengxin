@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="loancontractqueryAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.form.LoanContractQueryAF" />
+
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="loanvipcheckShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanvipcheck.form.LoanVIPCheckShowAF" />
+		<form-bean name="loanvipcheckReasonAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanvipcheck.form.LoanVIPCheckReasonAF" />
+		<!-- ========================loanapply======================-->
+		<form-bean name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyNewAF" />
+		<form-bean name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTbNewAF" />
+		<form-bean name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTcNewAF" />
+		<form-bean name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTdNewAF" />
+		<!-- ========================endorsecontract======================-->
+		<form-bean name="endorsecontractTaAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTaAF" />
+		<form-bean name="endorsecontractTbAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTbAF" />
+		<form-bean name="endorsecontractTcAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTcAF" />
+		<form-bean name="endorsecontractTdAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="loancontractqueryAF"
+			path="/loancontractqueryshowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryShowAC">
+			<forward name="loancontractquery"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery.jsp" />
+		</action>
+		<action name="loancontractqueryAF"
+			path="/loancontractqueryPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryPrintAC">
+			<forward name="loancontractquery_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_cell.jsp" />
+		</action>
+		<action name="loancontractqueryAF"
+			path="/loancontractqueryfindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryFindAC">
+			<forward name="loancontractqueryshowAC"
+				path="/loancontractqueryshowAC.do" />
+
+		</action>
+		<action path="/loancontractqueryfindAAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryFindAAC" />
+
+		<action name="loanapplynewAF" path="/loancontractqueryTaShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTaShowAC">
+			<forward name="loancontractquery_ta_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_ta_cell.jsp" />
+		</action>
+		<action name="loanapplytbnewAF"
+			path="/loancontractqueryTbShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTbShowAC">
+			<forward name="loancontractquery_tb_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tb_cell.jsp" />
+		</action>
+		<action name="loanapplytcnewAF" path="/loancontractqueryTcShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTcShowAC">
+			<forward name="loancontractquery_tc_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tc_cell.jsp" />
+		</action>
+		<action path="/loancontractqueryTdShowAC"
+			name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTdShowAC">
+			<forward name="loancontractquery_td_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_td_cell.jsp" />
+		</action>
+		<action name="endorsecontractTaAF"
+			path="/loancontractqueryTeShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTeShowAC">
+			<forward name="loancontractquery_te_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_te_cell.jsp" />
+		</action>
+		<action name="endorsecontractTbAF"
+			path="/loancontractqueryTfShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTfShowAC">
+			<forward name="loancontractquery_tf_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tf_cell.jsp" />
+		</action>
+		<action name="endorsecontractTcAF"
+			path="/loancontractqueryTgShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTgShowAC">
+			<forward name="loancontractquery_tg_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tg_cell.jsp" />
+		</action>
+		<action name="endorsecontractTdAF"
+			path="/loancontractqueryThShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryThShowAC">
+			<forward name="loancontractquery_th_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_th_cell.jsp" />
+		</action>
+		<action name="idAF" path="/loancontractqueryTbFindempInfoAAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTbFindempInfoAAC" />
+		<action name="loanapplynewAF" path="/loancontractqueryTaPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTaPrintAC">
+			<forward name="loancontractquery_ta_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_ta_print_cell.jsp" />
+		</action>
+		<action name="loanapplytbnewAF"
+			path="/loancontractqueryTbPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTbPrintAC">
+			<forward name="loancontractquery_tb_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tb_print_cell.jsp" />
+		</action>
+		<action name="loanapplytcnewAF"
+			path="/loancontractqueryTcPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTcPrintAC">
+			<forward name="loancontractquery_tcs_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tcs_print_cell.jsp" />
+			<forward name="loancontractquery_tce_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tce_print_cell.jsp" />
+		</action>
+		<action name="loanapplytdnewAF"
+			path="/loancontractqueryTdPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTdPrintAC">
+			<forward name="loancontractquery_td_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_td_print_cell.jsp" />
+		</action>
+		<action name="endorsecontractTaAF"
+			path="/loancontractqueryTePrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTePrintAC">
+			<forward name="loancontractquery_te_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_te_print_cell.jsp" />
+		</action>
+		<action name="endorsecontractTbAF"
+			path="/loancontractqueryTfPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTfPrintAC">
+			<forward name="loancontractquery_tf_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tf_print_cell.jsp" />
+		</action>
+		<action name="endorsecontractTcAF"
+			path="/loancontractqueryTgPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryTgPrintAC">
+			<forward name="loancontractquery_tg_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_tg_print_cell.jsp" />
+		</action>
+		<action name="endorsecontractTdAF"
+			path="/loancontractqueryThPrintAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryThPrintAC">
+			<forward name="loancontractquery_th_print_cell"
+				path="/querystatistics/loanbusiquery/loancontractquery/loancontractquery_th_print_cell.jsp" />
+		</action>
+    <action path="/loancontractqueryForwardURLAC" type="org.xpup.hafmis.sysloan.querystatistics.loanbusiquery.loancontractquery.action.LoancontractqueryForwardURLAC">
+    <forward name="loancontractqueryshowAC"
+				path="/loancontractqueryshowAC.do" />
+    </action>
+
+
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

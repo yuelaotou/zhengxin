@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<root file="3">
+<file name="ExplainExp" col="1" space="0" row="1">
+  <column>explain</column>
+</file>
+<file name="EmpAddPayHeadExport" col="3"  space="1" row="2">
+     <column>orgId</column>
+	 <column>orgName</column>
+	  <column>noteNum</column>
+</file>
+<file name="AddPayExp" col="8"  space="3" row="-1">
+     <column>empId</column>
+	 <column>empName</column>
+	 <column>orgPay</column>
+	 <column>empPay</column>
+     <column>beginMonth</column>
+     <column>endMonth</column>
+	 <column>reason</column>
+	 <column>addPayType</column>
+</file>
+</root>

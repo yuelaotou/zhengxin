@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<bean id="orgDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgLogDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgChgLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgLogOpenDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgChgLogOpenDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgLogOpenSealDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgChgLogOpenSealDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgLogSealDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgChgLogSealDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="drawRuleDAO" class="org.xpup.hafmis.syscollection.pickupmng.pickup.pickrule.DrawRuleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgLogDelAccountDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgChgLogDelAccountDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="baseGhgInfoDAO" class="org.xpup.hafmis.syscollection.common.dao.BaseGhgInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowOverduePaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowOverduePaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowExcessPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowExcessPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowDrawingDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowDrawingDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowTransOutDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowTransOutDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowTransInDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowTransInDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowAdjustOtherDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowAdjustOtherDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowAdjustPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowAdjustPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowAdjustPickDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowAdjustPickDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowEndAccrualDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowEndAccrualDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowBalanceEndTransferDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowBalanceEndTransferDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowExcessPaymentBalanceEndTransferDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowExcessPaymentBalanceEndTransferDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgHAFAccountFlowOrgAddPayDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgHAFAccountFlowOrgAddPayDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empHAFAccountFlowDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpHAFAccountFlowDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="searchLackInfoDAO" class="org.xpup.hafmis.syscollection.common.dao.SearchLackInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	
+	<bean id="pickHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.PickHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="pickTailDAO" class="org.xpup.hafmis.syscollection.common.dao.PickTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="specialPickDAO" class="org.xpup.hafmis.syscollection.common.dao.SpecialPickDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranOutHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.TranOutHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranOutTailDAO" class="org.xpup.hafmis.syscollection.common.dao.TranOutTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranInHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.TranInHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranInTailDAO" class="org.xpup.hafmis.syscollection.common.dao.TranInTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="hafInterestRateDAO" class="org.xpup.hafmis.syscollection.common.dao.HafInterestRateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adjustWrongAccountHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.AdjustWrongAccountHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adjustWrongAccountAdjustPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.AdjustWrongAccountAdjustPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adjustWrongAccountAdjustPickDAO" class="org.xpup.hafmis.syscollection.common.dao.AdjustWrongAccountAdjustPickDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adjustWrongAccountAdjustOtherDAO" class="org.xpup.hafmis.syscollection.common.dao.AdjustWrongAccountAdjustOtherDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="adjustWrongAccountTailDAO" class="org.xpup.hafmis.syscollection.common.dao.AdjustWrongAccountTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.SettInterestHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestTailDAO" class="org.xpup.hafmis.syscollection.common.dao.SettInterestTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestResultDAO" class="org.xpup.hafmis.syscollection.common.dao.SettInterestResultDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.BizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="docNumMaintainDAO" class="org.xpup.hafmis.syscollection.common.dao.DocNumMaintainDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="docNumCancelDAO" class="org.xpup.hafmis.syscollection.common.dao.DocNumCancelDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="monthPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.MonthPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgAddPayDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgAddPayDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empAddPayDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpAddPayDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgExcessPaymentDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgExcessPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="paymentHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.PaymentHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="monthPaymentHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.MonthPaymentHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	
+	
+	
+	<bean id="chgOrgRateDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgOrgRateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgChgDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.OrgChgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgOrgRateDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgOrgRateDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPaymentHeadDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPaymentHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+
+		</property>
+	</bean>
+	<bean id="chgPersonHeadDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="chgPaymentTailDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPaymentTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPersonTailDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPaymentSalaryBaseDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPaymentSalaryBaseDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPaymentPaymentDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPaymentPaymentDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="chgPersonQfTypeDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonQfTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPersonFcTypeDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonFcTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPersonXzzcTypeDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonXzzcTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPersonXzfcTypeDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgPersonXzfcTypeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+
+	<bean id="settInterestHeadNZJXDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.SettInterestHeadNZJXDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestHeadXHTQDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.SettInterestHeadXHTQDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestHeadZYDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.SettInterestHeadZYDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="monthPaymentTailDAO" class="org.xpup.hafmis.syscollection.common.dao.MonthPaymentTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="addPayTailDAO" class="org.xpup.hafmis.syscollection.common.dao.AddPayTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="monthPaymentBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.MonthPaymentBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgAddPayBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgAddPayBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgExcessPaymentBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgExcessPaymentBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="pickBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.PickBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranOutBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.TranOutBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranInBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.TranInBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="changeAccountBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChangeAccountBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="settInterestBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.SettInterestBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="specialPickBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.SpecialPickBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="changeRateBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChangeRateBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empAddPayBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpAddPayBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgOrgRateBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChgOrgRateBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="changeSalaryBaseBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChangeSalaryBaseBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPaymentBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChgPaymentBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgPersonBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChgPersonBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgOpenAccountBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgOpenAccountBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranInOrgDAO" class="org.xpup.hafmis.syscollection.common.dao.TranInOrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="tranOutOrgDAO" class="org.xpup.hafmis.syscollection.common.dao.TranOutOrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgOrgBizActivityLogDAO" class="org.xpup.hafmis.syscollection.common.dao.ChgOrgBizActivityLogDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="agentDetailDAO" class="org.xpup.hafmis.syscollection.common.dao.AgentDetailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="empAgentDetailDAO" class="org.xpup.hafmis.syscollection.common.dao.EmpAgentDetailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgAgentDetailDAO" class="org.xpup.hafmis.syscollection.common.dao.OrgAgentDetailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="collLoanbackHeadDAO" class="org.xpup.hafmis.syscollection.common.dao.CollLoanbackHeadDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="collLoanbackTailDAO" class="org.xpup.hafmis.syscollection.common.dao.CollLoanbackTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="officeParaDAO" class="org.xpup.hafmis.syscollection.common.dao.OfficeParaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="partPickupConditionDAO" class="org.xpup.hafmis.syscollection.common.dao.PartPickupConditionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="incrementInAndOutDAO" class="org.xpup.hafmis.syscollection.common.dao.IncrementInAndOutDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="bankInfoDAO" class="org.xpup.hafmis.syscollection.common.dao.BankInfoDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="autoInfoPickDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.AutoInfoPickDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgEditionDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.OrgEditionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="inspectionDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.InspectionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="chgOrgRateTailDAO"
+		class="org.xpup.hafmis.syscollection.common.dao.ChgOrgRateTailDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.OrgDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="orgInfoDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.OrgInfoDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="autoInfoPickDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.AutoInfoPickDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="chgPaymentTailDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgPaymentTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="chgPaymentHeadDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgPaymentHeadDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	
+	<bean id="chgPersonHeadDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgPersonHeadDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="chgPersonTailDW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgPersonTailDW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="tailDaoDW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.PickTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+		<bean id="empDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.EmpDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="searchLackInfoDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.SearchLackInfoDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="pickupheadDaoDW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.PickupHeadDaoDW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="addPayTailDAODW" class="org.xpup.hafmis.syscollection.common.daoDW.AddPayTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="empAddPayDAODW" class="org.xpup.hafmis.syscollection.common.daoDW.EmpAddPayDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="settInterestHeadDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.SettInterestHeadDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="settInterestResultDAODW" class="org.xpup.hafmis.syscollection.common.daoDW.SettInterestResultDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="tranOutHeadDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.TranOutHeadDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="tranOutTailDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.TranOutTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="tranInTailDAODW" class="org.xpup.hafmis.syscollection.common.daoDW.TranInTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="orgAddPayTailDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.OrgAddPayTailDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="chgPaymentPaymentDAODW"
+		class="org.xpup.hafmis.syscollection.common.daoDW.ChgPaymentPaymentDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="orgUnitPropertyDAODW"
+		class="org.xpup.hafmis.orgstrct.daoDW.OrgUnitPropertyDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="organizationUnitDAODW"
+		class="org.xpup.hafmis.orgstrct.daoDW.OrganizationUnitDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="collBankDAODW"
+		class="org.xpup.hafmis.orgstrct.daoDW.CollBankDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="orgUnitPropTemplateDAODW"
+		class="org.xpup.hafmis.orgstrct.daoDW.OrgUnitPropTemplateDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="ouptItemDAODW"
+		class="org.xpup.hafmis.orgstrct.daoDW.OuptItemDAODW">
+		<property name="sessionFactory">
+			<ref bean="sessionFactoryDW" />
+		</property>
+	</bean>
+</beans>

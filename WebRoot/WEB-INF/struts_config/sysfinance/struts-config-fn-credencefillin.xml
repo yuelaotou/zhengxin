@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!-- ===============================================liub  -->
+	    <form-bean name="credenceFillinTaAF" type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.form.CredenceFillinTaAF"></form-bean>
+	    <!-- ===============================================liub  -->
+	    
+		<!-- =============================================== -->		
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF"/>
+	    <!-- =============================================== -->
+	    
+		<!-- ===============================================fuyf -->		
+		<form-bean name="credenceFillinTbAF" type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.form.CredenceFillinTbAF"></form-bean>
+		<form-bean name="credenceFillinTcAF" type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.form.CredenceFillinTcAF"></form-bean>
+		<form-bean name="credenceFillinTdAF" type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.form.CredenceFillinTdAF"></form-bean>
+		<form-bean name="credenceFillinIncomeExpenseAF" type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.form.CredenceFillinIncomeExpenseAF"></form-bean>
+		<!-- ===============================================fuyf -->	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/credenceFillinShowIncomeExpenseAC"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinShowIncomeExpenseAC">
+				<forward name="credenceFillinIncomeExpenseShowAC" path="/credenceFillinIncomeExpenseShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinIncomeExpenseShowAC"
+				scope="request"
+				name="credenceFillinIncomeExpenseAF"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinIncomeExpenseShowAC">
+				<forward name="credencefillinshowincomeexpense" path="/accounthandle/credencefillin/credencefillinshowincomeexpense.jsp"></forward>
+		</action>
+	    <!-- ===============================================liub  -->
+		<action path="/credenceFillinTaForwardAC"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaForwardAC">
+				<forward name="credenceFillinTaShowAC" path="/credenceFillinTaShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTaShowAC"
+		        name="credenceFillinTaAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaShowAC">
+				<forward name="to_credencefillinta_show" path="/accounthandle/credencefillin/credencefillinta_show.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTaSaveAC"
+		        name="credenceFillinTaAF"
+				scope="request"
+
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaSaveAC">
+				<forward name="to_credencefillinta_show" path="/credenceFillinTaShowAC.do"></forward>		
+		</action>
+		<action path="/credenceFillinTaUpdateAC"
+		        name="credenceFillinTaAF"
+				scope="request"
+
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaUpdateAC">
+				<forward name="credenceFillinTdShowdAC" path="/credenceFillinTdShowdAC.do"></forward>
+
+		</action>
+		<action path="/summayTaShowAC"
+		        name="credenceFillinTaAF"
+				scope="request"
+
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.SummayTaShowAC">
+				<forward name="to_summay_show" path="/accounthandle/credencefillin/summaypopTaShow.jsp"></forward>
+
+		</action>
+		<action path="/credenceFillinSerchSuggestAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinSerchSuggestAC">
+		</action>
+		<action path="/credenceFillinIsEndSubjectAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinIsEndSubjectAAC">
+		</action>
+		<action path="/credenceFillinIsEndSubjectSecAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinIsEndSubjectSecAAC">
+		</action>
+		<action path="/credenceFillinNumAndDateAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinNumAndDateAAC">
+		</action>
+		<action path="/credenceFillinIsSettNumAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinIsSettNumAAC">
+		</action>
+		<action path="/credenceFillinIsSummayAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinIsSummayAAC">
+		</action>
+		<action path="/credenceFillinGetBalaDirAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinGetBalaDirAAC">
+		</action>
+		<action path="/credenceFillinGetNumByDateAAC" 
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinGetNumByDateAAC">
+		</action>
+		<action path="/credenceFillinTaDelRowAC" 
+				name="credenceFillinTaAF"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaDelRowAC"
+				scope="request">
+				<forward name="to_credencefillinta_show" path="/accounthandle/credencefillin/credencefillinta_show.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTaAddRowAC" 
+				name="credenceFillinTaAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTaAddRowAC">
+				<forward name="to_credencefillinta_show" path="/accounthandle/credencefillin/credencefillinta_show.jsp"></forward>
+		</action>
+	    <!-- ===============================================liub -->
+	    
+		<!-- =============================================== -->
+		
+	    <!-- =============================================== -->
+	    
+		<!-- ===============================================fuyf -->
+		<!-- Tb Action -->
+		<action path="/credenceFillinTbForwardAC"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTbForwardAC">
+				<forward name="credenceFillinTbShowAC" path="/credenceFillinTbShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTbShowAC"
+				name="credenceFillinTbAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTbShowAC">
+				<forward name="to_credencefillintb_show" path="/accounthandle/credencefillin/credencefillintb_show.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTbFindAC"
+				name="credenceFillinTbAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTbFindAC">
+				<forward name="credenceFillinTbShowAC" path="/credenceFillinTbShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTbMainTainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTbMainTainAC">
+				<forward name="credenceFillinTbShowAC" path="/credenceFillinTbShowAC.do"></forward>
+		</action>
+	<!-- Tc Action -->
+		<action path="/credenceFillinTcForwardAC"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTcForwardAC">
+				<forward name="credenceFillinTcShowAC" path="/credenceFillinTcShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTcShowAC"
+				name="credenceFillinTcAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTcShowAC">
+				<forward name="to_credencefillintc_show" path="/accounthandle/credencefillin/credencefillintc_show.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTcFindAC"
+				name="credenceFillinTcAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTcFindAC">
+				<forward name="credenceFillinTcShowAC" path="/credenceFillinTcShowAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTcMainTainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTcMainTainAC">
+				<forward name="credenceFillinTcShowAC" path="/credenceFillinTcShowAC.do"></forward>
+		</action>
+		<!-- Td Action -->
+		<action path="/credenceFillinTdForwardAC"
+					type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTdForwardAC">
+					<forward name="credenceFillinTdShowdAC" path="/credenceFillinTdShowdAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTdShowdAC"
+				name="credenceFillinTdAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTdShowdAC">
+				<forward name="to_credencefillintd_show" path="/accounthandle/credencefillin/credencefillintd_show.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTdFindAC"
+				name="credenceFillinTdAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTdFindAC">
+				<forward name="credenceFillinTdShowdAC" path="/credenceFillinTdShowdAC.do"></forward>
+		</action>
+		<action path="/credenceFillinTdMainTainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTdMainTainAC">
+				<forward name="credenceFillinTdShowdAC" path="/credenceFillinTdShowdAC.do"></forward>
+				<forward name="to_credencefillintd_print" path="/accounthandle/credencefillin/credencefillintd_print.jsp"></forward>
+				<forward name="to_credencefillinta_show" path="/accounthandle/credencefillin/credencefillinta_show.jsp"></forward>
+				<forward name="to_credencefillintd_continuumprint" path="/accounthandle/credencefillin/credencefillintd_continuumprint.jsp"></forward>
+				<forward name="credencefillintd_continuumprint_jj" path="/accounthandle/credencefillin/credencefillintd_continuumprint_jj.jsp"></forward>
+		</action>
+		<action path="/credenceFillinTdForward_jjAC"
+					type="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.action.CredenceFillinTdForward_jjAC">
+					<forward name="credenceFillinTdShowdAC" path="/credenceFillinTdShowdAC.do"></forward>
+		</action>
+			
+		<!-- ===============================================fuyf -->
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

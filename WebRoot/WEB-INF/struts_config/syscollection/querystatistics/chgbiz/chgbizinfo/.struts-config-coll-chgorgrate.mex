@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/chgorgrateList.jsp" location="503,376" dimension="120,49" />
+  <StrutsActivity path="/chgorgrateList_cell.jsp" location="175,658" dimension="141,49" />
+  <StrutsActivity path="/findChgbizinfoListAC.do" location="950,150" dimension="463,88" />
+  <StrutsActivity path="/to_showChgbizinfoListAC.do.do" location="50,250" dimension="180,75" />
+  <StrutsActivity path="/showChgbizinfoListAC.do" location="950,350" dimension="496,88" />
+  <StrutsActivity path="/chgbizinfoList.jsp" location="350,150" dimension="115,49" />
+  <StrutsTransition id="/findChgbizinfoListAC.do,to_ShowChgbizinfoListAC,/to_showChgbizinfoListAC.do.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1168,238" />
+      <AbsolutePoint location="1168,287" />
+      <AbsolutePoint location="230,287" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgorgrateListAC.do,to_showChgorgrateListAC,/to_showChgorgrateListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="261,88" />
+      <AbsolutePoint location="261,138" />
+      <AbsolutePoint location="440,138" />
+      <AbsolutePoint location="440,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgbizinfoListAC.do,to_showChgbizinfoListAC,/to_showChgbizinfoListAC.do.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,350" />
+      <AbsolutePoint location="1198,317" />
+      <AbsolutePoint location="230,317" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showChgbizinfoListAC.do,to_showChgbizinfoListAC,/to_showChgbizinfoListAC.do.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,361" />
+      <AbsolutePoint location="140,361" />
+      <AbsolutePoint location="140,325" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findChgorgrateListAC.do,to_ShowChgorgrateListAC,/to_showChgorgrateListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="866,88" />
+      <AbsolutePoint location="866,138" />
+      <AbsolutePoint location="687,138" />
+      <AbsolutePoint location="687,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/printChgorgrateListAC.do,to_chgorgrateList_cell.jsp,/chgorgrateList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="245,558" />
+      <AbsolutePoint location="245,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_showChgorgrateListAC.do,to_ChgorgrateList.jsp,/chgorgrateList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="563,276" />
+      <AbsolutePoint location="563,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findChgbizinfoListAC.do,to_ShowChgbizinfoListAC,/to_showChgbizinfoListAC.do.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1181,238" />
+      <AbsolutePoint location="1181,291" />
+      <AbsolutePoint location="230,291" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_showChgbizinfoListAC.do.do,to_ChgbizinfoList.jsp,/chgbizinfoList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="140,250" />
+      <AbsolutePoint location="140,174" />
+      <AbsolutePoint location="350,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

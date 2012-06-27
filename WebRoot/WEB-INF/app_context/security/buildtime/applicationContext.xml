@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for june's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+
+	<bean id="securityObjectBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.security.buildtime.bizsrvc.impl.SecurityObjectBS">
+				<property name="menuItemDAO">
+					<ref bean="menuItemDAO" />
+				</property>
+				<property name="operationDAO">
+					<ref bean="operationDAO" />
+				</property>
+				<property name="dataAccessDAO">
+					<ref bean="dataAccessDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>

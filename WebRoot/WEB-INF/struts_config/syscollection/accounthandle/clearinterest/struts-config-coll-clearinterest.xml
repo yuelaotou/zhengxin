@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="clearaccountShowAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearinterest.form.ClearaccountShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="clearaccountShowAF" path="/clearAccountForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearinterest.action.ClearAccountForwardURLAC">
+			<forward name="to_clearaccount_list" path="/showClearAccountListAC.do"/>
+		</action>
+		<action name="clearaccountShowAF" path="/showClearAccountListAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearinterest.action.ShowClearAccountListAC">
+			<forward name="to_clearaccount_list" path="/clearaccount.jsp"/>
+		</action>
+		<action name="clearaccountShowAF" path="/findClearAccountListAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearinterest.action.FindClearAccountListAC">
+			<forward name="to_clearaccount_list" path="/showClearAccountListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainClearAccountListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearinterest.action.MaintainClearAccountListAC">
+			<forward name="to_clearaccount_list" path="/showClearAccountListAC.do"/>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/clearinterest/applicationContext.xml" />
+	</plug-in>
+</struts-config>

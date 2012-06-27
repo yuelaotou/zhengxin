@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="org.xpup.hafmis.orgstrct.domain">
+
+	<class name="OrganizationUnit" table="BB101">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="name" type="string" column="NAME" />
+
+		<property name="description" type="string" column="DESCRIPTION" />
+		
+		<property name="position" type="integer"/>
+		
+		<property name="ouptId" type="string" column="OUPT_ID" />
+		
+		<property name="type" type="integer" column="OU_TYPE" access="field" />
+
+		<many-to-one name="parent" class="OrganizationUnit">
+			<column name="PARENT_ID" />
+		</many-to-one>
+
+		<set name="subOrgUnits" lazy="false" inverse="true"
+			cascade="all-delete-orphan" order-by="position asc">
+			<key column="PARENT_ID" />
+			<one-to-many class="OrganizationUnit" />
+		</set>
+
+	</class>
+
+</hibernate-mapping>

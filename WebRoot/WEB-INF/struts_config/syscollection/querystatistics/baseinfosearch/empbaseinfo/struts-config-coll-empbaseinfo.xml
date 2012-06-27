@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="employeeInfoSearchAF" type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.form.EmployeeInfoSearchAF" />
+    <form-bean name="employeeInfoDisplayAF" type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.form.EmployeeInfoDisplayAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    <action path="/employeeInfoListForwardAC" type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.EmployeeInfoListForwardACAction" />
+    <action path="/employeeInfoListShowAC" type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.EmployeeInfoListShowAC" />
+    <action
+      attribute="employeeInfoSearchAF"
+      name="employeeInfoSearchAF"
+      path="/employeeInfoSearchAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.EmployeeInfoSearchAC" />
+    <action
+      attribute="idAF"
+      name="idAF"
+      path="/skipAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.SkipAC" />
+    <action path="/statEmployeeInfoAC" type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.StatEmployeeInfoAC" />
+     <action name="idAF" path="/empBaseInfoTaMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.querystatistics.baseinfosearch.empbaseinfo.action.EmpBaseInfoTaMaintainAC">
+			<forward name="to_empBaseInfoListprint" path="/empbaseinfoList_cell.jsp"></forward>
+			<forward name="to_empBaseInfoprint" path="/empbaseinfo_cell.jsp"></forward>
+	</action>
+	</action-mappings>
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/baseinfosearch/empbaseinfo/applicationContext.xml" />
+	</plug-in>
+</struts-config>

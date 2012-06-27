@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.xpup.security.common.domain">
+
+	<class name="Operation" table="CA107">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="name" type="string" column="NAME" />
+
+		<property name="innerName" type="string" column="INNER_NAME" />
+
+		<property name="description" type="string" column="DESCRIPTION" />
+
+		<property name="group" type="string" column="OP_GROUP" />
+
+	</class>
+
+	<sql-query name="unusedByUserId">
+		<return alias="operation" class="Operation" />
+		select {operation.*} from (select t1.* from ca107 t1 minus
+		select t2.* from ca107 t2 inner join ca108 t3 on t2.id =
+		t3.op_id where t3.user_id = :userId) operation
+	</sql-query>
+	
+	<sql-query name="unusedByUserId_">
+		<return alias="operation" class="Operation" />
+		select {operation.*} from (select t1.* from ca107 t1 where not exists
+		(select t2.* from ca107 t2 inner join ca108 t3 on t2.id =
+		t3.op_id where t3.user_id = :userId and t1.id = t2.id)) operation
+	</sql-query>
+	
+	<sql-query name="unusedByRoleId">
+		<return alias="operation" class="Operation" />
+		select {operation.*} from (select t1.* from ca107 t1 minus
+		select t2.* from ca107 t2 inner join ca109 t3 on t2.id =
+		t3.op_id where t3.role_id = :roleId) operation
+	</sql-query>
+	
+	<sql-query name="unusedByRoleId_">
+		<return alias="operation" class="Operation" />
+		select {operation.*} from (select t1.* from ca107 t1 where not exists
+		(select t2.* from ca107 t2 inner join ca109 t3 on t2.id =
+		t3.op_id where t3.role_id = :roleId and t1.id = t2.id)) operation
+	</sql-query>
+
+</hibernate-mapping>

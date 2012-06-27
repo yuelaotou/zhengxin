@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="subjectpopShowAF"
+			type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.form.SubjectpopShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="subjectpopShowAF" path="/subjectpopTaShowAC" 
+	  type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.action.SubjectpopTaShowAC">
+	  <forward name="to_subject_show" path="/common/biz/subjectpop/subjectpopTaShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectpopShowAF" path="/subjectpopTbShowAC" 
+	  type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.action.SubjectpopTbShowAC">
+	  <forward name="to_subject_show" path="/common/biz/subjectpop/subjectpopTbShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectpopShowAF" path="/subjectpopTcShowAC" 
+	  type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.action.SubjectpopTcShowAC">
+	  <forward name="to_subject_show" path="/common/biz/subjectpop/subjectpopTcShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectpopShowAF" path="/subjectpopTdShowAC" 
+	  type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.action.SubjectpopTdShowAC">
+	  <forward name="to_subject_show" path="/common/biz/subjectpop/subjectpopTdShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectpopShowAF" path="/subjectpopTeShowAC" 
+	  type="org.xpup.hafmis.sysfinance.common.biz.subjectpop.action.SubjectpopTeShowAC">
+	  <forward name="to_subject_show" path="/common/biz/subjectpop/subjectpopTeShow.jsp"></forward>
+	 </action>
+	
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="orgkhAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.OrgkhAF" />
+		<form-bean name="orgkhCriteronsAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.OrgkhCriteronsAF" />
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="empkhAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.EmpkhAF" />
+		<form-bean name="empKhCriteronsAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.EmpKhCriteronsAF" />
+		<form-bean name="empOpenImportAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.EmpOpenImportAF" />
+		<form-bean name="empChoIdAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.EmpChoIdAF" />
+		<form-bean name="empChangeAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.form.EmpChangeAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<action name="idAF" path="/orgBaseInfoTaMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenPrintAC">
+			<forward name="to_orgBaseInfoListprint"
+				path="/orgbaseinfoList_cell.jsp">
+			</forward>
+			<forward name="to_orgBaseInfoprint"
+				path="/orgbaseinfo_cell.jsp">
+			</forward>
+		</action>
+		<action name="orgkhCriteronsAF" path="/orgchgforwardURLAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenEmpShowListForwardURLAC">
+			<forward name="to_orgchg_list"
+				path="/orgOpenEmpShowListAC.do">
+			</forward>
+		</action>
+		<action name="orgkhCriteronsAF" path="/orgOpenEmpShowListAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenEmpShowListAC">
+			<forward name="to_org_cha_new"
+				path="/organization_emp_open_list.jsp">
+			</forward>
+		</action>
+		<action name="orgkhAF" path="/orgopenshowAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenShowAC">
+			<forward name="to_org_open_new"
+				path="/organization_open_new.jsp">
+			</forward>
+		</action>
+		<action name="orgkhAF" path="/orgInfo_kh_save" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenSaveAC">
+			<forward name="show_organizations"
+				path="/orgBaseInfoTaMaintainAC.do">
+			</forward>
+			<forward name="organization_open_show"
+				path="/organization_open_show.do">
+			</forward>
+		</action>
+		<action name="orgkhCriteronsAF" path="/find_organizations_kh"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenFindListAC">
+			<forward name="show_organizations"
+				path="/organization_open_show.do">
+			</forward>
+		</action>
+		<action name="orgkhCriteronsAF" path="/find_organizations_kh_1"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenEmpFindListAC">
+			<forward name="show_organizations"
+				path="/orgOpenEmpShowListAC.do">
+			</forward>
+		</action>
+		<action name="orgkhCriteronsAF" path="/organization_open_show"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenShowListAC">
+			<forward name="organizations"
+				path="/organization_open_list.jsp">
+			</forward>
+		</action>
+		<action name="idAF" path="/organization_kh_maintain"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenMaintainAC"
+			parameter="method">
+			<forward name="employee_kh_show"
+				path="/employee_kh_show.do">
+			</forward>
+			<forward name="organization_open_detail"
+				path="/organization_open_new.jsp">
+			</forward>
+			<forward name="organization_open_show"
+				path="/organization_open_show.do">
+			</forward>
+			<forward name="orgInfo_remove" path="/orgInfoRemoveAC.do"></forward>
+			<forward name="to_orgagent_imports"
+				path="/orgagent_imports.jsp">
+			</forward>
+			<forward name="to_orgBaseInfoprint"
+				path="/orgbaseinfo_cell.jsp">
+			</forward>
+		</action>
+		<action path="/orgInfoRemoveAC"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgInfoRemoveAC">
+			<forward name="organization_open_show"
+				path="/organization_open_show.do">
+			</forward>
+		</action>
+		<action name="empkhAF" path="/employee_kh_show"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenShowAC">
+			<forward name="employees" path="/emp_open_list.jsp">
+			</forward>
+		</action>
+		<action name="empkhAF" path="/employee_kh_find"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenFindAC">
+			<forward name="employee_kh_show"
+				path="/employee_kh_show.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/employee_kh_maintain" scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenMaintainAC"
+			parameter="method">
+			<forward name="employee_kh_show"
+				path="/employee_kh_show.do">
+			</forward>
+			<forward name="employee_open_detail"
+				path="/emp_open_new.jsp">
+			</forward>
+			<forward name="organization_open_show"
+				path="/organization_open_show.do">
+			</forward>
+			<forward name="to_empopen_imports"
+				path="/empopendo_imports.jsp">
+			</forward>
+			<forward name="to_empagent_imports"
+				path="/empagent_imports.jsp">
+			</forward>
+			<forward name="printlist" path="/empopenprintlist.jsp"></forward>
+			<forward name="to_start_page"
+				path="/orgOpenEmpShowListAC.do">
+			</forward>
+		</action>
+		<action name="empKhCriteronsAF" path="/empOpenPayFindACC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenPayFindACC">
+		</action>
+		<action name="empOpenImportAF" path="/empopenImportAC"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenImportAC">
+			<forward name="employees" path="/employee_kh_show.do">
+			</forward>
+		</action>
+		<action name="empKhCriteronsAF" path="/employee_kh_save"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpOpenSaveAC">
+			<forward name="emp_open_new" path="/emp_open_new.jsp">
+			</forward>
+			<forward name="show_employee" path="/employee_kh_show.do">
+			</forward>
+			<forward name="emp_choose" path="/emp_choose.jsp"></forward>
+		</action>
+		<action name="empChoIdAF" path="/saveEmpchoAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpChoSaveAC">
+			<forward name="emp_open_new" path="/emp_open_new.jsp">
+			</forward>
+		</action>
+		<action path="/orgAgentImportAC" name="empOpenImportAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgAgentImportAC">
+			<forward name="to_orgagent_imports"
+				path="/orgagent_imports.jsp">
+			</forward>
+			<forward name="organization_open_show"
+				path="/organization_open_show.do">
+			</forward>
+		</action>
+		<action path="/empAgentImportAC" name="empOpenImportAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpAgentImportAC">
+			<forward name="to_empagent_imports"
+				path="/empagent_imports.jsp">
+			</forward>
+			<forward name="employee_kh_show"
+				path="/employee_kh_show.do">
+			</forward>
+		</action>
+		<action path="/isCardNumSameAAC"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.IsCardNumSameAAC">
+		</action>
+		<action path="/empSaveAC" name="empKhCriteronsAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpSaveAC">
+			<forward name="emp_open_new" path="/emp_open_new.jsp"></forward>
+			<forward name="show_employee" path="/employee_kh_show.do"></forward>
+			<forward name="emp_choose" path="/emp_choose.jsp"></forward>
+		</action>
+		<action path="/empUpdateAC" name="empKhCriteronsAF"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpUpdateAC">
+			<forward name="emp_open_new" path="/emp_open_new.jsp"></forward>
+			<forward name="show_employee" path="/employee_kh_show.do"></forward>
+			<forward name="emp_choose" path="/emp_choose.jsp"></forward>
+		</action>
+		<action path="/orgOpenInfoAAC"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.OrgOpenInfoAAC">
+			<forward name="organization_open_detail"
+				path="/organization_open_new.jsp">
+			</forward>
+		</action>
+		<action name="empChangeAF" path="/empChangeEmpIdAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountopen.action.EmpChangeEmpIdAC">
+			<forward name="employee_kh_show"
+				path="/employee_kh_show.do">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accountmng/accountopen/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

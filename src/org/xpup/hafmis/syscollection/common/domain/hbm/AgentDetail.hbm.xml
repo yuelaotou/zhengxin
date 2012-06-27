@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="AgentDetail" 
+    table="EA001"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_EA001</param>
+	</generator>
+    </id>
+    <property
+        name="agentYearMonth"
+        type="java.lang.String"
+        column="AGENT_YEAR_MONTH"
+        length="6"
+    />
+    <property
+        name="status"
+        type="java.lang.String"
+        column="STATUS"
+        length="2"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        length="20"
+    />
+    <property
+        name="payMode"
+        type="java.lang.Integer"
+        column="PAY_MODE"
+    />
+    <property
+        name="agentType"
+        type="java.lang.Integer"
+        column="Agent_TYPE"
+    />
+    <property
+        name="noteNum"
+        type="java.lang.String"
+        column="NOTE_NUM"
+        length="20"
+    />
+    
+</class>
+</hibernate-mapping>

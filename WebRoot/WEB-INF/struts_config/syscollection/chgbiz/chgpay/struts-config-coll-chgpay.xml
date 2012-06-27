@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+					<form-bean name="chgpayListAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.form.ChgpayListAF" />
+			<form-bean name="chgpayNewAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.form.ChgpayNewAF" />
+				<form-bean name="chgpayImportTaAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.form.ChgpayImportTaAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="chgpayListAF" path="/chgpayTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaForwardURLAC">
+			<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do"/>
+		</action>
+	
+
+	
+	<action name="chgpayListAF" path="/chgpayTaSouwAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaSouwAC">
+			<forward name="to_chgpay_list.jsp" path="/chgpay_list.jsp"></forward>
+		</action>
+	   <action name="idAF" path="/chgpayTaMaintainAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaMaintainAC">
+			<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+			<forward name="to_chgpay_new.jsp" path="/chgpay_new.jsp" />
+				<forward name="to_chgpay_imports.jsp" path="/chgpay_imports.jsp" />
+		</action>
+	  <action name="chgpayListAF" path="/chgpayTaFindAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaFindAAC">
+           <forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+	  </action>
+	  <action name="chgpayNewAF" path="/chgpayTaSaveAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaSaveAC">
+			<forward name="to_chgpay_new.jsp" path="/chgpay_new.jsp" />
+				<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+		</action>
+		
+	    <action  path="/chgpayEmpTaFindAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayEmpTaFindAAC">
+			<forward name="to_chgpay_new.jsp" path="/chgpay_new.jsp" />
+		</action>
+			<!-- ==TB==-->
+			
+		<action name="chgpayListAF" path="/chgpayTbForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTbForwardURLAC">
+			<forward name="chgpayTbSouwAC.do" path="/chgpayTbSouwAC.do"/>
+		</action>
+		
+		<action name="chgpayListAF" path="/chgpayTbFindAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTbFindAC">
+			<forward name="goto_show" path="/chgpayTbSouwAC.do"></forward>
+		</action>
+			
+		<action name="chgpayListAF" path="/chgpayTbSouwAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTbSouwAC">
+			<forward name="to_chgpay_tblist.jsp" path="/chgpay_tblist.jsp"></forward>
+		</action>
+		
+		<action name="idAF" path="/chgpayTbMaintainAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTbMaintainAC">
+			<forward name="chgpayTbSouwAC.do" path="/chgpayTbSouwAC.do" />
+				<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+		</action>
+		
+	  <action name="chgpayListAF" path="/chgpayTbFindAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTbFindAAC">
+			<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+		</action>
+	   <action name="chgpayImportTaAF" path="/chgpayTaImportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaImportAC"
+			>
+			<forward name="chgpayTaSouwAC.do" path="/chgpayTaSouwAC.do" />
+		</action>
+		<action name="chgpayListAF" path="/chgpayTaWindowForwardAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgpayTaWindowForwardAC">
+			<forward name="to_chgpay_window" path="/chgpay_window.jsp" />
+		</action>
+		<action  name="chgpayListAF" path="/chgPayExportAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgpay.action.ChgPayExportAC">
+			<forward name="chgpayTaSouwAC" path="/chgpayTaSouwAC.do" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/chgbiz/chgpay/applicationContext.xml" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

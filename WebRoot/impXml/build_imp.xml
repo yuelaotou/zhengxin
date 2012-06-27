@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="BuildImportHead" col="4"  space="0" row="2">
+     <column>
+	     <name>DeveloperId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>DeveloperName</name>
+		 <typle>java.lang.String</typle>
+     </column>
+	 <column>
+	     <name>FloorId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>FloorName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	
+</file>
+<file name="BuildImport" col="5"  space="2" row="-1">
+	<!--   <column>
+	     <name>BuildId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>FloorId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 --> 
+	 <column>
+	     <name>BuildNum</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 
+	  <column>
+	     <name>BuildAdd</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     
+	<column>
+	     <name>Build_s</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>FundStatus</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>Reserved</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+  </file>
+</root>

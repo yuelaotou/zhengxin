@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.RestoreLoan" 
+    table="PL201"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL201</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        length="100"
+    />
+    <property
+        name="loanKouYearmonth"
+        type="java.lang.String"
+        column="LOAN_KOU_YEARMONTH"
+        length="6"
+    />
+    <property
+        name="shouldCorpus"
+        type="java.math.BigDecimal"
+        column="SHOULD_CORPUS"
+        length="15"
+    />
+    <property
+        name="shouldInterest"
+        type="java.math.BigDecimal"
+        column="SHOULD_INTEREST"
+        length="15"
+    />
+    <property
+        name="realCorpus"
+        type="java.math.BigDecimal"
+        column="REAL_CORPUS"
+        length="15"
+    />
+    <property
+        name="realInterest"
+        type="java.math.BigDecimal"
+        column="REAL_INTEREST"
+        length="15"
+    />
+    <property
+        name="punishInterest"
+        type="java.math.BigDecimal"
+        column="PUNISH_INTEREST"
+        length="15"
+    />
+    <property
+        name="loanBankId"
+        type="java.math.BigDecimal"
+        column="LOAN_BANK_ID"
+        length="22"
+    />
+    <property
+        name="loanRate"
+        type="java.math.BigDecimal"
+        column="LOAN_RATE"
+        length="8"
+    />
+    <property
+        name="days"
+        type="java.math.BigDecimal"
+        column="DAYS"
+        length="22"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    <property
+        name="bizDate"
+        type="java.lang.String"
+        column="BIZ_DATE"
+        length="8"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

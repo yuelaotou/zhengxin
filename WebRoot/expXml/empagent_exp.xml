@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="EmpAgentExportTitle" col="2"  space="0" row="2">
+     <column>orgId</column>
+	 <column>orgName</column>
+</file>
+<file name="EmpAgentExport" col="10"  space="2" row="-1">
+     <column>empId</column>
+	 <column>empName</column>
+	  <column>cardNum</column>
+	  <column>sex</column>
+	  <column>birthday</column>
+	  <column>cardKind</column>
+	  <column>tel</column>
+	  <column>mobileTle</column>
+	  <column>monthIncome</column>
+	  <column>department</column>
+	 
+</file>
+</root>

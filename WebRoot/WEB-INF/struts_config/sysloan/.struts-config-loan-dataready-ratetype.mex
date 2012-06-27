@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/rateTypeTaForwardURLAC.do" location="0,0" dimension="478,84" />
+  <StrutsActivity path="/rateTypeTaShowAC.do" location="796,184" dimension="442,84" />
+  <StrutsActivity path="/rateTypeTaFindAC.do" location="578,0" dimension="442,84" />
+  <StrutsActivity path="/rateTypeTaMaintainAC.do" location="1120,0" dimension="466,84" />
+  <StrutsActivity path="/rateTypeTaSaveAC.do" location="1686,0" dimension="442,84" />
+  <StrutsActivity path="/dataready/ratetype/ratetype_show.jsp" location="886,368" dimension="262,48" />
+  <StrutsActivity path="/dataready/ratetype/ratetype_new.jsp" location="1679,202" dimension="256,48" />
+  <StrutsTransition id="/rateTypeTaMaintainAC.do,to_ratetype_new,/dataready/ratetype/ratetype_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1469,84" />
+      <AbsolutePoint location="1469,119" />
+      <AbsolutePoint location="1743,119" />
+      <AbsolutePoint location="1743,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaMaintainAC.do,rateTypeTaShowAC,/rateTypeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1236,84" />
+      <AbsolutePoint location="1236,119" />
+      <AbsolutePoint location="1073,119" />
+      <AbsolutePoint location="1073,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaFindAC.do,rateTypeTaShowAC,/rateTypeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="799,84" />
+      <AbsolutePoint location="799,119" />
+      <AbsolutePoint location="962,119" />
+      <AbsolutePoint location="962,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaForwardURLAC.do,rateTypeTaShowAC,/rateTypeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="239,84" />
+      <AbsolutePoint location="239,149" />
+      <AbsolutePoint location="852,149" />
+      <AbsolutePoint location="852,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaShowAC.do,to_ratetype_show,/dataready/ratetype/ratetype_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1017,268" />
+      <AbsolutePoint location="1017,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaSaveAC.do,rateTypeTaShowAC,/rateTypeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1796,84" />
+      <AbsolutePoint location="1796,149" />
+      <AbsolutePoint location="1183,149" />
+      <AbsolutePoint location="1183,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/rateTypeTaSaveAC.do,to_ratetype_new,/dataready/ratetype/ratetype_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2017,84" />
+      <AbsolutePoint location="2017,119" />
+      <AbsolutePoint location="1871,119" />
+      <AbsolutePoint location="1871,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="credencecheckAF"
+			type="org.xpup.hafmis.sysfinance.accounthandle.credencecheck.form.CredencecheckAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action path="/credencecheckForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credencecheck.action.CredencecheckForwardAC">
+	  	<forward name="to_credencecheck_show" path="/credencecheckShowAC.do"></forward>
+	 </action>
+	 <action  name="credencecheckAF" path="/credencecheckShowAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credencecheck.action.CredencecheckShowAC">
+	 	<forward name="credencecheck_show" path="/accounthandle/credencecheck/credencecheck1_show.jsp"></forward>
+	 </action>
+	 <action  name="credencecheckAF"
+		scope="request"
+	 	path="/credencecheckFindAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credencecheck.action.CredencecheckFindAC">
+	 	<forward name="to_credencecheck_show" path="/credencecheckShowAC.do"></forward>
+	 </action>
+	 <action name="idAF" path="/credencecheckMaintainAC" 
+		parameter="method"
+		type="org.xpup.hafmis.sysfinance.accounthandle.credencecheck.action.CredencecheckMaintainAC" >
+		<forward name="to_credencecheck_show" path="/credencecheckShowAC.do"></forward>
+	</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

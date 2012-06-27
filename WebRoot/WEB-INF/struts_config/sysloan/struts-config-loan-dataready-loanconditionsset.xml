@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="loanConditionsSetAF"
+			type="org.xpup.hafmis.sysloan.dataready.loanconditionsset.form.LoanConditionsSetAF" />		
+	</form-beans>
+		
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="loanConditionsSetAF" 
+		scope="request"
+		path="/loanConditionsSetShowAC" type="org.xpup.hafmis.sysloan.dataready.loanconditionsset.action.LoanConditionsSetShowAC">
+      <forward name="to_loanconditionsset_show" path="/dataready/loanconditionsset/loanconditionsset_show.jsp" />
+    </action>
+    <action name="loanConditionsSetAF" 
+    	scope="request"
+    	path="/loanConditionsSetSaveAC" type="org.xpup.hafmis.sysloan.dataready.loanconditionsset.action.LoanConditionsSetSaveAC">
+      <forward name="loanconditionsset_show" path="/loanConditionsSetShowAC.do" />
+    </action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

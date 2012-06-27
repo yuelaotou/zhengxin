@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/monthclearShowAC.do" location="350,50" dimension="443,88" />
+  <StrutsActivity path="/monthclearDoAC.do" location="950,50" dimension="430,88" />
+  <StrutsActivity path="/monthclear.jsp" location="50,250" dimension="104,49" />
+  <StrutsActivity path="/clearaccount.jsp" location="773,376" dimension="112,49" />
+  <StrutsActivity path="/dayclear.jsp" location="50,150" dimension="92,49" />
+  <StrutsTransition id="/monthclearDoAC.do,monthclearShowAC,/monthclearShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,94" />
+      <AbsolutePoint location="793,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthclearShowAC.do,monthclear,/monthclear.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="571,138" />
+      <AbsolutePoint location="571,274" />
+      <AbsolutePoint location="154,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

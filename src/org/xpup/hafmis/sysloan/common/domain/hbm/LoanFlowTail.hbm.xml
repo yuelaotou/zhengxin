@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.LoanFlowTail" 
+    table="PL203"
+>
+
+    <id
+        name="flowTailId"
+        type="integer"
+        column="FLOW_TAIL_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL203</param>
+	</generator>
+    </id>
+
+    <property
+        name="flowHeadId"
+        type="java.math.BigDecimal"
+        column="FLOW_HEAD_ID"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="loanKouAcc"
+        type="java.lang.String"
+        column="LOAN_KOU_ACC"
+        length="100"
+    />
+    <property
+        name="yearMonth"
+        type="java.lang.String"
+        column="YEAR_MONTH"
+        length="6"
+    />
+    <property
+        name="shouldCorpus"
+        type="java.math.BigDecimal"
+        column="SHOULD_CORPUS"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="shouldInterest"
+        type="java.math.BigDecimal"
+        column="SHOULD_INTEREST"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="shouldPunishInterest"
+        type="java.math.BigDecimal"
+        column="SHOULD_PUNISH_INTEREST"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="realCorpus"
+        type="java.math.BigDecimal"
+        column="REAL_CORPUS"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="realInterest"
+        type="java.math.BigDecimal"
+        column="REAL_INTEREST"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="realPunishInterest"
+        type="java.math.BigDecimal"
+        column="REAL_PUNISH_INTEREST"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="occurMoney"
+        type="java.math.BigDecimal"
+        column="OCCUR_MONEY"
+        length="15"
+    />
+    <property
+        name="otherInterest"
+        type="java.math.BigDecimal"
+        column="OTHER_INTEREST"
+        length="15"
+    />
+    <property
+        name="loanRate"
+        type="java.math.BigDecimal"
+        column="LOAN_RATE"
+        length="8"
+    />
+    <property
+        name="loanType"
+        type="java.lang.String"
+        column="LOAN_TYPE"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+
+    <property
+        name="tempPunishInterest"
+        type="java.math.BigDecimal"
+        column="TEMP_PUNISH_INTEREST"
+        not-null="true"
+        length="8"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

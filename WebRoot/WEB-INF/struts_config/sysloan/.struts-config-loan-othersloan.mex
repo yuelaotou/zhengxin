@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/othersLoanForwardURLAC.do" location="0,0" dimension="490,84" />
+  <StrutsActivity path="/othersLoanShowAC.do" location="517,184" dimension="454,84" />
+  <StrutsActivity path="/othersLoanMaintainAC.do" location="590,0" dimension="478,84" />
+  <StrutsActivity path="/findLoanapplywshAAC.do" location="0,1199" dimension="460,84" />
+  <StrutsActivity path="/otherLoanapplyAAC.do" location="535,922" dimension="472,84" />
+  <StrutsActivity path="/othersLoanTbForwardURLAC.do" location="1758,0" dimension="502,84" />
+  <StrutsActivity path="/othersLoanTbShowAC.do" location="2107,184" dimension="466,84" />
+  <StrutsActivity path="/othersLoanTbFindAC.do" location="2360,0" dimension="466,84" />
+  <StrutsActivity path="/othersLoanTbMaintainAC.do" location="1168,0" dimension="490,84" />
+  <StrutsActivity path="/othersLoanTcForwardURLAC.do" location="0,461" dimension="502,84" />
+  <StrutsActivity path="/othersLoanTcShowAC.do" location="310,645" dimension="466,84" />
+  <StrutsActivity path="/othersLoanTcFindAC.do" location="602,461" dimension="466,84" />
+  <StrutsActivity path="/othersLoanTcMaintainAC.do" location="0,922" dimension="490,84" />
+  <StrutsActivity path="/othersLoanTdForwardURLAC.do" location="2926,0" dimension="502,84" />
+  <StrutsActivity path="/loanapply/othersloan/othersloan_new.jsp" location="604,368" dimension="280,48" />
+  <StrutsActivity path="/loanapply/othersloan/othersloantbshow.jsp" location="2194,368" dimension="292,48" />
+  <StrutsActivity path="/loanapply/othersloan/othersloantbprint.jsp" location="1264,202" dimension="298,48" />
+  <StrutsActivity path="/loanapply/othersloan/othersloantcshow.jsp" location="397,829" dimension="292,48" />
+  <StrutsActivity path="/loanapply/othersloan/othersloantcprint.jsp" location="96,1106" dimension="298,48" />
+  <StrutsActivity path="/loanapply/othersloan/othersloanWin.jsp" location="950,650" dimension="274,48" />
+  <StrutsActivity path="/othersLoanWinShowAC.do" />
+  <StrutsTransition id="/othersLoanTbMaintainAC.do,othersLoanTbPrint,/loanapply/othersloan/othersloantbprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1413,84" />
+      <AbsolutePoint location="1413,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTbMaintainAC.do,othersLoanTbShowAC,/othersLoanTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1576,84" />
+      <AbsolutePoint location="1576,149" />
+      <AbsolutePoint location="2165,149" />
+      <AbsolutePoint location="2165,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTbFindAC.do,to_othersLoanTb_show,/othersLoanTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2593,84" />
+      <AbsolutePoint location="2593,119" />
+      <AbsolutePoint location="2398,119" />
+      <AbsolutePoint location="2398,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTbMaintainAC.do,othersLoanShowAC,/othersLoanShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1249,84" />
+      <AbsolutePoint location="1249,119" />
+      <AbsolutePoint location="895,119" />
+      <AbsolutePoint location="895,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTcForwardURLAC.do,othersLoanTcShowAC,/othersLoanTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="251,545" />
+      <AbsolutePoint location="251,595" />
+      <AbsolutePoint location="426,595" />
+      <AbsolutePoint location="426,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTcShowAC.do,to_othersLoanTc_show,/loanapply/othersloan/othersloantcshow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="543,729" />
+      <AbsolutePoint location="543,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanMaintainAC.do,othersLoanShowAC,/othersLoanShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="829,84" />
+      <AbsolutePoint location="829,119" />
+      <AbsolutePoint location="744,119" />
+      <AbsolutePoint location="744,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanWinShowAC.do,to_othersLoan_show,/loanapply/othersloan/othersloanWin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1087,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTbShowAC.do,to_othersLoanTb_show,/loanapply/othersloan/othersloantbshow.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2340,268" />
+      <AbsolutePoint location="2340,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTdForwardURLAC.do,othersLoanTbShowAC,/othersLoanTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3177,84" />
+      <AbsolutePoint location="3177,149" />
+      <AbsolutePoint location="2515,149" />
+      <AbsolutePoint location="2515,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanShowAC.do,to_othersLoan_show,/loanapply/othersloan/othersloanWin.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="971,226" />
+      <AbsolutePoint location="1087,226" />
+      <AbsolutePoint location="1087,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTbForwardURLAC.do,othersLoanTbShowAC,/othersLoanTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2009,84" />
+      <AbsolutePoint location="2009,119" />
+      <AbsolutePoint location="2282,119" />
+      <AbsolutePoint location="2282,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanForwardURLAC.do,otherLoanShowAC,/othersLoanShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="245,84" />
+      <AbsolutePoint location="245,119" />
+      <AbsolutePoint location="592,119" />
+      <AbsolutePoint location="592,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanShowAC.do,to_othersLoan_show,/loanapply/othersloan/othersloan_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="744,268" />
+      <AbsolutePoint location="744,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTcMaintainAC.do,othersLoanTcPrint,/loanapply/othersloan/othersloantcprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="245,1006" />
+      <AbsolutePoint location="245,1106" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/othersLoanTcFindAC.do,to_othersLoanTc_show,/othersLoanTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,545" />
+      <AbsolutePoint location="835,595" />
+      <AbsolutePoint location="659,595" />
+      <AbsolutePoint location="659,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

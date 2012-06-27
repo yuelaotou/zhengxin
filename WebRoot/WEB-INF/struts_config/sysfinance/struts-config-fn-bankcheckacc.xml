@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="bankCheckAccTaAF"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.form.BankCheckAccTaAF" />
+		<form-bean name="bankCheckAccTbAF"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.form.BankCheckAccTbAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/checkSubiectCodeAAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.CheckSubiectCodeAAC">
+		</action>
+		<!-- ============================================ta ========================================================-->
+		<action name="bankCheckAccTaAF" scope="request"
+			path="/bankCheckAccTaShowAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTaShowAC">
+			<forward name="to_bankcheckaccta_show"
+				path="/treasurermng/bankcheckacc/bankcheckaccta_show.jsp">
+			</forward>
+		</action>
+		<action name="bankCheckAccTaAF" scope="request"
+			parameter="method" path="/bankCheckAccTaMaintainAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTaMaintainAC">
+			<forward name="bankcheckaccta_show"
+				path="/bankCheckAccTaShowAC.do">
+			</forward>
+		</action>
+		<!-- ============================================tb ========================================================-->
+		<action path="/bankCheckAccTbForwardAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTbForwardAC">
+			<forward name="bankcheckacctb_show"
+				path="/bankCheckAccTbShowAC.do">
+			</forward>
+		</action>
+		<action name="bankCheckAccTbAF" scope="request"
+			path="/bankCheckAccTbShowAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTbShowAC">
+			<forward name="to_bankcheckacctb_show"
+				path="/treasurermng/bankcheckacc/bankcheckacctb_show.jsp">
+			</forward>
+		</action>
+		<action name="bankCheckAccTbAF" scope="request"
+			path="/bankCheckAccTbFindAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTbFindAC">
+			<forward name="bankcheckacctb_show"
+				path="/bankCheckAccTbShowAC.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/bankCheckAccTbMaintainAC"
+			parameter="method" scope="request"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTbMaintainAC">
+			<forward name="bankcheckacctb_show"
+				path="/bankCheckAccTbShowAC.do">
+			</forward>
+			<forward name="bankcheckaccta_show"
+				path="/bankCheckAccTaShowAC.do">
+			</forward>
+			<forward name="to_bankcheckacctb_print"
+				path="/treasurermng/bankcheckacc/bankcheckacctb_print.jsp">
+			</forward>
+			<forward name="to_bankcheckacctb_imports"
+				path="/treasurermng/bankcheckacc/bankcheckacctb_imports.jsp">
+			</forward>
+		</action>
+		<action name="bankCheckAccTbAF" scope="request"
+			path="/bankCheckAccTbImportsAC"
+			type="org.xpup.hafmis.sysfinance.treasurermng.bankcheckacc.action.BankCheckAccTbImportsAC">
+			<forward name="bankcheckacctb_show"
+				path="/bankCheckAccTbShowAC.do">
+			</forward>
+			<forward name="to_bankcheckacctb_imports"
+				path="/treasurermng/bankcheckacc/bankcheckacctb_imports.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

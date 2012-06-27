@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.FnOperateLog" 
+    table="FN311"
+>
+
+    <id
+        name="ploperateLogId"
+        type="integer"
+        column="PLOPERATE_LOG_ID"
+    >
+<generator class="sequence">
+	   <param name="sequence">SEQ_FN311</param>
+	</generator>
+    </id>
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opSys"
+        type="java.lang.String"
+        column="OP_SYS"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opModel"
+        type="java.lang.String"
+        column="OP_MODEL"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opButton"
+        type="java.lang.String"
+        column="OP_BUTTON"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opIp"
+        type="java.lang.String"
+        column="OP_IP"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

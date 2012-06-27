@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.LoanBank" 
+    table="PL002"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_PL002</param>
+	</generator>
+    </id>
+
+    <property
+        name="loanBankId"
+        type="java.math.BigDecimal"
+        column="LOAN_BANK_ID"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="loanAcc"
+        type="java.lang.String"
+        column="LOAN_ACC"
+        length="100"
+    />
+    <property
+        name="interestAcc"
+        type="java.lang.String"
+        column="INTEREST_ACC"
+        length="100"
+    />
+    <property
+        name="bankPrisident"
+        type="java.lang.String"
+        column="BANK_PRISIDENT"
+        length="100"
+    />
+    <property
+        name="bankPrisidentTel"
+        type="java.lang.String"
+        column="BANK_PRISIDENT_TEL"
+        length="100"
+    />
+    <property
+        name="contactPrsn"
+        type="java.lang.String"
+        column="CONTACT_PRSN"
+        length="100"
+    />
+    <property
+        name="contactTel"
+        type="java.lang.String"
+        column="CONTACT_TEL"
+        length="100"
+    />
+    <property
+        name="business"
+        type="java.lang.String"
+        column="BUSINESS"
+        length="100"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanBnakSt"
+        type="java.lang.String"
+        column="LOAN_BNAK_ST"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    <property
+        name="yearClear"
+        type="java.lang.String"
+        column="YEARCLEAR"
+        length="4"
+    />
+	<property
+        name="outAccount"
+        type="java.lang.String"
+        column="OUTACCOUNT"
+        length="100"
+    />
+    <property
+        name="inAccount"
+        type="java.lang.String"
+        column="INACCOUNT"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

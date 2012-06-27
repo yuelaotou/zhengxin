@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pastyearscontrastShowAC.do" location="50,50" dimension="171,62" />
+  <StrutsActivity path="/to_ShowAC.do" location="350,50" dimension="99,62" />
+  <StrutsActivity path="/pastyearscontrastFindAC.do" location="950,50" dimension="613,88" />
+  <StrutsActivity path="/pastyearscontrastPrintAC.do" location="50,250" dimension="615,88" />
+  <StrutsActivity path="/pastyearscontrastOfficeCodeAAC.do" location="950,350" dimension="654,88" />
+  <StrutsActivity path="/pastyearscontrast.jsp" location="650,50" dimension="139,49" />
+  <StrutsActivity path="/pastyearscontrast_cell.jsp" location="950,250" dimension="160,49" />
+  <StrutsTransition id="/pastyearscontrastPrintAC.do,to_cell.jsp,/pastyearscontrast_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pastyearscontrastOfficeCodeAAC.do,to_pastyearscontras.jsp,/pastyearscontrast_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1095,350" />
+      <AbsolutePoint location="1095,299" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pastyearscontrastShowAC.do,to_ShowAC,/to_ShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="221,81" />
+      <AbsolutePoint location="350,81" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pastyearscontrastFindAC.do,to_showAC,/to_ShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,127" />
+      <AbsolutePoint location="399,127" />
+      <AbsolutePoint location="399,112" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_ShowAC.do,to_pastyearscontras.jsp,/pastyearscontrast.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="449,81" />
+      <AbsolutePoint location="650,81" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pastyearscontrastOfficeCodeAAC.do,to_pastyearscontras.jsp,/pastyearscontrast.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="719,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

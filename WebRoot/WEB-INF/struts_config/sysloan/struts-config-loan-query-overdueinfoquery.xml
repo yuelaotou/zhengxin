@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--公共结束	-->
+		<form-bean name="overDueinfoQueryShowListAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.form.OverDueinfoQueryShowListAF" />
+		<!-- 导入 -->
+		<form-bean name="overDueinfoQueryTaImportAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.form.OverDueinfoQueryTaImportAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/overDueinfoQueryShowListAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryShowListAC">
+			<forward name="to_overdueinfoquery_show"
+				path="/querystatistics/querystatistics/overdueinfoquery/overdueinfoquery_show.jsp">
+			</forward>
+		</action>
+		<action name="overDueinfoQueryShowListAF"
+			path="/overDueinfoQueryFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryFindAC"
+			scope="request">
+			<forward name="overDueinfoQueryShowListAC"
+				path="/overDueinfoQueryShowListAC.do">
+			</forward>
+		</action>
+		<action name="overDueinfoQueryShowListAF"
+			path="/overDueinfoQueryFindFloorNameAAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryFindFloorNameAAC">
+		</action>
+		<action name="idAF" path="/overDueinfoQueryMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryMaintainAC"
+			scope="request" parameter="method">
+			<forward name="to_overdueinfoquery_print"
+				path="/querystatistics/querystatistics/overdueinfoquery/overdueinfoquery_cell.jsp">
+			</forward>
+			<forward name="to_overdueinfoquery_printone"
+				path="/querystatistics/querystatistics/overdueinfoquery/overdueinfoquery_printone.jsp">
+			</forward>
+		</action>
+		<action path="/overDueinfoQueryForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryForwardURLAC">
+			<forward name="overDueinfoQueryShowListAC"
+				path="/overDueinfoQueryShowListAC.do">
+			</forward>
+		</action>
+		
+		<!-- 生成 -->
+		<action path="/overDueinfoQueryTaCreateAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryTaCreateAC">
+			<forward name="overDueinfoQueryFindAC"
+				path="/overDueinfoQueryFindAC.do">
+			</forward>
+		</action>
+		<!-- 导入 -->
+		<action name="overDueinfoQueryTaImportAF" path="/overDueinfoQueryTaImportAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryTaImportAC">
+			<forward name="overDueinfoQueryFindAC"
+				path="/overDueinfoQueryFindAC.do">
+			</forward>
+		</action>
+		<action path="/overDueinfoQueryTaToImportAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overdueinfoquery.action.OverDueinfoQueryTaToImportAC">
+			<forward name="overDueinfoQueryTaToImportAC"
+				path="/querystatistics/querystatistics/overdueinfoquery/overdueinfoquery_import.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

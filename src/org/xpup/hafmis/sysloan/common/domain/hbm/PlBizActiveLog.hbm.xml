@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.PlBizActiveLog" 
+    table="PL020"
+>
+
+    <id
+        name="bizactivityLogId"
+        type="integer"
+        column="BIZACTIVITY_LOG_ID"
+    >
+        <generator class="sequence">
+        <param name="sequence">SEQ_PL020</param>
+        </generator>
+    </id>
+
+    <property
+        name="bizid"
+        type="java.math.BigDecimal"
+        column="BIZID"
+        length="22"
+    />
+    <property
+        name="action"
+        type="java.lang.String"
+        column="ACTION"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="type"
+        type="java.lang.String"
+        column="TYPE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

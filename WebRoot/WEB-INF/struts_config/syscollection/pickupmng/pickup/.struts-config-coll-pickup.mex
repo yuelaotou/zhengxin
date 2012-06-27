@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/pickupShowAC.do" location="50,50" dimension="442,84" />
+  <StrutsActivity path="/pickupMiantianAC.do" location="650,50" dimension="466,84" />
+  <StrutsActivity path="/pickupTransactionAAC.do" location="50,250" dimension="490,84" />
+  <StrutsActivity path="/pickupGetInfoAF.do" location="650,250" dimension="484,84" />
+  <StrutsActivity path="/pickupTransactionAddAAC.do" location="50,450" dimension="508,84" />
+  <StrutsActivity path="/pickupTransactionAddAC.do" location="650,450" dimension="502,84" />
+  <StrutsActivity path="/pickupTypeSkipAC.do" location="650,650" dimension="466,84" />
+  <StrutsActivity path="/pickReasonShowAC.do" location="1250,450" dimension="466,84" />
+  <StrutsActivity path="/pickReasonSaveAC.do" location="1250,650" dimension="466,84" />
+  <StrutsActivity path="/pickupDisplayAddInfoAC.do" location="50,750" dimension="502,84" />
+  <StrutsActivity path="/pickupAddAjaxAAC.do" location="650,850" dimension="466,84" />
+  <StrutsActivity path="/pickImportAC.do" location="50,1050" dimension="478,84" />
+  <StrutsActivity path="/pageSkipAC.do" location="650,1050" dimension="430,84" />
+  <StrutsActivity path="/vindicateListShowAC.do" location="50,1250" dimension="484,84" />
+  <StrutsActivity path="/vindicatePickMiantainAC.do" location="650,1250" dimension="508,84" />
+  <StrutsActivity path="/vindicatePickEmployeeList.do" location="50,1450" dimension="370,84" />
+  <StrutsActivity path="/vindicateActionAC.do" location="650,1450" dimension="472,84" />
+  <StrutsActivity path="/transactionActionAC.do" location="50,1650" dimension="484,84" />
+  <StrutsActivity path="/printEmployeeAC.do" location="650,1650" dimension="460,84" />
+  <StrutsActivity path="/pickupExportTaAC.do" location="50,1850" dimension="395,88" />
+  <StrutsActivity path="/windowMaintainAC.do" location="650,1850" dimension="399,88" />
+  <StrutsActivity path="/pickup_transactionlist.jsp" location="50,650" dimension="202,48" />
+  <StrutsActivity path="/pickup_add.jsp" location="350,650" dimension="130,48" />
+  <StrutsActivity path="/pickreason.jsp" location="1250,850" dimension="130,48" />
+  <StrutsActivity path="/" location="50,950" dimension="46,48" />
+  <StrutsActivity path="/pickcheck.jsp" location="650,2050" dimension="124,48" />
+  <StrutsActivity path="/pickCheckForwardAC.do" location="1250,950" dimension="478,84" />
+  <StrutsActivity path="/pickCheckShowAC.do" location="1250,1150" dimension="460,84" />
+  <StrutsActivity path="/pickCheckMaintainAC.do" location="1250,1350" dimension="484,84" />
+  <StrutsActivity path="/pickCheckFindAC.do" location="1250,1550" dimension="460,84" />
+  <StrutsTransition id="/pickReasonShowAC.do,pickreason,/pickreason.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,492" />
+      <AbsolutePoint location="1203,492" />
+      <AbsolutePoint location="1203,874" />
+      <AbsolutePoint location="1250,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickCheckForwardAC.do,pickCheckShowAC,/pickCheckShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1489,1034" />
+      <AbsolutePoint location="1489,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/windowMaintainAC.do,srcan_jsp,/vindicatePickEmployeeList.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="849,1894" />
+      <AbsolutePoint location="235,1492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickupTransactionAddAC.do,add,/pickup_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="901,534" />
+      <AbsolutePoint location="901,579" />
+      <AbsolutePoint location="415,579" />
+      <AbsolutePoint location="415,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickupMiantianAC.do,add,/pickupDisplayAddInfoAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,122" />
+      <AbsolutePoint location="603,122" />
+      <AbsolutePoint location="603,792" />
+      <AbsolutePoint location="552,792" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickupExportTaAC.do,to_pickup_showAC,/pickupMiantianAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="445,1894" />
+      <AbsolutePoint location="573,1894" />
+      <AbsolutePoint location="573,92" />
+      <AbsolutePoint location="650,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickReasonSaveAC.do,pickReasonShowAC,/pickReasonShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1483,650" />
+      <AbsolutePoint location="1483,534" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickupShowAC.do,show,/pickup_transactionlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,92" />
+      <AbsolutePoint location="-25,92" />
+      <AbsolutePoint location="-25,674" />
+      <AbsolutePoint location="50,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickupTypeSkipAC.do,add,/pickup_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,683" />
+      <AbsolutePoint location="480,683" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickCheckMaintainAC.do,pickCheckShowAC,/pickCheckShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1492,1350" />
+      <AbsolutePoint location="1492,1234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickCheckFindAC.do,pickCheckShowAC,/pickCheckShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1710,1592" />
+      <AbsolutePoint location="1749,1592" />
+      <AbsolutePoint location="1749,1222" />
+      <AbsolutePoint location="1710,1222" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/pickCheckShowAC.do,pickcheck,/pickcheck.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1710,1192" />
+      <AbsolutePoint location="1809,1192" />
+      <AbsolutePoint location="1809,2074" />
+      <AbsolutePoint location="774,2074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

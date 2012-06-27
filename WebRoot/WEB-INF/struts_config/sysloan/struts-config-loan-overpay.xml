@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="overPayTaAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.overpay.form.OverPayTaAF" />			
+	<form-bean name="overPayTbAF"
+			type="org.xpup.hafmis.sysloan.accounthandle.overpay.form.OverPayTbAF" />			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- ============================================Ta========================================================-->
+	<action name="overPayTaAF" path="/overPayTaShowAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTaShowAC">
+	 	<forward name="to_overpayta_show" path="/accounthandle/overpay/overpayta_show.jsp"></forward>
+	 </action>
+	 <action path="/overPayTaFindAAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTaFindAAC">
+	 </action>
+	 <action name="overPayTaAF" path="/overPayTaSaveAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTaSaveAC">
+	 	<forward name="overpayta_show" path="/overPayTaShowAC.do"></forward>
+	 </action>
+	 <!-- ============================================Tb========================================================-->
+	 <action path="/overPayTbForwardAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTbForwardAC">
+	 	<forward name="overpaytb_show" path="/overPayTbShowAC.do"></forward>
+	 </action>
+	 <action name="overPayTbAF" path="/overPayTbShowAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTbShowAC">
+	 	<forward name="to_overpaytb_show" path="/accounthandle/overpay/overpaytb_show.jsp"></forward>
+	 </action>
+	 <action name="overPayTbAF" path="/overPayTbFindAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTbFindAC">
+	 	<forward name="overpaytb_show" path="/overPayTbShowAC.do"></forward>
+	 </action>
+	 <action name="idAF" path="/overPayTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.accounthandle.overpay.action.OverPayTbMaintainAC">
+			<forward name="overpaytb_show" path="/overPayTbShowAC.do" ></forward>
+			<forward name="to_overpay_windowprin" path="/accounthandle/bizcheck/overpaywindowprin_cell.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="inspectionShowAF" type="org.xpup.hafmis.syscollection.querystatistics.inspection.form.InspectionShowAF" />
+    <form-bean name="inspectionFindAF" type="org.xpup.hafmis.syscollection.querystatistics.inspection.form.InspectionFindAF" />
+   	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+    <action path="/inspectionForwardAC" type="org.xpup.hafmis.syscollection.querystatistics.inspection.action.InspectionForwardAC" >
+    <forward name="inspectionShowAC" path="/inspectionShowAC.do"></forward>
+    </action>
+    <action
+      name="inspectionShowAF"
+      path="/inspectionShowAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.querystatistics.inspection.action.InspectionShowAC">
+   	<forward name="to_inspection.jsp" path="/inspection.jsp"></forward>
+    </action>
+    <action
+      name="inspectionFindAF"
+      path="/inspectionFindAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.querystatistics.inspection.action.InspectionFindAC">
+      <forward name="InspectionShowAC" path="/inspectionShowAC.do" />
+    </action>
+    <action
+      name="inspectionShowAF"
+      path="/inspectionPrintAC"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.querystatistics.inspection.action.InspectionPrintAC">
+            <forward name="inspectionprint.jsp" path="/inspectionprint.jsp" />
+    </action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/inspection/applicationContext.xml" />
+	</plug-in>
+</struts-config>

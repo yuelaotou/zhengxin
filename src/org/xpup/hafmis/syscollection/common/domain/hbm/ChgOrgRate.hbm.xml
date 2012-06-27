@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<!-- 
+		Created by Middlegen Hibernate plugin
+		
+		http://boss.bekk.no/boss/middlegen/
+		http://hibernate.sourceforge.net/
+	-->
+
+	<class name="ChgOrgRate" table="AA201">
+
+		<id name="id" type="integer" column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_AA201</param>
+			</generator>
+		</id>
+
+		<property name="chgMonth" type="java.lang.String"
+			column="CHG_MONTH" not-null="true" length="6" />
+		<property name="preOrgRate" type="java.math.BigDecimal"
+			column="PRE_ORG_RATE" not-null="true" length="4" />
+		<property name="preEmpRate" type="java.math.BigDecimal"
+			column="PRE_EMP_RATE" not-null="true" length="4" />
+		<property name="orgRate" type="java.math.BigDecimal"
+			column="ORG_RATE" not-null="true" length="4" />
+		<property name="empRate" type="java.math.BigDecimal"
+			column="EMP_RATE" not-null="true" length="4" />
+		<property name="chgPersonCount" type="java.lang.Integer"
+			column="CHG_P_COUNT" not-null="true" length="22" />
+		<property name="oldOrgPay" type="java.math.BigDecimal"
+			column="OLD_ORG_PAY" not-null="true" length="18" />
+		<property name="oldEmpPay" type="java.math.BigDecimal"
+			column="OLD_EMP_PAY" not-null="true" length="18" />
+		<property name="orgPay" type="java.math.BigDecimal"
+			column="ORG_PAY" not-null="true" length="18" />
+		<property name="empPay" type="java.math.BigDecimal"
+			column="EMP_PAY" not-null="true" length="18" />
+		<property name="bizDate" type="java.lang.String"
+			column="BIZ_DATE" not-null="true" length="8" />
+		<property name="chgStatus" type="java.lang.Integer"
+			column="CHG_STATUS" not-null="true" length="22" />
+		<property name="reserveaA" type="java.lang.String"
+			column="RESERVEA_A" length="50" />
+
+		<property name="reserveaB" type="java.lang.String"
+			column="RESERVEA_B" length="50" />
+		<property name="reserveaC" type="java.lang.String"
+			column="RESERVEA_C" length="50" />
+
+		<many-to-one name="org" column="ORG_ID" class="Org"
+			not-null="true" cascade="save-update" lazy="false">
+		</many-to-one>
+		<many-to-one name="paymentHead" column="PAY_HEAD_ID"
+			class="PaymentHead" cascade="save-update">
+		</many-to-one>
+
+		<property name="preSumPay" type="java.math.BigDecimal"
+			formula="(select a201.old_org_pay+a201.old_emp_pay  from aa201 a201 where a201.id=id)" />
+		<property name="sumPay" type="java.math.BigDecimal"
+			formula="(select a201.org_pay+a201.emp_pay from aa201 a201 where a201.id=id)" />
+		<property name="sumPreSumPay" type="java.math.BigDecimal"
+			formula="(select sum(aa201.old_org_pay+aa201.old_emp_pay) from AA201 aa201)" />
+		<property name="sumSumPay" type="java.math.BigDecimal"
+			formula="(select sum(aa201.org_pay+aa201.emp_pay) from AA201 aa201)" />
+		<property name="empCount" type="java.math.BigDecimal"
+			formula="(select count(*) from AA201_1 e where e.CHNG_HEAD_ID=ID )" />
+		<property name="personCount" type="java.lang.Integer"
+			formula="(select count(a002.id) from aa002 a002 where a002.org_id = ORG_ID and a002.pay_status in ('1','2'))" />
+		<!--  
+			<property name="rate" type="java.math.BigDecimal" formula="(select round(((a.org_pay+a.emp_pay)-(a.old_org_pay+a.old_emp_pay))/(a.old_org_pay+a.old_emp_pay),2) from aa201 a where a.id=id)"/>
+		-->
+		<!-- associations -->
+
+	</class>
+</hibernate-mapping>

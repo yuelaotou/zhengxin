@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<data-sources />
+	<form-beans>
+		<form-bean name="ouptCriterionsAF"
+			type="org.xpup.hafmis.orgstrct.form.OuptCriterionsAF" />
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="ouptAF"
+			type="org.xpup.hafmis.orgstrct.form.OuptAF" />
+		<form-bean name="ouptItemAF"
+			type="org.xpup.hafmis.orgstrct.form.OuptItemAF" />
+		<form-bean name="ouptItemCriterionsAF"
+			type="org.xpup.hafmis.orgstrct.form.OuptItemCriterionsAF" />
+		<form-bean name="orgUnitAF"
+			type="org.xpup.hafmis.orgstrct.form.OrgUnitAF" />
+		<form-bean name="hafEmployeeAF"
+			type="org.xpup.hafmis.orgstrct.form.HafEmployeeAF" />
+		<form-bean name="hafEmployeeCriterionsAF"
+			type="org.xpup.hafmis.orgstrct.form.HafEmployeeCriterionsAF" />
+		<form-bean name="hafRoleAF"
+			type="org.xpup.hafmis.orgstrct.form.HafRoleAF" />
+		<form-bean name="hafRoleCriterionsAF"
+			type="org.xpup.hafmis.orgstrct.form.HafRoleCriterionsAF" />
+		<form-bean name="idStringAF"
+			type="org.xpup.hafmis.common.form.IdStringAF" />
+		<form-bean name="dataAuthzAF"
+			type="org.xpup.hafmis.orgstrct.form.DataAuthzAF" />
+		<form-bean name="userAF"
+			type="org.xpup.hafmis.orgstrct.form.UserAF" />
+		<!-- 权限 -->
+		<form-bean name="userToSecurityAF"
+			type="org.xpup.hafmis.orgstrct.form.UserToSecurityAF" />
+		<form-bean name="roleToSecurityAF"
+			type="org.xpup.hafmis.orgstrct.form.RoleToSecurityAF" />
+		<form-bean name="officeAssignRoleAF"
+			type="org.xpup.hafmis.orgstrct.form.OfficeAssignRoleAF" />
+		<form-bean name="bankAssignRoleAF"
+			type="org.xpup.hafmis.orgstrct.form.BankAssignRoleAF" />
+		<form-bean name="officeAssignUserAF"
+			type="org.xpup.hafmis.orgstrct.form.OfficeAssignUserAF" />
+		<form-bean name="bankAssignUserAF"
+			type="org.xpup.hafmis.orgstrct.form.BankAssignUserAF" />
+		<form-bean name="userAssignUsersAF"
+			type="org.xpup.hafmis.orgstrct.form.UserAssignUsersAF" />
+		<form-bean name="collBankTaAF"
+			type="org.xpup.hafmis.orgstrct.form.CollBankTaAF" />
+		<form-bean name="userAssignBookAF"
+			type="org.xpup.hafmis.orgstrct.form.UserAssignBookAF" />
+	</form-beans>
+
+	<global-exceptions />
+	<global-forwards />
+	<action-mappings>
+		<action attribute="idAF" name="idAF" path="/adminSetNullAction"
+			type="org.xpup.hafmis.orgstrct.action.AdminSetNullAction">
+			<forward name="adminSetNullAction"
+				path="/adminSetNullShowAC.do" />
+		</action>
+		<action attribute="userAF" name="userAF"
+			path="/adminSetNullFindAC"
+			type="org.xpup.hafmis.orgstrct.action.AdminSetNullFindAC">
+			<forward name="adminSetNullShowAC"
+				path="/adminSetNullShowAC.do" />
+		</action>
+		<action attribute="userAF" name="userAF" path="/adminForwardAC"
+			type="org.xpup.hafmis.orgstrct.action.AdminForwardAC">
+			<forward name="adminSetNullShowAC"
+				path="/adminSetNullShowAC.do" />
+		</action>
+		<action attribute="userAF" name="userAF"
+			path="/adminSetNullShowAC"
+			type="org.xpup.hafmis.orgstrct.action.AdminSetNullShowAC">
+			<forward name="userList" path="/user_list.jsp" />
+		</action>
+		<action path="/show_oupts"
+			type="org.xpup.hafmis.orgstrct.action.ShowOuptsAC">
+			<forward name="oupts" path="/oupts.jsp" />
+		</action>
+		<action attribute="ouptCriterionsAF" name="ouptCriterionsAF"
+			path="/find_oupts" type="org.xpup.hafmis.orgstrct.action.FindOuptsAC"
+			validate="false">
+			<forward name="show_oupts" path="/show_oupts.do" />
+		</action>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/maintain_oupt" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.MaintainOuptAC"
+			validate="false">
+			<forward name="show_oupts" path="/show_oupts.do" />
+			<forward name="oupt" path="/oupt.jsp" />
+			<forward name="show_oupt_items" path="/show_oupt_items.do" />
+		</action>
+		<action attribute="ouptAF" input="/oupt.jsp" name="ouptAF"
+			path="/create_oupt" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CreateOuptAC">
+			<forward name="show_oupts" path="/show_oupts.do" />
+			<forward name="oupt" path="/oupt.jsp" />
+		</action>
+		<action path="/show_oupt_items"
+			type="org.xpup.hafmis.orgstrct.action.ShowOuptItemsAC"
+			validate="false">
+			<forward name="oupt_items" path="/oupt_items.jsp" />
+		</action>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/maintain_oupt_item" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.MaintainOuptItemAC"
+			validate="false">
+			<forward name="oupt_item" path="/oupt_item.jsp" />
+			<forward name="show_oupt_items" path="/show_oupt_items.do" />
+		</action>
+		<action attribute="ouptItemCriterionsAF"
+			name="ouptItemCriterionsAF" path="/find_oupt_items"
+			type="org.xpup.hafmis.orgstrct.action.FindOuptItemsAC"
+			validate="false">
+			<forward name="show_oupt_items" path="/show_oupt_items.do" />
+		</action>
+		<action attribute="ouptItemAF" input="/oupt_item.jsp"
+			name="ouptItemAF" path="/create_oupt_item" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CreateOuptItemAC"
+			validate="true">
+			<forward name="oupt_item" path="/oupt_item.jsp" />
+			<forward name="show_oupt_items" path="/show_oupt_items.do" />
+		</action>
+
+		<action forward="/orgunit_editor.jsp" path="/show_orgunits" />
+		<action parameter="method" path="/maintain_orgunit"
+			type="org.xpup.hafmis.orgstrct.action.MaintainOrgUnitAC"
+			validate="false">
+			<forward name="orgunit" path="/orgunit_editor_orgunit.jsp" />
+			<forward name="editor_right"
+				path="/orgunit_editor_right.jsp" />
+		</action>
+		
+				
+		<action  path="/find_flagAAC"
+			type="org.xpup.hafmis.orgstrct.action.Find_flagAAC" >     
+		</action>
+		
+		<action attribute="orgUnitAF"
+			input="/orgunit_editor_orgunit.jsp" name="orgUnitAF"
+			path="/create_orgunit" scope="session"
+			type="org.xpup.hafmis.orgstrct.action.CreateOrgUnitAC">
+			<forward name="orgunit" path="/orgunit_editor_orgunit.jsp" />
+			<forward name="editor_right"
+				path="/orgunit_editor_right.jsp" />
+		</action>
+
+		<action path="/show_employees"
+			type="org.xpup.hafmis.orgstrct.action.ShowHafEmployeesAC"
+			validate="false">
+			<forward name="employees" path="/employees.jsp" />
+		</action>
+		<action attribute="hafEmployeeCriterionsAF"
+			name="hafEmployeeCriterionsAF" path="/find_employees"
+			type="org.xpup.hafmis.orgstrct.action.FindHafEmployeesAC"
+			validate="false">
+			<forward name="show_employees" path="/show_employees.do" />
+		</action>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/maintain_employee" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.MaintainHafEmployeeAC"
+			validate="false">
+			<forward name="show_employees" path="/show_employees.do" />
+			<forward name="employee" path="/employee.jsp" />
+			<forward name="employee_menutree"
+				path="/employee_menutree.jsp" />
+			<forward name="employee_data_accesses"
+				path="/employee_data_accesses.jsp" />
+			<forward name="employee_operations"
+				path="/employee_operations.jsp" />
+			<forward name="employee_roles" path="/employee_roles.jsp" />
+		</action>
+		<action attribute="hafEmployeeAF" input="/employee.jsp"
+			name="hafEmployeeAF" path="/create_employee" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CreateHafEmployeeAC">
+			<forward name="show_employees" path="/show_employees.do" />
+			<forward name="employee" path="/employee.jsp" />
+		</action>
+		<action path="/show_employee_orgtree"
+			forward="/employee_orgtree.jsp" />
+		<action attribute="idStringAF" name="idStringAF"
+			path="/assign_menu_to_user" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.AssignMenuToUser"
+			validate="false">
+			<forward name="show_employees" path="/show_employees.do" />
+			<forward name="employee_menutree"
+				path="/employee_menutree.jsp" />
+		</action>
+		<action attribute="dataAuthzAF" name="dataAuthzAF"
+			path="/assign_data_accesses_to_user"
+			type="org.xpup.hafmis.orgstrct.action.AssignDataAccessesToUser"
+			validate="false" scope="session">
+			<forward name="show_employees" path="/show_employees.do" />
+		</action>
+		<action attribute="idStringAF" name="idStringAF"
+			path="/assign_operations_to_user" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.AssignOperationsToUser"
+			validate="false">
+			<forward name="show_employees" path="/show_employees.do" />
+		</action>
+		<action attribute="idStringAF" name="idStringAF"
+			path="/assign_roles_to_user" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.AssignRolesToUser"
+			validate="false">
+			<forward name="show_employees" path="/show_employees.do" />
+		</action>
+
+		<action path="/show_roles"
+			type="org.xpup.hafmis.orgstrct.action.ShowHafRolesAC"
+			validate="false">
+			<forward name="roles" path="/roles.jsp" />
+		</action>
+		<action attribute="hafRoleCriterionsAF"
+			name="hafRoleCriterionsAF" path="/find_roles"
+			type="org.xpup.hafmis.orgstrct.action.FindHafRolesAC"
+			validate="false">
+			<forward name="show_roles" path="/show_roles.do" />
+		</action>
+		<action attribute="idAF" name="idAF" parameter="method"
+			path="/maintain_role" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.MaintainHafRoleAC"
+			validate="false">
+			<forward name="show_roles" path="/show_roles.do" />
+			<forward name="role" path="/role.jsp" />
+			<forward name="role_menutree" path="/role_menutree.jsp" />
+			<forward name="role_data_accesses"
+				path="/role_data_accesses.jsp" />
+			<forward name="role_operations" path="/role_operations.jsp" />
+		</action>
+		<action attribute="hafRoleAF" input="/role.jsp" name="hafRoleAF"
+			path="/create_role" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CreateHafRoleAC">
+			<forward name="show_roles" path="/show_roles.do" />
+			<forward name="role" path="/role.jsp" />
+		</action>
+		<action path="/show_role_orgtree" forward="/role_orgtree.jsp" />
+		<action attribute="idStringAF" name="idStringAF"
+			path="/assign_menu_to_role" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.AssignMenuToRole"
+			validate="false">
+			<forward name="show_roles" path="/show_roles.do" />
+			<forward name="role_menutree" path="/role_menutree.jsp" />
+		</action>
+		<action attribute="dataAuthzAF" name="dataAuthzAF"
+			path="/assign_data_accesses_to_role"
+			type="org.xpup.hafmis.orgstrct.action.AssignDataAccessesToRole"
+			validate="false" scope="session">
+			<forward name="show_roles" path="/show_roles.do" />
+		</action>
+		<action attribute="idStringAF" name="idStringAF"
+			path="/assign_operations_to_role" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.AssignOperationsToRole"
+			validate="false">
+			<forward name="show_roles" path="/show_roles.do" />
+		</action>
+
+		<!-- 权限 -->
+		<!-- 用户单位 -->
+		<action path="/userToSecurityForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityForwardURLAC"
+			validate="false">
+			<forward name="show_usersecurity"
+				path="/userToSecurityShowAC.do" />
+		</action>
+		<action attribute="userToSecurityAF" name="userToSecurityAF"
+			path="/userToSecurityShowAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityShowAC"
+			validate="false">
+			<forward name="show_usersecurity"
+				path="/usertosecurity.jsp" />
+		</action>
+		<action name="userToSecurityAF" path="/userToSecurityFindOrgAAC"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityFindOrgAAC">
+		</action>
+		<action name="userToSecurityAF"
+			path="/userToSecurityFindOfficeAAC"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityFindOfficeAAC">
+		</action>
+		<action name="userToSecurityAF"
+			path="/userToSecurityFindBankAAC"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityFindBankAAC">
+		</action>
+		<action name="userToSecurityAF" parameter="method"
+			scope="request" path="/userToSecurityMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.UserToSecurityMaintainAC">
+			<forward name="show_usersecurity"
+				path="/userToSecurityShowAC.do" />
+		</action>
+		<!-- 角色单位 -->
+		<action path="/roleToSecurityForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityForwardURLAC"
+			validate="false">
+			<forward name="show_rolesecurity"
+				path="/roleToSecurityShowAC.do" />
+		</action>
+		<action attribute="roleToSecurityAF" name="roleToSecurityAF"
+			path="/roleToSecurityShowAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityShowAC"
+			validate="false">
+			<forward name="show_rolesecurity"
+				path="/roletosecurity.jsp" />
+		</action>
+		<action name="roleToSecurityAF" path="/roleToSecurityFindOrgAAC"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityFindOrgAAC">
+		</action>
+		<action name="roleToSecurityAF"
+			path="/roleToSecurityFindOfficeAAC"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityFindOfficeAAC">
+		</action>
+		<action name="roleToSecurityAF"
+			path="/roleToSecurityFindBankAAC"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityFindBankAAC">
+		</action>
+		<action name="roleToSecurityAF" parameter="method"
+			scope="request" path="/roleToSecurityMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.RoleToSecurityMaintainAC">
+			<forward name="show_rolesecurity"
+				path="/roleToSecurityShowAC.do" />
+		</action>
+		<!-- 角色办事处 -->
+		<action name="officeAssignRoleAF"
+			path="/officeAssignRoleFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignRoleFindAAC">
+		</action>
+		<action path="/officeAssignRoleForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignRoleForwardURLAC"
+			validate="false">
+			<forward name="show_roleoffice"
+				path="/officeAssignRoleShowAC.do" />
+		</action>
+		<action attribute="officeAssignRoleAF" name="officeAssignRoleAF"
+			path="/officeAssignRoleShowAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignRoleShowAC"
+			validate="false">
+			<forward name="show_roleoffice"
+				path="/officeAssignRole.jsp" />
+		</action>
+		<action name="officeAssignRoleAF" parameter="method"
+			scope="request" path="/officeAssignRoleMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignRoleMaintainAC">
+			<forward name="show_roleoffice"
+				path="/officeAssignRoleShowAC.do" />
+		</action>
+		<!-- 角色银行 -->
+		<action name="bankAssignRoleAF" path="/bankAssignRoleFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignRoleFindAAC">
+		</action>
+		<action name="bankAssignRoleAF"
+			path="/bankAssignRoleFindOfficeAAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignRoleFindOfficeAAC">
+		</action>
+		<action path="/bankAssignRoleForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignRoleForwardURLAC">
+			<forward name="show_rolebank"
+				path="/bankAssignRoleShowAC.do" />
+		</action>
+		<action attribute="bankAssignRoleAF" name="bankAssignRoleAF"
+			path="/bankAssignRoleShowAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignRoleShowAC"
+			validate="false">
+			<forward name="show_rolebank" path="/bankAssignRole.jsp" />
+		</action>
+		<action name="bankAssignRoleAF" parameter="method"
+			scope="request" path="/bankAssignRoleMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignRoleMaintainAC">
+			<forward name="show_rolebank"
+				path="/bankAssignRoleShowAC.do" />
+		</action>
+		<!-- 用户办事处 -->
+		<action name="officeAssignUserAF"
+			path="/officeAssignUserFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignUserFindAAC">
+		</action>
+		<action path="/officeAssignUserForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignUserForwardURLAC"
+			validate="false">
+			<forward name="show_useroffice"
+				path="/officeAssignUserShowAC.do" />
+		</action>
+		<action name="officeAssignUserAF" path="/officeAssignUserShowAC"
+			scope="request"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignUserShowAC"
+			validate="false">
+			<forward name="show_useroffice"
+				path="/officeAssignUser.jsp" />
+		</action>
+		<action name="officeAssignUserAF" parameter="method"
+			scope="request" path="/officeAssignUserMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.OfficeAssignUserMaintainAC">
+			<forward name="show_useroffice"
+				path="/officeAssignUserShowAC.do" />
+		</action>
+		<!-- 用户银行 -->
+
+		<action name="bankAssignUserAF" path="/bankAssignUserFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignUserFindAAC">
+		</action>
+		<action name="bankAssignUserAF"
+			path="/bankAssignUserFindOfficeAAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignUserFindOfficeAAC">
+		</action>
+		<action path="/bankAssignUserForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignUserForwardURLAC"
+			validate="false">
+			<forward name="show_userbank"
+				path="/bankAssignUserShowAC.do" />
+		</action>
+		<action name="bankAssignUserAF" path="/bankAssignUserShowAC"
+			scope="request"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignUserShowAC"
+			validate="false">
+			<forward name="show_userbank" path="/bankAssignUser.jsp" />
+		</action>
+		<action name="bankAssignUserAF" parameter="method"
+			scope="request" path="/bankAssignUserMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.BankAssignUserMaintainAC">
+			<forward name="show_userbank"
+				path="/bankAssignUserShowAC.do" />
+		</action>
+
+		<!-- 用户用户 -->
+
+		<action name="userAssignUsersAF" path="/userAssignUserAFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignUserAFindAAC">
+		</action>
+		<action path="/userAssignUsersForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignUsersForwardURLAC"
+			validate="false">
+			<forward name="show_useruser"
+				path="/userAssignUsersShowAC.do" />
+		</action>
+		<action name="userAssignUsersAF" path="/userAssignUsersShowAC"
+			scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignUsersShowAC"
+			validate="false">
+			<forward name="show_useruser" path="/userAssignUsers.jsp" />
+		</action>
+		<action name="userAssignUsersAF" parameter="method"
+			scope="request" path="/userAssignUsersMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignUsersMaintainAC">
+			<forward name="show_useruser"
+				path="/userAssignUsersShowAC.do" />
+		</action>
+		<!-- 归集行维护 -->
+
+		<action name="collBankTaAF" path="/collBankTaFindAC"
+			type="org.xpup.hafmis.orgstrct.action.CollBankTaFindAC">
+			<forward name="show_collbank" path="/collBankTaShowAC.do" />
+		</action>
+		<action path="/collBankTaForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CollBankTaForwardURLAC"
+			validate="false">
+			<forward name="show_collbank" path="/collBankTaShowAC.do" />
+		</action>
+		<action name="collBankTaAF" path="/collBankTaShowAC"
+			scope="request"
+			type="org.xpup.hafmis.orgstrct.action.CollBankTaShowAC"
+			validate="false">
+			<forward name="show_collbank" path="/collBank_lb.jsp" />
+		</action>
+		<action name="idAF" parameter="method" scope="request"
+			path="/collBankTaMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.CollBankTaMaintainAC">
+			<forward name="show_collbank" path="/collBankTaShowAC.do" />
+			<forward name="show_collbank_edit"
+				path="/collBank_edit.jsp" />
+		</action>
+		<action name="collBankTaAF" parameter="method" scope="request"
+			path="/collBankTaEditMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.CollBankTaEditMaintainAC">
+			<forward name="show_collbank" path="/collBankTaShowAC.do" />
+		</action>
+
+
+		<!-- 用户账套 -->
+		<action path="/userAssignBookForwardURLAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignBookForwardURLAC"
+			validate="false">
+			<forward name="show_userbook"
+				path="/userAssignBookShowAC.do" />
+		</action>
+		<action attribute="userAssignBookAF" name="userAssignBookAF"
+			path="/userAssignBookShowAC" scope="request"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignBookShowAC"
+			validate="false">
+			<forward name="show_userbook" path="/userAssignBook.jsp" />
+		</action>
+		<action name="userAssignBookAF" path="/userAssignBookFindAAC"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignBookFindAAC">
+		</action>
+		<action name="userAssignBookAF" parameter="method"
+			scope="request" path="/userAssignBookMaintainAC"
+			type="org.xpup.hafmis.orgstrct.action.UserAssignBookMaintainAC">
+			<forward name="show_userbook"
+				path="/userAssignBookShowAC.do" />
+		</action>
+
+
+
+	</action-mappings>
+
+	<controller nocache="true"></controller>
+	<message-resources
+		parameter="org.xpup.hafmis.orgstrct.message-resources-orgstrct"
+		key="orgstrct" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/orgstrct/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/orgstrct/validation.xml,/WEB-INF/validation/validator-rules.xml" />
+	</plug-in>
+</struts-config>
+

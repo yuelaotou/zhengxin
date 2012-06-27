@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="createBookAF" type="org.xpup.hafmis.sysfinance.bookmng.createbook.form.CreateBookAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    <action path="/createBookForwoardAC" type="org.xpup.hafmis.sysfinance.bookmng.createbook.action.CreateBookForwoardAC">
+    	<forward name="to_createbook_new" path="/bookmng/createbook/createbook.jsp" />
+    </action>
+    
+    <action
+      attribute="createBookAF"
+      name="createBookAF"
+      path="/createBookNewAC"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.bookmng.createbook.action.CreateBookNewAC">
+    <forward name="createBookForwoardAC" path="/createBookForwoardAC.do"></forward>
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

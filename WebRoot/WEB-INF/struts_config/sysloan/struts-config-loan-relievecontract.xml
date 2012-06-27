@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="relieveContractTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.relievecontract.form.RelieveContractTaAF" />	
+	<form-bean name="relieveContractTbAF"
+			type="org.xpup.hafmis.sysloan.loancallback.relievecontract.form.RelieveContractTbAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- ================================================Ta====================================================== -->
+    <action name="relieveContractTaAF" path="/relieveContractTaShowAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTaShowAC">
+    	<forward name="to_relievecontractta_show" path="/loancallback/relievecontract/relievecontractta_show.jsp" />
+    </action>
+    <action path="/relieveContractTaForwardAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTaForwardAC">
+      <forward name="relievecontractta_show" path="/relieveContractTaShowAC.do" />
+    </action>
+    <action name="relieveContractTaAF" path="/relieveContractTaSaveAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTaSaveAC">
+      <forward name="relievecontractta_show" path="/relieveContractTaShowAC.do" />
+    </action>
+    <action path="/relieveContractTaFindAAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTaFindAAC">
+    </action>
+    <!-- ================================================Tb====================================================== -->
+	<action path="/relieveContractTbForwardAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTbForwardAC">
+      <forward name="relievecontracttb_show" path="/relieveContractTbShowAC.do" />
+    </action>
+    <action name="relieveContractTbAF" path="/relieveContractTbShowAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTbShowAC">
+    	<forward name="to_relievecontracttb_show" path="/loancallback/relievecontract/relievecontracttb_show.jsp" />
+    </action>
+    <action name="relieveContractTbAF" path="/relieveContractTbFindAC" type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTbFindAC">
+    	<forward name="relievecontracttb_show" path="/relieveContractTbShowAC.do" />
+    </action>
+    <action name="idAF" path="/relieveContractTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.relievecontract.action.RelieveContractTbMaintainAC">
+			<forward name="relievecontracttb_show" path="/relieveContractTbShowAC.do" />
+			<forward name="to_relievecontracttb_print" path="/loancallback/relievecontract/relievecontracttb_print.jsp" />
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

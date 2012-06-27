@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/mailinfoTaShowAC.do" location="350,150" dimension="333,88" />
+  <StrutsActivity path="/mailinfoTaNewAC.do" location="950,250" dimension="328,88" />
+  <StrutsActivity path="/sendmail/mailinfo_new.jsp" location="350,50" dimension="158,49" />
+  <StrutsActivity path="/mailinfoTaShowAC" location="50,350" dimension="121,49" />
+  <StrutsActivity path="/dataready/rate/rate_show.jsp" location="679,564" dimension="180,49" />
+  <StrutsActivity path="/dataready/rate/rate_new.jsp" location="2,207" dimension="175,49" />
+  <StrutsActivity path="/dataready/rate/rate_appuse.jsp" location="75,846" dimension="190,49" />
+  <StrutsActivity path="/sendmail/sendmail/mailinfo_new.jsp" location="950,150" dimension="203,49" />
+  <StrutsActivity path="/sendmail/mailinfoTaShowAC" location="350,350" dimension="166,49" />
+  <StrutsTransition id="/mailinfoTaNewAC.do,to_mailinfoshow,/mailinfoTaShowAC,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,294" />
+      <AbsolutePoint location="110,294" />
+      <AbsolutePoint location="110,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mailinfoTaNewAC.do,to_mailinfo_show,/sendmail/mailinfoTaShowAC,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,294" />
+      <AbsolutePoint location="433,294" />
+      <AbsolutePoint location="433,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mailinfoTaNewAC.do,to_mailinfo_show,/mailinfoTaShowAC,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,294" />
+      <AbsolutePoint location="110,294" />
+      <AbsolutePoint location="110,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mailinfoTaShowAC.do,to_mailinfo_show,/sendmail/mailinfo_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="516,194" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/mailinfoTaNewAC.do,to_mailinfoshow,/mailinfoTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1114,294" />
+      <AbsolutePoint location="516,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

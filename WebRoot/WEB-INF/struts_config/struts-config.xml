@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans>
+         <form-bean name="loginActionForm"
+			type="org.xpup.security.commonlogin.form.LoginActionForm" />
+   </form-beans>
+  <global-exceptions />
+  <global-forwards />
+  
+  <action-mappings>
+  	<action name="loginActionForm" path="/loginAction"
+			type="org.xpup.security.commonlogin.action.LoginAction">
+			<forward name="success"
+				path="/index.jsp" />
+			<forward name="fail"
+				path="/login.jsp" />
+		</action>
+	<action name="loginActionForm" path="/toIndexAction"
+			type="org.xpup.security.commonlogin.action.ToIndexAction">
+			<forward name="index"
+				path="/toindex.jsp" />
+			<forward name="fail"
+				path="/login.jsp" />
+		</action>	
+	<action name="loginActionForm" path="/loginOffAction"
+			type="org.xpup.security.commonlogin.action.LoginOffAction">
+			<forward name="login"
+				path="/login.jsp" />
+		</action>			
+    <action name="loginActionForm" path="/changSystemToIndexAction"
+			type="org.xpup.security.commonlogin.action.ChangSystemToIndexAction">
+			<forward name="toindex"
+				path="/toindex.jsp" />
+			<forward name="toChangeBizDateAction"
+				path="/toChangeBizDateAction.do" />					
+		</action>	
+		
+  <action name="loginActionForm" path="/toChangeBizDateAction"
+			type="org.xpup.security.commonlogin.action.ToChangeBizDateAction">
+			<forward name="changebizdate"
+				path="/changebizdate.jsp" />
+		</action>	
+
+ <action name="loginActionForm" path="/changeBizDateAction"
+			type="org.xpup.security.commonlogin.action.ChangeBizDateAction">
+			<forward name="toIndexAction"
+				path="/toIndexAction.do" />
+		</action>	
+		
+ <action name="loginActionForm" path="/toChangeBizDateAAC"
+			type="org.xpup.security.commonlogin.action.ToChangeBizDateAAC">
+		</action>
+    <action path="/toshowpassord" name="loginActionForm" type="org.xpup.security.commonlogin.action.ToShowPasswordAction" >
+    <forward name="toshowupdatepassword"
+				path="/toshowupdatepassword.jsp" />
+    </action>
+    <action path="/toupdatepasswordAC" name="loginActionForm" type="org.xpup.security.commonlogin.action.ToUpdatePasswordAction">
+      <forward name="sussceupdatetoshowjsp" path="/toshowupdatepassword.jsp" />
+      <forward name="badupdatepassword" path="/toshowupdatepassword.jsp" />
+    </action>	
+    <action path="/toChangeBookAAC" name="loginActionForm" type="org.xpup.security.commonlogin.action.ToChangeBookAAC">
+    </action>					
+   </action-mappings>  
+  
+  <message-resources parameter="message-resources-global" />
+  	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/security/buildtime/applicationContext.xml,/WEB-INF/app_context/syscollection/accounthandle/dayclear/applicationContext.xml" />
+	</plug-in>
+</struts-config>
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/creditParamShowAC.do" location="650,50" dimension="436,84" />
+  <StrutsActivity path="/creditParamSaveAC.do" location="950,350" dimension="436,84" />
+  <StrutsActivity path="/creditForwardURLAC.do" location="50,250" dimension="424,84" />
+  <StrutsActivity path="/creditFindAC.do" location="50,650" dimension="388,84" />
+  <StrutsActivity path="/creditShowAC.do" location="50,450" dimension="388,84" />
+  <StrutsActivity path="/creditMaintainAC.do" location="650,550" dimension="412,84" />
+  <StrutsActivity path="/credit/parameter/creditparam.jsp" location="350,150" dimension="238,48" />
+  <StrutsActivity path="/credit/report/credit.jsp" location="650,250" dimension="190,48" />
+  <StrutsActivity path="/credit/paramter/creditparam.jsp" location="50,150" dimension="232,48" />
+  <StrutsActivity path="/dataready/bank/bank_show.jsp" location="528,368" dimension="214,48" />
+  <StrutsActivity path="/dataready/bank/bank_add.jsp" location="1206,202" dimension="208,48" />
+  <StrutsActivity path="/creditQueryForwardURLAC.do" />
+  <StrutsActivity path="/creditQueryFindAC.do" />
+  <StrutsActivity path="/creditQueryShowAC.do" />
+  <StrutsActivity path="/credit/query/creditquery.jsp" />
+  <StrutsTransition id="/creditForwardURLAC.do,creditShowAC,/creditShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="244,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditMaintainAC.do,credit,/credit/report/credit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="745,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditQueryShowAC.do,creditquery,/credit/query/creditquery.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditQueryFindAC.do,creditQueryShowAC,/creditQueryShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditShowAC.do,credit,/credit/report/credit.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="438,492" />
+      <AbsolutePoint location="757,492" />
+      <AbsolutePoint location="757,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditFindAC.do,creditShowAC,/creditShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="244,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditMaintainAC.do,creditShowAC,/creditShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="856,592" />
+      <AbsolutePoint location="244,492" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditParamShowAC.do,creditparam,/credit/parameter/creditparam.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="868,92" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditQueryForwardURLAC.do,creditQueryShowAC,/creditQueryShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/creditParamSaveAC.do,creditParamShowAC,/creditParamShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1071,350" />
+      <AbsolutePoint location="1071,134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

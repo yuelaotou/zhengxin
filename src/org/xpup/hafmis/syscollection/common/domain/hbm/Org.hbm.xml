@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.Org" 
+    table="AA001"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA001</param>
+	</generator>
+    </id>
+
+    <property
+        name="payMode"
+        type="java.math.BigDecimal"
+        column="PAY_MODE"
+        length="22"
+    />
+    <property
+        name="orgRate"
+        type="java.math.BigDecimal"
+        column="ORG_RATE"
+        length="4"
+    />
+    <property
+        name="empRate"
+        type="java.math.BigDecimal"
+        column="EMP_RATE"
+        length="4"
+    />
+    <property
+        name="payPrecision"
+        type="integer"
+        column="PAY_PRECISION"
+        length="22"
+    />
+    <property
+        name="firstPayMonth"
+        type="java.lang.String"
+        column="FIRST_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="orgPayMonth"
+        type="java.lang.String"
+        column="ORG_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="empPayMonth"
+        type="java.lang.String"
+        column="EMP_PAY_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="oldOrgID"
+        type="java.lang.String"
+        column="ORG_ID_OLD"
+        length="20"
+    />
+    <property
+        name="orgAgentNum"
+        type="java.lang.String"
+        column="ORG_AGENT_NUM"
+        length="20"
+    />
+<property name="orgPayCount" type="java.lang.Integer" formula="(select count(a.id) from  AA002 a where a.ORG_ID=ID and a.PAY_STATUS in ('1','3','4'))"/>
+<property name="sumPay" type="java.math.BigDecimal" formula="(select sum(a.EMP_PAY+a.ORG_PAY) from AA002 a where a.ORG_ID=ID and a.PAY_STATUS in ('1','3','4'))"/>
+	  <property name="orgCount" type="java.lang.Integer" formula="(select count(a.id) from  AA002 a where a.ORG_ID=ID )"/>
+	<property name="salaryBaseCount" type="java.math.BigDecimal" formula="(select sum(a.SALARY_BASE) from AA002 a where a.ORG_ID=ID )"/>
+		<property name="orgpaySumCount" type="java.math.BigDecimal" formula="(select sum(a.ORG_PAY) from AA002 a where a.ORG_ID=ID )"/>
+			<property name="emppaySumCount" type="java.math.BigDecimal" formula="(select sum(a.EMP_PAY) from AA002 a where a.ORG_ID=ID )"/>
+		<property name="sumCount" type="java.math.BigDecimal" formula="(select sum(a.ORG_PAY+a.EMP_PAY) from AA002 a where a.ORG_ID=ID )"/>
+	<many-to-one
+        name="orgInfo"
+        class="org.xpup.hafmis.syscommon.domain.entity.OrgInfo"
+        not-null="true"
+        cascade="save-update"
+        lazy="false"
+        >
+     	<column name="ORGINFO_ID" />
+    </many-to-one>
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

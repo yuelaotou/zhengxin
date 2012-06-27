@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="agentImpAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentImpAF"></form-bean>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="agentImportAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentImportAF"></form-bean>
+	<form-bean name="agentChgAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentChgAF"></form-bean>
+	
+	<form-bean name="agentInfoQueryTaAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentInfoQueryTaAF" />
+    <form-bean name="agentInfoQueryTbAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentInfoQueryTbAF" />
+	<form-bean name="agentInfoQueryTcAF" type="org.xpup.hafmis.syscollection.paymng.agent.form.AgentInfoQueryTcAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/agentImpForwardAC"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentImpForwardAC">
+				<forward name="to_agentImpShowAC" path="/agentImpShowAC.do"></forward>
+		</action>
+		<action path="/agentImpShowAC"
+				name="agentImpAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentImpShowAC">
+				<forward name="to_agentimp_show" path="/agentimp_show.jsp"></forward>
+		</action>
+		<action path="/agentImportPageShowAC"
+				name="agentImpAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentImportPageShowAC">
+				<forward name="to_agentimp_imports" path="/agentimp_imports.jsp"></forward>
+				<forward name="to_agentImpShowAC" path="/agentImpShowAC.do"></forward>
+		</action>
+		<action path="/agentImportAC"
+				name="agentImportAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentImportAC">
+				<forward name="to_agentImpShowAC" path="/agentImpShowAC.do"></forward>
+		</action>
+		<action path="/agentImpMaintainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentImpMaintainAC">
+				<forward name="to_agentImpShowAC" path="/agentImpShowAC.do"></forward>
+		</action>
+		<action path="/agentChgForwardAC"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentChgForwardAC">
+				<forward name="to_agentChgShowAC" path="/agentChgShowAC.do"></forward>
+		</action>
+		<action path="/agentChgShowAC"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentChgShowAC">
+				<forward name="to_agentchg_show" path="/agentchg_show.jsp"></forward>
+		</action>
+		<action path="/agentChgFindAC"
+				name="agentChgAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentChgFindAC">
+				<forward name="to_agentChgShowAC" path="/agentChgShowAC.do"></forward>
+		</action>
+		<action path="/agentChgMaintainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentChgMaintainAC">
+				<forward name="to_agentChgShowAC" path="/agentChgShowAC.do"></forward>
+		</action>
+		
+		
+		<!-- 代扣信息查询  -->	
+    <action 
+    	path="/agentInfoQueryForWardAC" 
+    	type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryForWardAC">
+    	<forward name="agentInfoQueryTaShowAC" path="/agentInfoQueryTaShowAC.do" />
+    </action>
+    <action
+      path="/agentInfoQueryTaFindAC"
+      name="agentInfoQueryTaAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTaFindAC">
+      <forward name="agentInfoQueryTaShowAC" path="/agentInfoQueryTaShowAC.do" />
+    </action>
+    <action
+      path="/agentInfoQueryTaShowAC"
+      name="idAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTaShowAC">
+      <forward name="to_agentInfoQueryTa_show" path="/agentInfoQueryTa_show.jsp" />
+    </action>
+    <action
+      path="/agentInfoQueryTaModifyAC"
+      name="idAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTaModifyAC">
+      <forward name="agentInfoQueryTbShowAC" path="/agentInfoQueryTbShowAC.do" />
+    </action>
+    
+    <!-- 代扣单位信息查询  -->	
+    <action
+      path="/agentInfoQueryTbShowAC"
+      name="idAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTbShowAC">
+      <forward name="to_agentInfoQueryTb_show" path="/agentInfoQueryTb_show.jsp" />
+    </action>
+    <action
+      path="/agentInfoQueryTbFindAC"
+      name="agentInfoQueryTbAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTbFindAC">
+      <forward name="agentInfoQueryTbShowAC" path="/agentInfoQueryTbShowAC.do" />
+    </action>
+    <action
+      path="/agentInfoQueryTbModifyAC"
+      name="idAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTbModifyAC">
+      <forward name="agentInfoQueryTaShowAC" path="/agentInfoQueryTaShowAC.do" />
+      <forward name="agentInfoQueryTcShowAC" path="/agentInfoQueryTcShowAC.do" />
+    </action>
+    
+    <!-- 代扣单位信息查询  -->	
+    <action
+      path="/agentInfoQueryTcShowAC"
+      name="idAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTcShowAC">
+      <forward name="to_agentInfoQueryTc_show" path="/agentInfoQueryTc_show.jsp" />
+    </action>
+    <action
+      path="/agentInfoQueryTcFindAC"
+      name="agentInfoQueryTcAF"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTcFindAC">
+      <forward name="agentInfoQueryTcShowAC" path="/agentInfoQueryTcShowAC.do" />
+    </action>
+    <action
+      path="/agentInfoQueryTcModifyAC"
+      name="idAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentInfoQueryTcModifyAC">
+	  <forward name="agentInfoQueryTbShowAC" path="/agentInfoQueryTbShowAC.do" />
+    </action>  
+    <!-- 单位明细 -->
+    <action path="/agentOrgpopForwardAC" 
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentOrgpopForwardAC">
+				<forward name="to_agentOrgpopShowAC" path="/agentOrgpopShowAC.do"></forward>
+		</action>
+    <action path="/agentOrgpopFindAC" 
+    			name="agentChgAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentOrgpopFindAC">
+				<forward name="to_agentOrgpopShowAC" path="/agentOrgpopShowAC.do"></forward>
+		</action>
+		<action path="/agentOrgpopShowAC"
+		        type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentOrgpopShowAC">
+		        <forward name="to_agentorgpop_show" path="/agentorgpop_show.jsp"></forward>
+		</action>
+		<action path="/agentOrgpopMaintainAC"
+				name="idAF"
+				parameter="method"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentOrgpopMaintainAC">
+				<forward name="to_agentOrgpopShowAC" path="/agentOrgpopShowAC.do"></forward>
+				<forward name="to_agentChgShowAC" path="/agentChgShowAC.do"></forward>
+		</action>
+		<!-- 职工明细 -->
+		<action path="/agentEmppopForwardAC"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentEmppopForwardAC">
+				<forward name="to_agentEmppopShowAC" path="/agentEmppopShowAC.do"></forward>
+		</action>
+		<action path="/agentEmppopFindAC"
+				name="agentChgAF"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentEmppopFindAC">
+				<forward name="to_agentEmppopShowAC" path="/agentEmppopShowAC.do"></forward>
+		</action>
+		<action path="/agentEmppopShowAC"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentEmppopShowAC">
+				<forward name="to_agentemppop_show" path="/agentemppop_show.jsp"></forward>
+		</action>
+		<action path="/agentEmppopMaintainAC"
+				name="idAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.syscollection.paymng.agent.action.AgentEmppopMaintainAC">
+				<forward name="to_agentEmppopShowAC" path="/agentEmppopShowAC.do"></forward>
+				<forward name="to_agentOrgpopShowAC" path="/agentOrgpopShowAC.do"></forward>
+				<forward name="to_agentImpShowAC" path="/agentImpShowAC.do"></forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/paymng/agent/applicationContext.xml" />
+	</plug-in>
+</struts-config>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+
+		<form-bean name="pickupMaintainAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickupMaintainAF" />
+		<form-bean name="pickupGetCompanyIdAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickupGetCompanyIdAF" />
+		<form-bean name="pickupAddAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickupAddAF" />
+		<form-bean name="pickGetEmployeeInfoAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickGetEmployeeInfoAF" />
+		<form-bean name="pickImportAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickImportAF" />
+		<form-bean name="employeePickInfoAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.EmployeePickInfoAF" />
+		<form-bean name="vindicateListAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.VindicateListAF" />
+		<form-bean name="pickReasonAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickReasonAF" />
+		<form-bean name="pickCheckAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickCheckAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		
+		<action name="pickCheckAF" path="/pickCheckForwardAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickCheckForwardAC">
+			<forward name="pickCheckShowAC" path="/pickCheckShowAC.do"></forward>
+		</action>
+		<action name="pickCheckAF" path="/pickCheckShowAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickCheckShowAC">
+			<forward name="pickcheck" path="/pickcheck.jsp"></forward>
+		</action>
+		<action name="idAF" path="/pickCheckMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickCheckMaintainAC">
+			<forward name="pickCheckShowAC" path="/pickCheckShowAC.do"></forward>
+		</action>
+		<action name="pickCheckAF" path="/pickCheckFindAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickCheckFindAC">
+			<forward name="pickCheckShowAC" path="/pickCheckShowAC.do"></forward>
+		</action>
+	
+		<action attribute="pickupGetCompanyIdAF" path="/pickupShowAC"
+			name="pickupGetCompanyIdAF" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupShowAC">
+			<forward name="show" path="/pickup_transactionlist.jsp"></forward>
+		</action>
+		<action attribute="pickupMaintainAF" name="pickupMaintainAF"
+			parameter="method" path="/pickupMiantianAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupMiantianAC">
+			<forward name="add" path="/pickupDisplayAddInfoAC.do"></forward>
+		</action>
+		<action attribute="pickupGetCompanyIdAF"
+			name="pickupGetCompanyIdAF" path="/pickupTransactionAAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupTransactionAAC" />
+		<action path="/pickupGetInfoAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickupGetInfoAFAction" />
+		<action attribute="pickupGetCompanyIdAF" name="pickupAddAF"
+			path="/pickupTransactionAddAAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupTransactionAddAAC" />
+		<action attribute="pickupAddAF" name="pickupAddAF"
+			parameter="method" path="/pickupTransactionAddAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupTransactionAddAC">
+			<forward name="add" path="/pickup_add.jsp"></forward>
+		</action>
+		<action path="/pickupTypeSkipAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupTypeSkipAC">
+			<forward name="add" path="/pickup_add.jsp"></forward>
+		</action>
+		<action name="pickReasonAF" path="/pickReasonShowAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickReasonShowAC">
+			<forward name="pickreason" path="/pickreason.jsp"></forward>
+		</action>
+		<action name="pickReasonAF" path="/pickReasonSaveAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickReasonSaveAC">
+			<forward name="pickReasonShowAC"
+				path="/pickReasonShowAC.do">
+			</forward>
+		</action>
+		<action attribute="pickGetEmployeeInfoAF"
+			name="pickGetEmployeeInfoAF" path="/pickupDisplayAddInfoAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupDisplayAddInfoAC" />
+		<action name="pickGetEmployeeInfoAF" scope="request"
+			parameter="method" path="/pickupAddAjaxAAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupAddAjaxAAC" />
+		<action attribute="pickImportAF" name="pickImportAF"
+			path="/pickImportAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickImportAC" />
+		<action attribute="employeePickInfoAF" name="employeePickInfoAF"
+			path="/pageSkipAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PageSkipAC" />
+		<action attribute="vindicateListAF" name="vindicateListAF"
+			path="/vindicateListShowAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.VindicateListShowAC" />
+		<action attribute="idAF" name="idAF"
+			path="/vindicatePickMiantainAC" scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.VindicatePickMiantainAC" />
+		<action path="/vindicatePickEmployeeList"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.VindicatePickEmployeeListAction" />
+		<action path="/vindicateActionAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.VindicateActionAC" />
+		<action path="/transactionActionAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.TransactionActionAC" />
+		<action path="/printEmployeeAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PrintEmployeeAC"
+			name="idAF" scope="request" />
+		<action attribute="pickupMaintainAF" path="/pickupExportTaAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.PickupExportTaAC"
+			scope="request" parameter="method">
+			<forward name="to_pickup_showAC"
+				path="/pickupMiantianAC.do">
+			</forward>
+		</action>
+		<action path="/windowMaintainAC"
+			type="org.xpup.hafmis.syscollection.pickupmng.pickup.action.WindowMaintainAC"
+			parameter="method" name="pickGetEmployeeInfoAF" scope="request">
+			<forward name="srcan_jsp"
+				path="/vindicatePickEmployeeList.do">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/pickupmng/pickup/applicationContext.xml" />
+	</plug-in>
+</struts-config>

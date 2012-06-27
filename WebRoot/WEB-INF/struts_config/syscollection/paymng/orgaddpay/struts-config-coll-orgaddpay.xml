@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="orgaddpayTaAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.form.OrgaddpayTaAF" />
+		<form-bean name="orgaddpayTbAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.form.OrgaddpayTbAF" />
+		<form-bean name="orgaddpayImportTaAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.form.OrgaddpayImportTaAF" />
+		<form-bean name="orgaddpayTbPickupdataWindowAF"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.form.OrgaddpayTbPickupdataWindowAF" />
+			<form-bean name="monthpayJYAF"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.form.MonthpayJYAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="orgaddpayTaAF" path="/orgaddpayTaFindAAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTaFindAAC">
+		</action>
+		<action path="/orgaddpayTaForwardUrlAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTaForwardUrlAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTaShowAC.do" />
+		</action>
+		<action name="orgaddpayTaAF" path="/orgaddpayTaShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTaShowAC">
+			<forward name="show_orgaddpay" path="/orgaddpay_jy.jsp" />
+		</action>
+		<action name="idAF" path="/orgaddpayTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTaMaintainAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTaShowAC.do" />
+			<forward name="orgaddpay_imports" path="/orgaddpay_imports.jsp" />
+			<forward name="org_tdpz_cell" path="/org_tdpz_cell.jsp" />
+		</action>
+		<action name="orgaddpayTbAF"
+			path="/orgaddpayTbFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbFindAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTbShowAC.do">
+			</forward>
+		</action>
+		<action path="/orgaddpayTbForwardUrlAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbForwardUrlAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTbShowAC.do" />
+		</action>
+		<action path="/orgaddpayTbShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbShowAC">
+			<forward name="show_orgaddpayList" path="/orgaddpay_lb.jsp" />
+		</action>
+		<action name="idAF" path="/orgaddpayTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbMaintainAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTbShowAC.do" />
+			<forward name="show_orgaddpayta" path="/orgaddpayTaShowAC.do" />
+			<forward name="show_print" path="/orgaddpay_cell.jsp" />
+			<forward name="orgaddpay_lb_cell" path="/orgaddpay_lb_cell.jsp" />
+			<forward name="org_tdpz_cell" path="/org_tdpz_cell.jsp" />
+			<forward name="modify_monthPay" path="/modify_monthPay.jsp" />
+		</action>
+		
+		<action name="orgaddpayImportTaAF" path="/orgaddpayTaImportAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTaImportAC"
+			>
+			<forward name="show_orgaddpay" path="/orgaddpayTaShowAC.do" />
+		</action>
+		<action name="orgaddpayTaAF" path="/orgaddpayTbWindowShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbWindowShowAC"
+			>
+			<forward name="show_orgaddpay" path="/orgaddpay_lb_mx.jsp" />
+		</action>
+		<action name="orgaddpayTaAF" path="/orgaddpayTbMXPrintAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbMXPrintAC"
+			>
+			<forward name="show_print" path="/orgaddpay_mx_cell.jsp" />
+			<forward name="show_print_1" path="/orgaddpay_mx_cell_1.jsp" />
+		</action>
+		
+		
+		<action path="/orgaddpayTbWindowForwardURLAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbWindowForwardURLAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTbWindowShowAC.do" />
+		</action>
+		
+		<action path="/orgaddpayTbPrintAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbPrintAC">
+			<forward name="show_print" path="/orgaddpay_cell.jsp" />
+		</action>
+		<action path="/orgaddpayExportAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayExportAC">
+			<forward name="show_orgaddpay" path="/orgaddpayTaForwardUrlAC.do" />
+		</action>
+		<!--============================================20080409 ======================================================== -->
+		<action name="orgaddpayTbPickupdataWindowAF" path="/orgaddpayTbPickupdataWindowShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbPickupdataWindowShowAC">
+			<forward name="to_orgaddpay_pickupdatawindow_show" path="/orgaddpay_pickupdatawindow_show.jsp" />
+		</action>
+		<action name="orgaddpayTbPickupdataWindowAF" path="/orgaddpayTbPickupdataWindowSureAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbPickupdataWindowSureAC">
+			<forward name="show_orgaddpayta" path="/orgaddpayTaShowAC.do" />
+			<forward name="show_orgaddpaytb" path="/orgaddpayTbShowAC.do" />
+		</action>
+		<action path="/orgaddpayTbPickupdataWindowFindAAC"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.OrgaddpayTbPickupdataWindowFindAAC">
+		</action>
+		<action name="monthpayJYAF" path="/monthpayModifyAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.orgaddpay.action.MonthpayModifyAC">
+			<forward name="show_paymentList" path="/orgaddpayTbShowAC.do" />
+		</action>
+	</action-mappings>
+	
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/paymng/orgaddpay/applicationContext.xml,/WEB-INF/app_context/syscollection/paymng/monthpay/applicationContext.xml" />
+	</plug-in>
+</struts-config>

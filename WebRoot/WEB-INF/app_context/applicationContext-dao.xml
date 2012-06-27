@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+	<!-- ========================= DATA ACCESS OBJECT DEFINITIONS ======================== -->
+	<!-- ======= security ======= -->
+	<bean id="userDAO" class="org.xpup.security.common.dao.UserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="roleDAO" class="org.xpup.security.common.dao.RoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="menuItemDAO"
+		class="org.xpup.security.common.dao.MenuItemDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="operationDAO"
+		class="org.xpup.security.common.dao.OperationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="muRelationDAO"
+		class="org.xpup.security.common.dao.MuRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="mrRelationDAO"
+		class="org.xpup.security.common.dao.MrRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ouRelationDAO"
+		class="org.xpup.security.common.dao.OuRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orRelationDAO"
+		class="org.xpup.security.common.dao.OrRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="dataAccessDAO"
+		class="org.xpup.security.common.dao.DataAccessDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="drRelationDAO"
+		class="org.xpup.security.common.dao.DrRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="duRelationDAO"
+		class="org.xpup.security.common.dao.DuRelationDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<!-- ======= orgstrct ======= -->
+	<bean id="organizationUnitDAO"
+		class="org.xpup.hafmis.orgstrct.dao.OrganizationUnitDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgUnitPropertyDAO"
+		class="org.xpup.hafmis.orgstrct.dao.OrgUnitPropertyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="orgUnitPropTemplateDAO"
+		class="org.xpup.hafmis.orgstrct.dao.OrgUnitPropTemplateDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ouptItemDAO"
+		class="org.xpup.hafmis.orgstrct.dao.OuptItemDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="hafEmployeeDAO"
+		class="org.xpup.hafmis.orgstrct.dao.HafEmployeeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="hafRoleDAO"
+		class="org.xpup.hafmis.orgstrct.dao.HafRoleDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+    <bean id="securityDAO"
+		class="org.xpup.hafmis.orgstrct.dao.SecurityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+    <bean id="collBankDAO"
+		class="org.xpup.hafmis.orgstrct.dao.CollBankDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+		
+    <bean id="relaRoleAndOrgDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaRoleAndOrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+    </property>
+	</bean>
+	
+    <bean id="relaUserAndOrgDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaUserAndOrgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+    </property>
+	</bean>
+	
+	<bean id="relaUserAndOfficeDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaUserAndOfficeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="relaUserAndCollBankDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaUserAndCollBankDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="relaRoleAndOfficeDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaRoleAndOfficeDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="relaRoleAndCollBankDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaRoleAndCollBankDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="drawRuleDAO" class="org.xpup.hafmis.syscollection.pickupmng.pickup.pickrule.DrawRuleDAO">
+		<property name="sessionFactory">    
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+	<bean id="relaUserAndUserDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaUserAndUserDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="relaUserAndBookDAO"
+		class="org.xpup.hafmis.orgstrct.dao.RelaUserAndBookDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	
+</beans>

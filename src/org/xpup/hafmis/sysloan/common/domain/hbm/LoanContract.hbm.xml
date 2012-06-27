@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.LoanContract" 
+    table="PL120"
+>
+
+    <id
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+    >
+        <generator class="assigned" />
+    </id>
+    <property
+        name="assistantOrgId"
+        type="java.lang.String"
+        column="ASSISTANT_ORG_ID"
+        length="100"
+    />
+    <property
+        name="assurer"
+        type="java.lang.String"
+        column="ASSURER"
+        length="100"
+    />
+    <property
+        name="agreementDate"
+        type="java.lang.String"
+        column="AGREEMENT_DATE"
+        length="8"
+    />
+    <property
+        name="loanStartDate"
+        type="java.lang.String"
+        column="LOAN_START_DATE"
+        length="8"
+    />
+    <property
+        name="loanPayDate"
+        type="java.lang.String"
+        column="LOAN_PAY_DATE"
+        length="8"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        length="7"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <property
+        name="photoUrl"
+        type="java.lang.String"
+        column="PHOTO_URL"
+        length="100"
+    />
+    <property
+        name="photoUrl2"
+        type="java.lang.String"
+        column="PHOTO_URL2"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

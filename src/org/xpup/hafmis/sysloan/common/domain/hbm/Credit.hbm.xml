@@ -1,0 +1,215 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+	<class
+		name="org.xpup.hafmis.sysloan.common.domain.entity.Credit"
+		table="CR101">
+
+		<id
+			name="id"
+			type="integer"
+			column="ID">
+			<generator class="sequence">
+				<param name="sequence">SEQ_CR101</param>
+			</generator>
+		</id>
+
+		<property
+			name="yewuhao"
+			type="java.lang.String"
+			column="YEWUHAO"
+			not-null="true"
+			length="40" />
+		<property
+			name="office"
+			type="java.lang.String"
+			column="OFFICE"
+			not-null="true"
+			length="100" />
+		<property
+			name="loan_bank_id"
+			type="java.math.BigDecimal"
+			column="LOAN_BANK_ID"
+			not-null="true"
+			length="2" />
+		<property
+			name="kaihuriqi"
+			type="java.lang.String"
+			column="KAIHURIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="daoqiriqi"
+			type="java.lang.String"
+			column="DAOQIRIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="daikuanjine"
+			type="java.math.BigDecimal"
+			column="DAIKUANJINE"
+			not-null="true"
+			length="10" />
+		<property
+			name="daikuanqixian"
+			type="java.lang.String"
+			column="DAIKUANQIXIAN"
+			not-null="true"
+			length="3" />
+		<property
+			name="huankuanyueshu"
+			type="java.lang.String"
+			column="HUANKUANYUESHU"
+			not-null="true"
+			length="3" />
+		<property
+			name="shengyuqixian"
+			type="java.lang.String"
+			column="SHENGYUQIXIAN"
+			not-null="true"
+			length="3" />
+		<property
+			name="yinghuankuanriqi"
+			type="java.lang.String"
+			column="YINGHUANKUANRIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="shijihuankuanriqi"
+			type="java.lang.String"
+			column="SHIJIHUANKUANRIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="yinghuankuanjine"
+			type="java.math.BigDecimal"
+			column="YINGHUANKUANJINE"
+			not-null="true"
+			length="10" />
+		<property
+			name="shijihuankuanjine"
+			type="java.math.BigDecimal"
+			column="SHIJIHUANKUANJINE"
+			not-null="true"
+			length="10" />
+		<property
+			name="daikuanyue"
+			type="java.math.BigDecimal"
+			column="DAIKUANYUE"
+			not-null="true"
+			length="10" />
+		<property
+			name="dangqianyuqiqishu"
+			type="java.math.BigDecimal"
+			column="DANGQIANYUQIQISHU"
+			not-null="true"
+			length="2" />
+		<property
+			name="dangqianyuqizonge"
+			type="java.math.BigDecimal"
+			column="DANGQIANYUQIZONGE"
+			not-null="true"
+			length="10" />
+		<property
+			name="yuqiyigeyue"
+			type="java.math.BigDecimal"
+			column="YUQIYIGEYUE"
+			not-null="true"
+			length="10" />
+		<property
+			name="yuqilianggeyue"
+			type="java.math.BigDecimal"
+			column="YUQILIANGGEYUE"
+			not-null="true"
+			length="10" />
+		<property
+			name="yuqisangeyue"
+			type="java.math.BigDecimal"
+			column="YUQISANGEYUE"
+			not-null="true"
+			length="10" />
+		<property
+			name="yuqiliugeyue"
+			type="java.math.BigDecimal"
+			column="YUQILIUGEYUE"
+			not-null="true"
+			length="10" />
+		<property
+			name="weiyuecishu"
+			type="java.math.BigDecimal"
+			column="WEIYUECISHU"
+			not-null="true"
+			length="3" />
+		<property
+			name="zuigaoyuqiqishu"
+			type="java.math.BigDecimal"
+			column="ZUIGAOYUQIQISHU"
+			not-null="true"
+			length="2" />
+		<property
+			name="zhanghuzhuangtai"
+			type="java.math.BigDecimal"
+			column="ZHANGHUZHUANGTAI"
+			not-null="true"
+			length="1" />
+		<property
+			name="ershisigeyue"
+			type="java.lang.String"
+			column="ERSHISIGEYUE"
+			not-null="true"
+			length="24" />
+		<property
+			name="zhanghuxinxitishi"
+			type="java.math.BigDecimal"
+			column="ZHANGHUXINXITISHI"
+			not-null="true"
+			length="1" />
+		<property
+			name="xingming"
+			type="java.lang.String"
+			column="XINGMING"
+			not-null="true"
+			length="30" />
+		<property
+			name="zhengjianleixing"
+			type="java.lang.String"
+			column="ZHENGJIANLEIXING"
+			not-null="true"
+			length="1" />
+		<property
+			name="zhengjianhaoma"
+			type="java.lang.String"
+			column="ZHENGJIANHAOMA"
+			not-null="true"
+			length="18" />
+		<property
+			name="shujutiquriqi"
+			type="java.lang.String"
+			column="SHUJUTIQURIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="baowenshengchengriqi"
+			type="java.lang.String"
+			column="BAOWENSHENGCHENGRIQI"
+			not-null="true"
+			length="8" />
+		<property
+			name="jiluzhuangtai"
+			type="java.math.BigDecimal"
+			column="JILUZHUANGTAI"
+			not-null="true"
+			length="1" />
+		<property
+			name="isexport"
+			type="java.math.BigDecimal"
+			column="ISEXPORT"
+			not-null="true"
+			length="1" />
+
+	</class>
+</hibernate-mapping>

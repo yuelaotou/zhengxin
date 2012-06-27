@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="receiveaccModifyAF"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.form.ReceiveaccModifyAF" />
+		<form-bean name="gatheringAccAF"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.form.GatheringAccAF" />
+		<!--	公共结束	-->
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="receiveaccModifyAF" path="/receiveaccTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.ReceiveaccTaShowAC">
+			<forward name="to_show_receiveacc"
+				path="/loanapply/receiveacc/receiveacc_modify.jsp" />
+		</action>
+		<action name="receiveaccModifyAF" path="/receiveaccTaModifyAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.ReceiveaccTaModifyAC">
+			<forward name="to_show_receiveacc"
+				path="/receiveaccTaShowAC.do" />
+		</action>
+		<action path="/receiveaccTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.ReceiveaccTaFindAAC">
+		</action>
+		<action name="gatheringAccAF" path="/gatheringAccTbFindAC"
+type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.GatheringAccTbFindAC">
+			<forward name="to_gathering_show"
+				path="/gatheringAccTbShowAC.do" />
+		</action>
+		<action name="idAF" path="/gatheringAccTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.GatheringAccTbShowAC">
+			<forward name="to_gathering_show"
+				path="/loanapply/receiveacc/gatheringacc_show.jsp" />
+		</action>
+		<action name="idAF" path="/gatheringAccPrintAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.GatheringAccPrintAC">
+			<forward name="to_gatheringAccInfoDTO_print"
+				path="/loanapply/receiveacc/gathering_print.jsp" />
+		</action>
+		<action name="idAF" path="/recieveAccForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.RecieveAccForwardURLAC">
+			<forward name="to_receiveacc_modify"
+				path="/receiveaccTaShowAC.do" />
+		</action>
+		<action name="idAF" path="/gathingAccForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loanapply.receiveacc.action.GathingAccForwardURLAC">
+			<forward name="to_gathingacc_list"
+				path="/gatheringAccTbShowAC.do" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

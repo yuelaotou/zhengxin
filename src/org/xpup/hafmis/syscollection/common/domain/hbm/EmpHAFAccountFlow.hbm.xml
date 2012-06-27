@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.EmpHAFAccountFlow" 
+    table="AA102"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA102</param>
+	</generator>
+    </id>
+	<property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+    <property
+        name="debit"
+        type="java.math.BigDecimal"
+        column="DEBIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="credit"
+        type="java.math.BigDecimal"
+        column="CREDIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="interest"
+        type="java.math.BigDecimal"
+        column="INTEREST"
+        length="18"
+    />
+    <property
+        name="summary"
+        type="java.lang.String"
+        column="SUMMARY"
+        length="50"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+
+ <property name="empName" type="java.lang.String" formula="(select distinct ba002.name from BA002 ba002,AA002 aa002  where aa002.emp_info_id=ba002.id and aa002.id=EMP_ID )"/>
+ <property name="empMoney" type="java.math.BigDecimal" formula="(debit+credit)"/>
+ 
+    <many-to-one name="orgHAFAccountFlow"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.OrgHAFAccountFlow" not-null="true" lazy="false">
+			<column name="ORG_FLOW_ID" />
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

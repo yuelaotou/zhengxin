@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="ChgPersonHead" 
+    table="AA204"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_AA201</param>
+	</generator>
+    </id>
+
+
+    <property
+        name="chngMonth"
+        type="java.lang.String"
+        column="CHNG_MONTH"
+        not-null="true"
+        length="6"
+    />
+    <property
+        name="bizDate"
+        type="java.lang.String"
+        column="BIZ_DATE"
+        not-null="true"
+        length="8"
+    />
+    <property
+        name="chgStatus"
+        type="java.lang.Integer"
+        column="CHG_STATUS"
+        not-null="true"
+        length="22"
+    />
+    
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"    
+        length="50"
+    />
+    
+   <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"    
+        length="50"
+    />
+   <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"    
+        length="50"
+    />
+ <property
+        name="oldPayment"
+        type="java.math.BigDecimal"
+        column="OLD_PAYMENT"
+        not-null="true"
+        length="18"
+    />
+    
+    <many-to-one name="org" column="ORG_ID" class="Org" not-null="true"></many-to-one>
+    <many-to-one name="paymentHead" column="PAY_HEAD_ID" class="PaymentHead"></many-to-one>
+    
+  <!-- 	<property name="sumChgPerson" type="integer" formula="(select count(a205.id) from aa205 a205 where a205.chg_head_id=id)"/>
+  	<property name="insChgperson" type="integer" formula="(select count(a205.id) from aa205 a205 where a205.chg_head_id = id and a205.chg_type in (1,3))"/>
+  	<property name="mulChgperson" type="integer" formula="(select count(a205.id) from aa205 a205 where a205.chg_head_id = id and a205.chg_type =4 )"/>
+  	<property name="insPayment" type="java.math.BigDecimal" formula="(select nvl(sum(a205.org_pay),0)+nvl(sum(a205.emp_pay),0) from aa205 a205 where a205.chg_head_id = id and a205.chg_type in (1,3) )"/>
+  	<property name="mulPayment" type="java.math.BigDecimal" formula="(select nvl(sum(a205.org_pay),0)+nvl(sum(a205.emp_pay),0) from aa205 a205 where a205.chg_head_id = id and a205.chg_type =4  )"/>
+  	<property name="sumOrgPay" type="java.math.BigDecimal" formula="(select nvl(sum(a205.org_pay),0) from aa205 a205 where a205.chg_head_id = id)"/>
+  	<property name="sumEmpPay" type="java.math.BigDecimal" formula="(select nvl(sum(a205.emp_pay),0) from aa205 a205 where a205.chg_head_id = id)"/>
+  	<property name="sumSumPay" type="java.math.BigDecimal" formula="(select nvl(sum(a205.org_pay),0)+nvl(sum(a205.emp_pay),0) from aa205 a205 where a205.chg_head_id = id)"/>
+	<property name="oldOldPayment" type="java.math.BigDecimal" formula="(select nvl(a204.old_payment,0) from aa204 a204  where a204.id=id)"/> -->
+
+   
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

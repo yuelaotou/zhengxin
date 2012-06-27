@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="queryorgversionintAF"
+		 type="org.xpup.hafmis.syscollection.accounthandle.queryorgversionint.form.QueryorgversionintAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	<action path="/queryorgversionintShowAC" scope="request" 
+	 type="org.xpup.hafmis.syscollection.accounthandle.queryorgversionint.action.QueryorgversionintForwardURLAC">
+	 <forward name="to_queryorgversionintShowAC" path="/to_queryorgversionintShowAC.do"></forward>
+	</action>
+	 
+	 <action path="/to_queryorgversionintShowAC" scope="request" 
+	  type="org.xpup.hafmis.syscollection.accounthandle.queryorgversionint.action.QueryorgversionintShowAC">
+	  <forward name="to_queryorgversionint_show" path="/queryorgversionint_show.jsp"></forward>
+	 </action>
+	 
+	 <action name="queryorgversionintAF" path="/queryorgversionintFindAC" scope="request" 
+	 type="org.xpup.hafmis.syscollection.accounthandle.queryorgversionint.action.QueryorgversionintFindAC">
+	 <forward name="to_queryorgversionintShowAC" path="/to_queryorgversionintShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/queryorgversionintMaintainAC" scope="request" 
+	 type="org.xpup.hafmis.syscollection.accounthandle.queryorgversionint.action.QueryorgversionintForwardURLAC">
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+    <plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/queryorgversionint/applicationContext.xml" />
+	</plug-in>
+</struts-config>

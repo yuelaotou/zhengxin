@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/forwardAC.do" location="950,150" dimension="670,84" />
+  <StrutsActivity path="/showListAC.do" location="50,50" dimension="676,84" />
+  <StrutsActivity path="/findListAC.do" location="50,250" dimension="676,84" />
+  <StrutsActivity path="/maintainAC.do" location="950,350" dimension="676,84" />
+  <StrutsActivity path="/orginandoutschedule.jsp" location="950,50" dimension="184,48" />
+  <StrutsActivity path="/printscheduleinfo.jsp" location="50,450" dimension="172,48" />
+  <StrutsActivity path="/printScheduleInfo.jsp" />
+  <StrutsTransition id="/maintainAC.do,to_print,/printScheduleInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1288,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainAC.do,to_print,/printscheduleinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1288,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findListAC.do,showlist,/showListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="388,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showListAC.do,orginandoutschedule,/orginandoutschedule.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="726,83" />
+      <AbsolutePoint location="950,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/forwardAC.do,showlist,/showListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="388,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

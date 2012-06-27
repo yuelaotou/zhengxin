@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="loanLastSureShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanlastsure.form.LoanLastSureShowAF" />
+		<!-- ========================loanapply======================-->
+		<!-- ========================endorsecontract======================-->
+		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loanLastSureForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loanlastsure.action.LoanLastSureForwardURLAC">
+			<forward name="loanLastSureShowAC"
+				path="/loanLastSureShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanLastSureShowAF" path="/loanLastSureShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanlastsure.action.LoanLastSureShowAC"
+			scope="request">
+			<forward name="to_loanLastSure_show"
+				path="/loanapply/loanlastsure/loanlastsure_show.jsp">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/loanLastSureMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanlastsure.action.LoanLastSureMaintainAC"
+			scope="request" parameter="method">
+			<forward name="loanLastSureShowAC"
+				path="/loanLastSureShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanLastSureShowAF" path="/loanLastFindABCDE"
+			type="org.xpup.hafmis.sysloan.loanapply.loanlastsure.action.LoanLastSureFind_1AC"
+			scope="request">
+			<forward name="loanLastSureShowAC"
+				path="/loanLastSureShowAC.do">
+			</forward>
+			<forward name="to_loanLastSure_show"
+				path="/loanapply/loanlastsure/loanlastsure_show.jsp">
+			</forward>
+		</action>
+
+		
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

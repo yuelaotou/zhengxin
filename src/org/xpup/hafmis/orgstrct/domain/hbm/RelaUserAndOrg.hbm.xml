@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.orgstrct.domain.RelaUserAndOrg" 
+    table="BB106"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+	   <param name="sequence">SEQ_BB106</param>
+	</generator>
+    </id>
+
+    <property
+        name="username"
+        type="java.lang.String"
+        column="USERNAME"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="orgId"
+        type="java.math.BigDecimal"
+        column="ORG_ID"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="collBankId"
+        type="java.lang.String"
+        column="COLL_BANK_ID"
+        length="20"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        length="50"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

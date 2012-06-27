@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="SpecialPick" 
+    table="AA308"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA308</param>
+			</generator>
+    </id>
+    <property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+    <property
+        name="pickCorpus"
+        type="java.math.BigDecimal"
+        column="PICK_CORPUS"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="isPick"
+        type="java.math.BigDecimal"
+        column="IS_PICK"
+        not-null="true"
+        length="22"
+    />
+    
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="operateTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        length="7"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="pickPeopleNum"
+        type="integer"
+        formula="(select count(aa308.id) from AA308 aa308 where aa308.id=id)"
+  	/>
+  	<property
+        name="pickCorpusSum"
+        type="java.math.BigDecimal"
+        formula="(select sum(aa308.PICK_CORPUS) from AA308 aa308 where aa308.id=id)"
+  	/>
+  	<property name="empName" type="java.lang.String" formula="(select distinct ba002.name from BA002 ba002,AA002 aa002  where aa002.emp_info_id=ba002.id and aa002.id=EMP_ID)"/>
+    <many-to-one name="org"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.Org" not-null="true" lazy="false">
+			<column name="ORG_ID" />
+	</many-to-one>
+	
+</class>
+</hibernate-mapping>

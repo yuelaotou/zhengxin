@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="ChgpayHeadImport" col="5"  space="0" row="2">
+     <column>
+	     <name>OrgId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>OrgName</name>
+		 <typle>java.lang.String</typle>
+     </column>
+	 <column>
+	     <name>ChgMonth</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>PayMode</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>PayMode1</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	
+</file>
+<file name="ChgpayListImport" col="8"  space="2" row="-1">
+	  <column>
+	     <name>EmpId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>EmpName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	  <column>
+	     <name>CardNum</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>OldOrgPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>OldEmpPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>OrgPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>EmpPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 	<column>
+	     <name>SalaryBase</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+  </file>
+</root>

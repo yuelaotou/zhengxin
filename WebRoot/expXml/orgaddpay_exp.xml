@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="OrgaddpayHeadExport" col="5"  space="0" row="2">
+    <column>orgid</column>
+	<column>orgName</column>
+	<column>addStartPayMonth</column>
+	<column>addpayMonth</column>
+	<column>noteNum</column>
+</file>
+<file name="OrgaddpayListExport" col="12"  space="2" row="-1">
+    <column>empId</column>
+	<column>empName</column>
+	<column>orgShouldpay</column>
+   	<column>empShouldpay</column>
+    <column>orgAddpayMoney</column>
+   	<column>empAddpayMoney</column>
+   	<column>empPayStatus</column>
+   	<column>startPayMonth</column>
+   	<column>endPayMonth</column>
+   	<column>salaryBase</column>
+   	<column>orgRate</column>
+   	<column>empRate</column>
+</file>
+</root>

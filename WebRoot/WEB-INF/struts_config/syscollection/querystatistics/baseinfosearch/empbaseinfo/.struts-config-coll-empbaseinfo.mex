@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/employeeInfoListForwardAC.do" location="50,50" dimension="712,84" />
+  <StrutsActivity path="/employeeInfoListShowAC.do" location="950,50" dimension="658,84" />
+  <StrutsActivity path="/employeeInfoSearchAC.do" location="50,250" dimension="646,84" />
+  <StrutsActivity path="/skipAC.do" location="950,250" dimension="256,84" />
+  <StrutsActivity path="/statEmployeeInfoAC.do" location="50,450" dimension="634,84" />
+</FlowViewLayout>
+

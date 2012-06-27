@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="orgVerAccountBalanceAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.form.OrgVerAccountBalanceAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+
+		<action name="orgVerAccountBalanceAF"
+			path="/orgVerAccountBalanceFindAAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.action.OrgVerAccountBalanceFindAAC">
+			<forward name="orgVerAccountBalanceShowAC"
+				path="/orgVerAccountBalanceShowAC.do">
+			</forward>
+		</action>
+
+		<action path="/orgVerAccountBalanceForwardAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.action.OrgVerAccountBalanceForwardURLAC">
+			<forward name="orgVerAccountBalanceShowAC"
+				path="/orgVerAccountBalanceShowAC.do">
+			</forward>
+		</action>
+
+		<action path="/orgVerAccountBalanceShowAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.action.OrgVerAccountBalanceShowAC">
+			<forward name="to_orgveraccountbalance_show"
+				path="/orgveraccountbalance_show.jsp">
+			</forward>
+		</action>
+
+		<action name="orgVerAccountBalanceAF"
+			path="/orgVerAccountBalanceFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.action.OrgVerAccountBalanceFindAC">
+			<forward name="orgVerAccountBalanceShowAC"
+				path="/orgVerAccountBalanceShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/orgVerAccountBalanceMaintainAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.orgveraccountbalance.action.OrgVerAccountBalanceMaintainAC"
+			scope="request" parameter="method">
+			<forward name="orgVerAccountBalanceShowAC"
+				path="/orgVerAccountBalanceShowAC.do">
+			</forward>
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/orgveraccountbalance/applicationContext.xml" />
+	</plug-in>
+</struts-config>

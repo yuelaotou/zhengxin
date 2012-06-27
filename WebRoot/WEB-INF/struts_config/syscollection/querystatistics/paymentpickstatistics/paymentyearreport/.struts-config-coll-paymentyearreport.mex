@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/paymntMonthReportShowAC.do" location="448,184" dimension="742,84" />
+  <StrutsActivity path="/paymntMonthReportFindAC.do" location="878,0" dimension="742,84" />
+  <StrutsActivity path="/paymntMonthReportMaintainAC.do" location="0,461" dimension="766,84" />
+  <StrutsActivity path="/paymntMonthReport.jsp" location="733,368" dimension="172,48" />
+  <StrutsActivity path="/paymntMonthReport_cell.jsp" location="282,645" dimension="202,48" />
+  <StrutsActivity path="/paymentYearReportForwardAC.do" />
+  <StrutsTransition id="/paymntMonthReportForwardURLAC.do,paymntMonthReportShowAC,/paymntMonthReportShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="389,84" />
+      <AbsolutePoint location="389,134" />
+      <AbsolutePoint location="633,134" />
+      <AbsolutePoint location="633,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paymntMonthReportFindAC.do,paymntMonthReportShowAC,/paymntMonthReportShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1249,84" />
+      <AbsolutePoint location="1249,134" />
+      <AbsolutePoint location="1004,134" />
+      <AbsolutePoint location="1004,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paymntMonthReportMaintainAC.do,to_paymntMonthReport_cell,/paymntMonthReport_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="383,545" />
+      <AbsolutePoint location="383,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paymntMonthReportShowAC.do,to_paymntMonthReport,/paymntMonthReport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="819,268" />
+      <AbsolutePoint location="819,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/paymentYearReportForwardAC.do,paymntMonthReportShowAC,/paymntMonthReportShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="819,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

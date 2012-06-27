@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xpup.hafmis.orgstrct.domain">
+
+	<joined-subclass name="HafRole" table="BB202"
+		extends="org.xpup.security.common.domain.Role">
+
+		<key column="ID" />
+
+		<property name="description" type="string" column="DESCRIPTION" />
+		
+		<property name="officeId" type="string" column="OFFICE_ID" />
+
+		<property name="departmentId" type="string" column="DEPT_ID" />
+
+		<property name="operatorId" type="string" column="OPERATOR_ID" />
+
+		<many-to-one name="organizationUnit" class="OrganizationUnit"
+			lazy="false">
+			<column name="ORG_UNIT_ID" />
+		</many-to-one>
+
+	</joined-subclass>
+
+</hibernate-mapping>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="paymntPickAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickdetail.form.PaymntPickAF" />
+
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+
+		<action path="/paymntPickTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickdetail.action.PaymntPickTaForwardURLAC">
+			<forward name="paymntPickTaShowAC"
+				path="/paymntPickTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="paymntPickAF" path="/paymntPickTaShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickdetail.action.PaymntPickTaShowAC">
+			<forward name="to_paymntpicktashow"
+				path="/paymntpicktashow.jsp">
+			</forward>
+		</action>
+
+		<action name="paymntPickAF" path="/paymntPickTaFindAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickdetail.action.PaymntPickTaFindAC">
+			<forward name="paymntPickTaShowAC"
+				path="/paymntPickTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="paymntPickAF" path="/paymntPickTaMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickdetail.action.PaymntPickTaMaintainAC">
+			<forward name="to_paymntpickta_cell"
+				path="/paymntpickta_cell.jsp">
+			</forward>
+		</action>
+
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickdetail/applicationContext.xml" />
+	</plug-in>
+</struts-config>

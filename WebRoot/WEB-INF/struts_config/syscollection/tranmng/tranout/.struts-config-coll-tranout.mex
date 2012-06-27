@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/tran_FindAAC.do" location="50,50" dimension="435,88" />
+  <StrutsActivity path="/tran_AddFindempinfoAAC.do" location="650,50" dimension="429,88" />
+  <StrutsActivity path="/tran_CheckEmpInfoAAC.do" location="1250,50" dimension="421,88" />
+  <StrutsActivity path="/tran_FindImpOrgNameAAC.do" location="50,250" dimension="435,88" />
+  <StrutsActivity path="/tran_showAC.do" location="650,250" dimension="370,88" />
+  <StrutsActivity path="/tran_MaintainAC.do" location="50,450" dimension="385,88" />
+  <StrutsActivity path="/tranTaImportAC.do" location="650,450" dimension="383,88" />
+  <StrutsActivity path="/tran_addMaintainAC.do" location="50,650" dimension="403,88" />
+  <StrutsActivity path="/tran_TbMaintainAC.do" location="650,650" dimension="397,88" />
+  <StrutsActivity path="/tran_FindTbAC.do" location="50,850" dimension="377,88" />
+  <StrutsActivity path="/tran_showFindTbAC.do" location="650,850" dimension="402,88" />
+  <StrutsActivity path="/tranOutMXPrintAC.do" location="50,1450" dimension="460,84" />
+  <StrutsActivity path="/tranoutTaForwardURLAC.do" location="50,1050" dimension="426,88" />
+  <StrutsActivity path="/tranoutTbForwardURLAC.do" location="950,1250" dimension="490,84" />
+  <StrutsActivity path="/tran_showTCAC.do" location="50,1250" dimension="383,88" />
+  <StrutsActivity path="/tranoutTbBackAC.do" location="950,1450" dimension="454,84" />
+  <StrutsActivity path="/tranoutTcForwardURLAC.do" location="50,1650" dimension="490,84" />
+  <StrutsActivity path="/inTran_AddFindempinfoAAC.do" location="1250,350" dimension="439,88" />
+  <StrutsActivity path="/tranExportTaAC.do" location="1250,550" dimension="383,88" />
+  <StrutsActivity path="/tranout_show.jsp" location="650,1050" dimension="118,49" />
+  <StrutsActivity path="/tranout_cell_ygb.jsp" location="650,1550" dimension="166,48" />
+  <StrutsActivity path="/tranout_cell_yg.jsp" location="1250,950" dimension="126,49" />
+  <StrutsActivity path="/tranout_cell.jsp" location="650,1350" dimension="142,48" />
+  <StrutsActivity path="/tranout_imports.jsp" location="950,1050" dimension="128,49" />
+  <StrutsActivity path="/tranout_cell_yga.jsp" location="1250,1150" dimension="132,49" />
+  <StrutsActivity path="/printCredence_cell.jsp" location="1250,850" dimension="140,49" />
+  <StrutsActivity path="/tran_add.jsp" location="650,1150" dimension="95,49" />
+  <StrutsActivity path="/printall_cell.jsp" location="1250,750" dimension="104,49" />
+  <StrutsActivity path="/tranoutlist.jsp" location="1250,1050" dimension="100,49" />
+  <StrutsActivity path="/tranout_showtb.jsp" location="950,1150" dimension="128,49" />
+  <StrutsActivity path="/tranout_showTC.jsp" location="650,1250" dimension="131,49" />
+  <StrutsActivity path="/tranout_mx_cell.jsp" location="650,1450" dimension="160,48" />
+  <StrutsTransition id="/tran_MaintainAC.do,to_tranout_imports.jsp,/tranout_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,524" />
+      <AbsolutePoint location="5,524" />
+      <AbsolutePoint location="5,983" />
+      <AbsolutePoint location="1014,983" />
+      <AbsolutePoint location="1014,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_tran_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,664" />
+      <AbsolutePoint location="555,664" />
+      <AbsolutePoint location="555,264" />
+      <AbsolutePoint location="650,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_tran_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,450" />
+      <AbsolutePoint location="242,395" />
+      <AbsolutePoint location="835,395" />
+      <AbsolutePoint location="835,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_FindAAC.do,to_tran_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="267,138" />
+      <AbsolutePoint location="267,183" />
+      <AbsolutePoint location="835,183" />
+      <AbsolutePoint location="835,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_showFindTbAC.do,to_show_jsp,/tranout_showtb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="911,938" />
+      <AbsolutePoint location="911,1174" />
+      <AbsolutePoint location="950,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_tran_print_yga,/tranout_cell_yga.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranoutTaForwardURLAC.do,to_show,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="468,1050" />
+      <AbsolutePoint location="468,365" />
+      <AbsolutePoint location="805,365" />
+      <AbsolutePoint location="805,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_addMaintainAC.do,to_addjsp,/tran_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,694" />
+      <AbsolutePoint location="35,694" />
+      <AbsolutePoint location="35,1214" />
+      <AbsolutePoint location="697,1214" />
+      <AbsolutePoint location="697,1199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_FindTbAC.do,to_showFindAC,/tran_showFindTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="427,894" />
+      <AbsolutePoint location="650,894" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranTaImportAC.do,tranout_imports,/tranout_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,494" />
+      <AbsolutePoint location="1014,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranoutTbBackAC.do,to_tran_showTbAC,/tran_showFindTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1483" />
+      <AbsolutePoint location="851,1483" />
+      <AbsolutePoint location="851,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_tran_print,/tranout_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,494" />
+      <AbsolutePoint location="-25,494" />
+      <AbsolutePoint location="-25,1413" />
+      <AbsolutePoint location="721,1413" />
+      <AbsolutePoint location="721,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_tran_print_ygb,/tranout_cell_ygb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_printall.jsp,/printall_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,694" />
+      <AbsolutePoint location="1302,694" />
+      <AbsolutePoint location="1302,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,tranoutlist,/tranoutlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="848,694" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_printCredence.jsp,/printCredence_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,494" />
+      <AbsolutePoint location="1320,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_tran_showTbAC,/tran_showFindTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="848,738" />
+      <AbsolutePoint location="848,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_tran_print_yg,/tranout_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,724" />
+      <AbsolutePoint location="1154,724" />
+      <AbsolutePoint location="1154,983" />
+      <AbsolutePoint location="1250,983" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_printCredence.jsp,/printCredence_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1047,664" />
+      <AbsolutePoint location="1369,664" />
+      <AbsolutePoint location="1369,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranExportTaAC.do,to_tran_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1633,594" />
+      <AbsolutePoint location="1764,594" />
+      <AbsolutePoint location="1764,294" />
+      <AbsolutePoint location="1020,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_TbMaintainAC.do,to_tran_print,/tranout_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,724" />
+      <AbsolutePoint location="525,724" />
+      <AbsolutePoint location="525,1374" />
+      <AbsolutePoint location="650,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_tran_print_yg,/tranout_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,494" />
+      <AbsolutePoint location="1313,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranOutMXPrintAC.do,to_print_one,/tranout_cell_yg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="510,1483" />
+      <AbsolutePoint location="615,1483" />
+      <AbsolutePoint location="615,953" />
+      <AbsolutePoint location="1250,953" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_addMaintainAC.do,to_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="453,694" />
+      <AbsolutePoint location="615,694" />
+      <AbsolutePoint location="615,324" />
+      <AbsolutePoint location="650,324" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranoutTbForwardURLAC.do,to_Tbshow,/tran_showFindTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1284" />
+      <AbsolutePoint location="881,1284" />
+      <AbsolutePoint location="881,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_MaintainAC.do,to_add_jsp,/tran_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,464" />
+      <AbsolutePoint location="-85,464" />
+      <AbsolutePoint location="-85,1174" />
+      <AbsolutePoint location="650,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranoutTcForwardURLAC.do,to_tcshow,/tran_showTCAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1692" />
+      <AbsolutePoint location="35,1692" />
+      <AbsolutePoint location="35,1294" />
+      <AbsolutePoint location="50,1294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_showTCAC.do,to_show_jsp,/tranout_showTC.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="433,1284" />
+      <AbsolutePoint location="650,1284" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranOutMXPrintAC.do,to_print,/tranout_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="448,1450" />
+      <AbsolutePoint location="448,1314" />
+      <AbsolutePoint location="721,1314" />
+      <AbsolutePoint location="721,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tranTaImportAC.do,to_tran_showAC,/tran_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="865,450" />
+      <AbsolutePoint location="865,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/tran_showAC.do,to_show_jsp,/tranout_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,294" />
+      <AbsolutePoint location="585,294" />
+      <AbsolutePoint location="585,1074" />
+      <AbsolutePoint location="650,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

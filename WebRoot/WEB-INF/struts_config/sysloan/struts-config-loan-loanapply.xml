@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyNewAF" />
+		<form-bean name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTbNewAF" />
+		<form-bean name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTcNewAF" />
+		<form-bean name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTdNewAF" />
+		<form-bean name="loanapplytenewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTeNewAF" />
+		<form-bean name="develepernewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.DeveleperNewAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/showLoanapplyAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTaShowAC">
+			<forward name="to_loanapply_new"
+				path="/loanapply/loanapply/loanapply_new.jsp" />
+		</action>
+		<action path="/findLoanapplyAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTaFindAAC" />
+
+		<action path="/loanapplyTaMainTianAC" name="loanapplynewAF"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTaMainTianAC">
+			<forward name="loanapply_new" path="/showLoanapplyAC.do" />
+		</action>
+		<action path="/loanapplytbshowAC" name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTbShowAC">
+			<forward name="assistantborrower_new"
+				path="/loanapply/loanapply/assistantborrower_new.jsp" />
+		</action>
+		<action name="loanapplytbnewAF" parameter="method"
+			path="/loanapplytbtopmaintianAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTbTopMainTianAC">
+			<forward name="loanapplytbshowAC"
+				path="/loanapplytbshowAC.do" />
+		</action>
+		<action name="idAF" parameter="method"
+			path="/loanapplytbdownmaintianAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTbDownMainTianAC">
+			<forward name="loanapplytbshowAC"
+				path="/loanapplytbshowAC.do" />
+		</action>
+		<action path="/loanapplytbfindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTbFindAAC" />
+		<action path="/loanapplytbfindempinfoAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTbEmpInfoFindAAC" />
+		<action name="loanapplytcnewAF" path="/loanapplytcshowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcShowAC">
+			<forward name="loanapplytc_new"
+				path="/loanapply/loanapply/loanapplytc_new.jsp" />
+		</action>
+		<action name="loanapplytcnewAF" path="/loanapplytcmaintianAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcMainTianAC">
+			<forward name="loanapplytcshowAC"
+				path="/loanapplytcshowAC.do" />
+		</action>
+		<action path="/loanapplytcfindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcFindAAC" />
+		<action path="/loanapplytcfindorgAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcFindOrgAAC" />
+		<action name="loanapplytdnewAF" path="/loanapplytdshowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTdShowAC">
+			<forward name="loanapplytd_new"
+				path="/loanapply/loanapply/loanapplytd_new.jsp" />
+		</action>
+		<action name="loanapplytdnewAF" path="/loanapplytdmaintianAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTdMainTianAC">
+			<forward name="loanapplytdshowAC"
+				path="/loanapplytdshowAC.do" />
+		</action>
+		<action path="/loanapplytdfindmonthrateAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTdFindMonthRateAAC" />
+		<action path="/loanapplytdfindmonthinterestAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTdFindMonthInterestAAC" />
+		<action path="/loanapplytdfindcontractAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTdFindContractAAC" />
+		<action path="/loanapplyteshowAC" name="loanapplytenewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTeShowAC">
+			<forward name="loanapplyte_new"
+				path="/loanapply/loanapply/loanapplyte_new.jsp" />
+		</action>
+		<action name="loanapplytenewAF" path="/loanapplytefindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTeFindAC">
+			<forward name="loanapplyteshowAC"
+				path="/loanapplyteshowAC.do" />
+		</action>
+		<action name="idAF" path="/loanapplytemaintianAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTeMainTianAC">
+			<forward name="showLoanapplyAC" path="/showLoanapplyAC.do" />
+			<forward name="loanapplyteshowAC"
+				path="/loanapplyteshowAC.do" />
+			<forward name="loanapply_tb_cell"
+				path="/loanapply/loanapply/loanapply_tb_cell.jsp" />
+			<forward name="loanapply_ta_cell"
+				path="/loanapply/loanapply/loanapply_ta_cell.jsp" />
+			<forward name="to_acceptance_cll"
+				path="/loanapply/loanapply/acceptance_cll.jsp" />
+			<forward name="to_loanapplytable_cll"
+				path="/loanapply/loanapply/loanapplytable_cll.jsp" />
+			<forward name="to_loanapplyte_printbargainor"
+				path="/loanapply/loanapply/loanapplyte_printbargainor.jsp" />
+		</action>
+		<action path="/loanapplytcfindbankAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcFindBankAAC" />
+		<action path="/loanapplytcfindfloorAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcFindFloorAAC" />
+		<action path="/loanapplytcfindHouseAddAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyTcFindHouseAddAAC" />
+		<action path="/loanapplytcfindfloorNameAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplytcfindfloorNameAAC" />
+
+		<action path="/develepershowAC" name="develepernewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.DeveleperShowAC">
+			<forward name="develeper_new"
+				path="/loanapply/loanapply/develeper_new.jsp" />
+		</action>
+		<action name="develepernewAF" path="/develeperfindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.DeveleperFindAC">
+			<forward name="develepershowAC" path="/develepershowAC.do" />
+		</action>
+		<action path="/findNotPassReasonAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.FindNotPassReasonAC">
+			<forward name="showreason_show"
+				path="/loanapply/loanapply/showreason_show.jsp" />
+		</action>
+		<action path="/loanapplyForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.action.LoanapplyForwardAC">
+			<forward name="showLoanapplytaAC"
+				path="/showLoanapplyAC.do" />
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

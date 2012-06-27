@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/businesslogsearchForwardURLAC.do" location="50,350" dimension="610,84" />
+  <StrutsActivity path="/businesslogsearchShowAC.do" location="50,550" dimension="670,84" />
+  <StrutsActivity path="/businesslogsearchMaintainAC.do" location="950,650" dimension="598,84" />
+  <StrutsActivity path="/businesslogsearchFindAC.do" location="50,850" dimension="670,84" />
+  <StrutsActivity path="/businesslogsearch_show.jsp" location="950,550" dimension="202,48" />
+  <StrutsActivity path="/businesslogprint.jsp" location="50,750" dimension="166,48" />
+  <StrutsActivity path="/logflow_show.jsp" location="923,368" dimension="142,48" />
+  <StrutsActivity path="/orgoverpay_lb_detail.jsp" location="50,250" dimension="190,48" />
+  <StrutsActivity path="/bizcheck_mx_A.jsp" location="350,250" dimension="148,48" />
+  <StrutsActivity path="/bizcheck_mx_M.jsp" location="650,250" dimension="148,48" />
+  <StrutsActivity path="/bizcheck_mx_F.jsp" location="350,750" dimension="148,48" />
+  <StrutsActivity path="/bizcheck_mx_D.jsp" location="650,750" dimension="148,48" />
+  <StrutsActivity path="/bizcheck_mx_E.jsp" location="950,850" dimension="148,48" />
+  <StrutsActivity path="/bizcheck_windowlist.jsp" location="950,950" dimension="184,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_mx_A.jsp" location="50,1050" dimension="232,48" />
+  <StrutsActivity path="../../bizcheck/orgoverpay_lb_detail.jsp" location="350,1050" dimension="274,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_mx_M.jsp" location="950,1050" dimension="232,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_mx_F.jsp" location="50,1150" dimension="232,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_mx_D.jsp" location="350,1150" dimension="232,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_mx_E.jsp" location="650,1150" dimension="232,48" />
+  <StrutsActivity path="../../bizcheck/bizcheck_windowlist.jsp" location="950,1150" dimension="268,48" />
+  <StrutsActivity path="/logSearchTaWindowAC.do" location="50,1250" dimension="646,84" />
+  <StrutsActivity path="/clearaccount_mx_A.jsp" location="1250,450" dimension="172,48" />
+  <StrutsActivity path="/clearaccount_mx.jsp" location="1250,550" dimension="160,48" />
+  <StrutsActivity path="/clearaccount_mx_D.jsp" location="1250,850" dimension="172,48" />
+  <StrutsActivity path="/clearaccount_mx_E.jsp" location="1250,950" dimension="172,48" />
+  <StrutsActivity path="/clearaccount_mx_M.jsp" location="1250,1050" dimension="172,48" />
+  <StrutsActivity path="/clearaccount_mx_F.jsp" location="950,1250" dimension="172,48" />
+  <StrutsActivity path="/.jsp" location="1250,1250" dimension="70,48" />
+  <StrutsActivity path="/logsearch_mx_F.jsp" location="950,1350" dimension="154,48" />
+  <StrutsActivity path="/logsearch_mx_M.jsp" location="1250,1350" dimension="154,48" />
+  <StrutsActivity path="/logsearch_mx_E.jsp" location="50,1450" dimension="154,48" />
+  <StrutsActivity path="/logsearch_mx_A.jsp" location="350,1450" dimension="154,48" />
+  <StrutsActivity path="/logsearch_mx_D.jsp" location="650,1450" dimension="154,48" />
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_clearaccount_mx_D.jsp,/clearaccount_mx_D.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,1334" />
+      <AbsolutePoint location="373,1409" />
+      <AbsolutePoint location="1497,1409" />
+      <AbsolutePoint location="1497,874" />
+      <AbsolutePoint location="1422,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,show_window,/clearaccount_mx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="696,1313" />
+      <AbsolutePoint location="1623,1313" />
+      <AbsolutePoint location="1623,574" />
+      <AbsolutePoint location="1410,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businesslogsearchShowAC.do,to_businesslogsearch_show.jsp,/businesslogsearch_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="720,583" />
+      <AbsolutePoint location="950,583" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_D.jsp,/clearaccount_mx_D.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,1250" />
+      <AbsolutePoint location="373,1213" />
+      <AbsolutePoint location="1497,1213" />
+      <AbsolutePoint location="1497,874" />
+      <AbsolutePoint location="1422,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_F.jsp,/logsearch_mx_F.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="433,1334" />
+      <AbsolutePoint location="433,1374" />
+      <AbsolutePoint location="950,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_clearaccount_mx_A.jsp,/clearaccount_mx_A.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="696,1253" />
+      <AbsolutePoint location="897,1253" />
+      <AbsolutePoint location="897,474" />
+      <AbsolutePoint location="1250,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_clearaccount_mx_F.jsp,/clearaccount_mx_F.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="696,1283" />
+      <AbsolutePoint location="950,1283" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_D.jsp,/.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,1250" />
+      <AbsolutePoint location="373,1213" />
+      <AbsolutePoint location="1285,1213" />
+      <AbsolutePoint location="1285,1250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_businesslogsearchShowAC,/businesslogsearchShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1292" />
+      <AbsolutePoint location="-25,1292" />
+      <AbsolutePoint location="-25,592" />
+      <AbsolutePoint location="50,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_businesslogsearchShowAC,/businesslogsearchShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1292" />
+      <AbsolutePoint location="-25,1292" />
+      <AbsolutePoint location="-25,592" />
+      <AbsolutePoint location="50,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_clearaccount_mx_M.jsp,/clearaccount_mx_M.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,1250" />
+      <AbsolutePoint location="373,1213" />
+      <AbsolutePoint location="1336,1213" />
+      <AbsolutePoint location="1336,1098" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_M.jsp,/logsearch_mx_M.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="403,1334" />
+      <AbsolutePoint location="403,1413" />
+      <AbsolutePoint location="1327,1413" />
+      <AbsolutePoint location="1327,1398" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_A.jsp,/logsearch_mx_A.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,1334" />
+      <AbsolutePoint location="373,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_D.jsp,/logsearch_mx_D.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="665,1334" />
+      <AbsolutePoint location="665,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_logsearch_mx_E.jsp,/logsearch_mx_E.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="189,1334" />
+      <AbsolutePoint location="189,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businesslogsearchFindAC.do,to_businesslogsearchShowAC,/businesslogsearchShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="335,850" />
+      <AbsolutePoint location="335,634" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businesslogsearchMaintainAC.do,to_businesslogprint.jsp,/businesslogprint.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,692" />
+      <AbsolutePoint location="133,692" />
+      <AbsolutePoint location="133,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_clearaccount_mx_E.jsp,/clearaccount_mx_E.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="335,1250" />
+      <AbsolutePoint location="335,1013" />
+      <AbsolutePoint location="1336,1013" />
+      <AbsolutePoint location="1336,998" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/logSearchTaWindowAC.do,to_orgover_windowlist.jsp,/orgoverpay_lb_detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1292" />
+      <AbsolutePoint location="-25,1292" />
+      <AbsolutePoint location="-25,274" />
+      <AbsolutePoint location="50,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/businesslogsearchForwardURLAC.do,businesslogsearchShowAC,/businesslogsearchShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="355,434" />
+      <AbsolutePoint location="355,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

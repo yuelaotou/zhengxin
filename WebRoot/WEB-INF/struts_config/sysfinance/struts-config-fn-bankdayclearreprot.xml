@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- 直接跳到账簿管理:现金日记账的办理页面 -->
+	<action path="/bankDayClearReportForwardAC"
+	  		type="org.xpup.hafmis.sysfinance.accmng.bankdayclearreprot.action.BankDayClearReportForwardAC">
+	  	<forward name="cashdayclearreport_show" path="/cashDayClearReportShowAC.do"></forward>
+	 </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

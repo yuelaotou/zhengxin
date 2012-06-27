@@ -1,0 +1,204 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.Assurer" 
+    table="PL123"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL123</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="empId"
+        type="java.math.BigDecimal"
+        column="EMP_ID"
+        length="22"
+    />
+    <property
+        name="empName"
+        type="java.lang.String"
+        column="EMP_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="sex"
+        type="java.lang.String"
+        column="SEX"
+        length="100"
+    />
+    <property
+        name="cardKind"
+        type="java.lang.String"
+        column="CARD_KIND"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARD_NUM"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="birthday"
+        type="java.lang.String"
+        column="BIRTHDAY"
+        length="8"
+    />
+    <property
+        name="salary"
+        type="java.math.BigDecimal"
+        column="SALARY"
+        length="15"
+    />
+    <property
+        name="monthPay"
+        type="java.math.BigDecimal"
+        column="MONTH_PAY"
+        length="15"
+    />
+    <property
+        name="balance"
+        type="java.math.BigDecimal"
+        column="BALANCE"
+        length="15"
+    />
+    <property
+        name="empSt"
+        type="java.lang.String"
+        column="EMP_ST"
+        length="100"
+    />
+    <property
+        name="tel"
+        type="java.lang.String"
+        column="TEL"
+        length="100"
+    />
+    <property
+        name="mobile"
+        type="java.lang.String"
+        column="MOBILE"
+        length="100"
+    />
+    <property
+        name="homeTel"
+        type="java.lang.String"
+        column="HOME_TEL"
+        length="100"
+    />
+    <property
+        name="homeAddr"
+        type="java.lang.String"
+        column="HOME_ADDR"
+        length="100"
+    />
+    <property
+        name="homeMail"
+        type="java.lang.String"
+        column="HOME_MAIL"
+        length="100"
+    />
+    <property
+        name="orgId"
+        type="java.math.BigDecimal"
+        column="ORG_ID"
+        length="22"
+    />
+    <property
+        name="orgName"
+        type="java.lang.String"
+        column="ORG_NAME"
+        length="100"
+    />
+    <property
+        name="orgAddr"
+        type="java.lang.String"
+        column="ORG_ADDR"
+        length="100"
+    />
+    <property
+        name="orgMail"
+        type="java.lang.String"
+        column="ORG_MAIL"
+        length="100"
+    />
+    <property
+        name="orgTel"
+        type="java.lang.String"
+        column="ORG_TEL"
+        length="100"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        length="7"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+	<property
+        name="status"
+        type="java.lang.String"
+        column="STATUS"
+        length="100"
+    />
+    <property
+        name="photoUrl"
+        type="java.lang.String"
+        column="PHOTO_URL"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

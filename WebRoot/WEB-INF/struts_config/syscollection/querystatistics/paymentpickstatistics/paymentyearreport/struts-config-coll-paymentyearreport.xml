@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="paymentYearReportAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearreport.form.PaymentYearReportAF" />
+
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+
+		<action path="/paymentYearReportForwardAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearreport.action.PaymentYearReportForwardAC">
+			<forward name="paymentYearReportShowAC"
+				path="/paymentYearReportShowAC.do">
+			</forward>
+		</action>
+
+		<action name="paymentYearReportAF"
+			path="/paymentYearReportShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearreport.action.PaymentYearReportShowAC">
+			<forward name="paymentyearreport"
+				path="/paymentyearreport.jsp">
+			</forward>
+		</action>
+
+		<action name="paymentYearReportAF"
+			path="/paymentYearReportFindAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearreport.action.PaymentYearReportFindAC">
+			<forward name="paymentYearReportShowAC"
+				path="/paymentYearReportShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF"
+			path="/paymentYearReportMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.paymentyearreport.action.PaymentYearReportMaintainAC">
+			<forward name="paymentyearreport_cell"
+				path="/paymentyearreport_cell.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickstatistics/paymentyearreport/applicationContext.xml" />
+	</plug-in>
+</struts-config>

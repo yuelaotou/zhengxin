@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="displayAF" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orginandoutschedule.form.DisplayAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	<action path="/forwardAC" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orginandoutschedule.action.ForwardAC" >
+	<forward name="showlist" path="/showListAC.do"></forward>
+	</action>
+	<action name="displayAF" path="/showListAC" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orginandoutschedule.action.ShowListAC" >
+	<forward name="orginandoutschedule" path="/orginandoutschedule.jsp"></forward>
+	</action>
+	<action name="displayAF" path="/findListAC" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orginandoutschedule.action.FindListAC" >
+	<forward name="showlist" path="/showListAC.do"></forward>
+	</action>
+	<action name="idAF" path="/maintainAC" type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orginandoutschedule.action.MaintainAC" >
+	<forward name="to_print" path="/printScheduleInfo.jsp"></forward>
+	</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickstatistics/orginandoutschedule/applicationContext.xml" />
+	</plug-in>
+</struts-config>

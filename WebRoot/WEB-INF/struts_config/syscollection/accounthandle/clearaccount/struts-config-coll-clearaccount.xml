@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+			<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+			<form-bean name="clearAccountShowAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.form.ClearAccountShowAF" />
+			<form-bean name="clearAccountDetailAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.form.ClearAccountDetailAF" />
+			<form-bean name="clearAccountBalanceShowAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.form.ClearAccountBalanceShowAF" />
+			<form-bean name="clearAccountBalanceForm"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.form.ClearAccountBalanceForm" />
+			<form-bean name="orgbusinessflowAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.orgoperationflow.form.OrgbusinessflowAF" />
+			<form-bean name="empOperationFlowAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.operationflow.empoperationflow.form.EmpOperationFlowAF" />
+			<form-bean name="chenYanDSBAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.form.ChenYanDSBAF" />
+	</form-beans>
+	<global-forwards>
+        <forward name="toEmpOperationFlowTaShowAC" path="/empOperationFlowTaShowAC.do"></forward>
+    </global-forwards>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="clearAccountShowAF" path="/clearaccountsForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountsForwardURLAC">
+			<forward name="to_clearaccount_list" path="/showClearAccountAC.do"/>
+	</action>
+	<action name="clearAccountShowAF" path="/showClearAccountAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTaShowAC" >
+			<forward name="to_clearAccount_list" path="/clearaccount_list.jsp"></forward>
+		</action>
+		<action name="idAF" path="/maintainClearAccountAC" 
+		parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountMaintainAC" >
+			<forward name="showClearAccountAC" path="/showClearAccountAC.do"></forward>
+		</action>
+		<action name="clearAccountShowAF" path="/findClearAccountAC" 
+		parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTafindAC" >
+			<forward name="showClearAccountAC" path="/showClearAccountAC.do"></forward>
+		</action>
+		<action name="clearAccountShowAF" path="/clearaccountForwardURLAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearaccountForwardURLAC" >
+			<forward name="show_window" path="/clearAccountTaWindowAC.do"></forward>
+		</action>
+		<action path="/clearAccountTaWindowAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTaWindowAC" >
+		<forward name="to_clearaccount_mx_A.jsp" path="/clearaccount_mx_A.jsp"></forward>
+		<forward name="to_clearaccount_mx_M.jsp" path="/clearaccount_mx_M.jsp"></forward>
+		<forward name="to_clearaccount_mx_E.jsp" path="/clearaccount_mx_E.jsp"></forward>
+		<forward name="to_clearaccount_mx_F.jsp" path="/clearaccount_mx_F.jsp"></forward>
+		<forward name="to_clearaccount_mx_D.jsp" path="/clearaccount_mx_D.jsp"></forward>
+		<forward name="to_orgover_windowlist.jsp" path="/orgoverpay_lb_detail.jsp"></forward>
+			<forward name="show_window" path="/clearaccount_mx.jsp"></forward>
+		</action>
+		
+		<action name="clearAccountDetailAF" path="/clearAccountOrgoverPrintAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountOrgoverPrintAC" >
+			<forward name="show_report" path="/clearaccount_mx_orgover_cell.jsp"></forward>
+		</action>
+		
+		<action path="/clearAccountMXFindAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountMXFindAAC" >
+		</action>
+		
+		<action name="clearAccountDetailAF" path="/clearAccountWindowPrintAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountWindowPrintAC" >
+			<forward name="show_report" path="/clearaccount_mx_cell.jsp"></forward>
+		</action>
+
+		<action name="clearAccountShowAF" path="/clearAccountTaBalanceForwardURLAC"
+				type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTaBalanceForwardURLAC">
+				<forward name="to_clearaccount_list" path="/showClearAccountBalanceAC.do"/>
+		</action>
+		<action name="clearAccountBalanceShowAF" path="/showClearAccountBalanceAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTaBalanceShowAC" >
+			<forward name="to_clearAccountbalance_list" path="/clearaccountbalance_list.jsp"></forward>
+		</action>								
+		<action name="clearAccountBalanceShowAF" path="/findClearAccountBalanceAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountTaBalanceFindAC" >
+			<forward name="to_clearAccountbalance_list" path="/showClearAccountBalanceAC.do"></forward>
+		</action>
+		<action name="clearAccountBalanceForm" path="/maintainClearAccountBalanceAC" 
+		parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountBalanceMaintainAC" >
+			<forward name="to_print" path="/clearaccountbalance_cell.jsp"></forward>
+			<forward name="to_print_month" path="/clearaccountbalance_month_cell.jsp"></forward>
+			<forward name="showOrgFlow" path="/clearaccountbalance_mx.jsp"></forward>
+		</action>
+		<action path="/clearAccountBalanceMXFindAAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearAccountBalanceMXFindAAC">
+		</action>
+		
+		<action path="/clearaccountTacheckAAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ClearaccountTacheckAAC" >
+		</action>
+		<action name="orgbusinessflowAF" path="/showOrgbusinessflowListAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ShowOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_list" path="/orgbusinessflow_show.jsp"/>
+		</action>
+		<action name="orgbusinessflowAF" path="/findOrgbusinessflowListAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.FindOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_list" path="/showOrgbusinessflowListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainOrgbusinessflowListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.MaintainOrgbusinessflowListAC">
+			<forward name="to_orgbusinessflow_report" path="/orgbusinessflow_cell.jsp"/>
+		</action>
+		<action name="empOperationFlowAF"
+			path="/empOperationFlowTaFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.EmpOperationFlowTaFindAC">
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do">
+			</forward>
+		</action>
+		<action name="empOperationFlowAF" path="/empOperationFlowTaShowAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.EmpOperationFlowTaShowAC">
+			<forward name="show_empOperationFlow" path="/empoperationflow_lb.jsp" />
+		</action>
+		<action name="idAF" path="/empOperationFlowTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.EmpOperationFlowTaMaintainAC">
+			<forward name="show_print" path="/empoperationflow1_cell.jsp" />
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do" />
+		</action>
+		<action path="/empOperationFlowTaForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.EmpOperationFlowTaForwardURLAC">
+			<forward name="show_empOperationFlow" path="/empOperationFlowTaShowAC.do" />
+		</action>
+		<action path="/chenYanDSBForwardAC" name="chenYanDSBAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ChenYanDSBForwardAC">
+			<forward name="chenYanDSBShowAC" path="/chenYanDSBShowAC.do" />
+		</action>
+		<action path="/chenYanDSBFindAC" name="chenYanDSBAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ChenYanDSBFindAC">
+			<forward name="chenYanDSBShowAC" path="/chenYanDSBShowAC.do" />
+		</action>
+		<action path="/chenYanDSBShowAC" name="chenYanDSBAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ChenYanDSBShowAC">
+			<forward name="chenyandsb" path="/chenyandsb.jsp" />
+		</action>
+		<action path="/chenYanDSBPrintAC" name="chenYanDSBAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.clearaccount.action.ChenYanDSBPrintAC">
+			<forward name="chenyandsb_cell" path="/chenyandsb_cell.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/clearaccount/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

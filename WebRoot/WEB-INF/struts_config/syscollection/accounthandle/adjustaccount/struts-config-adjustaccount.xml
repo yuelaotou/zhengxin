@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+			<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+			<form-bean name="adjustaccountShowAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.form.AdjustaccountShowAF" />
+			<form-bean name="adjustaccountNewAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.form.AdjustaccountNewAF" />
+			<form-bean name="adjustaccountServiceShowAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.form.AdjustaccountServiceShowAF" />
+			<form-bean name="adjustaccountServiceFindAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.form.AdjustaccountServiceFindAF" />
+			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	     <action name="adjustaccountShowAF" path="/adjustaccountServiceTaShowTailAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceTaShowTailAC" >
+			<forward name="to_adjustaccountservice_tail_list" path="/adjustaccount_tail_list.jsp"></forward>
+			<forward name="show_cell" path="/adjustaccount_cell.jsp"></forward>
+		</action>
+			<action name="adjustaccountShowAF" path="/showAdjustaccountAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountTaShowAC" >
+			<forward name="to_adjustaccount_list" path="/adjustaccount_list.jsp"></forward>
+		</action>
+		<action name="adjustaccountShowAF" path="/adjustaccountTaFindAAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountTaFindAAC">
+			<forward name="showAdjustaccountAC" path="/showAdjustaccountAC.do" />
+		</action>
+		<action name="adjustaccountShowAF" path="/adjustaccountTaFindOrgAAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountTaFindOrgAAC">
+			<forward name="showAdjustaccountAC" path="/showAdjustaccountAC.do" />
+		</action>
+		<action name="idAF" path="/adjustaccountMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountMaintainAC">
+			<forward name="showAdjustaccountAC" path="/showAdjustaccountAC.do" />
+			<forward name="to_adjustaccount_add" path="/adjustaccount_new.jsp" />
+			<forward name="adjustaccountprint" path="/adjustaccountprint.do"></forward>
+			<forward name="show_cell" path="/adjustaccount_cell.jsp"></forward>
+			<forward name="adjustaccount_single_cell" path="/adjustaccount_single_cell.jsp"></forward>
+			<forward name="adjustaccount_list_cell" path="/adjustaccount_list_cell.jsp"></forward>
+		</action>
+		<action name="adjustaccountNewAF" path="/adjustaccountTaSaveAC"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountTaSaveAC">
+			<forward name="showAdjustaccountAC" path="/showAdjustaccountAC.do" />
+		</action>
+		<action name="adjustaccountNewAF" path="/adjustaccountTaFindEmpAAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountTaFindEmpAAC">
+		</action>
+		<action path="/adjustaccountprint" 
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountPrintAC" >
+			<forward name="show_cell" path="/adjustaccount_cell.jsp"></forward>
+		</action>
+		<action name="adjustaccountServiceShowAF" path="/showAdjustaccountServiceAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceTaShowAC">
+			<forward name="to_adjustaccountservice_list" path="/adjustaccountservice_list.jsp"></forward>
+		</action>
+		<action name="idAF" path="/adjustaccountServiceMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceMaintainAC">
+			<forward name="showAdjustaccountServiceAC" path="/showAdjustaccountServiceAC.do" />
+			<forward name="showAdjustaccountAC" path="/showAdjustaccountAC.do" />
+			<forward name="to_adjustaccount_add" path="/adjustaccount_new.jsp" />
+			<forward name="adjustaccount_single_cell" path="/adjustaccount_single_cell.jsp"></forward>
+			<forward name="adjustaccount_list_cell" path="/adjustaccount_list_cell.jsp"></forward>
+		</action>
+		<action name="adjustaccountServiceFindAF" path="/findAdjustaccountServiceAC" scope="request"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceTaFindAC">
+			<forward name="showAdjustaccountServiceAC" path="/showAdjustaccountServiceAC.do" />
+		</action>
+
+		<action name="idAF" path="/findAdjustaccountServiceTaAAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceTaFindOrgAAC">
+		</action>
+		
+		<action name="idAF" path="/adjustAdjustaccountServiceAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceTaAdjustAC">
+			<forward name="showAdjustaccountServiceAC" path="/showAdjustaccountServiceAC.do" />
+		</action>
+		<action name="adjustaccountServiceShowAF" path="/adjustaccountServiceForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServiceForwardURLAC">
+			<forward name="to_adjustaccountservice_list" path="/showAdjustaccountServiceAC.do" />
+		</action>
+		<action name="adjustaccountShowAF" path="/adjustaccountForwardURLAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountForwardURLAC">
+			<forward name="to_adjustaccount_list" path="/showAdjustaccountAC.do" />
+		</action>
+		<action path="/printAdjustaccountServiceAC" 
+			type="org.xpup.hafmis.syscollection.accounthandle.adjustaccount.action.AdjustaccountServicePrintAC" >
+			<forward name="show_cell" path="/adjustaccount_cell.jsp"></forward>
+			<forward name="adjustaccount_single_cell" path="/adjustaccount_single_cell.jsp"></forward>
+			<forward name="adjustaccount_list_cell" path="/adjustaccount_list_cell.jsp"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/adjustaccount/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

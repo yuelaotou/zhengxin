@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/openMondifyPrintAC.do" location="50,50" dimension="646,84" />
+  <StrutsActivity path="/openMondifyInfoSearchAC.do" location="950,50" dimension="676,84" />
+  <StrutsActivity path="/openMondiyInfoForwardAC.do" location="950,250" dimension="676,84" />
+  <StrutsActivity path="/showOpenMondifyListAC.do" location="950,450" dimension="802,84" />
+  <StrutsActivity path="/chgorgrateList.jsp" location="503,376" dimension="120,49" />
+  <StrutsActivity path="/chgorgrateList_cell.jsp" location="175,658" dimension="141,49" />
+</FlowViewLayout>
+

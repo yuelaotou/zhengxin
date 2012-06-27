@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="loanerlogoutTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.form.LoanerlogoutTaAF" />
+			<form-bean name="loanerlogoutTbAF"
+			type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.form.LoanerlogoutTbAF" />				
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- ================================================Ta====================================================== -->
+    <action name="loanerlogoutTaAF" path="/loanerlogoutTaShowAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTaShowAC">
+    	<forward name="to_loanerlogoutta_show" path="/loancallback/loanerlogout/loanerlogoutta_show.jsp" />
+    </action>
+    <action path="/loanerlogoutTaForwardAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTaForwardAC">
+      <forward name="loanerlogoutta_show" path="/loanerlogoutTaShowAC.do" />
+    </action>
+    <action name="loanerlogoutTaAF" path="/loanerlogoutTaSaveAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTaSaveAC">
+      <forward name="loanerlogout_show" path="/loanerlogoutTaShowAC.do" />
+    </action>
+    <action path="/loanerlogoutTaFindAAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTaFindAAC">
+    </action>
+    <!-- ================================================Tb====================================================== -->
+	<!-- ================================================Tb====================================================== -->
+	<action path="/loanerlogoutTbForwardAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTbForwardAC">
+      <forward name="loanerlogouttb_show" path="/loanerlogoutTbShowAC.do" />
+    </action>
+     <action name="loanerlogoutTbAF" path="/loanerlogoutTbShowAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTbShowAC">
+    	<forward name="to_loanerlogouttb_show" path="/loancallback/loanerlogout/loanerlogouttb_show.jsp" />
+    </action>
+    <action name="loanerlogoutTbAF" path="/loanerlogoutTbFindAC" type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTbFindAC">
+    	<forward name="loanerlogouttb_show" path="/loanerlogoutTbShowAC.do" />
+    </action>
+    <action name="idAF" path="/loanerlogoutTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.loanerlogout.action.LoanerlogoutTbMaintainAC">
+			<forward name="loanerlogouttb_show" path="/loanerlogoutTbShowAC.do" />
+			<forward name="to_loanerlogouttb_print" path="/loancallback/loanerlogout/loanerlogouttb_print.jsp" />
+		</action>	
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

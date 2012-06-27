@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		 
+		<form-bean name="queryPayOffRecordsTaShowAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.queryPayOffRecords.form.QueryPayOffRecordsTaShowAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/queryPayOffRecordsTaForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.queryPayOffRecords.action.QueryPayOffRecordsTaForwardURLAC">
+			<forward name="queryPayOffRecordsTaShowAC"
+				path="/queryPayOffRecordsTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="queryPayOffRecordsTaShowAF" path="/queryPayOffRecordsTaShowAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.queryPayOffRecords.action.QueryPayOffRecordsTaShowAC">
+			<forward name="to_queryPayOffRecords_talist"
+				path="/querystatistics/querystatistics/queryPayOffRecords/queryPayOffRecords_talist.jsp">
+			</forward>
+		</action>
+
+		<action name="queryPayOffRecordsTaShowAF" path="/queryPayOffRecordsTaFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.queryPayOffRecords.action.QueryPayOffRecordsTaFindAC"
+			scope="request">
+		<forward name="queryPayOffRecordsTaShowAC"
+				path="/queryPayOffRecordsTaShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/queryPayOffRecordsTaMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.queryPayOffRecords.action.QueryPayOffRecordsTaMaintainAC"
+			scope="request" parameter="method">
+	        <forward name="queryPayOffRecordsTaShowAC"
+				path="/queryPayOffRecordsTaShowAC.do">
+			</forward>
+			<forward name="to_queryPayOffRecords_tacell"
+				path="/querystatistics/querystatistics/queryPayOffRecords/queryPayOffRecords_tacell.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.orgstrct.domain.CollBank" 
+    table="BB105"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+           <generator class="sequence">
+	   <param name="sequence">SEQ_BB105</param>
+	</generator>
+    </id>
+
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="collBankId"
+        type="integer"
+        column="COLL_BANK_ID"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="collBankName"
+        type="java.lang.String"
+        column="COLL_BANK_NAME"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="status"
+        type="integer"
+        column="STATUS"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="contactprsn"
+        type="java.lang.String"
+        column="CONTACT_PRSN"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="contacttel"
+        type="java.lang.String"
+        column="CONTACT_TEL"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="collectionbankacc"
+        type="java.lang.String"
+        column="COLLECTION_BANK_ACC"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="centername"
+        type="java.lang.String"
+        column="CENTER_NAME"
+        not-null="true"
+        length="50"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

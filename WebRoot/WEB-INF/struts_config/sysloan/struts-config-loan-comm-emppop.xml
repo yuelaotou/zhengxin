@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="employeesAF"
+				type="org.xpup.hafmis.sysloan.common.biz.emppop.form.EmployeesAF" />
+</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/findEmployeesListAC"
+			name="employeesAF" 
+			scope="request"
+			type="org.xpup.hafmis.sysloan.common.biz.emppop.action.EmployeesFindAC">
+			<forward name="show_employees"
+				path="/showEmployeesListAC.do">
+			</forward>
+		</action>
+		
+		<action path="/showEmployeesListAC"
+			type="org.xpup.hafmis.sysloan.common.biz.emppop.action.EmployeesShowAC">
+			<forward name="employees" path="/common/biz/emppop/emppop.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	
+</struts-config>

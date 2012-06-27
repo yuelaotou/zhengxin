@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscommon.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="OrgInfo" 
+    table="BA001"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_BA001</param>
+			</generator>
+    </id>
+
+    <property
+        name="name"
+        type="java.lang.String"
+        column="NAME"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="officecode"
+        type="java.lang.String"
+        column="OFFICECODE"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="code"
+        type="java.lang.String"
+        column="CODE"
+        length="50"
+    />
+    <property
+        name="taxRegNum"
+        type="java.lang.String"
+        column="TAX_REG_NUM"
+        length="50"
+    />
+    <property
+        name="artificialPerson"
+        type="java.lang.String"
+        column="ARTIFICIAL_PERSON"
+        length="50"
+    />
+    <property
+        name="character"
+        type="java.lang.String"
+        column="CHARACTER"
+        length="20"
+    />
+    <property
+        name="industry"
+        type="java.lang.String"
+        column="INDUSTRY"
+        length="20"
+    />
+    <property
+        name="deptInCharge"
+        type="java.lang.String"
+        column="DEPT_IN_CHARGE"
+        length="20"
+    />
+    <property
+        name="address"
+        type="java.lang.String"
+        column="ADDRESS"
+        length="50"
+    />
+    <property
+        name="postalcode"
+        type="java.lang.String"
+        column="POSTALCODE"
+        length="10"
+    />
+    <property
+        name="tel"
+        type="java.lang.String"
+        column="TEL"
+        length="50"
+    />
+    <property
+        name="region"
+        type="java.lang.String"
+        column="REGION"
+        length="30"
+    />
+    <component name="payBank" class="PayBank">
+			<property name="name" type="java.lang.String" column="PAYBANK_NAME" />
+			<property name="accountNum" type="java.lang.String"
+				column="PAYBANK_ACCOUNT_NUM" />
+	</component>
+    <property
+        name="paydate"
+        type="java.lang.String"
+        column="PAYDATE"
+        length="2"
+    />
+    <property
+        name="collectionBankId"
+        type="java.lang.String"
+        column="COLLECTION_BANK_ID"
+        length="20"
+    />
+     <component name="transactor" class="Transactor">
+			<property name="name" type="java.lang.String"
+				column="TRANSACTOR_NAME" />
+			<property name="telephone" type="java.lang.String"
+				column="TRANSACTOR_TEL" />
+			<property name="mobileTelephone" type="java.lang.String"
+				column="TRANSACTOR_MOBILETEL" />
+			<property name="email" type="java.lang.String"
+				column="TRANSACTOR_EMAIL" />
+		</component>
+    <property
+        name="inspector"
+        type="java.lang.String"
+        column="INSPECTOR"
+        length="20"
+    />
+    <property
+        name="openstatus"
+        type="java.lang.String"
+        column="OPENSTATUS"
+        length="20"
+    />
+    <property
+        name="openDate"
+        type="java.lang.String"
+        column="OPEN_DATE"
+        length="8"
+    />
+
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+	 <property
+        name="tijiao"
+        type="java.lang.String"
+        column="TIJIAO"
+        length="2"
+    />
+</class>
+</hibernate-mapping>

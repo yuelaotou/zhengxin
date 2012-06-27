@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+		<!--	公共结束	-->		
+		<form-bean name="rateShowAF"
+			type="org.xpup.hafmis.sysloan.dataready.rate.form.RateShowAF"/>	
+		<form-bean name="rateNewAF"
+			type="org.xpup.hafmis.sysloan.dataready.rate.form.RateNewAF"/>
+		<form-bean name="rateUseAF"
+			type="org.xpup.hafmis.sysloan.dataready.rate.form.RateUseAF"/>		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	    <action  path="/rateTaForwardUrlAC"
+			type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaForwardUrlAC">
+			<forward name="rateTaShowAC" path="/rateTaShowAC.do"/>
+		</action>
+		<action  path="/rateTaShowAC"
+			type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaShowAC">
+			<forward name="to_rate_show" path="/dataready/rate/rate_show.jsp"/>
+		</action>
+		<action name="rateShowAF"  path="/rateTaFindAC"
+			type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaFindAC">
+			<forward name="rateTaShowAC" path="/rateTaShowAC.do"/>
+		</action>
+		<action name="idAF" path="/rateTaMaintainAC" parameter="method" type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaMaintainAC">
+			<forward name="to_rate_new" path="/dataready/rate/rate_new.jsp"/>
+			<forward name="rateTaShowAC" path="/rateTaForwardUrlAC.do"/>
+		</action>
+		<action name="rateNewAF" path="/rateTaNewAC" parameter="method"
+			type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaNewAC">
+			<forward name="rateTaShowAC" path="/rateTaForwardUrlAC.do"/>
+		</action>
+		<action name="rateUseAF" path="/rateTaUseAC" 
+			type="org.xpup.hafmis.sysloan.dataready.rate.action.RateTaUseAC">
+			<forward name="to_rate_appuse_new" path="/dataready/rate/rate_appuse.jsp"/>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection"/>
+
+</struts-config>

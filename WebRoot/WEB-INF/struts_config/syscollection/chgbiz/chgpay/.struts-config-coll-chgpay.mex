@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/chgpayTaForwardURLAC.do" location="650,1050" dimension="472,84" />
+  <StrutsActivity path="/chgpayTaSouwAC.do" location="950,250" dimension="436,84" />
+  <StrutsActivity path="/chgpayTaMaintainAC.do" location="350,350" dimension="460,84" />
+  <StrutsActivity path="/chgpayTaFindAAC.do" location="650,50" dimension="442,84" />
+  <StrutsActivity path="/chgpayTaSaveAC.do" location="950,450" dimension="472,84" />
+  <StrutsActivity path="/chgpayEmpTaFindAAC.do" location="50,550" dimension="460,84" />
+  <StrutsActivity path="/chgpayTbForwardURLAC.do" location="50,1250" dimension="472,84" />
+  <StrutsActivity path="/chgpayTbSouwAC.do" location="650,650" dimension="472,84" />
+  <StrutsActivity path="/chgpayTbMaintainAC.do" location="50,850" dimension="496,84" />
+  <StrutsActivity path="/chgpayTbFindAAC.do" location="650,850" dimension="442,84" />
+  <StrutsActivity path="/chgpayTaImportAC.do" location="50,1050" dimension="448,84" />
+  <StrutsActivity path="/chgpayTaWindowForwardAC.do" location="650,1250" dimension="433,88" />
+  <StrutsActivity path="/chgpay_list.jsp" location="650,250" dimension="136,48" />
+  <StrutsActivity path="/chgpay_new.jsp" location="50,350" dimension="130,48" />
+  <StrutsActivity path="/chgpay_imports.jsp" location="650,550" dimension="154,48" />
+  <StrutsActivity path="/chgpay_tblist.jsp" location="50,450" dimension="148,48" />
+  <StrutsActivity path="/chgpay_window.jsp" location="50,1450" dimension="128,49" />
+  <StrutsActivity path="/chgslarybase_list.jsp" location="50,250" dimension="172,48" />
+  <StrutsActivity path="/chgslarybase_new.jsp" location="350,250" dimension="166,48" />
+  <StrutsActivity path="/chgslarybase_tblist.jsp" location="50,750" dimension="184,48" />
+  <StrutsActivity path="/chgpayTbFindAC.do" location="350,1450" dimension="418,88" />
+  <StrutsTransition id="/chgpayTaFindAAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="965,134" />
+      <AbsolutePoint location="965,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbMaintainAC.do,chgpayTbSouwAC.do,/chgpayTbSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="298,850" />
+      <AbsolutePoint location="298,662" />
+      <AbsolutePoint location="650,662" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaMaintainAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,392" />
+      <AbsolutePoint location="1168,392" />
+      <AbsolutePoint location="1168,334" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaImportAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="274,1050" />
+      <AbsolutePoint location="274,979" />
+      <AbsolutePoint location="1527,979" />
+      <AbsolutePoint location="1527,262" />
+      <AbsolutePoint location="1386,262" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaSouwAC.do,to_chgpay_list.jsp,/chgpay_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,283" />
+      <AbsolutePoint location="786,283" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayEmpTaFindAAC.do,to_chgpay_new.jsp,/chgpay_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,592" />
+      <AbsolutePoint location="5,592" />
+      <AbsolutePoint location="5,374" />
+      <AbsolutePoint location="50,374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaMaintainAC.do,to_chgpay_new.jsp,/chgpay_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="350,353" />
+      <AbsolutePoint location="180,353" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaSaveAC.do,to_chgpay_new.jsp,/chgpay_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,513" />
+      <AbsolutePoint location="297,513" />
+      <AbsolutePoint location="297,383" />
+      <AbsolutePoint location="180,383" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbFindAAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1092,892" />
+      <AbsolutePoint location="1437,892" />
+      <AbsolutePoint location="1437,322" />
+      <AbsolutePoint location="1386,322" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbSouwAC.do,to_chgpay_tblist.jsp,/chgpay_tblist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="886,650" />
+      <AbsolutePoint location="886,474" />
+      <AbsolutePoint location="198,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbFindAC.do,goto_show,/chgpayTbSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="561,1450" />
+      <AbsolutePoint location="561,692" />
+      <AbsolutePoint location="650,692" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaMaintainAC.do,to_chgpay_imports.jsp,/chgpay_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="665,434" />
+      <AbsolutePoint location="665,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaWindowForwardAC.do,to_chgpay_window,/chgpay_window.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="866,1338" />
+      <AbsolutePoint location="866,1383" />
+      <AbsolutePoint location="114,1383" />
+      <AbsolutePoint location="114,1450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaSaveAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,450" />
+      <AbsolutePoint location="1198,334" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbForwardURLAC.do,chgpayTbSouwAC.do,/chgpayTbSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="522,1292" />
+      <AbsolutePoint location="591,1292" />
+      <AbsolutePoint location="591,722" />
+      <AbsolutePoint location="650,722" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTaForwardURLAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1122,1092" />
+      <AbsolutePoint location="1497,1092" />
+      <AbsolutePoint location="1497,292" />
+      <AbsolutePoint location="1386,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgpayTbMaintainAC.do,chgpayTaSouwAC.do,/chgpayTaSouwAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,892" />
+      <AbsolutePoint location="-25,892" />
+      <AbsolutePoint location="-25,313" />
+      <AbsolutePoint location="950,313" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

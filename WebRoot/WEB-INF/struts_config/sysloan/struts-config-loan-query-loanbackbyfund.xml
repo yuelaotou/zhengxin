@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanBackByFundAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanbackbyfund.form.LoanBackByFundAF" />
+		<!-- =============================== window ============================-->
+		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loanBackByFundForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanbackbyfund.action.LoanBackByFundForwardURLAC">
+			<forward name="loanBackByFundShowAC"
+				path="/loanBackByFundShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanBackByFundAF"
+			path="/loanBackByFundShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanbackbyfund.action.LoanBackByFundShowAC">
+			<forward name="loanbackbyfund"
+				path="/querystatistics/loanbackbyfund/loanbackbyfund/loanbackbyfund.jsp">
+			</forward>
+		</action>
+
+		<action name="loanBackByFundAF"
+			path="/loanBackByFundFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanbackbyfund.action.LoanBackByFundFindAC"
+			scope="request">
+			<forward name="loanBackByFundShowAC"
+				path="/loanBackByFundShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/loanBackByFundMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanbackbyfund.action.LoanBackByFundMaintainAC">
+			<forward name="loanBackByFundShowAC"
+				path="/loanBackByFundShowAC.do">
+			</forward>
+			<forward name="loanbackbyfund_cell"
+				path="/querystatistics/loanbackbyfund/loanbackbyfund/loanbackbyfund_cell.jsp">
+			</forward>
+		</action>
+
+		<!-- =============================== window ============================-->
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

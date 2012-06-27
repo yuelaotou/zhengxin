@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="destoryBackTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.form.DestoryBackTaAF" />
+		<form-bean name="destoryBackTbAF"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.form.DestoryBackTbAF" />			
+		</form-beans>
+		
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action path="/destoryBackTaShowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTaShowAC">
+			<forward name="to_destoryback_new"
+				path="/loancallback/destoryback/destoryback_new.jsp">
+			</forward>
+	</action>
+	<action name="destoryBackTaAF" path="/destoryBackTaFindAAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTaFindAAC">
+		</action>		
+	<action name="destoryBackTaAF" path="/destoryBackTaSaveAC"
+			scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTaSaveAC">
+			<forward name="destoryBackTaShowAC"
+				path="/destoryBackTaShowAC.do">
+			</forward>
+	</action>
+	<action  path="/destoryBackTaPrintAC" 
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTaPrintAC">
+			<forward name="to_destoryback_printta"
+				path="/loancallback/destoryback/destoryback_cellta.jsp">
+			</forward>
+	</action>	
+	<action path="/destoryBackTbShowAC" 
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbShowAC">
+			<forward name="to_destoryBackTb_show"
+				path="/loancallback/destoryback/destoryBackTb_show.jsp">
+			</forward>
+	</action>			
+	<action name="destoryBackTbAF" path="/destoryBackTbFindAC"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbFindAC"
+			scope="request">
+			<forward name="destoryBackTbShowAC"
+				path="/destoryBackTbShowAC.do">
+			</forward>
+	</action>	
+			<action path="/destoryBackTbForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbForwardURLAC">
+			<forward name="destoryBackTbShowAC"
+				path="/destoryBackTbShowAC.do">
+			</forward>
+	</action>
+			<action name="idAF" path="/destoryBackTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbMaintainAC"
+			scope="request" parameter="method">
+			<forward name="destoryBackTbShowAC"
+				path="/destoryBackTbShowAC.do">
+			</forward>
+			<forward name="to_destoryback_printtb"
+				path="/loancallback/destoryback/destoryback_celltb.jsp">
+			</forward>
+	</action>
+	<action  path="/destoryBackTbWindowAC" 
+				type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbWindowAC">
+				<forward name="to_destoryBackTbWindow_show"
+				path="/loancallback/destoryback/destoryBackTbWindow_show.jsp">
+			</forward>
+	</action>
+	<action  path="/destoryBackTbWindowPrinAC" 
+				type="org.xpup.hafmis.sysloan.loancallback.destoryback.action.DestoryBackTbWindowPrinAC">
+			<forward name="to_destorybacktb_windowprin"
+				path="/loancallback/destoryback/destorybacktbwindow_cell_show.jsp">
+			</forward>
+	</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

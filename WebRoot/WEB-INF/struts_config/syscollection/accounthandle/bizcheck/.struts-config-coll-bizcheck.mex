@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/bizcheckTaForwardURLAC.do" location="50,850" dimension="538,84" />
+  <StrutsActivity path="/bizcheckTaFindAC.do" location="650,350" dimension="502,84" />
+  <StrutsActivity path="/bizcheckTaShowAC.do" location="50,250" dimension="502,84" />
+  <StrutsActivity path="/bizcheckTaMaintainAC.do" location="950,50" dimension="526,84" />
+  <StrutsActivity path="/bizcheckTaWindowAC.do" location="50,450" dimension="514,84" />
+  <StrutsActivity path="/bizcheckTaRemotePrintAAC.do" location="650,1050" dimension="469,88" />
+  <StrutsActivity path="/bizcheckTaWindowPrintAC.do" location="350,650" dimension="544,84" />
+  <StrutsActivity path="/bizcheckTaWindowOrgoverPrintAC.do" location="650,850" dimension="209,62" />
+  <StrutsActivity path="/bizCheckCheckAAC.do" location="1250,750" dimension="550,84" />
+  <StrutsActivity path="/bizCheckCheckAC.do" location="1250,950" dimension="496,84" />
+  <StrutsActivity path="/bizcheckModifyBankAC.do" location="1250,1150" dimension="526,84" />
+  <StrutsActivity path="/bizCheckCheckFindAAC.do" location="50,1250" dimension="526,84" />
+  <StrutsActivity path="/bizCheckCheckModifyAAC.do" location="650,1250" dimension="538,84" />
+  <StrutsActivity path="/bizcheck_list.jsp" location="650,150" dimension="148,48" />
+  <StrutsActivity path="/orgoverpay_lb_detail.jsp" location="950,750" dimension="153,49" />
+  <StrutsActivity path="/bizcheck_mx_A.jsp" location="1250,250" dimension="124,49" />
+  <StrutsActivity path="/bizcheck_mx_M.jsp" location="1250,350" dimension="125,49" />
+  <StrutsActivity path="/bizcheck_mx_F.jsp" location="1250,450" dimension="123,49" />
+  <StrutsActivity path="/bizcheck_mx_D.jsp" location="1250,550" dimension="124,49" />
+  <StrutsActivity path="/bizcheck_mx_E.jsp" location="1250,650" dimension="123,49" />
+  <StrutsActivity path="/bizcheck_windowlist.jsp" location="650,250" dimension="184,48" />
+  <StrutsActivity path="/bizcheck_mx_cell.jsp" location="950,650" dimension="166,48" />
+  <StrutsActivity path="/bizcheck_mx_orgover_cell.jsp" location="350,1050" dimension="176,49" />
+  <StrutsActivity path="/bizcheckbankmodify.jsp" location="50,1150" dimension="178,48" />
+  <StrutsActivity path="/bizcheckt_mx_cell.jsp" location="50,750" dimension="172,48" />
+  <StrutsActivity path="/Bizcheck.jsp" location="950,250" dimension="91,49" />
+  <StrutsActivity path="/paySure_default.jsp" location="650,50" dimension="131,49" />
+  <StrutsActivity path="/" location="350,150" dimension="33,49" />
+  <StrutsActivity path="/chgslarybase_new.jsp" location="650,550" dimension="166,48" />
+  <StrutsActivity path="/chgslarybase_imports.jsp" location="950,550" dimension="190,48" />
+  <StrutsActivity path="/v" location="50,650" dimension="52,48" />
+  <StrutsActivity path="/clearaccount_mx.jsp" location="950,850" dimension="160,48" />
+  <StrutsActivity path="/clearaccount_mx_cell.jsp" location="950,950" dimension="190,48" />
+  <StrutsActivity path="//bizcheck_mx_orgover_cell.jsp" location="50,1050" dimension="180,49" />
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_mx_E.jsp,/bizcheck_mx_E.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaShowAC.do,to_bizcheck.jsp,/bizcheck_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="398,250" />
+      <AbsolutePoint location="398,174" />
+      <AbsolutePoint location="650,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_windowlist.jsp,/bizcheck_windowlist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,492" />
+      <AbsolutePoint location="609,492" />
+      <AbsolutePoint location="609,274" />
+      <AbsolutePoint location="650,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaForwardURLAC.do,bizcheckTaShowAC.do,/bizcheckTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="319,892" />
+      <AbsolutePoint location="301,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_orgover_windowlist.jsp,/orgoverpay_lb_detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowPrintAC.do,show_report,/bizcheck_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="894,683" />
+      <AbsolutePoint location="950,683" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaFindAC.do,to_bizcheckTaShowAC.do,/bizcheckTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="901,350" />
+      <AbsolutePoint location="901,314" />
+      <AbsolutePoint location="552,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaMaintainAC.do,to_bizcheckTaShowAC.do,/bizcheckTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="301,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_mx_A.jsp,/bizcheck_mx_A.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_mx_F.jsp,/bizcheck_mx_F.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_mx_M.jsp,/bizcheck_mx_M.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckModifyBankAC.do,to_show_modify,/bizcheckbankmodify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="139,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowOrgoverPrintAC.do,show_report,/bizcheck_mx_orgover_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,881" />
+      <AbsolutePoint location="633,881" />
+      <AbsolutePoint location="633,1074" />
+      <AbsolutePoint location="526,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizCheckCheckAC.do,to_show_modify,/bizcheckbankmodify.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1498,992" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckTaWindowAC.do,to_bizcheck_mx_D.jsp,/bizcheck_mx_D.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="307,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bizcheckModifyBankAC.do,to_show_modify,/bizcheckTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1513,1192" />
+      <AbsolutePoint location="301,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

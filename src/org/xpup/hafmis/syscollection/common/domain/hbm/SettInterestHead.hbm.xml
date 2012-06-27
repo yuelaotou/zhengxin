@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="SettInterestHead"
+    table="AA316" 
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+
+    <generator class="sequence">
+	   <param name="sequence">SEQ_AA316</param>
+	</generator>
+
+    </id>
+
+    <discriminator column="TYPE" type="string" />
+    <property
+        name="bizId"
+        type="integer"
+        column="BIZ_ID"
+        length="22"
+    />
+
+    <property
+        name="year"
+        type="java.lang.String"
+        column="YEAR"
+        not-null="true"
+        length="4"
+    />
+
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        length="20"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"    
+        length="50"
+    />
+    
+   <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"    
+        length="50"
+    />
+   <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"    
+        length="50"
+    />
+    
+    <property name="interestType" type="java.lang.String" formula="(SELECT A316.TYPE from AA316 A316 where A316.ID=id)"/>
+    
+    <many-to-one 
+    name="org" 
+    column="ORG_ID" 
+    class="org.xpup.hafmis.syscollection.common.domain.entity.Org" 
+    not-null="true" cascade="save-update" >
+    </many-to-one>
+
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

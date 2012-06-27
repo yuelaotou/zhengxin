@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/yearclearForwardURLAC.do" location="950,50" dimension="626,88" />
+  <StrutsActivity path="/showYearclearstatisticsListAC.do" location="50,150" dimension="619,88" />
+  <StrutsActivity path="/findYearclearstatisticsListAC.do" location="950,250" dimension="613,88" />
+  <StrutsActivity path="/maintainYearclearstatisticsListAC.do" location="950,450" dimension="633,88" />
+  <StrutsActivity path="/yearclearEmpListForwardURLAC.do" location="50,650" dimension="626,88" />
+  <StrutsActivity path="/showYearclearEmpListAC.do" location="950,650" dimension="587,88" />
+  <StrutsActivity path="/findYearclearEmpListAC.do" location="350,850" dimension="581,88" />
+  <StrutsActivity path="/maintainYearclearEmpListAC.do" location="50,1050" dimension="601,88" />
+  <StrutsActivity path="/yearclearEmpForwardURLAC.do" location="950,1350" dimension="604,88" />
+  <StrutsActivity path="/yearclearEmpAC.do" location="50,1250" dimension="571,88" />
+  <StrutsActivity path="/maintainYearclearEmpAC.do" location="1250,850" dimension="585,88" />
+  <StrutsActivity path="/yearclearstatisticsList.jsp" location="50,350" dimension="154,49" />
+  <StrutsActivity path="/yearclearstatisticsList_cell.jsp" location="650,550" dimension="175,49" />
+  <StrutsActivity path="/yearclear_cell.jsp" location="650,350" dimension="154,48" />
+  <StrutsActivity path="/yearclearEmpList.jsp" location="50,850" dimension="132,49" />
+  <StrutsActivity path="/yearclearEmpList_cell.jsp" location="50,950" dimension="153,49" />
+  <StrutsActivity path="/yearclearEmp.jsp" location="950,1250" dimension="116,49" />
+  <StrutsActivity path="/yearclearEmp_cell.jsp" location="1250,1050" dimension="137,49" />
+  <StrutsActivity path="/yearclearstatisticsListList_cell.jsp" location="350,350" dimension="191,49" />
+  <StrutsActivity path="/yearclearEmpListList_cell.jsp" location="950,1150" dimension="169,49" />
+  <StrutsActivity path="/searchLackInfoList.jsp" location="50,450" dimension="140,49" />
+  <StrutsActivity path="/searchLackInfoList_cell.jsp" location="350,450" dimension="161,49" />
+  <StrutsActivity path="/searchLackInfoOne_cell.jsp" location="650,450" dimension="165,49" />
+  <StrutsActivity path="/yearclearstatisticsListAFOne_cell.jsp" location="50,550" dimension="208,49" />
+  <StrutsActivity path="/yearclearstatisticsListAFList_cell.jsp" location="350,550" dimension="204,49" />
+  <StrutsActivity path="/showYearclearEmpListAC" location="950,1050" dimension="153,49" />
+  <StrutsActivity path="/yearclearlist_cell.jsp" />
+  <StrutsTransition id="/yearclearEmpAC.do,to_yearclearEmp_list,/yearclearEmp.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="621,1284" />
+      <AbsolutePoint location="950,1284" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearstatisticsListAC.do,to_yearclearstatistics_report,/yearclearstatisticsList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1266,538" />
+      <AbsolutePoint location="1266,574" />
+      <AbsolutePoint location="825,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yearclearEmpListForwardURLAC.do,to_yearclearEmp_list,/showYearclearEmpListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="676,694" />
+      <AbsolutePoint location="950,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findYearclearstatisticsListAC.do,to_yearclearstatistics_list,/showYearclearstatisticsListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1268,250" />
+      <AbsolutePoint location="1268,224" />
+      <AbsolutePoint location="669,224" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findYearclearEmpListAC.do,to_yearclearEmp_list,/showYearclearEmpListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1243,694" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yearclearForwardURLAC.do,to_yearclearstatistics_list,/showYearclearstatisticsListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="359,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearEmpListAC.do,to_yearclearEmpList_back,/showYearclearstatisticsListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,1094" />
+      <AbsolutePoint location="-45,1094" />
+      <AbsolutePoint location="-45,194" />
+      <AbsolutePoint location="50,194" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearEmpAC.do,to_yearclearEmp_report,/yearclearEmp_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearstatisticsListAC.do,to_interest_report,/yearclear_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1266,494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showYearclearstatisticsListAC.do,to_yearclearstatistics_list,/yearclearstatisticsList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="189,238" />
+      <AbsolutePoint location="189,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearEmpListAC.do,to_yearclearEmpList_report,/yearclearEmpList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="188,1050" />
+      <AbsolutePoint location="188,999" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/yearclearEmpForwardURLAC.do,to_yearclearEmp_list,/yearclearEmpAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,1394" />
+      <AbsolutePoint location="335,1394" />
+      <AbsolutePoint location="335,1338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainYearclearstatisticsListAC.do,yearclearlist_cell,/yearclearlist_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1266,494" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showYearclearEmpListAC.do,to_yearclearEmp_list,/yearclearEmpList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1034,738" />
+      <AbsolutePoint location="1034,874" />
+      <AbsolutePoint location="182,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

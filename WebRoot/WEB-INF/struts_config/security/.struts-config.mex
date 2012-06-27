@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/bt_maintain_operation.do" location="950,350" dimension="370,84" />
+  <StrutsActivity path="/bt_show_operations.do" location="50,150" dimension="352,84" />
+  <StrutsActivity path="/bt_find_operations.do" location="350,450" dimension="352,84" />
+  <StrutsActivity path="/bt_create_operation.do" location="650,150" dimension="358,84" />
+  <StrutsActivity path="/bt_show_menuitems.do" location="50,350" dimension="154,60" />
+  <StrutsActivity path="/bt_maintain_menuitem.do" location="950,550" dimension="364,84" />
+  <StrutsActivity path="/bt_create_menuitem.do" location="50,750" dimension="352,84" />
+  <StrutsActivity path="/bt_create_data_access.do" location="45,855" dimension="364,84" />
+  <StrutsActivity path="/bt_show_data_accesses.do" location="950,1050" dimension="364,84" />
+  <StrutsActivity path="/bt_find_data_accesses.do" location="45,975" dimension="364,84" />
+  <StrutsActivity path="/bt_maintain_data_access.do" location="45,1140" dimension="376,84" />
+  <StrutsActivity path="/operation.jsp" location="675,300" dimension="124,48" />
+  <StrutsActivity path="/operations.jsp" location="330,285" dimension="130,48" />
+  <StrutsActivity path="/menu_editor.jsp" location="50,550" dimension="136,48" />
+  <StrutsActivity path="/menu_editor_right.jsp" location="50,650" dimension="172,48" />
+  <StrutsActivity path="/menu_editor_menuitem.jsp" location="350,650" dimension="190,48" />
+  <StrutsActivity path="/data_access.jsp" location="855,795" dimension="136,48" />
+  <StrutsActivity path="/data_accesses.jsp" location="915,945" dimension="148,48" />
+  <StrutsActivity path="/index.jsp" location="650,650" dimension="77,49" />
+  <StrutsActivity path="/login.jsp" location="650,750" dimension="73,49" />
+  <StrutsTransition id="/bt_show_data_accesses.do,data_accesses,/data_accesses.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1048,1050" />
+      <AbsolutePoint location="1048,993" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_data_access.do,data_access,/data_access.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="409,867" />
+      <AbsolutePoint location="870,867" />
+      <AbsolutePoint location="870,843" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_show_operations.do,operations,/operations.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="345,234" />
+      <AbsolutePoint location="345,285" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_find_data_accesses.do,show_data_accesses,/bt_show_data_accesses.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="227,1017" />
+      <AbsolutePoint location="1132,1092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_operation.do,show_operations,/bt_show_operations.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,192" />
+      <AbsolutePoint location="402,192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/operation.jsp,null,/bt_create_operation.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,300" />
+      <AbsolutePoint location="737,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,show_data_accesses,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="712,1250" />
+      <AbsolutePoint location="712,699" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_find_operations.do,show_operations,/bt_show_operations.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="526,450" />
+      <AbsolutePoint location="526,222" />
+      <AbsolutePoint location="402,222" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_data_access.do,show_data_accesses,/bt_show_data_accesses.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="227,897" />
+      <AbsolutePoint location="1132,1092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/data_access.jsp,null,/bt_create_data_access.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="930,843" />
+      <AbsolutePoint location="930,897" />
+      <AbsolutePoint location="409,897" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_operation.do,operation,/operation.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1135,350" />
+      <AbsolutePoint location="1135,324" />
+      <AbsolutePoint location="799,324" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_data_access.do,show_data_accesses,/bt_show_data_accesses.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,1212" />
+      <AbsolutePoint location="1102,1212" />
+      <AbsolutePoint location="1102,1134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_data_access.do,data_access,/data_access.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="421,1212" />
+      <AbsolutePoint location="900,1212" />
+      <AbsolutePoint location="900,843" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,show_data_accesses,/bt_show_data_accesses.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="932,1294" />
+      <AbsolutePoint location="1132,1294" />
+      <AbsolutePoint location="1132,1134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_show_menuitems.do,null,/menu_editor.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="127,410" />
+      <AbsolutePoint location="127,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_menuitem.do,menuitem,/menu_editor_menuitem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,583" />
+      <AbsolutePoint location="445,583" />
+      <AbsolutePoint location="445,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_operation.do,operation,/operation.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="784,234" />
+      <AbsolutePoint location="784,300" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_operation.do,show_operations,/bt_show_operations.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,392" />
+      <AbsolutePoint location="237,392" />
+      <AbsolutePoint location="237,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="784,1250" />
+      <AbsolutePoint location="784,674" />
+      <AbsolutePoint location="727,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_menuitem.do,menuitem,/menu_editor_menuitem.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,750" />
+      <AbsolutePoint location="365,698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_create_menuitem.do,editor_right,/menu_editor_right.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="207,750" />
+      <AbsolutePoint location="207,698" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/menu_editor_menuitem.jsp,null,/bt_create_menuitem.do,2" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="387,698" />
+      <AbsolutePoint location="387,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,fail,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="708,1250" />
+      <AbsolutePoint location="708,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bt_maintain_menuitem.do,editor_right,/menu_editor_right.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,613" />
+      <AbsolutePoint location="136,613" />
+      <AbsolutePoint location="136,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

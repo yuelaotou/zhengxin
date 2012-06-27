@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="spePickAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.form.SpePickAF" />
+	<form-bean name="spePickListAF"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.form.SpePickListAF" />
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/spepickshowAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickShowAC">
+			<forward name="to_spe_pick_new"
+				path="/specialpickup_transaction.jsp">
+			</forward>
+		</action>
+		<action name="spePickAF" path="/spePickSaveAC"    
+			parameter="method"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickSaveAC">
+			<forward name="to_spe_pick_show"
+				path="/spepickshowAC.do">
+			</forward>
+		</action>
+		<action  path="/spePickfindAAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickFindAAC">
+		</action>
+		<action  path="/spePickfindempAAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickFindEmpACC">
+		</action>
+		
+		<action path="/spePickShowListAC" name="spePickListAF" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickShowListAC">
+			<forward name="spe_pick_list"
+				path="/specialpickup_vindicate.jsp">
+			</forward>
+		</action>
+		<action name="spePickListAF" path="/spePickFindListAC" scope="request"
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickFindListAC">
+			<forward name="show_organizations"
+				path="/spePickShowListAC.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/spepickmaintainac"
+			scope="request" 
+			type="org.xpup.hafmis.syscollection.pickupmng.specialpickup.action.SpePickRemoveAC"
+			parameter="method">
+			<forward name="show_list"
+				path="/spePickShowListAC.do">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/pickupmng/specialpickup/applicationContext.xml" />
+	</plug-in>
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

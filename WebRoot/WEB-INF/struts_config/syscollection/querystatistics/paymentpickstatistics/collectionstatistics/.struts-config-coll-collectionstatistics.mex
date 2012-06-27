@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/showCollection.do" location="50,150" dimension="633,88" />
+  <StrutsActivity path="/to_showAC.do" location="350,350" dimension="633,88" />
+  <StrutsActivity path="/findCollection.do" location="950,150" dimension="633,88" />
+  <StrutsActivity path="/maintain.do" location="50,550" dimension="647,88" />
+  <StrutsActivity path="/theStatCollectCircsList.jsp" location="950,50" dimension="158,49" />
+  <StrutsActivity path="/theStatCollectCircsList_cell.jsp" location="50,350" dimension="179,49" />
+  <StrutsTransition id="/showCollection.do,to_showAC,/to_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="366,238" />
+      <AbsolutePoint location="366,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintain.do,to_printjsp,/theStatCollectCircsList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findCollection.do,to_showCollectionAC,/to_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="968,238" />
+      <AbsolutePoint location="968,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintain.do,to_showAC,/to_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="373,594" />
+      <AbsolutePoint location="666,394" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_showAC.do,to_theStatCollectCircsList.jsp,/theStatCollectCircsList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="698,350" />
+      <AbsolutePoint location="698,74" />
+      <AbsolutePoint location="950,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

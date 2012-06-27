@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+
+	<bean id="giveaccBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.loanapply.giveacc.business.GiveaccBS">
+				<property name="housesDAO">
+					<ref bean="housesDAO" />
+				</property>
+				<property name="borrowerAccDAO">
+					<ref bean="borrowerAccDAO" />
+				</property>
+				<property name="giveAccDAO">
+					<ref bean="giveAccDAO" />
+				</property>
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO" />
+				</property>
+				<property name="securityDAO">
+					<ref bean="securityDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+</beans>
+

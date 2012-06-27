@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/collByFundForwardAC.do" location="0,0" dimension="544,84" />
+  <StrutsActivity path="/collByFundFindAC.do" location="644,0" dimension="526,84" />
+  <StrutsActivity path="/collByFundShowAC.do" location="326,184" dimension="526,84" />
+  <StrutsActivity path="/collByFundMaintainAC.do" location="0,461" dimension="550,84" />
+  <StrutsActivity path="/collbyfund.jsp" location="524,368" dimension="130,48" />
+  <StrutsActivity path="/collbyfund_bankcell.jsp" location="47,645" dimension="184,48" />
+  <StrutsActivity path="/collbyfund_cell.jsp" location="331,645" dimension="160,48" />
+  <StrutsTransition id="/collByFundMaintainAC.do,collbyfund_bankcell,/collbyfund_bankcell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="137,545" />
+      <AbsolutePoint location="137,595" />
+      <AbsolutePoint location="139,595" />
+      <AbsolutePoint location="139,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collByFundMaintainAC.do,collbyfund_cell,/collbyfund_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="412,545" />
+      <AbsolutePoint location="412,595" />
+      <AbsolutePoint location="411,595" />
+      <AbsolutePoint location="411,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collByFundForwardAC.do,collByFundShowAC,/collByFundShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,84" />
+      <AbsolutePoint location="272,134" />
+      <AbsolutePoint location="458,134" />
+      <AbsolutePoint location="458,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collByFundFindAC.do,collByFundShowAC,/collByFundShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="907,84" />
+      <AbsolutePoint location="907,134" />
+      <AbsolutePoint location="721,134" />
+      <AbsolutePoint location="721,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collByFundShowAC.do,collbyfund,/collbyfund.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="589,268" />
+      <AbsolutePoint location="589,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

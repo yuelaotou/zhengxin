@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="documentsAF"
+			type="org.xpup.hafmis.syscollection.peoplebank.documents.form.DocumentsAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="documentsAF" path="/documentsForwardURLAC"
+			type="org.xpup.hafmis.syscollection.peoplebank.documents.action.DocumentsForwardURLAC">
+			<forward name="to_documents_show" path="/documentsShowAC.do"/>
+		</action>
+		<action name="documentsAF" path="/documentsShowAC"
+			type="org.xpup.hafmis.syscollection.peoplebank.documents.action.DocumentsShowAC">
+			<forward name="to_documents_show" path="/documentShow.jsp"/>
+		</action>
+		<action name="documentsAF" path="/documentsMaintainAC" parameter="method"
+			type="org.xpup.hafmis.syscollection.peoplebank.documents.action.DocumentsMaintainAC">
+			<forward name="to_documents_show" path="/documentsShowAC.do"/>
+		</action>
+		
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/peoplebank/documents/applicationContext.xml" />
+	</plug-in>
+</struts-config>

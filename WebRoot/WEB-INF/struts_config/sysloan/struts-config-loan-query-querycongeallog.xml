@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+    <form-bean name="queryCongeallogAF" type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.querycongeallog.form.QueryCongeallogAF" />
+    
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/queryCongeallogForWardAC" 
+    	type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.querycongeallog.action.QueryCongeallogForWardAC" >
+    	<forward name="queryCongeallogShowAC" path="/queryCongeallogShowAC.do" />
+    </action>
+    
+    <action
+      path="/queryCongeallogFindAC"
+      name="queryCongeallogAF"
+      scope="request"
+      type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.querycongeallog.action.QueryCongeallogFindAC" >
+      <forward name="queryCongeallogShowAC" path="/queryCongeallogShowAC.do" />
+    </action>
+    
+    <action
+      path="/queryCongeallogShowAC"
+      name="idAF"
+      scope="request"
+      type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.querycongeallog.action.QueryCongeallogShowAC" >
+      <forward name="queryCongeallog_show" path="/querystatistics/querystatistics/querycongeallog/queryCongeallog_show.jsp" />
+    </action>
+    
+    <action
+     path="/queryCongeallogPrintAC" 
+     name="idAF"
+     scope="request"
+     type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.querycongeallog.action.QueryCongeallogPrintAC" >
+    <forward name="queryCongeallog_cell" path="/querystatistics/querystatistics/querycongeallog/queryCongeallog_cell.jsp" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

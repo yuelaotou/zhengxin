@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgCollInfoShowAC.do" location="50,50" dimension="518,88" />
+  <StrutsActivity path="/orgCollInfoMaintainAC.do" location="650,50" dimension="532,88" />
+  <StrutsActivity path="/orgCollInfoFindListAC.do" location="50,250" dimension="528,88" />
+  <StrutsActivity path="/orgCollInfoForwardAC.do" location="650,250" dimension="532,88" />
+  <StrutsActivity path="/orgCollInfoSkipOrgFlowAAC.do" location="50,450" dimension="558,88" />
+  <StrutsActivity path="/orgCollInfoPrintAC.do" location="950,550" dimension="544,88" />
+  <StrutsActivity path="/orgcollinfo_list.jsp" location="950,450" dimension="119,49" />
+  <StrutsActivity path="/orgcollinfo_print.jsp" location="50,650" dimension="128,49" />
+  <StrutsTransition id="/orgCollInfoPrintAC.do,orgcollinfo_print,/orgcollinfo_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,594" />
+      <AbsolutePoint location="114,594" />
+      <AbsolutePoint location="114,650" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgCollInfoFindListAC.do,orgcollinfo_show_AC,/orgCollInfoShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="284,250" />
+      <AbsolutePoint location="284,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgCollInfoShowAC.do,orgcollinfo_show,/orgcollinfo_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="568,94" />
+      <AbsolutePoint location="623,94" />
+      <AbsolutePoint location="623,474" />
+      <AbsolutePoint location="950,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgCollInfoForwardAC.do,orgcollinfo_show_AC,/orgCollInfoShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="916,250" />
+      <AbsolutePoint location="916,183" />
+      <AbsolutePoint location="314,183" />
+      <AbsolutePoint location="314,138" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

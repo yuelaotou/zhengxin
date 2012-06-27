@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<root file="1">
+	<file name="CashDayClearTcExport" col="13" space="0" row="-1">
+		<column>credenceDate</column>
+		<column>credenceChaNum</column>
+		<column>temp_summary</column>
+		<column>subjectCode</column>
+		<column>subjectName</column>
+		<column>debit</column>
+		<column>credit</column>
+		<column>balance</column>
+		<column>settNum</column>
+		<column>temp_settType</column>
+		<column>dopsn</column>
+		<column>makebill</column>
+		<column>credenceSt</column>
+	</file>
+</root>

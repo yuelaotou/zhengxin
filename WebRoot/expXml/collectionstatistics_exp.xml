@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root file="1">
+
+	<file name="CollectionstatisticsExport" col="15" space="0" row="-1">
+		<column>officeCode</column>
+		<column>collectionBank</column>
+		<column>orgId</column>
+		<column>orgName</column>
+		<column>orgCharacter</column>
+		<column>deptInCharge</column>
+		<column>region</column>
+		<column>lastMonthCollect</column>
+		<column>monthPay</column>
+		<column>orgAddPay</column>
+		<column>personAddPay</column>
+		<column>orgOverPay</column>
+		<column>chgPay</column>
+		<column>thisMonthCollect</column>
+		<column>rate</column>
+	</file>
+
+</root>

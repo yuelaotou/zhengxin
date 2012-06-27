@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgaddpayTaFindAAC.do" location="619,1186" dimension="478,84" />
+  <StrutsActivity path="/orgaddpayTaForwardUrlAC.do" location="1212,184" dimension="508,84" />
+  <StrutsActivity path="/orgaddpayTaShowAC.do" location="1618,448" dimension="472,84" />
+  <StrutsActivity path="/orgaddpayTaMaintainAC.do" location="32,184" dimension="496,84" />
+  <StrutsActivity path="/orgaddpayTbFindAC.do" location="4270,184" dimension="472,84" />
+  <StrutsActivity path="/orgaddpayTbForwardUrlAC.do" location="3662,184" dimension="508,84" />
+  <StrutsActivity path="/orgaddpayTbShowAC.do" location="3621,448" dimension="472,84" />
+  <StrutsActivity path="/orgaddpayTbMaintainAC.do" location="1820,184" dimension="496,84" />
+  <StrutsActivity path="/orgaddpayTaImportAC.do" location="628,184" dimension="484,84" />
+  <StrutsActivity path="/orgaddpayTbWindowShowAC.do" location="18,909" dimension="508,84" />
+  <StrutsActivity path="/orgaddpayTbMXPrintAC.do" location="1202,725" dimension="490,84" />
+  <StrutsActivity path="/orgaddpayTbWindowForwardURLAC.do" location="0,725" dimension="544,84" />
+  <StrutsActivity path="/orgaddpayTbPrintAC.do" location="3084,184" dimension="478,84" />
+  <StrutsActivity path="/orgaddpayExportAC.do" location="1230,0" dimension="472,84" />
+  <StrutsActivity path="/orgaddpayTbPickupdataWindowShowAC.do" location="589,725" dimension="568,84" />
+  <StrutsActivity path="/orgaddpayTbPickupdataWindowSureAC.do" location="2416,184" dimension="568,84" />
+  <StrutsActivity path="/orgaddpayTbPickupdataWindowFindAAC.do" location="0,1186" dimension="574,84" />
+  <StrutsActivity path="/orgaddpay_jy.jsp" location="1783,632" dimension="142,48" />
+  <StrutsActivity path="/orgaddpay_imports.jsp" location="0,466" dimension="172,48" />
+  <StrutsActivity path="/org_tdpz_cell.jsp" location="466,466" dimension="148,48" />
+  <StrutsActivity path="/orgaddpay_lb.jsp" location="3786,632" dimension="142,48" />
+  <StrutsActivity path="/orgaddpay_lb_cell.jsp" location="2394,466" dimension="172,48" />
+  <StrutsActivity path="/orgaddpay_cell.jsp" location="3098,466" dimension="154,48" />
+  <StrutsActivity path="/orgaddpay_lb_mx.jsp" location="192,1093" dimension="160,48" />
+  <StrutsActivity path="/orgaddpay_mx_cell.jsp" location="1222,909" dimension="172,48" />
+  <StrutsActivity path="/orgaddpay_mx_cell_1.jsp" location="1494,909" dimension="184,48" />
+  <StrutsActivity path="/orgaddpay_pickupdatawindow_show.jsp" location="745,909" dimension="256,48" />
+  <StrutsActivity path="/modify_monthPay.jsp" location="950,550" dimension="160,48" />
+  <StrutsActivity path="/monthpayModifyAC.do" location="650,1050" dimension="466,84" />
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,show_print,/orgaddpay_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2043,268" />
+      <AbsolutePoint location="2043,358" />
+      <AbsolutePoint location="3137,358" />
+      <AbsolutePoint location="3137,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,orgaddpay_lb_cell,/orgaddpay_lb_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2068,268" />
+      <AbsolutePoint location="2068,388" />
+      <AbsolutePoint location="2480,388" />
+      <AbsolutePoint location="2480,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayModifyAC.do,show_paymentList,/monthpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1116,1092" />
+      <AbsolutePoint location="1250,1092" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaShowAC.do,show_orgaddpay,/orgaddpay_jy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1854,532" />
+      <AbsolutePoint location="1854,632" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbWindowShowAC.do,show_orgaddpay,/orgaddpay_lb_mx.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,993" />
+      <AbsolutePoint location="272,1093" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,org_tdpz_cell,/org_tdpz_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1870,268" />
+      <AbsolutePoint location="1870,388" />
+      <AbsolutePoint location="577,388" />
+      <AbsolutePoint location="577,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbPrintAC.do,show_print,/orgaddpay_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3323,268" />
+      <AbsolutePoint location="3323,358" />
+      <AbsolutePoint location="3214,358" />
+      <AbsolutePoint location="3214,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayModifyAC.do,show_paymentList,/orgaddpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1116,1092" />
+      <AbsolutePoint location="3943,1092" />
+      <AbsolutePoint location="3943,532" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,show_orgaddpayta,/orgaddpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2267,268" />
+      <AbsolutePoint location="2267,298" />
+      <AbsolutePoint location="1948,298" />
+      <AbsolutePoint location="1948,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaMaintainAC.do,show_orgaddpay,/orgaddpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="446,268" />
+      <AbsolutePoint location="446,358" />
+      <AbsolutePoint location="1665,358" />
+      <AbsolutePoint location="1665,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayExportAC.do,show_orgaddpay,/orgaddpayTaForwardUrlAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1466,84" />
+      <AbsolutePoint location="1466,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbForwardUrlAC.do,show_orgaddpay,/orgaddpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3916,268" />
+      <AbsolutePoint location="3916,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbPickupdataWindowSureAC.do,show_orgaddpaytb,/orgaddpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2842,268" />
+      <AbsolutePoint location="2842,298" />
+      <AbsolutePoint location="3798,298" />
+      <AbsolutePoint location="3798,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbWindowForwardURLAC.do,show_orgaddpay,/orgaddpayTbWindowShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,809" />
+      <AbsolutePoint location="272,909" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbShowAC.do,show_orgaddpayList,/orgaddpay_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3857,532" />
+      <AbsolutePoint location="3857,632" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbPickupdataWindowShowAC.do,to_orgaddpay_pickupdatawindow_show,/orgaddpay_pickupdatawindow_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="873,809" />
+      <AbsolutePoint location="873,909" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbFindAC.do,show_orgaddpay,/orgaddpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4506,268" />
+      <AbsolutePoint location="4506,298" />
+      <AbsolutePoint location="4034,298" />
+      <AbsolutePoint location="4034,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,modify_monthPay,/modify_monthPay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2167,268" />
+      <AbsolutePoint location="2167,574" />
+      <AbsolutePoint location="1110,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbPickupdataWindowSureAC.do,show_orgaddpayta,/orgaddpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2558,268" />
+      <AbsolutePoint location="2558,418" />
+      <AbsolutePoint location="2043,418" />
+      <AbsolutePoint location="2043,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMXPrintAC.do,show_print,/orgaddpay_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1324,809" />
+      <AbsolutePoint location="1324,859" />
+      <AbsolutePoint location="1308,859" />
+      <AbsolutePoint location="1308,909" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMXPrintAC.do,show_print_1,/orgaddpay_mx_cell_1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1569,809" />
+      <AbsolutePoint location="1569,859" />
+      <AbsolutePoint location="1586,859" />
+      <AbsolutePoint location="1586,909" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTbMaintainAC.do,show_orgaddpay,/orgaddpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2197,268" />
+      <AbsolutePoint location="2197,328" />
+      <AbsolutePoint location="3680,328" />
+      <AbsolutePoint location="3680,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaMaintainAC.do,orgaddpay_imports,/orgaddpay_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="115,268" />
+      <AbsolutePoint location="115,298" />
+      <AbsolutePoint location="86,298" />
+      <AbsolutePoint location="86,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaMaintainAC.do,org_tdpz_cell,/org_tdpz_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="280,268" />
+      <AbsolutePoint location="280,388" />
+      <AbsolutePoint location="503,388" />
+      <AbsolutePoint location="503,466" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaForwardUrlAC.do,show_orgaddpay,/orgaddpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1466,268" />
+      <AbsolutePoint location="1466,298" />
+      <AbsolutePoint location="1854,298" />
+      <AbsolutePoint location="1854,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgaddpayTaImportAC.do,show_orgaddpay,/orgaddpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="870,268" />
+      <AbsolutePoint location="870,328" />
+      <AbsolutePoint location="1760,328" />
+      <AbsolutePoint location="1760,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="bailpickupTaAF" 
+		  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.form.BailpickupTaAF"/>
+		<form-bean name="bailpickupTbAF" 
+		  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.form.BailpickupTbAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	<action path="/bailpickupShowAC" scope="session" 
+	 type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTaForwardURLAC">
+	 <forward name="to_bailpickupTaShowAC" path="/bailpickupTaShowAC.do"></forward>
+	</action>
+	 
+	 <action path="/bailpickupTaShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTaShowAC">
+	  <forward name="to_bailpickupTa" path="/specialbiz/bailpickup/bailpickupTa.jsp"></forward>
+	 </action>
+	 
+	 <action name="bailpickupTaAF" path="/bailpickupTaNewAC" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTaNewAC">
+	  <forward name="to_bailpickupTa" path="/specialbiz/bailpickup/bailpickupTa.jsp"></forward>
+	  <forward name="to_bailpickupTa_cell" path="/specialbiz/bailpickup/bailpickupTa_cell.jsp"></forward>
+	 </action>
+	 
+	 <action path="/bailpickupTbForwardURLAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTbForwardURLAC">
+	  <forward name="to_bailpickupTbShowAC" path="/bailpickupTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="bailpickupTbAF" path="/bailpickupTbShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTbShowAC">
+	  <forward name="to_bailpickupTb" path="/specialbiz/bailpickup/bailpickupTb.jsp"></forward>
+	 </action>
+	 
+	 <action name="bailpickupTbAF" path="/bailpickupTbFindAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTbFindAC">
+	  <forward name="to_bailpickupTbShowAC" path="/bailpickupTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/bailpickupTbMaintainAC" scope="session" parameter="method" 
+	  type="org.xpup.hafmis.sysloan.specialbiz.bailpickup.action.BailpickupTbMaintainAC">
+	  <forward name="to_bailpickupTbShowAC" path="/bailpickupTbShowAC.do"></forward>
+	  <forward name="to_bailpickupTa_cell" path="/specialbiz/bailpickup/bailpickupTa_cell.jsp"></forward>
+	  <!--  
+	  <forward name="to_bailpickupTb_cell" path="/specialbiz/bailpickup/bailpickupTb_cell.jsp"></forward>
+	  -->
+	 </action>
+	
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

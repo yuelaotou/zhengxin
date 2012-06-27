@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loginAction.do" location="1504,184" dimension="334,84" />
+  <StrutsActivity path="/toIndexAction.do" location="606,184" dimension="346,84" />
+  <StrutsActivity path="/loginOffAction.do" location="1052,184" dimension="352,84" />
+  <StrutsActivity path="/changSystemToIndexAction.do" location="94,184" dimension="412,84" />
+  <StrutsActivity path="/toChangeBizDateAction.do" location="0,368" dimension="394,84" />
+  <StrutsActivity path="/changeBizDateAction.do" location="588,0" dimension="382,84" />
+  <StrutsActivity path="/toChangeBizDateAAC.do" location="0,922" dimension="376,84" />
+  <StrutsActivity path="/toshowpassord.do" location="0,645" dimension="388,84" />
+  <StrutsActivity path="/toupdatepasswordAC.do" location="488,645" dimension="400,84" />
+  <StrutsActivity path="/toChangeBookAAC.do" location="421,922" dimension="358,84" />
+  <StrutsActivity path="/index.jsp" location="1704,386" dimension="100,48" />
+  <StrutsActivity path="/login.jsp" location="1178,386" dimension="100,48" />
+  <StrutsActivity path="/toindex.jsp" location="608,386" dimension="112,48" />
+  <StrutsActivity path="/changebizdate.jsp" location="123,552" dimension="148,48" />
+  <StrutsActivity path="/toshowupdatepassword.jsp" location="493,829" dimension="190,48" />
+  <StrutsTransition id="/toIndexAction.do,fail,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="865,268" />
+      <AbsolutePoint location="865,318" />
+      <AbsolutePoint location="1194,318" />
+      <AbsolutePoint location="1194,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/changeBizDateAction.do,toIndexAction,/toIndexAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="779,84" />
+      <AbsolutePoint location="779,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/changSystemToIndexAction.do,toChangeBizDateAction,/toChangeBizDateAction.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,268" />
+      <AbsolutePoint location="197,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/toIndexAction.do,index,/toindex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="692,268" />
+      <AbsolutePoint location="692,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginOffAction.do,login,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1228,268" />
+      <AbsolutePoint location="1228,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/toupdatepasswordAC.do,badupdatepassword,/toshowupdatepassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="788,729" />
+      <AbsolutePoint location="788,779" />
+      <AbsolutePoint location="651,779" />
+      <AbsolutePoint location="651,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/toshowpassord.do,toshowupdatepassword,/toshowupdatepassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="194,729" />
+      <AbsolutePoint location="194,779" />
+      <AbsolutePoint location="524,779" />
+      <AbsolutePoint location="524,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/toChangeBizDateAction.do,changebizdate,/changebizdate.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,452" />
+      <AbsolutePoint location="197,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/changSystemToIndexAction.do,toindex,/toindex.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="403,268" />
+      <AbsolutePoint location="403,318" />
+      <AbsolutePoint location="636,318" />
+      <AbsolutePoint location="636,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,success,/index.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1754,268" />
+      <AbsolutePoint location="1754,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/toupdatepasswordAC.do,sussceupdatetoshowjsp,/toshowupdatepassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="588,729" />
+      <AbsolutePoint location="588,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loginAction.do,fail,/login.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1587,268" />
+      <AbsolutePoint location="1587,318" />
+      <AbsolutePoint location="1261,318" />
+      <AbsolutePoint location="1261,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

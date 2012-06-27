@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="autoChangeParamAF" type="org.xpup.hafmis.syscollection.chgbiz.autochangeparam.form.AutoChangeParamAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/autoChangeParamShowAC"
+				type="org.xpup.hafmis.syscollection.chgbiz.autochangeparam.action.AutoChangeParamShowAC">
+				<forward name="to_autochangeparam_show" path="/autochangeparam_show.jsp"></forward>
+		</action>
+		<action path="/autoChangeParamSaveAC"
+				type="org.xpup.hafmis.syscollection.chgbiz.autochangeparam.action.AutoChangeParamSaveAC"
+				name="autoChangeParamAF"
+				scope="request">
+				<forward name="to_autoChangeParamShowAC" path="/autoChangeParamShowAC.do"></forward>
+		</action>
+	</action-mappings>
+	
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/chgbiz/autochangeparam/applicationContext.xml" />
+	</plug-in>
+</struts-config>

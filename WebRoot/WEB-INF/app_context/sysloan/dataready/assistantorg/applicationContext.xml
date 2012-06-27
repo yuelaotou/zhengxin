@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+ 	<bean id="assistantorgBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.assistantorg.business.AssistantorgBS">
+				<property name="assistantOrgDAO">
+					<ref bean="assistantOrgDAO"/>
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO"/>
+				</property>				
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 代理机构维护BS -->
+	<bean id="surrogateBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.assistantorg.business.SurrogateBS">
+				<property name="assistantOrgDAO">
+					<ref bean="assistantOrgDAO"/>
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO"/>
+				</property>				
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 保险公司维护BS -->
+	<bean id="insuranceBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.assistantorg.business.InsuranceBS">
+				<property name="assistantOrgDAO">
+					<ref bean="assistantOrgDAO"/>
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO"/>
+				</property>				
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 评估公司维护BS -->
+	<bean id="evaluateBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.assistantorg.business.EvaluateBS">
+				<property name="assistantOrgDAO">
+					<ref bean="assistantOrgDAO"/>
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO"/>
+				</property>				
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+	<!-- 公证处维护BS -->
+	<bean id="notarialBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.assistantorg.business.NotarialBS">
+				<property name="assistantOrgDAO">
+					<ref bean="assistantOrgDAO"/>
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO"/>
+				</property>				
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO"/>
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

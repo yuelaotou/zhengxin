@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+
+	<form-bean name="businesslogsearchAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.form.BusinesslogsearchAF" />
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="bizcheckDetailAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.bizcheck.form.BizcheckDetailAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+	
+		<action path="/businesslogsearchForwardURLAC" 
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.action.BusinesslogsearchForwardURLAC">
+		<forward name="businesslogsearchShowAC" path="/businesslogsearchShowAC.do" />
+		</action>
+		<action 
+		    name="businesslogsearchAF"
+		    scope="request"
+			path="/businesslogsearchShowAC" 
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.action.BusinesslogsearchShowAC">
+			<forward name="to_businesslogsearch_show.jsp" path="/businesslogsearch_show.jsp">
+			</forward>
+		</action>
+		
+		<action 
+			path="/businesslogsearchMaintainAC" 
+			name="idAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.action.BusinesslogsearchMaintainAC">
+			<forward name="to_businesslogprint.jsp" path="/businesslogprint.jsp">
+			</forward>
+		</action>
+
+		<action 
+			path="/businesslogsearchFindAC" scope="request"
+			name="businesslogsearchAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.action.BusinesslogsearchFindAC">
+			<forward name="to_businesslogsearchShowAC" path="/businesslogsearchShowAC.do">
+			</forward>
+		</action>
+		
+		<action 
+			path="/logSearchTaWindowAC" 
+			name="bizcheckDetailAF"
+			
+			type="org.xpup.hafmis.syscollection.querystatistics.logsearch.businesslogsearch.action.LogSearchTaWindowAC">
+			<forward name="to_logsearch_mx_A.jsp" path="/logsearch_mx_A.jsp"></forward>
+		    <forward name="to_logsearch_mx_M.jsp" path="/logsearch_mx_M.jsp"></forward>
+		    <forward name="to_logsearch_mx_E.jsp" path="/logsearch_mx_E.jsp"></forward>
+		    <forward name="to_logsearch_mx_F.jsp" path="/logsearch_mx_F.jsp"></forward>
+		    <forward name="to_logsearch_mx_D.jsp" path="/logsearch_mx_D.jsp"></forward>
+
+		</action>
+		
+		
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/logsearch/businesslogsearch/applicationContext.xml" />
+	</plug-in>
+		<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

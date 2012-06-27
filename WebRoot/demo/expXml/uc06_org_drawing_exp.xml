@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="UC06OrgDrawOrgExp" col="4"  space="0" row="2">
+     <column>id</column>
+	 <column>idText</column>
+	  <column>name</column>
+	   <column>nameText</column>
+</file>
+  <file name="UC06OrgDrawEmpExp" col="6"  space="2" row="-1">
+     <column>id</column>
+	 <column>name</column>
+	 <column>cardNumber</column>
+	 <column>drawType</column>
+	 <column>drawMoney</column>
+	 <column>drawReason</column>
+  </file>
+</root>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="orgpopFindAF"
+			type="org.xpup.hafmis.syscollection.common.biz.orgpop.form.OrgpopFindAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="orgpopFindAF"
+			path="/orgpopTaFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.common.biz.orgpop.action.OrgpopTaFindAC">
+			<forward name="show_orgpop"
+				path="/orgpopTaShowAC.do">
+			</forward>
+		</action>
+		<action path="/orgpopTaShowAC"
+			type="org.xpup.hafmis.syscollection.common.biz.orgpop.action.OrgpopTaShowAC">
+			<forward name="show_orgpop"
+				path="/orgpop_find.jsp">
+			</forward>
+		</action>
+		
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/common/biz/orgpop/applicationContext.xml" />
+	</plug-in>
+</struts-config>

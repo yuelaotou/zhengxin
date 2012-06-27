@@ -1,0 +1,184 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.syscollection.common.domain.entity.OrgHAFAccountFlow" 
+    table="AA101"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+	<generator class="sequence">
+		<param name="sequence">SEQ_AA101</param>
+	</generator>
+    </id>
+	<discriminator column="BIZ_TYPE" type="string" />
+	
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        length="20"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="debit"
+        type="java.math.BigDecimal"
+        column="DEBIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="credit"
+        type="java.math.BigDecimal"
+        column="CREDIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="interest"
+        type="java.math.BigDecimal"
+        column="INTEREST"
+        length="18"
+    />
+    <property
+        name="summary"
+        type="java.lang.String"
+        column="SUMMARY"
+        length="50"
+    />
+    <property
+        name="bizId"
+        type="java.math.BigDecimal"
+        column="BIZ_ID"
+        length="22"
+    />
+    <property
+        name="bizStatus"
+        type="java.math.BigDecimal"
+        column="BIZ_STATUS"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="noteNum"
+        type="java.lang.String"
+        column="NOTE_NUM"
+        length="50"
+    />
+    <property
+        name="isFinance"
+        type="java.math.BigDecimal"
+        column="IS_FINANCE"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="personTotal"
+        type="integer"
+        column="BUSICOUNT"
+        not-null="true"
+        length="9"
+    />
+    <property
+        name="specailType"
+        type="java.lang.String"
+        column="SPECAILTYPE"
+        length="1"
+    />
+      <property
+        name="moneyBank"
+        type="java.lang.String"
+        column="MONEYBANK"
+        length="20"
+    />
+      <property
+        name="officeCode"
+        type="java.lang.String"
+        column="OFFICECODE"
+        length="50"
+    />
+      <property
+        name="isClearAccount"
+        type="java.math.BigDecimal"
+        column="ISCLEARACCOUNT"
+        length="22"
+    />
+    <property
+        name="registrations"
+        type="java.lang.String"
+        column="registrations"
+        length="20"
+    />
+    <property
+        name="checkPerson"
+        type="java.lang.String"
+        column="CHECKPERSON"
+        length="20"
+    />
+    <property
+        name="clearPerson"
+        type="java.lang.String"
+        column="CLEARPERSON"
+        length="20"
+    />
+    
+        <property name="total" type="java.math.BigDecimal" formula="(select sum(a.credit) from aa101 t,aa102 a where a.org_flow_id=t.id and t.id=id)"
+	/>
+
+	   <property name="bizType_" type="java.lang.String" formula="(select aa101.BIZ_TYPE from AA101 aa101 where aa101.id=id)" 
+	/>
+	<!--  <property name="personTotal" type="java.lang.Integer" formula="(select count(*) from AA102 aa102  where aa102.ORG_FLOW_ID=id )"/>-->
+    <property name="interestTotal" type="java.math.BigDecimal" formula="(select sum(aa101.INTEREST) from AA101 aa101  where aa101.id=id )"/>
+    <property name="moneyTotal" type="java.math.BigDecimal" formula="(select sum(aa101.DEBIT+aa101.CREDIT) from AA101 aa101  where aa101.id=id )"/>
+    <property name="orgBalance" type="java.math.BigDecimal" formula="(select aa101.CREDIT-aa101.DEBIT from AA101 aa101  where aa101.id = id )"/>
+    <property name="biz_Type" type="java.lang.String" formula="(select aa101.BIZ_TYPE from AA101 aa101  where aa101.id=id )"/>
+	
+	<property name="debit_wl" type="java.math.BigDecimal" formula="(select sum(a.debit) from aa101 t,aa102 a where a.org_flow_id=t.id and t.id=id)"></property>
+	<property name="credit_wl" type="java.math.BigDecimal" formula="(select sum(a.credit) from aa101 t,aa102 a where a.org_flow_id=t.id and t.id=id)"></property>
+
+    <many-to-one name="org"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.Org" not-null="true" lazy="false">
+			<column name="ORG_ID" />
+	</many-to-one>
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/searchLackInfoForwardURLAC.do" location="650,450" dimension="528,88" />
+  <StrutsActivity path="/showSearchLackInfoListAC.do" location="50,250" dimension="606,88" />
+  <StrutsActivity path="/findSearchLackInfoListAC.do" location="950,250" dimension="600,88" />
+  <StrutsActivity path="/maintainSearchLackInfoListAC.do" location="950,50" dimension="620,88" />
+  <StrutsActivity path="/createSearchLackInfoAC.do" location="50,650" dimension="597,88" />
+  <StrutsActivity path="/searchLackInfoList.jsp" location="650,150" dimension="140,49" />
+  <StrutsActivity path="/searchLackInfoList_cell.jsp" location="350,150" dimension="161,49" />
+  <StrutsActivity path="/searchLackInfoOne_cell.jsp" location="50,550" dimension="202,48" />
+  <StrutsActivity path="/chgpersonOrgList.jsp" location="50,450" dimension="135,49" />
+  <StrutsActivity path="/chgpersonOrgList_cell.jsp" location="350,450" dimension="156,49" />
+  <StrutsActivity path="/showSearchLackInfoListAC_old.do" location="50,850" dimension="606,88" />
+  <StrutsActivity path="/findSearchLackInfoListAC_old.do" location="950,850" dimension="600,88" />
+  <StrutsActivity path="/searchLackInfoList_oldsys.jsp" location="350,550" dimension="176,49" />
+  <StrutsActivity path="/searchLackInfoURLAC_old.do" location="950,650" dimension="643,88" />
+  <StrutsTransition id="/maintainSearchLackInfoListAC.do,to_searchLackInfo_one_report,/searchLackInfoOne_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1260,94" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findSearchLackInfoListAC_old.do,to_searchLackInfo_list,/showSearchLackInfoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,894" />
+      <AbsolutePoint location="791,894" />
+      <AbsolutePoint location="791,613" />
+      <AbsolutePoint location="335,613" />
+      <AbsolutePoint location="335,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/maintainSearchLackInfoListAC.do,to_searchLackInfo_report,/searchLackInfoList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showSearchLackInfoListAC.do,to_searchLackInfo_list,/searchLackInfoList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="353,294" />
+      <AbsolutePoint location="720,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchLackInfoURLAC_old.do,to_searchLackInfo_list,/showSearchLackInfoListAC_old.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1271,738" />
+      <AbsolutePoint location="1271,783" />
+      <AbsolutePoint location="353,783" />
+      <AbsolutePoint location="353,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchLackInfoForwardURLAC_old.do,to_searchLackInfo_list,/showSearchLackInfoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1261,650" />
+      <AbsolutePoint location="1261,383" />
+      <AbsolutePoint location="365,383" />
+      <AbsolutePoint location="365,338" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showSearchLackInfoListAC_old.do,to_searchLackInfo_list,/searchLackInfoList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="50,894" />
+      <AbsolutePoint location="-75,894" />
+      <AbsolutePoint location="-75,413" />
+      <AbsolutePoint location="720,413" />
+      <AbsolutePoint location="720,199" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/createSearchLackInfoAC.do,to_searchLackInfo_list,/showSearchLackInfoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="353,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findSearchLackInfoListAC_old.do,to_searchLackInfo_list,/showSearchLackInfoListAC_old.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,924" />
+      <AbsolutePoint location="656,924" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchLackInfoForwardURLAC.do,to_searchLackInfo_list,/showSearchLackInfoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="914,494" />
+      <AbsolutePoint location="353,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/searchLackInfoForwardURLAC_old.do,to_searchLackInfo_list,/showSearchLackInfoListAC_old.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1261,738" />
+      <AbsolutePoint location="1261,783" />
+      <AbsolutePoint location="353,783" />
+      <AbsolutePoint location="353,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showSearchLackInfoListAC_old.do,to_searchLackInfo_list,/searchLackInfoList_oldsys.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="656,894" />
+      <AbsolutePoint location="791,894" />
+      <AbsolutePoint location="791,574" />
+      <AbsolutePoint location="526,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/findSearchLackInfoListAC.do,to_searchLackInfo_list,/showSearchLackInfoListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1250,294" />
+      <AbsolutePoint location="353,294" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanDeskaccQueryTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.form.LoanDeskaccQueryTaAF" />
+		<form-bean name="loanDeskaccQueryTbAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.form.LoanDeskaccQueryTbAF" />
+
+		<!-- ========================loanapply======================-->
+		<form-bean name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyNewAF" />
+		<form-bean name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTbNewAF" />
+		<form-bean name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTcNewAF" />
+		<form-bean name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTdNewAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loandeskaccquerytashowAC"
+			name="loanDeskaccQueryTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTaShowAC">
+			<forward name="loandeskaccquery_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquery_show.jsp">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryTaFindAC"
+			name="loanDeskaccQueryTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTaFindAC">
+			<forward name="loandeskaccquerytashowAC"
+				path="/loandeskaccquerytashowAC.do">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryTaMaintainAC" name="idAF"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTaMaintainAC">
+			<forward name="loandeskaccqueryta_cell"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccqueryta_cell.jsp">
+			</forward>
+		</action>
+		<action path="/LoanDeskaccQueryTaFindFloorNameAAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTaFindFloorNameAAC" />
+		<action path="/loanDeskaccQueryTaForwardAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTaForwardAC">
+			<forward name="loandeskaccquerytashowAC"
+				path="/loandeskaccquerytashowAC.do">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryContractInfoTaShowAC"
+			name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryContractInfoTaShowAC">
+			<forward name="loandeskaccquerycontractta_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerycontractta_show.jsp">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryContractInfoTbShowAC"
+			name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryContractInfoTbShowAC">
+			<forward name="loandeskaccquerycontracttb_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerycontracttb_show.jsp">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryContractInfoTcShowAC"
+			name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryContractInfoTcShowAC">
+			<forward name="loandeskaccquerycontracttc_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerycontracttc_show.jsp">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryContractInfoTdShowAC"
+			name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryContractInfoTdShowAC">
+			<forward name="loandeskaccquerycontracttd_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerycontracttd_show.jsp">
+			</forward>
+		</action>
+		<action path="/loanDeskaccQueryContractInfoTbFindEmpInfoAAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryContractInfoTbFindEmpInfoAAC" />
+		<action path="/loanDeskaccQueryTbShowAC"
+			name="loanDeskaccQueryTbAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTbShowAC">
+			<forward name="loandeskaccquerytb_show"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerytb_show.jsp">
+			</forward>
+		</action>
+		<action name="loanDeskaccQueryTbAF"
+			path="/loanDeskaccQueryTbFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTbFindAC">
+			<forward name="loanDeskaccQueryTbShowAC"
+				path="/loanDeskaccQueryTbShowAC.do">
+			</forward>
+		</action>
+    <action path="/loanDeskaccQueryTbPrintAC" name="idAF" type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTbPrintAC">
+    <forward name="loandeskaccquerytb_cell"
+				path="/querystatistics/querystatistics/loandeskaccquery/loandeskaccquerytb_cell.jsp">
+				</forward>
+    </action>
+    <action path="/loanDeskaccQueryTbForwardAC" type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.loandeskaccquery.action.LoanDeskaccQueryTbForwardAC">
+  <forward name="loanDeskaccQueryTbShowAC"
+				path="/loanDeskaccQueryTbShowAC.do">
+				</forward>
+    </action>
+    
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

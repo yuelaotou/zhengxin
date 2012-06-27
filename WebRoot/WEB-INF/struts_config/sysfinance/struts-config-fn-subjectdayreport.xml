@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="subjectdayreportAF" type="org.xpup.hafmis.sysfinance.accmng.subjectdayreport.form.SubjectdayreportAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    <action 
+    	path="/subjectdayreportForWardAC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectdayreport.action.SubjectdayreportForWardAC">
+    	<forward name="subjectdayreportShowAC" path="/subjectdayreportShowAC.do" />
+    </action>	
+    
+    <action 
+    	path="/subjectdayreportShowAC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectdayreport.action.SubjectdayreportShowAC">
+    	<forward name="to_subjectdayreport_show" path="/accmng/subjectdayreport/subjectdayreport_show.jsp" />
+    </action>
+    
+    <action
+      path="/subjectdayreportFindAC"
+      name="subjectdayreportAF"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.accmng.subjectdayreport.action.SubjectdayreportFindAC">
+      <forward name="subjectdayreportShowAC" path="/subjectdayreportShowAC.do" />
+    </action>
+    
+    <action 
+    	path="/subjectdayreportFindACC" 
+    	type="org.xpup.hafmis.sysfinance.accmng.subjectdayreport.action.SubjectdayreportFindACC">
+    </action>
+    	
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

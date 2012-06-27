@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="advancepayloanTaAF" type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.form.AdvancepayloanTaAF"></form-bean>
+		<form-bean name="advancepayloanTbAF" type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.form.AdvancepayloanTbAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	
+	<action-mappings>
+		<action path="/advancepayloanTaShowAC"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTaForwardURLAC">
+				<forward name="to_advancepayloanTaShowAC" path="/to_advancepayloanTaShowAC.do"></forward>
+		</action>
+		<action path="/to_advancepayloanTaShowAC"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTaShowAC">
+				<forward name="to_advancepayloanTa_show" path="/loancallback/advancepayloan/advancepayloanTa_show.jsp"></forward>
+		</action>
+		<action path="/advancepayloanTaFindAAC" 
+		        scope="request" 
+		        type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTaFindAAC">
+		</action>
+		<action path="/advancepayloanTaMainTainAC"
+				name="advancepayloanTaAF"
+				scope="request"
+				parameter="method"
+				type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTaMainTainAC">
+				<forward name="to_advancepayloanTaShowAC" path="/to_advancepayloanTaShowAC.do"></forward>
+		</action>
+		
+		<action path="/advancepayloanTbShowAC"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTbForwardURLAC">
+				<forward name="to_advancepayloanTbShowAC" path="/to_advancepayloanTbShowAC.do"></forward>
+		</action>
+		<action path="/to_advancepayloanTbShowAC"
+				scope="request"
+				type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTbShowAC">
+				<forward name="to_advancepayloanTb_show" path="/loancallback/advancepayloan/advancepayloanTb_show.jsp"></forward>
+		</action>
+		<action path="/advancepayloanTbFindAC" 
+		        scope="request" 
+		        name="advancepayloanTbAF"
+		        type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTbFindAC">
+		        <forward name="to_advancepayloanTbShowAC" path="/to_advancepayloanTbShowAC.do"></forward>
+		</action>
+		<action path="/advancepayloanTbMainTainAC" 
+		        scope="request" 
+		        name="idAF"
+		        parameter="method" 
+		        type="org.xpup.hafmis.sysloan.loancallback.advancepayloan.action.AdvancepayloanTbMainTainAC">
+		        <forward name="to_advancepayloanTbShowAC" path="/to_advancepayloanTbShowAC.do"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

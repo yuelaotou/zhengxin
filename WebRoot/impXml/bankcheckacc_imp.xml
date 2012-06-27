@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<root file="1">
+  <file name="BankCheckAccImpContent" col="8"  space="1" row="-1">
+	 <column>
+	     <name>Settdate</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>Subjectcode</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>Debit</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>Credit</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Setttype</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>Settnum</name>
+		 <typle>java.lang.String</typle>
+ 	</column>
+ 	<column>
+	     <name>Summary</name>
+		 <typle>java.lang.String</typle>
+ 	</column>
+ 	<column>
+	     <name>Dopsn</name>
+		 <typle>java.lang.String</typle>
+ 	</column>
+  </file>
+</root>

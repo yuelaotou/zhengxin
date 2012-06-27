@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="traninVidAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninVidAF" />
+		<form-bean name="traninStayAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninStayAF" />
+		<form-bean name="traninImportAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninImportAF" />
+		<form-bean name="traninAddAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninAddAF" />
+	    <form-bean name="traninIdAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninIdAF" />
+	    <form-bean name="traninAF"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.form.TraninAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="traninVidAF" path="/showTraninListPrintAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninListPrintAC">
+			<forward name="tranin_tail_cell" path="/tranin_cell.jsp" />
+		</action>
+	<action name="traninStayAF" path="/findTraninStayMaintainListAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.FindTraninStayMaintainListAC">
+			<forward name="to_traninStayMaintain_list" path="/showTraninStayListAC.do" />
+		</action>
+	<action name="traninVidAF" path="/findTraninVidMaintainListAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.FindTraninVidMaintainListAC">
+			<forward name="to_traninMaintain_list" path="/showTraninVidListAC.do" />
+		</action>
+	 <action name="traninAF" path="/showTraninListAAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninListAAC">
+			<forward name="tranin_AAC_List" path="/tranin_AAC_List.jsp" />
+			<forward name="tranin_tail_cell" path="/tranin_cell.jsp"></forward>
+			<forward name="tranin_tail_cell_yg" path="/tranin_cell_yg.jsp"></forward>
+			<forward name="tranin_tail_cell_yga" path="/tranin_cell_yga.jsp"></forward>
+			<forward name="tranin_tail_cell_ygb" path="/tranin_cell_ygb.jsp"></forward>
+		</action>
+	 <action  path="/showTraninListURLAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninListURLAC">
+			<forward name="to_showTranin_list" path="/showTraninListAC.do" />
+		</action>
+		 <action  path="/showTraninStayListURLAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninStayListURLAC">
+			<forward name="to_showTranin_stay_list" path="/showTraninStayListAC.do" />
+		</action>
+		 <action  path="/showTraninVidListURLAC" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninVidListURLAC">
+			<forward name="to_showTranin_vid_list" path="/showTraninVidListAC.do" />
+		</action>
+	 <action  path="/traninBaseTaCountAAC" scope="request"
+	       parameter="method" 
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninBaseTaCountAAC">
+			<forward name="to_tranin_add" path="/tranin_add.jsp" />
+		</action>
+	 <action name="traninAddAF" path="/addTraninMaintainAC2"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.AddTraninMaintainAC2"
+			parameter="method">
+			<forward name="showTraninListAC" path="/showTraninListAC.do" />
+		</action>
+	   <action name="traninIdAF" path="/traninVidMaintainAC"
+	       parameter="method"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninVidMaintainAC"
+			>
+			<forward name="tranin_tail_cell" path="/tranin_cell.jsp"></forward>
+			<forward name="tranin_tail_cell_yg" path="/tranin_cell_yg.jsp"></forward>
+			<forward name="tranin_tail_cell_yga" path="/tranin_cell_yga.jsp"></forward>
+			<forward name="tranin_tail_cell_ygb" path="/tranin_cell_ygb.jsp"></forward>
+			<forward name="traninlist_yg" path="/traninlist_yg.jsp"></forward>
+			<forward name="showTraninListAC" path="/showTraninListAC.do"></forward>
+			<forward name="showTraninVidListAC" path="/showTraninVidListAC.do" />
+			<forward name="to_printCredence.jsp" path="/printCredence_cell.jsp"></forward>
+			<forward name="to_printCredencea" path="/printCredence_cella.jsp"></forward>
+			<forward name="to_printall.jsp" path="/printall_cell.jsp"></forward>
+		</action>
+		<action name="traninVidAF" path="/showTraninVidListAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninVidListAC"
+			>
+			<forward name="to_tranin_vid_list" path="/traninTb_List.jsp"></forward>
+		</action>
+	   <action name="idAF" path="/traninStayMaintainAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninStayMaintainAC"
+			>
+			<forward name="showTraninStayListAC" path="/showTraninStayListAC.do" />
+			<forward name="tranin_tail_cell" path="/tranin_cell.jsp"></forward>
+			<forward name="tranin_tail_cell_yg" path="/tranin_cell_yg.jsp"></forward>
+			<forward name="to_printCredence.jsp" path="/printCredence_cell.jsp"></forward>
+		</action>
+	   <action name="traninStayAF" path="/showTraninStayListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninStayListAC">
+			<forward name="to_tranin_stay_show" path="/traninStay_List.jsp"></forward>
+		</action>
+	   <action name="traninImportAF" path="/traninTaImportAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninTaImportAC"
+			>
+			<forward name="showTraninListAC" path="/showTraninListAC.do" />
+		</action>
+	    <action name="traninAddAF" path="/addTraninMaintainAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.AddTraninMaintainAC"
+			parameter="method">
+			<forward name="showemppop" path="/emppop.jsp"></forward>
+			<forward name="showTraninListAC" path="/showTraninListAC.do" />
+			<forward name="to_tranin_add" path="/tranin_add.jsp" />
+			<forward name="to_traninnew_jsp" path="/tranin_new.jsp"></forward>
+		</action>
+	    <action name="traninAF" path="/traninFindInforAAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninFindInforAAC">
+		    <forward name="showTraninListAC" path="/showTraninListAC.do"></forward>
+		</action>
+	   <action name="traninAF" path="/showTraninListAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.ShowTraninListAC">
+			<forward name="to_tranin_list" path="/tranin_List.jsp"></forward>
+		</action>
+		<action name="traninIdAF" path="/traninMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninMaintainAC">
+			<forward name="to_tranin_add" path="/tranin_new.jsp"></forward>
+			<forward name="tranin_tail_cell" path="/tranin_cell.jsp"></forward>
+			<forward name="tranin_tail_cell_yga" path="/tranin_cell_yga.jsp"></forward>
+			<forward name="tranin_tail_cell_ygb" path="/tranin_cell_ygb.jsp"></forward>
+			<forward name="showTraninListAC" path="/showTraninListAC.do"></forward>
+			<forward name="to_tranin_imports" path="/tranin_imports.jsp"></forward>
+			<forward name="showTraninListURLAC" path="/showTraninListURLAC.do"></forward>
+			<forward name="to_printCredence.jsp" path="/printCredence_cella.jsp"></forward>
+		</action>
+		<action path="/isCardNumSameAAC" 
+				type="org.xpup.hafmis.syscollection.tranmng.tranin.action.IsCardNumSameAAC">
+		</action>
+		<action name="traninAddAF" path="/traninSaveAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninSaveAC"
+			parameter="method">
+			<forward name="showemppop" path="/emppop.jsp"></forward>
+			<forward name="showTraninListAC" path="/showTraninListAC.do" />
+			<forward name="to_tranin_add" path="/tranin_add.jsp" />
+			<forward name="to_traninnew_jsp" path="/tranin_new.jsp"></forward>
+		</action>
+		<action name="traninAddAF" path="/traninUpdateAC"
+			type="org.xpup.hafmis.syscollection.tranmng.tranin.action.TraninUpdateAC"
+			parameter="method">
+			<forward name="showTraninListAC" path="/showTraninListAC.do" />
+			<forward name="to_tranin_add" path="/tranin_add.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/tranmng/tranin/applicationContext.xml" />
+	</plug-in>
+	
+		<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

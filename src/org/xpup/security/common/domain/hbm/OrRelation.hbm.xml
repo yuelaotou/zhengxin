@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	
+<hibernate-mapping package="org.xpup.security.common.domain">
+
+	<class name="OrRelation" table="CA109">
+	
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+		
+		<property name="authNumber" type="integer" column="AUTH_NUM" />
+		
+		<many-to-one name="operation" class="Operation">
+			<column name="OP_ID" />
+		</many-to-one>
+		
+		<many-to-one name="role" class="Role">
+			<column name="ROLE_ID" />
+		</many-to-one>
+		
+	</class>
+	
+</hibernate-mapping>

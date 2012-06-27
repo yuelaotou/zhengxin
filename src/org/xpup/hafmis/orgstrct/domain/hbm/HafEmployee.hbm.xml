@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xpup.hafmis.orgstrct.domain">
+
+	<joined-subclass name="HafEmployee" table="BB201"
+		extends="org.xpup.security.common.domain.User">
+
+		<key column="ID" />
+
+		<property name="realName" type="string" column="REAL_NAME" />
+
+		<property name="sex" type="integer" column="SEX" access="field" />
+
+		<property name="duty" type="integer" column="DUTY"
+			access="field" />
+
+		<property name="email" type="string" column="EMAIL" />
+
+		<property name="description" type="string" column="DESCRIPTION" />
+
+		<property name="officeId" type="string" column="OFFICE_ID" />
+
+		<property name="departmentId" type="string" column="DEPT_ID" />
+
+		<property name="operatorId" type="string" column="OPERATOR_ID" />
+		
+		<property name="bizDate" type="string" column="BIZ_DATE" />
+		
+		<property name="plbizDate" type="string" column="PL_BIZ_DATE" />
+		
+		<property name="fbizDate" type="string" column="F_BIZ_DATE" />
+		
+		<property name="checkMoney" type="java.math.BigDecimal" column="CHECK_MONEY" />
+		
+		<many-to-one name="organizationUnit" class="OrganizationUnit"
+			lazy="false">
+			<column name="ORG_UNIT_ID" />
+		</many-to-one>
+
+	</joined-subclass>
+
+</hibernate-mapping>

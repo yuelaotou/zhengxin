@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<root file="2">
+	<file name="ChgPersonCellListHeadExport" col="3" space="0" row="2">
+		<column>orgId</column>
+		<column>orgName</column>
+		<column>chgMonth</column>
+	</file>
+	<file name="ChgPersonCellListListExport" col="10" space="2" row="-1">
+		<column>chgType</column>
+		<column>empId</column>
+		<column>name</column>
+		<column>cardNum</column>
+		<column>temp_oldPayStatus</column>
+		<column>salaryBase</column>
+		<column>orgPay</column>
+		<column>empPay</column>
+		<column>sumPay</column>
+		<column>temp_chgreason</column>
+	</file>
+</root>

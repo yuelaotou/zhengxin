@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/endorsecontractShowAC.do" location="0,0" dimension="562,84" />
+  <StrutsActivity path="/endorsecontractTaShowAC.do" location="1143,234" dimension="526,84" />
+  <StrutsActivity path="/to_EndorsecontractTaShowAC.do" location="517,234" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTaFindAAC.do" location="0,2023" dimension="532,84" />
+  <StrutsActivity path="/endorsecontractTaAccountAAC.do" location="631,1894" dimension="550,84" />
+  <StrutsActivity path="/endorsecontractTaXMLFindAAC.do" location="1226,1894" dimension="550,84" />
+  <StrutsActivity path="/endorsecontractTaMaintainAC.do" location="662,0" dimension="550,84" />
+  <StrutsActivity path="/endorsecontractBankIdTaFindAAC.do" location="0,1894" dimension="586,84" />
+  <StrutsActivity path="/endorsecontractTbShowAC.do" location="355,695" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTbTopmaintainAC.do" location="0,511" dimension="568,84" />
+  <StrutsActivity path="/endorsecontractTbDownmaintainAC.do" location="668,511" dimension="574,84" />
+  <StrutsActivity path="/endorsecontractTcShowAC.do" location="355,1156" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTcTopmaintainAC.do" location="0,972" dimension="568,84" />
+  <StrutsActivity path="/endorsecontractTcDownmaintainAC.do" location="668,972" dimension="574,84" />
+  <StrutsActivity path="/endorsecontractTdShowAC.do" location="355,1617" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTdTopmaintainAC.do" location="0,1433" dimension="568,84" />
+  <StrutsActivity path="/endorsecontractTdDownmaintainAC.do" location="668,1433" dimension="574,84" />
+  <StrutsActivity path="/endorsecontractTdGotoEmpInfoShowAC.do" location="1287,1433" dimension="592,84" />
+  <StrutsActivity path="/endorsecontractTdFindAAC.do" location="577,2023" dimension="532,84" />
+  <StrutsActivity path="/endorsecontractTeShowAC.do" location="4705,0" dimension="562,84" />
+  <StrutsActivity path="/to_EndorsecontractTeShowAC.do" location="4084,234" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTeFindAAC.do" location="1154,2023" dimension="532,84" />
+  <StrutsActivity path="/endorsecontractTeFindAC.do" location="4079,0" dimension="526,84" />
+  <StrutsActivity path="/endorsecontractTeMaintainAC.do" location="2818,0" dimension="550,84" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTa.jsp" location="948,418" dimension="328,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTb.jsp" location="454,879" dimension="328,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTc.jsp" location="454,1340" dimension="328,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTd.jsp" location="454,1801" dimension="328,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/empaccount_List.jsp" location="1425,1617" dimension="316,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTe.jsp" location="4183,418" dimension="328,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTb_cell.jsp" location="1769,252" dimension="358,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTc_cell.jsp" location="2227,252" dimension="358,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTe_cell.jsp" location="2685,252" dimension="358,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTa_cell.jsp" location="3143,252" dimension="358,48" />
+  <StrutsActivity path="/loanapply/endorsecontract/endorsecontractTd_cell.jsp" location="3626,252" dimension="358,48" />
+  <StrutsTransition id="/endorsecontractTcDownmaintainAC.do,to_endorsecontractTc,/loanapply/endorsecontract/endorsecontractTc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1098,1056" />
+      <AbsolutePoint location="1098,1106" />
+      <AbsolutePoint location="1035,1106" />
+      <AbsolutePoint location="1035,1290" />
+      <AbsolutePoint location="728,1290" />
+      <AbsolutePoint location="728,1340" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTcDownmaintainAC.do,to_endorsecontractTcShowAC,/endorsecontractTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,1056" />
+      <AbsolutePoint location="811,1106" />
+      <AbsolutePoint location="750,1106" />
+      <AbsolutePoint location="750,1156" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTa_cell,/loanapply/endorsecontract/endorsecontractTa_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3127,84" />
+      <AbsolutePoint location="3127,204" />
+      <AbsolutePoint location="3322,204" />
+      <AbsolutePoint location="3322,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTbDownmaintainAC.do,to_endorsecontractTbShowAC,/endorsecontractTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,595" />
+      <AbsolutePoint location="811,645" />
+      <AbsolutePoint location="750,645" />
+      <AbsolutePoint location="750,695" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTbDownmaintainAC.do,to_endorsecontractTb,/loanapply/endorsecontract/endorsecontractTb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1098,595" />
+      <AbsolutePoint location="1098,645" />
+      <AbsolutePoint location="1035,645" />
+      <AbsolutePoint location="1035,829" />
+      <AbsolutePoint location="728,829" />
+      <AbsolutePoint location="728,879" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTeShowAC,/to_EndorsecontractTeShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3265,84" />
+      <AbsolutePoint location="3265,144" />
+      <AbsolutePoint location="4150,144" />
+      <AbsolutePoint location="4150,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTb_cell,/loanapply/endorsecontract/endorsecontractTb_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2921,84" />
+      <AbsolutePoint location="2921,144" />
+      <AbsolutePoint location="1948,144" />
+      <AbsolutePoint location="1948,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdDownmaintainAC.do,to_endorsecontractTdShowAC,/endorsecontractTdShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="811,1517" />
+      <AbsolutePoint location="811,1567" />
+      <AbsolutePoint location="750,1567" />
+      <AbsolutePoint location="750,1617" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeShowAC.do,to_EndorsecontractTeShowAC,/to_EndorsecontractTeShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4986,84" />
+      <AbsolutePoint location="4986,114" />
+      <AbsolutePoint location="4544,114" />
+      <AbsolutePoint location="4544,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTaMaintainAC.do,to_EndorsecontractTaShowAC,/to_EndorsecontractTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1074,84" />
+      <AbsolutePoint location="1074,114" />
+      <AbsolutePoint location="955,114" />
+      <AbsolutePoint location="955,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTe,/to_EndorsecontractTeShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3333,84" />
+      <AbsolutePoint location="3333,114" />
+      <AbsolutePoint location="4281,114" />
+      <AbsolutePoint location="4281,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdShowAC.do,to_endorsecontractTd,/loanapply/endorsecontract/endorsecontractTd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="618,1701" />
+      <AbsolutePoint location="618,1801" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTe_cell,/loanapply/endorsecontract/endorsecontractTe_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3058,84" />
+      <AbsolutePoint location="3058,204" />
+      <AbsolutePoint location="2864,204" />
+      <AbsolutePoint location="2864,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdGotoEmpInfoShowAC.do,to_empAccount_list,/loanapply/endorsecontract/empaccount_List.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1583,1517" />
+      <AbsolutePoint location="1583,1617" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTbTopmaintainAC.do,to_endorsecontractTbShowAC,/endorsecontractTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="426,595" />
+      <AbsolutePoint location="426,645" />
+      <AbsolutePoint location="487,645" />
+      <AbsolutePoint location="487,695" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_EndorsecontractTeShowAC.do,to_endorsecontractTe,/loanapply/endorsecontract/endorsecontractTe.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4347,318" />
+      <AbsolutePoint location="4347,418" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTc_cell,/loanapply/endorsecontract/endorsecontractTc_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2990,84" />
+      <AbsolutePoint location="2990,174" />
+      <AbsolutePoint location="2406,174" />
+      <AbsolutePoint location="2406,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTbTopmaintainAC.do,to_endorsecontractTb,/loanapply/endorsecontract/endorsecontractTb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="142,595" />
+      <AbsolutePoint location="142,645" />
+      <AbsolutePoint location="202,645" />
+      <AbsolutePoint location="202,829" />
+      <AbsolutePoint location="509,829" />
+      <AbsolutePoint location="509,879" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdTopmaintainAC.do,to_endorsecontractTdShowAC,/endorsecontractTdShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="426,1517" />
+      <AbsolutePoint location="426,1567" />
+      <AbsolutePoint location="487,1567" />
+      <AbsolutePoint location="487,1617" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTaShowAC.do,to_endorsecontractTa,/loanapply/endorsecontract/endorsecontractTa.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1406,318" />
+      <AbsolutePoint location="1406,368" />
+      <AbsolutePoint location="1194,368" />
+      <AbsolutePoint location="1194,418" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdDownmaintainAC.do,to_endorsecontractTd,/loanapply/endorsecontract/endorsecontractTd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1098,1517" />
+      <AbsolutePoint location="1098,1567" />
+      <AbsolutePoint location="1035,1567" />
+      <AbsolutePoint location="1035,1751" />
+      <AbsolutePoint location="728,1751" />
+      <AbsolutePoint location="728,1801" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTaMaintainAC.do,to_endorsecontractTa,/to_EndorsecontractTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="799,84" />
+      <AbsolutePoint location="799,114" />
+      <AbsolutePoint location="780,114" />
+      <AbsolutePoint location="780,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeFindAC.do,to_endorsecontractTeShowAC,/to_EndorsecontractTeShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4342,84" />
+      <AbsolutePoint location="4342,114" />
+      <AbsolutePoint location="4413,114" />
+      <AbsolutePoint location="4413,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractShowAC.do,to_EndorsecontractTaShowAC,/to_EndorsecontractTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="281,84" />
+      <AbsolutePoint location="281,114" />
+      <AbsolutePoint location="604,114" />
+      <AbsolutePoint location="604,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_EndorsecontractTaShowAC.do,to_endorsecontractTa,/loanapply/endorsecontract/endorsecontractTa.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="780,318" />
+      <AbsolutePoint location="780,368" />
+      <AbsolutePoint location="1030,368" />
+      <AbsolutePoint location="1030,418" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTbShowAC.do,to_endorsecontractTb,/loanapply/endorsecontract/endorsecontractTb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="618,779" />
+      <AbsolutePoint location="618,879" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTcTopmaintainAC.do,to_endorsecontractTc,/loanapply/endorsecontract/endorsecontractTc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="142,1056" />
+      <AbsolutePoint location="142,1106" />
+      <AbsolutePoint location="202,1106" />
+      <AbsolutePoint location="202,1290" />
+      <AbsolutePoint location="509,1290" />
+      <AbsolutePoint location="509,1340" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTcShowAC.do,to_endorsecontractTc,/loanapply/endorsecontract/endorsecontractTc.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="618,1240" />
+      <AbsolutePoint location="618,1340" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTaShowAC,/endorsecontractTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2852,84" />
+      <AbsolutePoint location="2852,114" />
+      <AbsolutePoint location="1406,114" />
+      <AbsolutePoint location="1406,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTdTopmaintainAC.do,to_endorsecontractTd,/loanapply/endorsecontract/endorsecontractTd.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="142,1517" />
+      <AbsolutePoint location="142,1567" />
+      <AbsolutePoint location="202,1567" />
+      <AbsolutePoint location="202,1751" />
+      <AbsolutePoint location="509,1751" />
+      <AbsolutePoint location="509,1801" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTeMaintainAC.do,to_endorsecontractTd_cell,/loanapply/endorsecontract/endorsecontractTd_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3196,84" />
+      <AbsolutePoint location="3196,174" />
+      <AbsolutePoint location="3805,174" />
+      <AbsolutePoint location="3805,252" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/endorsecontractTcTopmaintainAC.do,to_endorsecontractTcShowAC,/endorsecontractTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="426,1056" />
+      <AbsolutePoint location="426,1106" />
+      <AbsolutePoint location="487,1106" />
+      <AbsolutePoint location="487,1156" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

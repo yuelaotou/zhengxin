@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgBaseInfoForwardAC.do" location="950,250" dimension="646,84" />
+  <StrutsActivity path="/orgBaseInfoShowAC.do" location="50,50" dimension="658,84" />
+  <StrutsActivity path="/orgBaseInfoFindAC.do" location="950,50" dimension="646,84" />
+  <StrutsActivity path="/orgDetailInfoAC.do" location="50,350" dimension="616,84" />
+  <StrutsActivity path="/orgBaseInfo.jsp" location="350,250" dimension="136,48" />
+  <StrutsActivity path="/tt.jsp" location="650,250" dimension="82,48" />
+  <StrutsActivity path="/demoList.jsp" location="50,250" dimension="118,48" />
+  <StrutsActivity path="/skipAC.do" location="950,450" dimension="628,84" />
+  <StrutsActivity path="/orgDetailInfo.jsp" />
+  <StrutsTransition id="/orgDetailInfoAC.do,to_orgbaseinfo_list,/orgBaseInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="365,350" />
+      <AbsolutePoint location="365,298" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgDetailInfoAC.do,orgdetailinfo,/orgDetailInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="358,392" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgBaseInfoShowAC.do,to_orgbaseinfo_list,/orgBaseInfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="379,92" />
+      <AbsolutePoint location="418,274" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

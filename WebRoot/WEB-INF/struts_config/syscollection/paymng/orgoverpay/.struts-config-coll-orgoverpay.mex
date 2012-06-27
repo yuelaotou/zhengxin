@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgoverpayTaShowAC.do" location="950,50" dimension="484,84" />
+  <StrutsActivity path="/orgoverpayConfirmAC.do" location="50,150" dimension="490,84" />
+  <StrutsActivity path="/orgoverpayTbFindAC.do" location="650,250" dimension="484,84" />
+  <StrutsActivity path="/orgoverpayTbShowAC.do" location="50,350" dimension="484,84" />
+  <StrutsActivity path="/orgoverpayMaintainAC.do" location="950,450" dimension="496,84" />
+  <StrutsActivity path="/orgoverpayTbWindowShowAC.do" location="350,550" dimension="496,84" />
+  <StrutsActivity path="/orgoverpayTbMXPrintAC.do" location="950,650" dimension="502,84" />
+  <StrutsActivity path="/orgoverpayTaFindAAC.do" location="350,750" dimension="490,84" />
+  <StrutsActivity path="/orgoverpayTaForwardUrlAC.do" location="950,850" dimension="520,84" />
+  <StrutsActivity path="/orgoverpayTbForwardUrlAC.do" location="50,950" dimension="520,84" />
+  <StrutsActivity path="/orgoverpay_show.jsp" location="650,50" dimension="160,48" />
+  <StrutsActivity path="/orgoverpay_lb.jsp" location="650,450" dimension="148,48" />
+  <StrutsActivity path="/orgoverpay_mx_cell.jsp" location="50,750" dimension="178,48" />
+  <StrutsActivity path="/orgoverpay_lb_detail.jsp" location="50,650" dimension="190,48" />
+  <StrutsActivity path="/orgoverpay_print.jsp" location="50,550" dimension="166,48" />
+  <StrutsTransition id="/orgoverpayTbFindAC.do,orgoverpayTbShowAC,/orgoverpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="650,292" />
+      <AbsolutePoint location="292,292" />
+      <AbsolutePoint location="292,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTbMXPrintAC.do,to_print.jsp,/orgoverpay_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,713" />
+      <AbsolutePoint location="139,713" />
+      <AbsolutePoint location="139,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTbShowAC.do,to_orgoverpay_lb.jsp,/orgoverpay_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="534,392" />
+      <AbsolutePoint location="724,392" />
+      <AbsolutePoint location="724,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayConfirmAC.do,to_orgoverpay.jsp,/orgoverpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="540,192" />
+      <AbsolutePoint location="1192,192" />
+      <AbsolutePoint location="1192,134" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayMaintainAC.do,orgoverpayTaShowAC,/orgoverpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,492" />
+      <AbsolutePoint location="1192,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTaForwardUrlAC.do,orgoverpayTaShow,/orgoverpayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1467,850" />
+      <AbsolutePoint location="1467,92" />
+      <AbsolutePoint location="1434,92" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTaShowAC.do,to_orgoverpay.jsp,/orgoverpay_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,83" />
+      <AbsolutePoint location="810,83" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayMaintainAC.do,orgoverpayTbShowAC,/orgoverpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,492" />
+      <AbsolutePoint location="292,392" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTbForwardUrlAC.do,orgoverpayTbShow,/orgoverpayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="310,950" />
+      <AbsolutePoint location="310,434" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayTbWindowShowAC.do,to_orgoverpay_lb_detail.jsp,/orgoverpay_lb_detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="598,634" />
+      <AbsolutePoint location="598,674" />
+      <AbsolutePoint location="240,674" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayMaintainAC.do,to_print.jsp,/orgoverpay_mx_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1198,492" />
+      <AbsolutePoint location="139,774" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgoverpayConfirmAC.do,to_orgoverpay.jsp,/orgoverpayTaForwardUrlAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="295,192" />
+      <AbsolutePoint location="1210,892" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

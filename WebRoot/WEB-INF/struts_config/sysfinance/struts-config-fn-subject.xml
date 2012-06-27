@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="subjectShowAF"
+			type="org.xpup.hafmis.sysfinance.bookmng.subject.form.SubjectShowAF" />
+
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="subjectShowAF" path="/subjectTaForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTaForwardAC">
+	  <forward name="subjectTaShowAC" path="/subjectTaShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTaShowAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTaShowAC">
+	  <forward name="to_subject_show" path="/bookmng/subject/subjectTaShow.jsp"></forward>
+	 </action>
+	 
+	 <action name="subjectShowAF" path="/subjectMaintainAC" parameter="method" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectMaintainAC">
+	  <forward name="to_subject_add" path="/bookmng/subject/subjectSave.jsp"></forward>
+	  <forward name="to_subject_showTa" path="/subjectTaShowAC.do"></forward>
+	  <forward name="to_subject_showTb" path="/subjectTbShowAC.do"></forward>
+	  <forward name="to_subject_showTc" path="/subjectTcShowAC.do"></forward>
+	  <forward name="to_subject_showTd" path="/subjectTdShowAC.do"></forward>
+	  <forward name="to_subject_showTe" path="/subjectTeShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectSave" parameter="method" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectSaveAC">
+	  <forward name="to_subject_save" path="/bookmng/subject/subjectSave.jsp"></forward>
+	  <forward name="to_subject_modify" path="/bookmng/subject/subjectSave.jsp"></forward>
+	  <forward name="to_subject_showTa" path="/subjectTaShowAC.do"></forward>
+	  <forward name="to_subject_showTb" path="/subjectTbShowAC.do"></forward>
+	  <forward name="to_subject_showTc" path="/subjectTcShowAC.do"></forward>
+	  <forward name="to_subject_showTd" path="/subjectTdShowAC.do"></forward>
+	  <forward name="to_subject_showTe" path="/subjectTeShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="subjectShowAF" path="/subjectModifyAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectModifyAC">
+	  <forward name="to_subject_modify" path="/bookmng/subject/subjectSave.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTbForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTbForwardAC">
+	  <forward name="subjectTbShowAC" path="/subjectTbShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTbShowAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTbShowAC">
+	  <forward name="to_subject_show" path="/bookmng/subject/subjectTbShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTcForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTcForwardAC">
+	  <forward name="subjectTcShowAC" path="/subjectTcShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTcShowAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTcShowAC">
+	  <forward name="to_subject_show" path="/bookmng/subject/subjectTcShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTdForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTdForwardAC">
+	  <forward name="subjectTdShowAC" path="/subjectTdShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTdShowAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTdShowAC">
+	  <forward name="to_subject_show" path="/bookmng/subject/subjectTdShow.jsp"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTeForwardAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTeForwardAC">
+	  <forward name="subjectTeShowAC" path="/subjectTeShowAC.do"></forward>
+	 </action>
+	
+	 <action name="subjectShowAF" path="/subjectTeShowAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectTeShowAC">
+	  <forward name="to_subject_show" path="/bookmng/subject/subjectTeShow.jsp"></forward>
+	 </action>
+	
+	 <action path="/subjectLoadmesageAAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.subject.action.SubjectLoadmesageAAC">
+	 </action>
+	 
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

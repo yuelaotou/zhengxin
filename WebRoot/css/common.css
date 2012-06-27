@@ -1,0 +1,180 @@
+/* CSS Document */
+
+body {
+  	background-color:#FFFFFF;
+  	font-family: "ËÎÌו", "Courier New";
+	font-size: 14px;
+	text-align: center;
+}
+
+form {
+    margin: 0;
+}
+
+.button {
+	width:60px;
+}
+
+/* search */
+table.search {
+	width: 98%;
+	text-align: left;
+	margin: 0;
+	border:0px;
+	background-color:#999999;
+}
+
+table.search tr {
+	background-color:#FFFFFF;
+}
+
+table.search thead th {
+	height: 25px;
+	text-align: left;
+	font-size: 16px;
+}
+
+table.search thead tr {
+	background-color:#99FF33;
+}
+
+table.search tbody th {
+	word-break: keep-all;
+	font-size: 14px;
+	text-align: left;
+	background:#AAFFFF;
+}
+
+table.search tbody td {
+	font-size: 14px;
+	text-align: left;
+	text-align: center;
+}
+
+table.search tfoot td {
+	height: 16px;
+	font-size: 14px;
+	text-align: right;
+}
+
+table.search input.text {
+    width:96%;
+}
+
+table.search select.text {
+	width:96%;
+}
+
+table.search input.button {
+	width:60px;
+}
+
+table.list {
+	width: 98%;
+	text-align: left;
+	margin: 0;
+	border:0px;
+	background-color:#999999;
+}
+
+table.list tr {
+	background-color:#FFFFFF;
+}
+
+table.list thead tr {
+    background-color:#99FF33;
+}
+
+table.list thead th {
+	height:25px;
+	font-size:14px;
+}
+
+table.list tbody td {
+	height:22px;
+	font-size:12px;
+}
+
+table.list tfoot td {
+	margin:0px;
+	height:22px;
+	padding:0px
+}
+
+table.list tfoot table.pagination {
+	margin:0;
+	padding:0;
+	border:0px;
+	width:100%;
+	height:22px;
+}
+
+table.list tfoot table.pagination tr {
+	background-color:#CCCCCC;
+}
+
+table.list tfoot table.pagination td {
+	height:22px;
+	font-size:12px;
+	padding:2px;
+}
+
+table.list input.button {
+	width:60px;
+}
+
+table.basicinfo {
+	width: 98%;
+	text-align: left;
+	margin: 0;
+	border:0px;
+	background-color:#999999;
+}
+
+table.basicinfo tr {
+	background-color:#FFFFFF;
+}
+
+table.basicinfo thead tr {
+	background-color:#99FF33;
+}
+
+table.basicinfo thead th {
+	height:26px;
+	font-size:16px;
+}
+
+table.basicinfo tbody th {
+	height:24px;
+	background:#AAFFFF;
+}
+
+table.basicinfo tbody td {
+	text-align:left;
+}
+
+table.basicinfo input.text {
+	width:96%;
+}
+
+table.basicinfo textarea.text {
+    width:99%;
+	height:40px;
+}
+
+table.basicinfo select.text {
+	width:96%;
+}
+
+table.basicinfo tfoot tr {
+	background:#CCCCCC;
+}
+
+table.basicinfo tfoot td {
+	text-align:right;
+}
+
+table.basicinfo input.button {
+	width:60px;
+}
+

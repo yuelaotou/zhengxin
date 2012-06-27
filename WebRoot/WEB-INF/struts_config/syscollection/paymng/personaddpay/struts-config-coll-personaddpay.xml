@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="personAddPayAF"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.form.PersonAddPayAF" />
+		<form-bean name="personAddPayImportAF"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.form.PersonAddPayImportAF" />
+		<form-bean name="personAddPayMaintainAF"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.form.PersonAddPayMaintainAF" />
+		<form-bean name="personaddpayTbPickupdataWindowAF"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.form.PersonaddpayTbPickupdataWindowAF" />	
+			<form-bean name="monthpayJYAF"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.form.MonthpayJYAF" />
+	</form-beans>
+	
+	
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="personAddPayAF" path="/personAddPayTaShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaShowAC">
+			<forward name="to_personaddpay_show.jsp"
+				path="/personaddpay_show.jsp">
+			</forward>
+		</action>
+
+		<action  path="/personAddPayTaFindInforAAC" 
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaFindInforAAC">
+
+		</action>
+		<action  path="/personaddpayEmpTaFindAAC" 
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayEmpTaFindAAC">
+		</action>
+		
+		<action name="idAF" path="/personAddPayTaMaintainAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaMaintainAC"
+			parameter="method">
+			<forward name="to_personAddPay_add.jsp"
+				path="/personaddpay_new.jsp">
+			</forward>
+			
+			<forward name="personAddPayTaShowAC"
+				path="/personAddPayTaShowAC.do">
+			</forward>
+			
+			<forward name="to_personaddpay_imports" path="/personaddpay_imports.jsp" />
+			<forward name="emp_tdpz_cell" path="/emp_tdpz_cell.jsp" />
+		</action>
+		
+		<action name="personAddPayAF" path="/personAddPayTaAddAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaAddAC"
+			parameter="method">
+			<forward name="to_personAddPay_add.jsp"
+				path="/personaddpay_new.jsp">
+			</forward>
+			
+			<forward name="personAddPayTaShowAC"
+				path="/personAddPayTaShowAC.do">
+			</forward>
+		</action>
+		
+		<action name="personAddPayImportAF" path="/personAddPayTaImportAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaImportAC">
+			<forward name="personAddPayTaShowAC"
+				path="/personAddPayTaShowAC.do">
+			</forward>
+		</action>
+		
+		<action name="personAddPayMaintainAF" path="/personAddPayTbShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTbShowAC">
+			<forward name="to_personAddPayMaintain_show.jsp"
+				path="/personaddpay_maintain.jsp">
+			</forward>
+		</action>
+		
+		<action name="personAddPayMaintainAF" path="/empaddpayTbFindAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.EmpaddpayTbFindAC">
+			<forward name="to_personAddPayMaintain_show"
+				path="/personAddPayTbShowAC.do">
+			</forward>
+		</action>
+		
+		<action name="idAF" path="/empAddPayTbMaintainAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.EmpAddPayTbMaintainAC"
+			parameter="method">
+			<forward name="personAddPayTaShowAC"
+				path="/personAddPayTaShowAC.do">
+			</forward>
+			<forward name="to_personAddPayMaintain_show"
+				path="/personAddPayTbShowAC.do">
+			</forward>
+			<forward name="personaddpay_lb_cell"
+				path="/personaddpay_lb_cell.jsp">
+			</forward>
+			<forward name="emp_tdpz_cell"
+				path="/emp_tdpz_cell.jsp">
+			</forward>
+<forward name="to_print.jsp" path="/personaddpay_print.jsp" />
+<forward name="modify_monthPay" path="/modify_monthPay.jsp" />
+		</action>
+		<action name="personAddPayMaintainAF" path="/personaddpayTbWindowShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbWindowShowAC">
+			<forward name="to_detail.jsp"
+				path="/personaddpay_detail.jsp">
+			</forward>
+		</action>
+	    <action name="idAF" path="/personaddpayTbMXPrintAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbMXPrintAC">
+			<forward name="to_print.jsp"
+				path="/personaddpay_print.jsp">
+			</forward>
+			<forward name="empaddpay_qc_cell"
+				path="/empaddpay_qc_cell.jsp">
+			</forward>
+			<forward name="empaddpay_qc_cell_1"
+				path="/empaddpay_qc_cell_1.jsp">
+			</forward>
+		</action>
+
+      
+	  <action path="/personaddpayTaForwardUrlAC"	        
+			  type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTaForwardUrlAC">
+			<forward name="personaddpayTaShow"
+				path="/personAddPayTaShowAC.do">
+			</forward>
+	  </action>
+	  <action path="/personaddpayTbForwardUrlAC"	        
+			  type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbForwardUrlAC">
+			<forward name="personaddpayTbShow"
+				path="/personAddPayTbShowAC.do">
+			</forward>
+	  </action>
+	  <action path="/personaddpayTbWindowForwardAC"	        
+			  type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbWindowForwardAC">
+			<forward name="personaddpayTbShow"
+				path="/personaddpayTbWindowShowAC.do">
+			</forward>
+	  </action>
+	  
+	   <action path="/personAddPayTaExportAC"	        
+			  type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonAddPayTaExportAC">
+			<forward name="personaddpayTbShow"
+				path="/personaddpayTbWindowShowAC.do">
+			</forward>
+	  </action> 
+	  <action name="personaddpayTbPickupdataWindowAF" path="/personaddpayTbPickupdataWindowShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbPickupdataWindowShowAC">
+			<forward name="to_personaddpay_pickupdatawindow_show" path="/personaddpay_pickupdatawindow_show.jsp" />
+		</action>
+		<action name="personaddpayTbPickupdataWindowAF" path="/personaddpayTbPickupdataWindowSureAC"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbPickupdataWindowSureAC">
+			<forward name="to_personaddpayta_show" path="/personAddPayTaShowAC.do" />
+		</action>
+		<action  path="/personaddpayTbPickupdataWindowAAC" 
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.PersonaddpayTbPickupdataWindowAAC">
+
+		</action>
+		<action name="monthpayJYAF" path="/monthpayModifyAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.personaddpay.action.MonthpayModifyAC">
+			<forward name="show_paymentList" path="/personAddPayTbShowAC.do" />
+		</action>
+	 </action-mappings>
+
+
+	<!--	<message-resources
+		parameter="cn.net.goldsoft.hafmis.syscollection.message-resources-syscollection" />-->
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/paymng/personaddpay/applicationContext.xml,/WEB-INF/app_context/syscollection/paymng/monthpay/applicationContext.xml" />
+	</plug-in>
+</struts-config>

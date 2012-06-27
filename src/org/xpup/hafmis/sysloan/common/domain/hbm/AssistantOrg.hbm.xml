@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.AssistantOrg" 
+    table="PL007"
+>
+
+    <id
+        name="assistantOrgId"
+        type="integer"
+        column="ASSISTANT_ORG_ID"
+    >
+        <generator class="sequence" >
+        <param name="sequence">SEQ_PL007</param>
+        </generator>
+    </id>
+
+    <property
+        name="assistantOrgName"
+        type="java.lang.String"
+        column="ASSISTANT_ORG_NAME"
+        length="100"
+    />
+    <property
+        name="artfclprsn"
+        type="java.lang.String"
+        column="ARTFCLPRSN"
+        length="100"
+    />
+    <property
+        name="code"
+        type="java.lang.String"
+        column="CODE"
+        length="100"
+    />
+    <property
+        name="assistantOrgAddr"
+        type="java.lang.String"
+        column="ASSISTANT_ORG_ADDR"
+        length="100"
+    />
+    <property
+        name="basedDate"
+        type="java.lang.String"
+        column="BASED_DATE"
+        length="8"
+    />
+    <property
+        name="artfclprsnCardKind"
+        type="java.lang.String"
+        column="ARTFCLPRSN_CARD_KIND"
+        length="100"
+    />
+    <property
+        name="artfclprsnCardNum"
+        type="java.lang.String"
+        column="ARTFCLPRSN_CARD_NUM"
+        length="100"
+    />
+    <property
+        name="allowDept"
+        type="java.lang.String"
+        column="ALLOW_DEPT"
+        length="100"
+    />
+    <property
+        name="allowId"
+        type="java.lang.String"
+        column="ALLOW_ID"
+        length="100"
+    />
+    <property
+        name="agreementStartDate"
+        type="java.lang.String"
+        column="AGREEMENT_START_DATE"
+        length="8"
+    />
+    <property
+        name="agreementEndDate"
+        type="java.lang.String"
+        column="AGREEMENT_END_DATE"
+        length="8"
+    />
+    <property
+        name="registerFund"
+        type="java.math.BigDecimal"
+        column="REGISTER_FUND"
+        length="15"
+    />
+    <property
+        name="paybank"
+        type="java.lang.String"
+        column="PAYBANK"
+        length="100"
+    />
+    <property
+        name="payacc"
+        type="java.lang.String"
+        column="PAYACC"
+        length="100"
+    />
+    <property
+        name="contactPrsn"
+        type="java.lang.String"
+        column="CONTACT_PRSN"
+        length="100"
+    />
+    <property
+        name="contactTel"
+        type="java.lang.String"
+        column="CONTACT_TEL"
+        length="100"
+    />
+    <property
+        name="business"
+        type="java.lang.String"
+        column="BUSINESS"
+        length="100"
+    />
+    <property
+        name="remark"
+        type="java.lang.String"
+        column="REMARK"
+        length="100"
+    />
+    <property
+        name="arear"
+        type="java.lang.String"
+        column="AREAR"
+        length="100"
+    />
+    <property
+        name="assistantOrgType"
+        type="java.lang.String"
+        column="ASSISTANT_ORG_TYPE"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+	<property
+        name="photoUrl"
+        type="java.lang.String"
+        column="PHOTO_URL"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

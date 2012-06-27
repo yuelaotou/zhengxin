@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="AdjustWrongAccountTail" 
+    table="AA315"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA315</param>
+		</generator>
+    </id>
+    <property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+    <property
+        name="adjustMoney"
+        type="java.math.BigDecimal"
+        column="ADJUST_MONEY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        not-null="true"
+        length="8"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="reason"
+        type="java.lang.String"
+        column="REASON"
+        length="100"
+    />
+    <property
+        name="remark"
+        type="java.lang.String"
+        column="REMARK"
+        length="100"
+    />
+     <property name="empName" type="java.lang.String" formula="(select distinct ba002.name from BA002 ba002,AA002 aa002  where aa002.emp_info_id=ba002.id and aa002.id=EMP_ID )"/>
+    
+    <many-to-one name="adjustWrongAccountHead"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.AdjustWrongAccountHead" not-null="true" >
+			<column name="ADJUST_HEAD_ID" />
+	</many-to-one>
+
+</class>
+</hibernate-mapping>

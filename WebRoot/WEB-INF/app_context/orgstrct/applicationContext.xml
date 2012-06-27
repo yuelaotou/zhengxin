@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+	<bean id="orgStructureBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.orgstrct.bizsrvc.impl.OrgStructureBS">
+				<property name="hafRoleDAO">
+					<ref bean="hafRoleDAO" />
+				</property>
+				<property name="hafEmployeeDAO">
+					<ref bean="hafEmployeeDAO" />
+				</property>
+				<property name="orgUnitPropTemplateDAO">
+					<ref bean="orgUnitPropTemplateDAO" />
+				</property>
+				<property name="ouptItemDAO">
+					<ref bean="ouptItemDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+			
+			<property name="organizationUnitDAODW">
+					<ref bean="organizationUnitDAODW" />
+			</property>
+		
+				<property name="orgUnitPropertyDAO">
+					<ref bean="orgUnitPropertyDAO" />
+				</property>	
+			 	<property name="orgUnitPropertyDAODW">
+					<ref bean="orgUnitPropertyDAODW" /> 
+				</property>	 
+				<property name="orgUnitPropTemplateDAODW">
+					<ref bean="orgUnitPropTemplateDAODW" />
+				</property>
+			 	<property name="ouptItemDAODW">
+					<ref bean="ouptItemDAODW" /> 
+				</property>	
+				<property name="userControlBS">
+					<ref bean="internalSecurityControlBS" />
+				</property>
+				<property name="menuControlBS">
+					<ref bean="internalSecurityControlBS" />
+				</property>
+				<property name="opControlBS">
+					<ref bean="internalSecurityControlBS" />
+				</property>
+				<property name="dataAccessControlBS">
+					<ref bean="internalSecurityControlBS" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+		<bean id="toSecurityMngBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.orgstrct.bizsrvc.impl.ToSecurityMngBS">
+				<property name="bookDAO">
+					<ref bean="bookDAO" />
+				</property>
+				<property name="securityDAO">
+					<ref bean="securityDAO" />
+				</property>
+				<property name="collBankDAO">
+					<ref bean="collBankDAO" />
+				</property>
+				<property name="relaUserAndOrgDAO">
+					<ref bean="relaUserAndOrgDAO" />
+				</property>
+				<property name="orgDAO">
+					<ref bean="orgDAO" />
+				</property>
+				<property name="relaUserAndOfficeDAO">
+					<ref bean="relaUserAndOfficeDAO" />
+				</property>
+				<property name="relaUserAndCollBankDAO">
+					<ref bean="relaUserAndCollBankDAO" />
+				</property>
+				<property name="roleDAO">
+					<ref bean="roleDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+				<property name="relaRoleAndOrgDAO">
+					<ref bean="relaRoleAndOrgDAO" />
+				</property>
+				<property name="relaRoleAndOfficeDAO">
+					<ref bean="relaRoleAndOfficeDAO" />
+				</property>
+				<property name="relaRoleAndCollBankDAO">
+					<ref bean="relaRoleAndCollBankDAO" />
+				</property>
+				<property name="relaUserAndUserDAO">
+					<ref bean="relaUserAndUserDAO" />
+				</property>
+				<property name="relaUserAndBookDAO">
+					<ref bean="relaUserAndBookDAO" />
+				</property>
+				<property name="collBankDAODW">
+					<ref bean="collBankDAODW" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="chgOrgRateDoAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.form.ChgOrgRateDoAF" />
+		<form-bean name="printCheckTableAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.form.PrintCheckTableAF" />
+		<form-bean name="chgOrgRateMaintainListAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.form.ChgOrgRateMaintainListAF" />
+		<form-bean name="orgChgAF"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.form.OrgChgAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+		<action name="chgOrgRateDoAF" path="/showChgOrgRateDoAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.ShowChgOrgRateDoAC">
+			<forward name="to_chgorgrateDo_sure" path="/chgorgrateDo.jsp"/>
+		</action>
+		<action name="chgOrgRateDoAF" path="/saveChgorgrateAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.SaveChgorgrateAC">
+			<forward name="to_chgorgrateDo_sure" path="/chgorgrateDo.jsp"/>
+		</action>
+		<action name="chgOrgRateDoAF" path="/maintainChgorgrateDoAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.MaintainChgorgrateDoAC">
+			<forward name="to_chgorgrateDo_save" path="/saveChgorgrateAC.do"/>
+			<forward name="to_chgorgrateDo_use" path="/showChgOrgRateDoAC.do"/>
+		</action>
+		<action path="/chgorgrateFindOrg_AjaxAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.ChgorgrateFindOrg_AjaxAAC">
+		</action>
+		<action name="chgOrgRateDoAF" path="/accountNewSumPayAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.AccountNewSumPayAC">
+		</action>
+		
+		
+		<action path="/chgorgrateMaintainForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.ChgorgrateMaintainForwardURLAC">
+			<forward name="to_chgorgrateMaintain_list" path="/showChgorgrateMaintainListAC.do"/>
+		</action>
+		<action name="chgOrgRateMaintainListAF" path="/showChgorgrateMaintainListAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.ShowChgorgrateMaintainListAC">
+			<forward name="to_chgorgrateMaintain_list" path="/chgorgrateMaintainList.jsp"/>
+		</action>
+		<action name="idAF" path="/maintainChgorgrateMaintainListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.MaintainChgorgrateMaintainListAC">
+			<forward name="to_chgorgrate_modify" path="/showChgOrgRateDoAC.do"/>
+			<forward name="to_chgorgrate_delete" path="/showChgorgrateMaintainListAC.do"/>
+			<forward name="to_chgperson_use" path="/showChgorgrateMaintainListAC.do"/>
+			<forward name="to_chgperson_deluse" path="/showChgorgrateMaintainListAC.do"/>
+			<forward name="to_chgapproval_cell" path="/chgapproval_cell.jsp"/>
+		</action>
+		<action name="chgOrgRateMaintainListAF" path="/findChgOrgRateMaintainAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.FindChgOrgRateMaintainAC">
+			<forward name="to_chgorgrateMaintain_list" path="/showChgorgrateMaintainListAC.do"/>
+		</action>
+		<action name="printCheckTableAF" path="/printCheckTableForwardURLAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.PrintCheckTableForwardURLAC">
+			<forward name="printchecktableshow" path="/printchecktableshow.jsp"/>
+		</action>
+		<action name="printCheckTableAF" path="/printCheckTableShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.PrintCheckTableShowAC">
+			<forward name="printchecktable_cell" path="/printchecktable_cell.jsp"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgShowAC">
+			<forward name="orgchgta" path="/orgchgta.jsp"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgSaveAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgSaveAC">
+			<forward name="orgChgShowAC" path="/orgChgShowAC.do"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgForwardTbAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgForwardTbAC">
+			<forward name="orgChgShowTbAC" path="/orgChgShowTbAC.do"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgFindTbAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgFindTbAC">
+			<forward name="orgChgShowTbAC" path="/orgChgShowTbAC.do"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgShowTbAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgShowTbAC">
+			<forward name="orgchgtb" path="/orgchgtb.jsp"/>
+		</action>
+		<action name="idAF" path="/orgChgMainTainTbAC" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgMainTainTbAC">
+			<forward name="orgChgShowTbAC" path="/orgChgShowTbAC.do"/>
+			<forward name="orgchgta" path="/orgchgta.jsp"/>
+			<forward name="orgchgprint" path="/orgchgprint.jsp"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgAAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgAAC">
+			<forward name="orgchgta" path="/orgchgta.jsp"/>
+		</action>
+		
+		<action name="orgChgAF" path="/orgChgCheckForwardAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgCheckForwardAC">
+			<forward name="orgChgCheckShowAC" path="/orgChgCheckShowAC.do"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgCheckFindAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgCheckFindAC">
+			<forward name="orgChgCheckShowAC" path="/orgChgCheckShowAC.do"/>
+		</action>
+		<action name="orgChgAF" path="/orgChgCheckShowAC"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgCheckShowAC">
+			<forward name="orgchgcheck" path="/orgchgcheck.jsp"/>
+		</action>
+		<action name="idAF" path="/orgChgCheckMainTainAC" parameter="method"
+			type="org.xpup.hafmis.syscollection.chgbiz.chgorgrate.action.OrgChgCheckMainTainAC">
+			<forward name="orgChgCheckShowAC" path="/orgChgCheckShowAC.do"/>
+			<forward name="orgchgprint" path="/orgchgprint.jsp"/>
+		</action>
+		
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/chgbiz/chgorgrate/applicationContext.xml" />
+	</plug-in>
+</struts-config>

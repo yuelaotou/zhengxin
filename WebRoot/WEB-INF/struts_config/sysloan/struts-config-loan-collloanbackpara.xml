@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="collLoanbackParaAF"
+			type="org.xpup.hafmis.sysloan.dataready.collloanbackpara.form.CollLoanbackParaAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="collLoanbackParaAF" 
+		scope="request"
+		path="/collLoanbackParaShowAC" type="org.xpup.hafmis.sysloan.dataready.collloanbackpara.action.CollLoanbackParaShowAC">
+      <forward name="to_collloanbackpara_show" path="/dataready/collloanbackpara/collloanbackpara_show.jsp" />
+    </action>
+    <action name="collLoanbackParaAF" 
+		scope="request"
+		path="/collLoanbackParaSaveAC" type="org.xpup.hafmis.sysloan.dataready.collloanbackpara.action.CollLoanbackParaSaveAC">
+      <forward name="collloanbackpara_show" path="/collLoanbackParaShowAC.do" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

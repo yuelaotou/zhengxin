@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="PaymentHead" 
+    table="AA301"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="id"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_AA301</param>
+	</generator>
+    </id>
+    
+	<discriminator column="PAY_TYPE" type="string" />
+
+    <property
+        name="payMoney"
+        type="java.math.BigDecimal"
+        column="PAY_MONEY"
+        length="18"
+    />
+    <property
+        name="noteNum"
+        type="java.lang.String"
+        column="NOTE_NUM"
+        length="20"
+    />
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        length="50"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="payStatus"
+        type="java.lang.Integer" 
+        column="PAY_STATUS"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+
+    
+
+    <property
+        name="excessReason"
+        type="java.lang.String"
+        column="EXCESS_REASON"
+        length="50"
+    />
+    
+    <property
+        name="financialPayId"
+        type="java.lang.Integer"
+        column="FINANCIAL_PAY_ID"
+    />
+    
+      <property
+        name="receivables_bank_acc"
+        type="java.lang.String"
+        column="RECEIVABLES_BANK_ACC"
+        length="100"
+    />
+    
+    <property
+        name="receivables_bank_name"
+        type="java.lang.String"
+        column="RECEIVABLES_BANK_NAME"
+        length="100"
+       />
+      <property
+        name="payment_bank_acc"
+        type="java.lang.String"
+        column="PAYMENT_BANK_ACC"
+        length="100"
+       />
+     <property
+        name="payment_bank_name"
+        type="java.lang.String"
+        column="PAYMENT_BANK_NAME"
+        length="100"
+       />
+       <property
+        name="pay_way"
+        type="java.lang.String"
+        column="PAY_WAY"
+        length="2"
+       /> 
+       <property
+        name="pay_kind"
+        type="java.lang.String"
+        column="PAY_KIND"
+        length="2"
+       /> 
+         <property
+        name="tmpplaceKind"
+        type="java.lang.String"
+        column="TMPPLACE_KIND"
+        length="2"
+       />  
+    
+    
+    
+    <property name="payType_" type="java.lang.String" formula="(select aA301.PAY_TYPE from AA301 aA301 where aA301.id=id)"/>
+    <property name="minMaxMonth" type="java.lang.String" 
+          formula="(select min(a.pay_month)||'-'||max(a.pay_month) from aa302 a where a.pay_head_id=id)"
+			/>	
+
+    <many-to-one name="org" column="ORG_ID" class="Org" lazy="false" not-null="true"></many-to-one>
+ 
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

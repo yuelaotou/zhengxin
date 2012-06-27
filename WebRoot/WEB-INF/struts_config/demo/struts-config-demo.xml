@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="demoAF"
+			type="org.xpup.hafmis.demo.form.DemoAF" />
+		<form-bean name="demoAddAF"
+			type="org.xpup.hafmis.demo.form.DemoAddAF" />
+		<form-bean name="demoImportAF"
+			type="org.xpup.hafmis.demo.form.DemoImportAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="demoAF" path="/showDemoListAC"
+			type="org.xpup.hafmis.demo.action.DemoTaShowAC">
+			<forward name="to_demo_list" path="/demoList.jsp"></forward>
+		</action>
+		<action name="idAF" path="/demoMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.demo.action.DemoTaMaintainAC">
+			<forward name="showDemoListAC" path="/showDemoListAC.do" />
+			<forward name="to_demo_add" path="/demoadd.jsp" />
+			<forward name="to_demo_imports" path="/demo_imports.jsp" />
+			<forward name="to_demo_report" path="/demo_cell.jsp" />
+		</action>
+
+		<action name="demoAF" path="/demoFindInforAAC"
+			type="org.xpup.hafmis.demo.action.DemoTaFindAAC">
+		</action>
+
+		<action name="demoAddAF" path="/addDemoMaintainAC"
+			type="org.xpup.hafmis.demo.action.DemoEditMaintainAC"
+			parameter="method">
+			<forward name="showDemoListAC" path="/showDemoListAC.do" />
+			<forward name="to_demo_add" path="/demoadd.jsp" />
+			<forward name="delToUrl" path="/todel.jsp" />
+		</action>
+		
+		<action name="demoImportAF" path="/demoTaImportAC"
+			type="org.xpup.hafmis.demo.action.DemoTaImportAC"
+			>
+			<forward name="showDemoListAC" path="/showDemoListAC.do" />
+		</action>
+	    <action name="demoImportAF" path="/forwardChildXmlAction"
+			type="org.xpup.hafmis.demo.action.ForwardChildXmlAction"
+			>			
+			<forward name="ajaxList" path="/ajaxList.jsp" />
+		</action>
+		<action name="demoImportAF" path="/childXmlAAC"
+			type="org.xpup.hafmis.demo.action.ChildXmlAAC"
+			>			
+		</action>
+		<action name="demoImportAF" path="/getAjaxListValueAC"
+			type="org.xpup.hafmis.demo.action.GetAjaxListValueAC"
+			>			
+		</action>
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.demo.message-resources-demo" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/demo/applicationContext.xml" />
+	</plug-in>
+	
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>	
+</struts-config>

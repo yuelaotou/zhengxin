@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="AgentImportTitle" col="4"  space="1" row="2">
+     <column>
+			<name>AgentYearMonth</name>
+			<typle>java.lang.String</typle>
+		</column>
+	 <column>
+			<name>NoteNum</name>
+			<typle>java.lang.String</typle>
+		</column>
+	  <column>
+			<name>PayMode</name>
+			<typle>java.lang.String</typle>
+		</column>
+		<column>
+			<name>AgentType</name>
+			<typle>java.lang.String</typle>
+		</column>
+</file>
+<file name="AgentImport" col="8"  space="3" row="-1">
+     <column>
+			<name>OrgAgentNum</name>
+			<typle>java.lang.String</typle>
+		</column>
+	 <column>
+			<name>OrgName</name>
+			<typle>java.lang.String</typle>
+		</column>
+	  <column>
+			<name>EmpAgentNum</name>
+			<typle>java.lang.String</typle>
+	</column>
+	<column>
+			<name>EmpName</name>
+			<typle>java.lang.String</typle>
+	</column>
+	<column>
+			<name>CardNum</name>
+			<typle>java.lang.String</typle>
+	</column>
+	<column>
+			<name>AgentOrgPay</name>
+			<typle>java.lang.String</typle>
+	</column>
+	<column>
+			<name>AgentEmpPay</name>
+			<typle>java.lang.String</typle>
+	</column>
+	<column>
+			<name>AgentEmpSalary</name>
+			<typle>java.lang.String</typle>
+	</column>
+	
+</file>
+</root>

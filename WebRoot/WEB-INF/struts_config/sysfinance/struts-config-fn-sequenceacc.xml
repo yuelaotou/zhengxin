@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />	
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		 <action path="/sequenceaccForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.accmng.sequenceacc.action.SequenceaccForwardAC">
+	  	<forward name="to_sequenceacc_show" path="/credenceclearShowAC.do"></forward>
+	 </action>
+	 <action name="idAF" path="/sequenceaccMaintainAC" 
+		parameter="method"
+		type="org.xpup.hafmis.sysfinance.accmng.sequenceacc.action.SequenceaccMaintainAC" >
+		<forward name="to_sequenceacc_print" path="/accounthandle/credencefillin/credencefillintd_print.jsp"></forward>
+	</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

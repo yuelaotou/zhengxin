@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/dayclearShowAC.do" location="350,50" dimension="420,88" />
+  <StrutsActivity path="/dayclearDoAC.do" location="950,150" dimension="407,88" />
+  <StrutsActivity path="/dayclear.jsp" location="950,50" dimension="92,49" />
+  <StrutsActivity path="/clearaccount.jsp" location="773,376" dimension="112,49" />
+  <StrutsTransition id="/dayclearDoAC.do,dayclearShowAC,/dayclearShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1153,194" />
+      <AbsolutePoint location="560,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/dayclearShowAC.do,dayclear,/dayclear.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="770,84" />
+      <AbsolutePoint location="950,84" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

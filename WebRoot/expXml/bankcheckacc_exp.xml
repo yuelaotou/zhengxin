@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<root file="2">
+	<file name="BankCheckAccExpNote" col="1" space="0" row="-1">
+		<column>note</column>
+	</file>
+	<file name="BankCheckAccExpHead" col="8" space="1" row="-1">
+		<column>settDate</column>
+		<column>subjectCode</column>
+		<column>debit</column>
+		<column>credit</column>
+		<column>settType</column>
+		<column>settNum</column>
+		<column>summary</column>
+		<column>dopsn</column>
+	</file>
+
+
+</root>

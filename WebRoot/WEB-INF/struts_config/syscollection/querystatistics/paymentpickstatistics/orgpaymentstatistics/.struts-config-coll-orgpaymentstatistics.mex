@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgpaymentShowAC.do" location="50,150" dimension="754,84" />
+  <StrutsActivity path="/to_showAC.do" location="950,50" dimension="645,88" />
+  <StrutsActivity path="/orgpaymentstatisticsFindAC.do" location="3,0" dimension="639,88" />
+  <StrutsActivity path="/orgpaymentstatisticsPrintAC.do" location="950,350" dimension="641,88" />
+  <StrutsActivity path="/orgpaymentstatisticsFindAAC.do" location="650,950" dimension="784,84" />
+  <StrutsActivity path="/emppaymentstatisticsShowAC.do" location="50,550" dimension="632,88" />
+  <StrutsActivity path="/to_showTbAC.do" location="950,550" dimension="647,88" />
+  <StrutsActivity path="/emppaymentstatisticsFindAC.do" location="50,750" dimension="641,88" />
+  <StrutsActivity path="/emppaymentstatisticsPrintAC.do" location="950,750" dimension="643,88" />
+  <StrutsActivity path="/emppaymentstatisticsFindAAC.do" location="50,1150" dimension="784,84" />
+  <StrutsActivity path="/orgpaymentstatistics.jsp" location="50,350" dimension="190,48" />
+  <StrutsActivity path="/Orgpayment_cell.jsp" location="50,950" dimension="132,49" />
+  <StrutsActivity path="/emppaymentstatistics.jsp" location="350,450" dimension="190,48" />
+  <StrutsActivity path="/emppaymentstatistics_cell.jsp" location="50,1050" dimension="220,48" />
+  <StrutsActivity path="/orgpaymentstatistics.jsp.jsp" location="950,250" dimension="214,48" />
+  <StrutsActivity path="/emppaymentstatistics.jsp.jsp" location="50,450" dimension="214,48" />
+  <StrutsActivity path="/OrgpaymentTaShow.jsp" location="613,376" dimension="149,49" />
+  <StrutsActivity path="/OrgpaymentTbShow.jsp" location="350,950" dimension="149,49" />
+  <StrutsActivity path="/empListShowAC.do" location="950,1150" dimension="700,84" />
+  <StrutsActivity path="/empListFindAC.do" location="50,1350" dimension="700,84" />
+  <StrutsActivity path="/emppop.jsp" location="950,1350" dimension="106,48" />
+  <StrutsActivity path="/emppop.jsps" location="350,1050" dimension="112,48" />
+  <StrutsTransition id="/orgpaymentShowAC.do,to_showAC,/to_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1272,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/emppaymentstatisticsPrintAC.do,to_cell.jsp,/emppaymentstatistics_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1271,794" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListShowAC.do,employees,/emppop.jsps,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1300,1150" />
+      <AbsolutePoint location="1300,1074" />
+      <AbsolutePoint location="462,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListShowAC.do,employees,/emppop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1300,1192" />
+      <AbsolutePoint location="1003,1374" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListFindAC.do,show_employees,/empListShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="400,1392" />
+      <AbsolutePoint location="1300,1192" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListShowAC.do,to_cell.jsp,/emppop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1041,1234" />
+      <AbsolutePoint location="1041,1350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_showAC.do,to_showTajsp,/orgpaymentstatistics.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1272,94" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_showTbAC.do,to_EmppaymentTbShow,/emppaymentstatistics.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1273,594" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListFindAC.do,to_cell.jsp,/empListShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="750,1413" />
+      <AbsolutePoint location="1300,1413" />
+      <AbsolutePoint location="1300,1234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/emppaymentstatisticsFindAC.do,to_emppaymentstatisticsShowAC,/to_showTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="370,750" />
+      <AbsolutePoint location="370,684" />
+      <AbsolutePoint location="1273,684" />
+      <AbsolutePoint location="1273,638" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/emppaymentstatisticsShowAC.do,to_showTbAC,/to_showTbAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="682,564" />
+      <AbsolutePoint location="950,564" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgpaymentstatisticsFindAC.do,to_orgpaymentstatisticsShowAC,/to_showAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="642,65" />
+      <AbsolutePoint location="950,65" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgpaymentstatisticsPrintAC.do,to_cell.jsp,/Orgpayment_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,361" />
+      <AbsolutePoint location="-75,361" />
+      <AbsolutePoint location="-75,974" />
+      <AbsolutePoint location="50,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empListShowAC.do,to_cell.jsp,/emppop.jsps,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1300,1150" />
+      <AbsolutePoint location="1300,1074" />
+      <AbsolutePoint location="462,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="loancheckShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.form.LoanCheckShowAF" />
+		<form-bean name="loancheckReasonAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.form.LoanCheckReasonAF" />
+		<!-- ========================loanapply======================-->
+		<form-bean name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyNewAF" />
+		<form-bean name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTbNewAF" />
+		<form-bean name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTcNewAF" />
+		<form-bean name="loanapplytdnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTdNewAF" />
+		<!-- ========================endorsecontract======================-->
+		<form-bean name="endorsecontractTaAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTaAF" />
+		<form-bean name="endorsecontractTbAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTbAF" />
+		<form-bean name="endorsecontractTcAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTcAF" />
+		<form-bean name="endorsecontractTdAF"
+			type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTdAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- 审核贷款 -->
+		<action path="/loancheckForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckForwardURLAC">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+		</action>
+		<!-- 回件确认 -->
+		<action path="/loanRedateForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanRedateForwardURLAC">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+		</action>
+		<!-- 再次审核贷款 -->
+		<action path="/loancheckAgainForwardAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckAgainForwardURLAC">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+		</action>
+		
+		<action name="loancheckShowAF" path="/loancheckShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckShowAC"
+			scope="request">
+			<forward name="to_loancheck_show"
+				path="/loanapply/loancheck/loancheck_show.jsp">
+			</forward>
+			<forward name="to_loanredate_show"
+				path="/loanapply/loancheck/loanredate_show.jsp">
+			</forward>
+			<forward name="to_loancheckagain_show"
+				path="/loanapply/loancheck/loancheckagain_show.jsp">
+			</forward>
+		</action>
+		<!-- 审核贷款 -->
+		<action name="idAF" path="/loancheckMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckMaintainAC"
+			scope="request" parameter="method">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+			<forward name="to_loancheck_show_cell"
+				path="/loanapply/loancheck/loancheck_show_cell.jsp" />
+		</action>
+		<!-- 回件确认 -->
+		<action name="idAF" path="/loanRedateMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanRedateMaintainAC"
+			scope="request" parameter="method">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+			<forward name="to_loanredate_cell"
+				path="/loanapply/loancheck/loanredate_cell.jsp" />
+		</action>
+		<!-- 再次审核贷款 -->
+		<action name="idAF" path="/loancheckAgainMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckAgainMaintainAC"
+			scope="request" parameter="method">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+			<forward name="to_loancheck_show_cell"
+				path="/loanapply/loancheck/loancheck_show_cell.jsp" />
+		</action>
+		
+		<action name="loancheckShowAF" path="/loancheckFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckFindAC"
+			scope="request">
+			<forward name="loancheckShowAC"
+				path="/loancheckShowAC.do">
+			</forward>
+			<forward name="to_loancheck_show"
+				path="/loanapply/loancheck/loancheck_show.jsp">
+			</forward>
+		</action>
+
+		<action name="loancheckReasonAF" path="/loancheckReasonAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckReasonAC"
+			scope="request">
+			<forward name="loancheckShowAC" path="/loancheckShowAC.do" />
+			<forward name="loancheckForwardAC"
+				path="/loancheckForwardAC.do" />
+			<forward name="to_loancheck_show"
+				path="/loanapply/loancheck/loancheck_show.jsp">
+			</forward>
+		</action>
+
+		<!-- ========================loanapply        show======================-->
+		<action name="loanapplynewAF" path="/showLoanCheckTaAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckTaShowAC">
+			<forward name="to_loancheckta_show"
+				path="/loanapply/loancheck/loancheck_borrowerinfo_show.jsp" />
+		</action>
+
+		<action name="loanapplytbnewAF" path="/showLoanCheckTbAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckTbShowAC">
+			<forward name="to_loanchecktb_show"
+				path="/loanapply/loancheck/loancheck_assistantborrower_show.jsp" />
+		</action>
+		<action name="idAF" path="/findLoanCheckTbEmpInfoAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckTbEmpInfoFindAAC" />
+
+		<action name="loanapplytcnewAF" path="/showLoanCheckTcAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckTcShowAC">
+			<forward name="to_loanchecktc_show"
+				path="/loanapply/loancheck/loancheck_tc_show.jsp" />
+		</action>
+		<action name="loanapplytdnewAF" path="/showLoanCheckTdAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.LoanCheckTdShowAC">
+			<forward name="to_loanchecktd_show"
+				path="/loanapply/loancheck/loancheck_td_show.jsp" />
+		</action>
+		<!-- ========================endorsecontract  to======================-->
+		<action name="endorsecontractTaAF" path="/to_LoanCheckTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.EndorsecontractTaShowAC">
+			<forward name="to_loancheckTa"
+				path="/loanapply/loancheck/loancheck_endorsecontractTa.jsp">
+			</forward>
+		</action>
+
+		<action name="endorsecontractTbAF" path="/to_LoanCheckTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.EndorsecontractTbShowAC">
+			<forward name="to_loancheckTb"
+				path="/loanapply/loancheck/loancheck_endorsecontractTb.jsp">
+			</forward>
+		</action>
+
+		<action name="endorsecontractTcAF" path="/to_LoanCheckTcShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.EndorsecontractTcShowAC">
+			<forward name="to_loancheckTc"
+				path="/loanapply/loancheck/loancheck_endorsecontractTc.jsp">
+			</forward>
+		</action>
+
+		<action name="endorsecontractTdAF" path="/to_LoanCheckTdShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loancheck.action.EndorsecontractTdShowAC">
+			<forward name="to_loancheckTd"
+				path="/loanapply/loancheck/loancheck_endorsecontractTd.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+
+</struts-config>

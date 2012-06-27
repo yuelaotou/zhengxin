@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.BankCredence" 
+    table="FN211"
+>
+
+    <id
+        name="credenceId"
+        type="integer"
+        column="CREDENCE_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_FN211</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="subjectCode"
+        type="java.lang.String"
+        column="SUBJECT_CODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="debit"
+        type="java.math.BigDecimal"
+        column="DEBIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="credit"
+        type="java.math.BigDecimal"
+        column="CREDIT"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="settType"
+        type="java.lang.String"
+        column="SETT_TYPE"
+        length="100"
+    />
+    <property
+        name="settNum"
+        type="java.lang.String"
+        column="SETT_NUM"
+        length="100"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="summary"
+        type="java.lang.String"
+        column="SUMMARY"
+        length="100"
+    />
+    <property
+        name="dopsn"
+        type="java.lang.String"
+        column="DOPSN"
+        length="100"
+    />
+    <property
+        name="makebill"
+        type="java.lang.String"
+        column="MAKEBILL"
+        length="100"
+    />
+    <property
+        name="credenceType"
+        type="java.lang.String"
+        column="CREDENCE_TYPE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root file="3">
+<file name="EmpOpenExpNote" col="2"  space="0" row="1">
+     <column>note</column>
+     <column>docmun</column>
+</file>
+<file name="EmpOpenExpTitle" col="2"  space="1" row="2">
+     <column>orgunitcode</column>
+	 <column>orgunitname</column>
+</file>
+  <file name="EmpOpenExpContent" col="10"  space="3" row="-1">
+	 <column>empname</column>
+	<column>cardkind</column>
+	 <column>cardnum</column>
+	  <column>dept</column>
+	  <column>tel</column>
+	 <column>mobileTle</column>
+	  <column>monthIncome</column>
+	 <column>salarybase</column>
+	 <column>orgpay</column>
+	 <column>emppay</column>
+  </file>
+</root>

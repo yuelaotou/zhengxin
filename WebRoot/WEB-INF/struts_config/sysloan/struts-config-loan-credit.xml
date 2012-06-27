@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="creditParamAF"
+			type="org.xpup.hafmis.sysloan.credit.parameter.form.CreditParamAF" />
+		<form-bean name="creditAF"
+			type="org.xpup.hafmis.sysloan.credit.report.form.CreditAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="creditParamAF" path="/creditParamShowAC"
+			type="org.xpup.hafmis.sysloan.credit.parameter.action.CreditParamShowAC">
+			<forward name="creditparam"
+				path="/credit/parameter/creditparam.jsp" />
+		</action>
+		<action name="creditParamAF" path="/creditParamSaveAC"
+			type="org.xpup.hafmis.sysloan.credit.parameter.action.CreditParamSaveAC">
+			<forward name="creditParamShowAC"
+				path="/creditParamShowAC.do" />
+		</action>
+		<action name="creditAF" path="/creditForwardURLAC"
+			type="org.xpup.hafmis.sysloan.credit.report.action.CreditForwardURLAC">
+			<forward name="creditShowAC" path="/creditShowAC.do" />
+		</action>
+		<action name="creditAF" path="/creditFindAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.credit.report.action.CreditFindAC">
+			<forward name="creditShowAC" path="/creditShowAC.do" />
+		</action>
+		<action name="creditAF" path="/creditShowAC"
+			type="org.xpup.hafmis.sysloan.credit.report.action.CreditShowAC">
+			<forward name="credit" path="/credit/report/credit.jsp" />
+		</action>
+		<action name="idAF" path="/creditMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.credit.report.action.CreditMaintainAC">
+			<forward name="credit" path="/credit/report/credit.jsp" />
+			<forward name="creditShowAC" path="/creditShowAC.do" />
+		</action>
+		
+		<action name="creditAF" path="/creditQueryForwardURLAC"
+			type="org.xpup.hafmis.sysloan.credit.query.action.CreditQueryForwardURLAC">
+			<forward name="creditQueryShowAC" path="/creditQueryShowAC.do" />
+		</action>
+		<action name="creditAF" path="/creditQueryFindAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.credit.query.action.CreditQueryFindAC">
+			<forward name="creditQueryShowAC" path="/creditQueryShowAC.do" />
+		</action>
+		<action name="creditAF" path="/creditQueryShowAC"
+			type="org.xpup.hafmis.sysloan.credit.query.action.CreditQueryShowAC">
+			<forward name="creditquery" path="/credit/query/creditquery.jsp" />
+		</action>
+
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

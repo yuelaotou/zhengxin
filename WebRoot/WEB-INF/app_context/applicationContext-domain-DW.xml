@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	
+	<!-- Hibernate SessionFactory -->
+	<bean id="sessionFactoryDW"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSourceDW" />
+		</property>
+		<property name="mappingResources">
+			<list>
+				<!-- ======= security ======= -->
+				<value>org/xpup/security/common/domain/hbm/User.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/Role.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/MenuItem.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/MuRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/MrRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/Operation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/OuRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/OrRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/DataAccess.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/DrRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/DuRelation.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/Userslogincollbank.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/Usersloginorg.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/Usersloginuser.hbm.xml</value>
+				<value>org/xpup/security/common/domain/hbm/UsersloginBook.hbm.xml</value>
+				
+				<!-- ======= orgstrct ======= -->
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/OrganizationUnit.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/OrgUnitProperty.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/OrgUnitPropTemplate.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/OuptItem.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/HafEmployee.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/HafRole.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/CollBank.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaRoleAndOrg.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaUserAndOrg.hbm.xml</value>				
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaRoleAndOffice.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaRoleAndCollBank.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaUserAndUser.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaUserAndOffice.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaUserAndCollBank.hbm.xml</value>
+				<value>org/xpup/hafmis/orgstrct/domain/hbm/RelaUserAndBook.hbm.xml</value>
+				
+				<!-- ======= demo ======= -->
+				<value>org/xpup/hafmis/demo/domain/hbm/Demo.hbm.xml</value>
+				<value>org/xpup/hafmis/demo/domain/hbm/DemoAccount.hbm.xml</value>
+				
+				<!-- ======= BA类 ======= -->				
+				<value>org/xpup/hafmis/syscommon/domain/hbm/EmpInfo.hbm.xml</value>
+				<value>org/xpup/hafmis/syscommon/domain/hbm/OrgInfo.hbm.xml</value>
+				<value>org/xpup/hafmis/syscommon/domain/hbm/HafOperateLog.hbm.xml</value>
+
+				
+				<!-- ======= AA类 ======= -->
+
+				
+				<!-- syscollection -->
+                <value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgBase.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/Org.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/Emp.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChgLog.hbm.xml</value>
+				<!--  <value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChgLogOpen.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChgLogOpenSeal.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChgLogSeal.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChgLogDelAccount.hbm.xml</value>-->
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/BaseGhgInfo.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlow.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowOverduePayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowExcessPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowDrawing.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowTransOut.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowTransIn.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowAdjustOther.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowAdjustPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowAdjustPick.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowEndAccrual.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowBalanceEndTransfer.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowExcessPaymentBalanceEndTransfer.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgHAFAccountFlowOrgAddPay.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/EmpHAFAccountFlow.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SearchLackInfo.hbm.xml</value>
+				
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/PickHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/PickTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SpecialPick.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/TranOutHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgOrgRate.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgChg.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPaymentHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPaymentTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/TranOutTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/HafInterestRate.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AdjustWrongAccountHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AdjustWrongAccountAdjustPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AdjustWrongAccountAdjustPick.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AdjustWrongAccountAdjustOther.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AdjustWrongAccountTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestResult.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/BizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/DocNumMaintain.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/DocNumCancel.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/PaymentHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/MonthPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgAddPay.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/EmpAddPay.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgExcessPayment.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/MonthPaymentHead.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/MonthPaymentTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/AddPayTail.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/MonthPaymentBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgAddPayBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgExcessPaymentBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/PickBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/TranOutBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/TranInBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChangeAccountBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SpecialPickBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChangeRateBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/EmpAddPayBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgOrgRateBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChangeSalaryBaseBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPaymentBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgOpenAccountBizActivityLog.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgOrgBizActivityLog.hbm.xml</value>
+				
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestHeadNZJX.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestHeadXHTQ.hbm.xml</value>
+				<value>org/xpup/hafmis/syscollection/common/domain/hbm/SettInterestHeadZY.hbm.xml</value>
+	
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPaymentPayment.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPaymentSalaryBase.hbm.xml</value>
+	        <!-- 
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonQfType.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonXzfcType.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonXzzcType.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/ChgPersonFcType.hbm.xml</value> -->
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/TranInOrg.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/TranOutOrg.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/TranInHead.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/TranInTail.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/OrgEdition.hbm.xml</value>
+	            <value>org/xpup/hafmis/syscollection/common/domain/hbm/AutoInfoPick.hbm.xml</value>
+	            
+	            <!-- ==========贷款========= -->
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/AssistantBorrower.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/AssistantOrg.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/Assurer.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/Borrower.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/BorrowerAcc.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/BorrowerLoanInfo.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/CenterRestoreLoanPlan.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/CongealInfo.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/ContractChg.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/ContractNumCancel.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/ContractNumMng.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/Developer.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/DevelopProject.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/GatheringAcc.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/GiveAcc.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/Houses.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/ImpawnContract.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanBank.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanBankPara.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanContract.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanContractPara.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanFlowHead.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanFlowTail.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/LoanRate.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/PlBizActiveLog.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/PlDocNumCancel.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/PlDocNumMaintain.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/PledgeContract.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/PlOperateLog.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/RestoreLoan.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/SpecialBorrower.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/OverdueInfo.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/Credit.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysloan/common/domain/hbm/CreditIdentity.hbm.xml</value>
+	            <!-- ==========财务========= -->
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/AccountantCredence.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/BankCredence.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/FnBizActivityLog.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/Book.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/BookParameter.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/CredenceModle.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/FnDocNumCancel.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/FnDocNumMaintain.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/FnOperateLog.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/ReportMng.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/SettleIncAndDec.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/Subject.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/SubjectRelation.hbm.xml</value>
+	            <value>org/xpup/hafmis/sysfinance/common/domain/hbm/TreasurerCredence.hbm.xml</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.Oracle9Dialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.query.factory_class">
+					org.hibernate.hql.ast.ASTQueryTranslatorFactory
+				</prop>
+				<prop key="hibernate.query.substitutions">
+					true 1, false 0
+				</prop>
+			</props>
+		</property>
+	</bean>
+	
+	<!-- Transaction manager for a single Hibernate sessionFactoryDW (alternative to JTA) -->
+	<bean id="transactionManagerDW"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactoryDW" />
+		</property>
+	</bean>
+	<bean id="baseTransactionProxyDW"
+		class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean"
+		abstract="true">
+		<property name="transactionManager">
+			<ref bean="transactionManagerDW" />
+		</property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="*">
+					PROPAGATION_REQUIRED,-BusinessException,-Exception 
+				</prop>
+			</props>
+		</property>
+	</bean>
+</beans>

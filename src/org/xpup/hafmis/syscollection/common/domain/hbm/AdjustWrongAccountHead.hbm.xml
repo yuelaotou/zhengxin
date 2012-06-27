@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="AdjustWrongAccountHead" 
+    table="AA314"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+       <generator class="sequence">
+				<param name="sequence">SEQ_AA314</param>
+		</generator>
+    </id>
+    
+	<discriminator column="BIZ_TYPE" type="string" />
+
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        
+        length="50"
+    />
+    <property
+        name="bizDate"
+        type="java.lang.String"
+        column="BIZ_DATE"
+        length="8"
+    />
+    <property
+        name="adjustStatus"
+        type="java.math.BigDecimal"
+        column="ADJUST_STATUS"
+        not-null="true"
+        length="22"
+    />
+    <property 
+    	name="bizDocNum"
+    	type="java.lang.String"
+    	column="BIZ_DOC_NUM"
+    	length="50"
+    />
+    <property 
+    	name="bizNoteNum"
+    	type="java.lang.String"
+    	column="BIZ_NOTE_NUM"
+    	length="50"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property name="orgName" type="java.lang.String" formula="(select ba001.name from BA001 ba001,AA001 aa001  where aa001.ORGINFO_ID=ba001.id and aa001.id=ORG_ID )"/>
+    <property name="personTotal" type="java.lang.Integer" formula="(select count(*) from AA315 aa315  where aa315.ADJUST_HEAD_ID=id )"/>
+ <property name="total" type="java.math.BigDecimal" formula="(select sum(aa315.ADJUST_MONEY) from AA315 aa315  where aa315.ADJUST_HEAD_ID=id )"
+	/>
+	<property name="allTotal" type="java.math.BigDecimal" formula="(select sum(aa315.ADJUST_MONEY) from AA315 aa315  where  aa315.ADJUST_HEAD_ID=id)"
+	/>
+	<property name="allTotalDefaults" type="java.math.BigDecimal" formula="(select sum(aa315.ADJUST_MONEY) from AA315 aa315  where aa315.ADJUST_HEAD_ID=id and (ADJUST_STATUS=1 or ADJUST_STATUS=3) )"
+	/>
+    <many-to-one 
+	    name="org" 
+	    column="ORG_ID" 
+	    class="org.xpup.hafmis.syscollection.common.domain.entity.Org" 
+	    not-null="true">
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

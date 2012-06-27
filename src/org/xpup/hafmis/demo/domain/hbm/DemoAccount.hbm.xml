@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.demo.domain.entity.DemoAccount" 
+    table="DEMO_ACCOUNT"
+>
+
+	<id name="id" type="string" unsaved-value="null">
+			<column name="ID" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+    <property
+        name="addmoney"
+        type="java.math.BigDecimal"
+        column="ADDMONEY"
+        not-null="true"
+        length="18"
+    />
+
+    <!-- associations -->
+    <!-- bi-directional many-to-one association to Demo -->
+    <many-to-one
+        name="demo"
+        class="org.xpup.hafmis.demo.domain.entity.Demo"
+        not-null="true"
+        
+    >
+        <column name="EMPID" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

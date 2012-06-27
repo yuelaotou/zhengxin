@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for psmonline's business layer. -->
+<beans>
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	<!-- Local DataSource that works in any environment -->
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:oracle:thin:@localhost:1521:orcl</value>
+		</property>
+		<property name="username">
+			<value>hafmis</value>
+		</property>
+		<property name="password">
+			<value>1</value>
+		</property>
+	</bean>
+
+	<!-- JNDI DataSource for J2EE environments -->
+	<!--
+		<bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiName"><value>java:comp/env/jdbc/petclinic</value></property>
+		</bean>
+	-->
+</beans>

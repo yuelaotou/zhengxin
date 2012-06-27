@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+ 	<bean id="developBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysloan.dataready.develop.business.DevelopBS">
+				<property name="developerDAO">
+					<ref bean="developerDAO" />
+				</property>
+				<property name="plOperateLogDAO">
+					<ref bean="plOperateLogDAO" />
+				</property>
+				<property name="developProjectDAO">
+					<ref bean="developProjectDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="ChgPaymentTail" 
+    table="AA203"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_AA203</param>
+	</generator>
+    </id>
+	<property 
+		name="empId"
+		type="integer"
+		column="EMP_ID"
+		not-null="true"
+	/>
+
+ 
+    <property
+        name="oldSalaryBase"
+        type="java.math.BigDecimal"
+        column="OLD_SALARY_BASE"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="salaryBase"
+        type="java.math.BigDecimal"
+        column="SALARY_BASE"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="oldOrgPay"
+        type="java.math.BigDecimal"
+        column="OLD_ORG_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="oldEmpPay"
+        type="java.math.BigDecimal"
+        column="OLD_EMP_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="orgPay"
+        type="java.math.BigDecimal"
+        column="ORG_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="empPay"
+        type="java.math.BigDecimal"
+        column="EMP_PAY"
+        not-null="true"
+        length="18"
+    />
+    <property
+        name="payStatus"
+        type="java.lang.Integer"
+        column="PAY_STATUS"
+        not-null="true"
+        length="1"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"    
+        length="50"
+    />
+    
+   <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"    
+        length="50"
+    />
+   <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"    
+        length="50"
+    />
+    
+    <property name="empName" type="java.lang.String" 
+	          formula="(select distinct ba002.name from BA002 ba002,AA002 aa002
+	          where aa002.emp_info_id=ba002.id and aa002.id=EMP_ID )"/>
+    
+    <property name="oldPaySum" type="java.lang.Double"
+			formula="(select (sum(e.ORG_PAY)+sum(e.EMP_PAY)) from AA203 e where e.ID=id )" />
+			
+			
+    <many-to-one name="chgPaymentHead" column="CHNG_HEAD_ID" class="ChgPaymentHead" not-null="true" cascade="save-update" ></many-to-one>
+   
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!-- 公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!-- 公共结束	-->
+		<form-bean name="overdueQueryTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.form.OverdueQueryTaAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/overdueQueryTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.action.OverdueQueryTaForwardURLAC">
+			<forward name="overdueQueryTaShowAC"
+				path="/overdueQueryTaShowAC.do">
+			</forward>
+		</action>
+		<action path="/overdueQueryTaShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.action.OverdueQueryTaShowAC">
+			<forward name="to_overduequeryta_show"
+				path="/querystatistics/querystatistics/overduequery/overduequeryta_show.jsp">
+			</forward>
+		</action>
+		<action name="overdueQueryTaAF"
+			path="/overdueQueryTaFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.action.OverdueQueryTaFindAC">
+			<forward name="overdueQueryTaShowAC"
+				path="/overdueQueryTaShowAC.do">
+			</forward>
+		</action>
+		<action name="idAF"
+			path="/overdueQueryTaMaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.action.OverdueQueryTaMaintainAC">
+			<forward name="to_overduequeryta_cell"
+				path="/querystatistics/querystatistics/overduequery/overduequeryta_cell.jsp">
+			</forward>
+			<forward name="to_overduequeryta_show"
+				path="/querystatistics/querystatistics/overduequery/overduequeryta_show.jsp">
+			</forward>
+		</action>
+		<!-- 明细 -->
+		<action path="/overdueQueryTbShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.overduequery.action.OverdueQueryTbShowAC">
+			<forward name="to_overduequerytb_show"
+				path="/querystatistics/querystatistics/overduequery/overduequerytb_show.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

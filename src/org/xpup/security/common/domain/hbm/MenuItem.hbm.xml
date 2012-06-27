@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xpup.security.common.domain">
+	<class name="MenuItem" table="CA104">
+
+		<id name="id" type="string" unsaved-value="null">
+			<column name="ID" sql-type="char(32)" not-null="true" />
+			<generator class="uuid.hex" />
+		</id>
+
+		<property name="caption" type="string" />
+
+		<property name="target" type="string" />
+
+		<property name="url" type="string" />
+
+		<property name="position" type="integer" />
+		
+		<property name="opSystemType" type="string" column="SYSTYPE" />
+
+		<property name="description" type="string" />
+
+		<many-to-one name="parentMenuItem" column="PARENT_ID"
+			class="MenuItem" />
+
+		<set name="subMenuItems" lazy="true" inverse="true"
+			cascade="all-delete-orphan" order-by="position asc">
+			<key column="PARENT_ID" />
+			<one-to-many class="MenuItem" />
+		</set>
+
+	</class>
+
+	<sql-query name="allRoots">
+		<return alias="menuItem" class="MenuItem" />
+		select {menuItem.*} from ( select t1.* from ca104 t1 inner join
+		ca105 t2 on t1.id=t2.menuitem_id inner join ca101 t3 on
+		t2.user_id=t3.id where t3.username = :username1 union select t1.* from
+		ca104 t1 inner join ca106 t2 on t1.id=t2.menuitem_id inner join
+		ca102 t3 on t2.role_id=t3.id inner join ca103 t4 on t3.id =
+		t4.role_id inner join ca101 t5 on t4.user_id = t5.id where
+		t5.username = :username2 ) menuItem where menuItem.parent_id is null order by menuItem.position
+	</sql-query>
+	
+	<sql-query name="allSubs">
+		<return alias="menuItem" class="MenuItem" />
+		select {menuItem.*} from ( select t1.* from ca104 t1 inner join
+		ca105 t2 on t1.id=t2.menuitem_id inner join ca101 t3 on
+		t2.user_id=t3.id where t3.username = :username1 union select t1.* from
+		ca104 t1 inner join ca106 t2 on t1.id=t2.menuitem_id inner join
+		ca102 t3 on t2.role_id=t3.id inner join ca103 t4 on t3.id =
+		t4.role_id inner join ca101 t5 on t4.user_id = t5.id where
+		t5.username = :username2 ) menuItem where menuItem.parent_id = :parentId order by menuItem.position
+	</sql-query>
+</hibernate-mapping>

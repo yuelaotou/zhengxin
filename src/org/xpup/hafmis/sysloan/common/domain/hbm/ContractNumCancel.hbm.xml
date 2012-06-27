@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.ContractNumCancel" 
+    table="PL102"
+>
+
+    <id
+        name="flowid"
+        type="integer"
+        column="FLOWID"
+    >
+        <generator class="sequence">
+        <param name="sequence">SEQ_PL102</param>
+        </generator>
+    </id>
+
+    <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        length="100"
+    />
+    <property
+        name="cancelcontractid"
+        type="java.lang.String"
+        column="CANCELCONTRACTID"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

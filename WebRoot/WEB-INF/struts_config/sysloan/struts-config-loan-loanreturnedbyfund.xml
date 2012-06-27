@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanreturnedbyfundTaAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.form.LoanreturnedbyfundTaAF" />
+		<form-bean name="loanreturnedbyfundTbAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.form.LoanreturnedbyfundTbAF" />
+	</form-beans>
+
+	<!-- ============================================TA ========================================================-->
+	<action-mappings>
+		<action path="/loanreturnedbyfundTaForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaForwardAC">
+			<forward name="to_showloanreturnedbyfundTa"
+				path="/loanreturnedbyfundTaShowAC.do" />
+		</action>
+		<action path="/loanreturnedbyfundTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaShowAC">
+			<forward name="to_showloanreturnedbyfundTa"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfund.jsp" />
+		</action>
+		<action path="/loanreturnedbyfundTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaFindAAC" />
+		<action name="idAF" path="/loanreturnedbyfundTaMainTianAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaMainTianAC">
+			<forward name="to_showloanreturnedbyfundTa"
+				path="/loanreturnedbyfundTaForwardAC.do" />
+			<forward name="bankexports_cell"
+				path="/loancallback/bankexports/bankexports_cell.jsp" />
+				<forward name="to_printloanreturnedbyfundTa"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfundinfo.jsp">
+			</forward>
+		</action>
+		<action path="/loanreturnedbyfundTaBorrowerNameFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaBorrowerNameFindAAC" />
+		<action path="/loanreturnedbyfundTaAssiFindAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaAssiFindAAC" />
+		<action path="/loanreturnedbyfundTaAssiFindAACA"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaAssiFindAACA" />
+		<action path="/loanreturnedbyfundTaAssiFindAACB"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaAssiFindAACB" />
+		<action name="loanreturnedbyfundTaAF"
+			path="/loanreturnedbyfundTaTaPrintAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTaTaPrintAC">
+			<forward name="loanreturnedbyfundTaTaPrint"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfundta_print.jsp" />
+		</action>
+
+		<!-- ============================================TB========================================================-->
+		<action path="/loanreturnedbyfundTbForwardAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbForwardAC">
+			<forward name="to_showloanreturnedbyfundTb"
+				path="/loanreturnedbyfundTbShowAC.do" />
+		</action>
+		<action path="/loanreturnedbyfundTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbShowAC">
+			<forward name="to_showloanreturnedbyfundTb"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtb.jsp" />
+		</action>
+		<action name="idAF" path="/loanreturnedbyfundTbMainTianAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbMainTianAC">
+			<forward name="to_showloanreturnedbyfundTb"
+				path="/loanreturnedbyfundTbShowAC.do" />
+			<forward name="to_showloanreturnedbyfundTb_print"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtb_print.jsp" />
+			<forward name="to_showloanreturnedbyfundTa"
+				path="/loanreturnedbyfundTaShowAC.do" />
+			<forward name="to_print"
+				path="/loanreturnedbyfundTaTaPrintAC.do" />
+
+		</action>
+		<action name="loanreturnedbyfundTbAF"
+			path="/loanreturnedbyfundTbFindAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbFindAC">
+
+			<forward name="to_showloanreturnedbyfundTb"
+				path="/loanreturnedbyfundTbShowAC.do" />
+		</action>
+		<action name="loanreturnedbyfundTbAF"
+			path="/loanreturnedbyfundTbDeleteAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbDeleteAC">
+
+			<forward name="to_showloanreturnedbyfundTb"
+				path="/loanreturnedbyfundTbShowAC.do" />
+		</action>
+		<action name="loanreturnedbyfundTaAF"
+			path="/loanreturnedbyfundTbRevertAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanreturnedbyfund.action.LoanreturnedbyfundTbRevertAC">
+
+			<forward name="loanreturnedbyfundTaTbRevertPrint"
+				path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtbconcel_print.jsp" />
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

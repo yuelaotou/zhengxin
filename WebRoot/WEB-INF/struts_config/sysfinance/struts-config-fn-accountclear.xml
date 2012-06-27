@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="cashDayClearTcAF"
+			type="org.xpup.hafmis.sysfinance.treasurermng.cashdayclear.form.CashDayClearTcAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action 
+    	path="/accountClearForwardAC" 
+    	type="org.xpup.hafmis.sysfinance.treasurermng.accountclear.action.AccountClearForwardAC">
+    <forward name="accountclear_show" path="/accountClearShowAC.do" />
+    </action>
+    <action name="cashDayClearTcAF"
+		scope="request"
+    	path="/accountClearFindAC" 
+    	type="org.xpup.hafmis.sysfinance.treasurermng.accountclear.action.AccountClearFindAC">
+    <forward name="accountclear_show" path="/accountClearShowAC.do"></forward>
+    </action>
+    <action name="cashDayClearTcAF"
+		scope="request"
+    	path="/accountClearShowAC" 
+    	type="org.xpup.hafmis.sysfinance.treasurermng.accountclear.action.AccountClearShowAC">
+    <forward name="to_accountclear_show" path="/treasurermng/accountclear/accountclear_show.jsp"></forward>
+    </action>
+    <action name="idAF" 
+	 		 path="/accountClearMaintainAC" 
+			 parameter="method"
+			 scope="request"
+		     type="org.xpup.hafmis.sysfinance.treasurermng.accountclear.action.AccountClearMaintainAC">
+		<forward name="accountclear_show" path="/accountClearShowAC.do"></forward>
+	</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

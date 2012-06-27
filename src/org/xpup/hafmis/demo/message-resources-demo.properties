@@ -1,0 +1,11 @@
+button.add=\u6dfb\u52a0
+button.update=\u4fee\u6539
+button.delete=\u5220\u9664
+button.delete.all=\u5168\u90e8\u5220\u9664
+button.back=\u8fd4\u56de
+button.delete.multibox=\u590d\u9009\u5220\u9664
+button.add.update=\u786e\u5b9a
+button.exports=\u5bfc\u51fa
+button.imports=\u5bfc\u5165
+button.reports=\u6253\u5370
+button.upload=\u626b\u63cf

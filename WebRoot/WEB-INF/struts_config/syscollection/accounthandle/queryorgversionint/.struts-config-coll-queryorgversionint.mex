@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/queryorgversionintShowAC.do" location="0,0" dimension="554,88" />
+  <StrutsActivity path="/to_queryorgversionintShowAC.do" location="333,188" dimension="521,88" />
+  <StrutsActivity path="/queryorgversionintFindAC.do" location="654,0" dimension="515,88" />
+  <StrutsActivity path="/queryorgversionintMaintainAC.do" location="0,470" dimension="554,88" />
+  <StrutsActivity path="/queryorgversionint_show.jsp" location="507,376" dimension="173,49" />
+  <StrutsTransition id="/queryorgversionintShowAC.do,to_queryorgversionintShowAC,/to_queryorgversionintShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="277,88" />
+      <AbsolutePoint location="277,138" />
+      <AbsolutePoint location="464,138" />
+      <AbsolutePoint location="464,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/queryorgversionintFindAC.do,to_queryorgversionintShowAC,/to_queryorgversionintShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="911,88" />
+      <AbsolutePoint location="911,138" />
+      <AbsolutePoint location="724,138" />
+      <AbsolutePoint location="724,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/to_queryorgversionintShowAC.do,to_queryorgversionint_show,/queryorgversionint_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="594,276" />
+      <AbsolutePoint location="594,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+	<form-bean name="queryOperationLogAF" type="org.xpup.hafmis.sysfinance.systemmaintain.queryoperationlog.form.QueryOperationLogAF"></form-bean>
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/queryOperationLogForwardAC"
+				type="org.xpup.hafmis.sysfinance.systemmaintain.queryoperationlog.action.QueryOperationLogForwardAC">
+				<forward name="queryOperationLogShowAC" path="/queryOperationLogShowAC.do"></forward>
+		</action>
+		<action path="/queryOperationLogShowAC"
+				type="org.xpup.hafmis.sysfinance.systemmaintain.queryoperationlog.action.QueryOperationLogShowAC">
+				<forward name="to_queryoperationlog_show" path="/systemmaintain/queryoperationlog/queryoperationlog_show.jsp"></forward>
+		</action>
+		<action path="/queryOperationLogFindAC"
+				name="queryOperationLogAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.systemmaintain.queryoperationlog.action.QueryOperationLogFindAC">
+				<forward name="queryOperationLogShowAC" path="/queryOperationLogShowAC.do"></forward>
+		</action>
+		<action path="/queryOperationLogMainTainAC"
+				parameter="method"
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.sysfinance.systemmaintain.queryoperationlog.action.QueryOperationLogMainTainAC">
+				<forward name="to_queryoperationlog_print" path="/systemmaintain/queryoperationlog/queryoperationlog_print.jsp"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

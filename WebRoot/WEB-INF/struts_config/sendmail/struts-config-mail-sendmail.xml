@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="mailinfoAF"
+			type="org.xpup.hafmis.sendmail.sendmial.form.MailinfoAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	    <action  path="/mailinfoTaShowAC" name="mailinfoAF"
+			type="org.xpup.hafmis.sendmail.sendmial.action.MailinfoTaShowAC">
+			<forward name="to_mailinfo_show" path="/sendmail/mailinfo_new.jsp"/>
+		</action>
+	     <action  path="/mailinfoTaNewAC" name="mailinfoAF"
+			type="org.xpup.hafmis.sendmail.sendmial.action.MailinfoTaNewAC">
+			<forward name="to_mailinfoshow" path="/mailinfoTaShowAC.do"/>
+		</action>
+	</action-mappings>
+	
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection"/>
+
+</struts-config>

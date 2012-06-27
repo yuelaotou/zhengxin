@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="ExportTitle" col="2"  space="0" row="2">
+     <column>empname</column>
+	 <column>empcode</column>
+	  <column>birthday</column>
+	   <column>salary</column>
+
+</file>
+  <file name="ExportContent" col="5"  space="2" row="-1">
+     <column>empcode</column>
+	 <column>empname</column>
+	 <column>birthday</column>
+	 <column>salary</column>
+	 <column>reason</column>
+  </file>
+</root>

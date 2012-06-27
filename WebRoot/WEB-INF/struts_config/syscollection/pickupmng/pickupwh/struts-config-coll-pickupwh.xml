@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		
+    <form-bean name="vindicateListAF" type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.VindicateListAF" />
+      <form-bean name="pickGetEmployeeInfoAF" type="org.xpup.hafmis.syscollection.pickupmng.pickup.form.PickGetEmployeeInfoAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>	
+      <action
+       attribute="vindicateListAF"
+       name="vindicateListAF"
+       path="/pickupWHShowAC"
+       scope="request"
+       type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.PickupWHShowAC" />
+	    <action
+	      attribute="idAF"
+	      name="idAF"
+	      path="/pickupWHMiantainAC"
+	      scope="request"
+	      parameter="method"
+	      type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.PickupWHMiantainAC" />
+    <action path="/pickUpWHForwardAC" type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.PickUpWHForwardAC" />
+    <action path="/queryPickUpForwardAC" type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.QueryPickUpForwardAC" />
+    <action path="/wehuwindowshowAC" type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.WehuwindowshowAC" />
+     <action path="/weihuprintAC" type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.WeihuPrintAC" name="idAF" scope="request"/>
+      <action 
+    path="/whwindowMaintainAC" 
+    type="org.xpup.hafmis.syscollection.pickupmng.pickupwh.action.WHWindowMaintainAC" 
+    parameter="method"
+    name="pickGetEmployeeInfoAF"
+    scope="request"/>   
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/pickupmng/pickup/applicationContext.xml" />
+	</plug-in>
+</struts-config>

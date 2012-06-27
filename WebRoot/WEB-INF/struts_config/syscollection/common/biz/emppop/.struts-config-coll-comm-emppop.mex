@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/findEmployeesListAC.do" location="3,0" dimension="406,88" />
+  <StrutsActivity path="/showEmployeesListAC.do" location="0,188" dimension="412,88" />
+  <StrutsActivity path="/emppop.jsp" location="161,376" dimension="89,49" />
+  <StrutsActivity path="/empfather.jsp" location="162,658" dimension="101,49" />
+  <StrutsTransition id="/findEmployeesListAC.do,show_employees,/showEmployeesListAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="206,88" />
+      <AbsolutePoint location="206,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showEmployeesListAC.do,employees,/emppop.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="206,276" />
+      <AbsolutePoint location="206,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

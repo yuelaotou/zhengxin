@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="datainitializeNewAF" type="org.xpup.hafmis.sysfinance.bookmng.datainitialize.form.DatainitializeNewAF" />
+    
+    </form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/datainitializeForwardAC" 
+    	type="org.xpup.hafmis.sysfinance.bookmng.datainitialize.action.DatainitializeForwardAC">
+	<forward name="datainitalizeShowAC" path="/datainitalizeShowAC.do" />
+    </action>
+    
+    <action 
+    	path="/datainitalizeShowAC" 
+    	name="datainitializeNewAF"
+    	scope="request"
+    	type="org.xpup.hafmis.sysfinance.bookmng.datainitialize.action.DatainitalizeShowAC">
+    <forward name="to_datainitialize_new" path="/bookmng/datainitialize/datainitialize_new.jsp" />
+    </action>
+    
+    <action
+      path="/datainitalizeNewAC"
+      name="datainitializeNewAF"
+      scope="request"
+      parameter="method"
+      type="org.xpup.hafmis.sysfinance.bookmng.datainitialize.action.DatainitalizeNewAC">
+      <forward name="datainitalizeShowAC" path="/datainitalizeShowAC.do"></forward>
+      <forward name="to_datainitialize_new" path="/bookmng/datainitialize/datainitialize_new.jsp" />
+    </action>
+    
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

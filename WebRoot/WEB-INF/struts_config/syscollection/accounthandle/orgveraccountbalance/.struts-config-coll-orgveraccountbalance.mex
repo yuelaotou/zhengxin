@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgVerAccountBalanceFindAAC.do" location="950,150" dimension="640,84" />
+  <StrutsActivity path="/orgVerAccountBalanceForwardAC.do" location="0,461" dimension="670,84" />
+  <StrutsActivity path="/orgVerAccountBalanceShowAC.do" location="0,184" dimension="634,84" />
+  <StrutsActivity path="/orgVerAccountBalanceFindAC.do" location="0,0" dimension="634,84" />
+  <StrutsActivity path="/orgveraccountbalance_show.jsp" location="207,368" dimension="220,48" />
+  <StrutsActivity path="/orgVerAccountBalanceMaintainAC.do" location="0,762" dimension="658,84" />
+  <StrutsTransition id="/orgVerAccountBalanceMaintainAC.do,orgVerAccountBalanceShowAC,/orgVerAccountBalanceShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="329,804" />
+      <AbsolutePoint location="317,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgVerAccountBalanceFindAAC.do,orgVerAccountBalanceShowAC,/orgVerAccountBalanceShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1270,192" />
+      <AbsolutePoint location="317,226" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgVerAccountBalanceForwardAC.do,orgVerAccountBalanceShowAC,/orgVerAccountBalanceShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="192,461" />
+      <AbsolutePoint location="192,268" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgVerAccountBalanceFindAC.do,orgVerAccountBalanceShowAC,/orgVerAccountBalanceShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="317,84" />
+      <AbsolutePoint location="317,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgVerAccountBalanceShowAC.do,to_orgveraccountbalance_show,/orgveraccountbalance_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="317,268" />
+      <AbsolutePoint location="317,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

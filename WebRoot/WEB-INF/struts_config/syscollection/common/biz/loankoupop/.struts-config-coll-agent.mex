@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/agentimp_show.jsp" location="639,1786" dimension="126,49" />
+  <StrutsActivity path="/agentimp_imports.jsp" location="36,1617" dimension="136,49" />
+  <StrutsActivity path="/agentchg_show.jsp" location="861,376" dimension="127,49" />
+  <StrutsActivity path="/agentInfoQueryTa_show.jsp" location="651,846" dimension="172,49" />
+  <StrutsActivity path="/agentInfoQueryTb_show.jsp" location="653,1316" dimension="172,49" />
+  <StrutsActivity path="/agentInfoQueryTc_show.jsp" location="1504,846" dimension="171,49" />
+  <StrutsActivity path="/agentorgpop_show.jsp" location="2362,376" dimension="144,49" />
+  <StrutsActivity path="/agentemppop_show.jsp" location="3628,376" dimension="148,49" />
+  <StrutsTransition id="/agentInfoQueryTbFindAC.do,agentInfoQueryTbShowAC,/agentInfoQueryTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="739,1028" />
+      <AbsolutePoint location="739,1128" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentImportPageShowAC.do,to_agentImpShowAC,/agentImpShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="313,1498" />
+      <AbsolutePoint location="313,1548" />
+      <AbsolutePoint location="575,1548" />
+      <AbsolutePoint location="575,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTcShowAC.do,to_agentInfoQueryTc_show,/agentInfoQueryTc_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1589,746" />
+      <AbsolutePoint location="1589,846" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTbShowAC.do,to_agentInfoQueryTb_show,/agentInfoQueryTb_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="739,1216" />
+      <AbsolutePoint location="739,1316" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentOrgpopFindAC.do,to_agentOrgpopShowAC,/agentOrgpopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2685,88" />
+      <AbsolutePoint location="2685,123" />
+      <AbsolutePoint location="2483,123" />
+      <AbsolutePoint location="2483,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTcFindAC.do,agentInfoQueryTcShowAC,/agentInfoQueryTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1784,558" />
+      <AbsolutePoint location="1784,608" />
+      <AbsolutePoint location="1695,608" />
+      <AbsolutePoint location="1695,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentImpMaintainAC.do,to_agentImpShowAC,/agentImpShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1183,1498" />
+      <AbsolutePoint location="1183,1548" />
+      <AbsolutePoint location="828,1548" />
+      <AbsolutePoint location="828,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentEmppopShowAC.do,to_agentemppop_show,/agentemppop_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3702,276" />
+      <AbsolutePoint location="3702,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTaModifyAC.do,agentInfoQueryTbShowAC,/agentInfoQueryTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="215,1028" />
+      <AbsolutePoint location="215,1078" />
+      <AbsolutePoint location="597,1078" />
+      <AbsolutePoint location="597,1128" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentOrgpopMaintainAC.do,to_agentChgShowAC,/agentChgShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1568,88" />
+      <AbsolutePoint location="1568,153" />
+      <AbsolutePoint location="1067,153" />
+      <AbsolutePoint location="1067,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentEmppopFindAC.do,to_agentEmppopShowAC,/agentEmppopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4206,88" />
+      <AbsolutePoint location="4206,123" />
+      <AbsolutePoint location="3835,123" />
+      <AbsolutePoint location="3835,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTbModifyAC.do,agentInfoQueryTaShowAC,/agentInfoQueryTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1153,558" />
+      <AbsolutePoint location="1153,608" />
+      <AbsolutePoint location="878,608" />
+      <AbsolutePoint location="878,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentImpShowAC.do,to_agentimp_show,/agentimp_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="702,1686" />
+      <AbsolutePoint location="702,1786" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryForWardAC.do,agentInfoQueryTaShowAC,/agentInfoQueryTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="214,558" />
+      <AbsolutePoint location="214,608" />
+      <AbsolutePoint location="595,608" />
+      <AbsolutePoint location="595,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentEmppopMaintainAC.do,to_agentEmppopShowAC,/agentEmppopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3291,88" />
+      <AbsolutePoint location="3291,123" />
+      <AbsolutePoint location="3568,123" />
+      <AbsolutePoint location="3568,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentChgFindAC.do,to_agentChgShowAC,/agentChgShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="682,88" />
+      <AbsolutePoint location="682,123" />
+      <AbsolutePoint location="877,123" />
+      <AbsolutePoint location="877,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTbModifyAC.do,agentInfoQueryTcShowAC,/agentInfoQueryTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1368,558" />
+      <AbsolutePoint location="1368,608" />
+      <AbsolutePoint location="1484,608" />
+      <AbsolutePoint location="1484,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentChgForwardAC.do,to_agentChgShowAC,/agentChgShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="197,88" />
+      <AbsolutePoint location="197,153" />
+      <AbsolutePoint location="782,153" />
+      <AbsolutePoint location="782,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentOrgpopShowAC.do,to_agentorgpop_show,/agentorgpop_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2434,276" />
+      <AbsolutePoint location="2434,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTaShowAC.do,to_agentInfoQueryTa_show,/agentInfoQueryTa_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,746" />
+      <AbsolutePoint location="737,846" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentEmppopMaintainAC.do,to_agentOrgpopShowAC,/agentOrgpopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3084,88" />
+      <AbsolutePoint location="3084,153" />
+      <AbsolutePoint location="2583,153" />
+      <AbsolutePoint location="2583,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentImportPageShowAC.do,to_agentimp_imports,/agentimp_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="104,1498" />
+      <AbsolutePoint location="104,1617" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentChgMaintainAC.do,to_agentChgShowAC,/agentChgShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1167,88" />
+      <AbsolutePoint location="1167,123" />
+      <AbsolutePoint location="972,123" />
+      <AbsolutePoint location="972,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTaFindAC.do,agentInfoQueryTaShowAC,/agentInfoQueryTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="737,558" />
+      <AbsolutePoint location="737,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentChgShowAC.do,to_agentchg_show,/agentchg_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="925,276" />
+      <AbsolutePoint location="925,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentInfoQueryTcModifyAC.do,agentInfoQueryTbShowAC,/agentInfoQueryTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1262,1028" />
+      <AbsolutePoint location="1262,1078" />
+      <AbsolutePoint location="880,1078" />
+      <AbsolutePoint location="880,1128" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentOrgpopMaintainAC.do,to_agentOrgpopShowAC,/agentOrgpopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1774,88" />
+      <AbsolutePoint location="1774,153" />
+      <AbsolutePoint location="2284,153" />
+      <AbsolutePoint location="2284,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentImportAC.do,to_agentImpShowAC,/agentImpShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="702,1498" />
+      <AbsolutePoint location="702,1598" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentEmppopForwardAC.do,to_agentEmppopShowAC,/agentEmppopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3702,88" />
+      <AbsolutePoint location="3702,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/agentOrgpopForwardAC.do,to_agentOrgpopShowAC,/agentOrgpopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2183,88" />
+      <AbsolutePoint location="2183,123" />
+      <AbsolutePoint location="2384,123" />
+      <AbsolutePoint location="2384,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

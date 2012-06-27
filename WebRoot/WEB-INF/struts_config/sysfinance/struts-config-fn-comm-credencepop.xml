@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="credencePopShowAF" type="org.xpup.hafmis.sysfinance.common.biz.credencepop.form.CredencePopShowAF"></form-bean>		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    	<action path="/credencePopShowAC"
+    			name="credencePopShowAF"
+    			scope="request"
+    			type="org.xpup.hafmis.sysfinance.common.biz.credencepop.action.CredencePopShowAC">
+    		<forward name="to_credencepop_show" path="/common/biz/credencepop/credencepop_show.jsp"></forward>
+    	</action>
+    	<action path="/credencePopPrintAC"
+    			name="credencePopShowAF"
+    			scope="request"
+    			parameter="method"
+    			type="org.xpup.hafmis.sysfinance.common.biz.credencepop.action.CredencePopPrintAC">
+    		<forward name="to_credencepop_print" path="/common/biz/credencepop/credencepop_print.jsp"></forward>
+    		<forward name="credencepop_print_jj" path="/common/biz/credencepop/credencepop_print_jj.jsp"></forward>
+    		<forward name="to_credencepop_show" path="/common/biz/credencepop/credencepop_show.jsp"></forward>
+
+    	</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

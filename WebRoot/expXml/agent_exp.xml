@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<root file="3">
+<file name="AgentExportHead" col="1"  space="0" row="2">
+     <column>explain</column>
+</file>
+<file name="AgentExportTitle" col="4"  space="1" row="2">
+     <column>agentYearMonth</column>
+	 <column>noteNum</column>
+	 <column>payMode</column>
+	 <column>agentType</column>
+</file>
+<file name="AgentExport" col="8"  space="3" row="-1">
+     <column>orgAgentNum</column>
+	 <column>orgName</column>
+	  <column>empAgentNum</column>
+	  <column>empName</column>
+	  <column>cardNum</column>
+	  <column>agentOrgPay</column>
+	  <column>agentEmpPay</column>
+	  <column>agentEmpSalary</column>
+</file>
+</root>

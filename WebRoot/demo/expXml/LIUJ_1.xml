@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="ExportTitle" col="4"  space="1" row="1">
+     <column>
+	     <name>orgunitcode</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	  <column>
+	     <name>orgunitcodecontent</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	     <column>
+	     <name>orgunitname</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	  <column>
+	     <name>orgunitnamecontent</name>
+		 <typle>java.lang.String</typle>
+		 
+	 </column>
+</file>
+  <file name="Contents" col="4"  space="3" row="-1">
+	      <column>
+	     <name>empcode</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	     <column>
+	     <name>empname</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	     <column>
+	     <name>birthday</name>
+		 <typle>java.lang.String</typle>
+
+	 </column>
+	<column>
+	     <name>salary</name>
+		 <typle>java.lang.String</typle>
+
+ </column>
+
+  </file>
+</root>

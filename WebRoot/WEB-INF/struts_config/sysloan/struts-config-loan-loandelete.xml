@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="loandeleteAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loandelete.form.LoandeleteAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loandeleteShowAC" 
+		        scope="request" 
+		        type="org.xpup.hafmis.sysloan.loanapply.loandelete.action.LoandeleteForwardURLAC">
+		        <forward name="to_loandeleteShowAC" path="/to_loandeleteShowAC.do"></forward>
+		</action>
+		<action path="/to_loandeleteShowAC" 
+		        scope="request" 
+		        type="org.xpup.hafmis.sysloan.loanapply.loandelete.action.LoandeleteShowAC">
+		        <forward name="to_loandelete_show" path="/loanapply/loandelete/loandelete_show.jsp"></forward>
+		</action>
+		<action path="/loandeleteFindAC"
+		        name="loandeleteAF" 
+		        scope="request" 
+		        type="org.xpup.hafmis.sysloan.loanapply.loandelete.action.LoandeleteFindAC">
+		        <forward name="to_loandeleteShowAC" path="/to_loandeleteShowAC.do"></forward>
+		</action>
+		<action path="/loandeleteMaintainAC" 
+		        name="idAF"
+		        parameter="method" 
+		        scope="request"
+		        type="org.xpup.hafmis.sysloan.loanapply.loandelete.action.LoandeleteMaintainAC">
+		        <forward name="to_loandeleteShowAC" path="/to_loandeleteShowAC.do"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+
+</struts-config>

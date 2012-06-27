@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/adjustAccountPopShowAC.do" location="0,645" dimension="532,84" />
+  <StrutsActivity path="/adjustAccountPopFindAC.do" location="0,461" dimension="532,84" />
+  <StrutsActivity path="/adjustAccountTaShowAC.do" location="0,184" dimension="526,84" />
+  <StrutsActivity path="/adjustAccountTaNewAC.do" location="408,0" dimension="520,84" />
+  <StrutsActivity path="/adjustAccountDocNumShowAAC.do" location="0,922" dimension="556,84" />
+  <StrutsActivity path="/adjustAccountLoanKouAccShowAAC.do" location="577,461" dimension="580,84" />
+  <StrutsActivity path="/adjustAccountYearMonthAAC.do" location="601,922" dimension="550,84" />
+  <StrutsActivity path="/adjustAccountTbForwardAC.do" location="1722,0" dimension="544,84" />
+  <StrutsActivity path="/adjustAccountTbShowdAC.do" location="1754,184" dimension="532,84" />
+  <StrutsActivity path="/adjustAccountTbFindAC.do" location="2366,0" dimension="526,84" />
+  <StrutsActivity path="/adjustAccountTbMainTainAC.do" location="1052,0" dimension="550,84" />
+  <StrutsActivity path="/accounthandle/adjustaccount/adjustaccountpop_find.jsp" location="84,829" dimension="364,48" />
+  <StrutsActivity path="/accounthandle/adjustaccount/adjustaccountta_show.jsp" location="84,368" dimension="358,48" />
+  <StrutsActivity path="/accounthandle/adjustaccount/adjustaccount_print.jsp" location="626,202" dimension="352,48" />
+  <StrutsActivity path="/accounthandle/adjustaccount/adjustaccount_putout_print.jsp" location="1078,202" dimension="394,48" />
+  <StrutsActivity path="/accounthandle/adjustaccount/adjustaccounttb_show.jsp" location="1841,368" dimension="358,48" />
+  <StrutsTransition id="/adjustAccountTbFindAC.do,adjustAccountTbShowdAC,/adjustAccountTbShowdAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2629,84" />
+      <AbsolutePoint location="2629,119" />
+      <AbsolutePoint location="2197,119" />
+      <AbsolutePoint location="2197,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTaNewAC.do,adjustAccountTaShowAC,/adjustAccountTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="494,84" />
+      <AbsolutePoint location="494,119" />
+      <AbsolutePoint location="263,119" />
+      <AbsolutePoint location="263,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTbMainTainAC.do,to_adjustaccount_print,/accounthandle/adjustaccount/adjustaccount_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1144,84" />
+      <AbsolutePoint location="1144,149" />
+      <AbsolutePoint location="890,149" />
+      <AbsolutePoint location="890,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTaShowAC.do,to_adjustaccountta_show,/accounthandle/adjustaccount/adjustaccountta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="263,268" />
+      <AbsolutePoint location="263,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountPopFindAC.do,adjustAccountPopShowAC,/adjustAccountPopShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="266,545" />
+      <AbsolutePoint location="266,645" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTaNewAC.do,to_adjustaccount_putout_print,/accounthandle/adjustaccount/adjustaccount_putout_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="841,84" />
+      <AbsolutePoint location="841,119" />
+      <AbsolutePoint location="1176,119" />
+      <AbsolutePoint location="1176,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTbShowdAC.do,to_adjustaccounttb_show,/accounthandle/adjustaccount/adjustaccounttb_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2020,268" />
+      <AbsolutePoint location="2020,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountPopShowAC.do,to_adjustaccountpop_find,/accounthandle/adjustaccount/adjustaccountpop_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="266,729" />
+      <AbsolutePoint location="266,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTbMainTainAC.do,to_adjustaccount_putout_print,/accounthandle/adjustaccount/adjustaccount_putout_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1327,84" />
+      <AbsolutePoint location="1327,119" />
+      <AbsolutePoint location="1373,119" />
+      <AbsolutePoint location="1373,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTbMainTainAC.do,adjustAccountTbShowdAC,/adjustAccountTbShowdAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1511,84" />
+      <AbsolutePoint location="1511,119" />
+      <AbsolutePoint location="1843,119" />
+      <AbsolutePoint location="1843,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTbForwardAC.do,adjustAccountTbShowdAC,/adjustAccountTbShowdAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1994,84" />
+      <AbsolutePoint location="1994,119" />
+      <AbsolutePoint location="2020,119" />
+      <AbsolutePoint location="2020,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/adjustAccountTaNewAC.do,to_adjustaccount_print,/accounthandle/adjustaccount/adjustaccount_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="668,84" />
+      <AbsolutePoint location="668,119" />
+      <AbsolutePoint location="714,119" />
+      <AbsolutePoint location="714,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

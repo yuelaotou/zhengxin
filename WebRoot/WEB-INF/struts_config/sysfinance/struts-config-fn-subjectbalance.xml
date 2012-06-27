@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="subjectbalanceAF"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.form.SubjectbalanceAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="subjectbalanceAF" path="/subjectbalanceForwardAC"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.SubjectbalanceForwardAC">
+			<forward name="subjectbalanceShowAC" 
+				path="/subjectbalanceShowAC.do" />
+		</action>
+		<action name="subjectbalanceAF" path="/totalAccMusterForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.TotalAccMusterForwardURLAC">
+			<forward name="subjectbalanceShowAC" 
+				path="/subjectbalanceShowAC.do" />
+		</action>
+
+		<action path="/subjectbalanceShowAC"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.SubjectbalanceShowAC">
+			<forward name="to_subjectbalance_show"
+				path="/accmng/subjectbalance/subjectbalance_show.jsp" />
+			<forward name="to_totalaccmuster_show"
+				path="/accmng/subjectbalance/totalaccmuster_show.jsp" />
+				
+		</action>
+
+		<action path="/subjcetbalanceFindAC" name="subjectbalanceAF"
+			scope="request"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.SubjcetbalanceFindAC">
+			<forward name="subjectbalanceShowAC"
+				path="/subjectbalanceShowAC.do" />
+		</action>
+
+		<action path="/subjcetbalanceFindACC"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.SubjcetbalanceFindACC">
+		</action>
+
+		<action path="/subjectbalanceMaintainAC" name="idAF"
+			scope="request" parameter="megho"
+			type="org.xpup.hafmis.sysfinance.accmng.subjectbalance.action.SubjectbalanceMaintainAC">
+			<forward name="to_subjectbalance_cell"
+				path="/accmng/subjectbalance/subjectbalance_cell.jsp" />
+		</action>
+
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

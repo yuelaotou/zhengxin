@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="othersLoanAF"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.form.OthersLoanShowAF" />
+			<form-bean name="othersLoanTbShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.form.OthersLoanTbShowAF" />
+		<!-- ========================loanapply======================-->
+		<!-- ========================endorsecontract======================-->
+		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/othersLoanForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanForwardURLAC">
+			<forward name="otherLoanShowAC"
+				path="/othersLoanShowAC.do">
+			</forward>
+		</action>
+
+		<action name="othersLoanAF" path="/othersLoanShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanShowAC"
+			scope="request">
+			<forward name="to_othersLoan_show"
+				path="/loanapply/othersloan/othersloan_new.jsp">
+			</forward>
+		</action>
+
+		<action name="othersLoanAF" path="/othersLoanMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanMaintainAC"
+			scope="request" parameter="method">
+			<forward name="othersLoanShowAC"
+				path="/othersLoanShowAC.do">
+			</forward>
+		</action>
+		<action path="/findLoanapplywshAAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanFindAAC" />
+		<action path="/otherLoanapplyAAC"
+		type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanFuFindAAC" />
+		
+		<action path="/othersLoanTbForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTbForwardURLAC">
+			<forward name="othersLoanTbShowAC"
+				path="/othersLoanTbShowAC.do">
+			</forward>
+		</action>
+
+		<action name="othersLoanTbShowAF" path="/othersLoanTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTbShowAC"
+			scope="request">
+			<forward name="to_othersLoanTb_show"
+				path="/loanapply/othersloan/othersloantbshow.jsp">
+			</forward>
+		</action>
+		<action name="othersLoanTbShowAF" path="/othersLoanTbFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTbFindAC"
+			scope="request">
+			<forward name="to_othersLoanTb_show"
+				path="/othersLoanTbShowAC.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/othersLoanTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTbMaintainAC"
+			scope="request" parameter="method">
+			<forward name="othersLoanTbShowAC"
+				path="/othersLoanTbShowAC.do">
+			</forward>
+			<forward name="othersLoanShowAC"
+				path="/othersLoanShowAC.do">
+			</forward>
+			<forward name="othersLoanTbPrint"
+				path="/loanapply/othersloan/othersloantbprint.jsp">
+			</forward>
+		</action>
+		
+		
+		<action path="/othersLoanTcForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTcForwardURLAC">
+			<forward name="othersLoanTcShowAC"
+				path="/othersLoanTcShowAC.do">
+			</forward>
+		</action>
+
+		<action name="othersLoanTbShowAF" path="/othersLoanTcShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTcShowAC"
+			scope="request">
+			<forward name="to_othersLoanTc_show"
+				path="/loanapply/othersloan/othersloantcshow.jsp">
+			</forward>
+		</action>
+		<action name="othersLoanTbShowAF" path="/othersLoanTcFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTcFindAC"
+			scope="request">
+			<forward name="to_othersLoanTc_show"
+				path="/othersLoanTcShowAC.do">
+			</forward>
+		</action>
+		<action name="idAF" path="/othersLoanTcMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTcMaintainAC"
+			scope="request" parameter="method">
+			<forward name="othersLoanTcPrint"
+				path="/loanapply/othersloan/othersloantcprint.jsp">
+			</forward>
+		</action>
+		<action path="/othersLoanTdForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanTdForwardURLAC">
+			<forward name="othersLoanTbShowAC"
+				path="/othersLoanTbShowAC.do">
+			</forward>
+		</action>
+		<action name="othersLoanAF" path="/othersLoanWinShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.othersloan.action.OthersLoanWinShowAC"
+			scope="request">
+			<forward name="to_othersLoan_show"
+				path="/loanapply/othersloan/othersloanWin.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

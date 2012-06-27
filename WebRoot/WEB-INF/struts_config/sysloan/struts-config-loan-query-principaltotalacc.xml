@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="principalTaAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.form.PrincipalTaAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- 年账 -->
+		<action path="/principalTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTaForwardURLAC">
+			<forward name="principalTaShowAC"
+				path="/principalTaShowAC.do">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTaShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTaShowAC">
+			<forward name="to_principalta_show"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principalta_show.jsp">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTaFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTaFindAC">
+			<forward name="principalTaShowAC"
+				path="/principalTaShowAC.do">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTaMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTaMaintainAC">
+			<forward name="to_principalta_cell"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principalta_cell.jsp">
+			</forward>
+		</action>
+		
+		<!-- 月账 -->
+		<action path="/principalTbForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTbForwardURLAC">
+			<forward name="principalTbShowAC"
+				path="/principalTbShowAC.do">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTbShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTbShowAC">
+			<forward name="to_principaltb_show"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principaltb_show.jsp">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTbMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTbMaintainAC">
+			<forward name="to_principaltb_cell"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principaltb_cell.jsp">
+			</forward>
+			<forward name="principalTaShowAC"
+				path="/principalTaShowAC.do">
+			</forward>
+		</action>
+		
+		<!-- 日账 -->
+		<action path="/principalTcForwardURLAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTcForwardURLAC">
+			<forward name="principalTcShowAC"
+				path="/principalTcShowAC.do">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTcShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTcShowAC">
+			<forward name="to_principaltc_show"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principaltc_show.jsp">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTcFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTcFindAC">
+			<forward name="principalTcShowAC"
+				path="/principalTcShowAC.do">
+			</forward>
+		</action>
+		<action name="principalTaAF" path="/principalTcMaintainAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanaccountquery.principaltotalacc.action.PrincipalTcMaintainAC">
+			<forward name="to_principaltc_cell"
+				path="/querystatistics/loanaccountquery/principaltotalacc/principaltc_cell.jsp">
+			</forward>
+			<forward name="principalTcShowAC"
+				path="/principalTcShowAC.do">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/sysloan/querystatistics/loanaccountquery/principaltotalacc/applicationContext.xml" />
+	</plug-in>
+</struts-config>

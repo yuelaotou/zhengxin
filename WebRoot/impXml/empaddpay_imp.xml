@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<root file="2">
+<file name="EmpaddpayHeadImport" col="3"  space="1" row="2">
+     <column>
+	     <name>OrgId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>OrgName</name>
+		 <typle>java.lang.String</typle>
+     </column>
+	 <column>
+	     <name>NoteNum</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+</file>
+<file name="EmpaddpayListImport" col="8"  space="3" row="-1">
+	  <column>
+	     <name>EmpId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>EmpName</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>OrgPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	<column>
+	     <name>EmpPay</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>BeginMonth</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 	 <column>
+	     <name>EndMonth</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>Reason</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	 <column>
+	     <name>AddPayType</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+  </file>
+</root>

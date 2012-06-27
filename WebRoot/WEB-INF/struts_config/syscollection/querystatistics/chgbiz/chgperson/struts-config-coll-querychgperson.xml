@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="chgpersonOrgListAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.from.ChgpersonOrgListAF" />
+		<form-bean name="chgpersonEmpListAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.from.ChgpersonEmpListAF" />
+		<form-bean name="chgpersonQueryAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.from.ChgpersonQueryAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<!-- 人员变更-统计查询 -->
+	<action-mappings>
+		<action name="chgpersonOrgListAF" path="/chppersonOrgForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ChppersonOrgForwardURLAC">
+			<forward name="to_chgpersonorg_list" path="/showChgpersonOrgListAC.do"/>
+		</action>
+		<action name="chgpersonOrgListAF" path="/showChgpersonOrgListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ShowChgpersonOrgListAC">
+			<forward name="to_chgpersonorg_list" path="/chgpersonOrgList.jsp"/>
+		</action>
+		<action name="chgpersonOrgListAF" path="/findChgpersonOrgMaintainListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.FindChgpersonOrgMaintainListAC">
+			<forward name="to_chgpersonorg_list" path="/showChgpersonOrgListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainChgpersonOrgMaintainListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.MaintainChgpersonOrgMaintainListAC">
+			<forward name="to_chgpersonorg_report" path="/chgpersonOrgList_cell.jsp"/>
+		</action>  
+		
+		
+		
+		<action name="chgpersonEmpListAF" path="/chppersonEmpForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ChppersonEmpForwardURLAC">
+			<forward name="to_chgpersonemp_list" path="/showChgpersonEmpListAC.do"/>
+		</action>
+		<action name="chgpersonEmpListAF" path="/showChgpersonEmpListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ShowChgpersonEmpListAC">
+			<forward name="to_chgpersonemp_list" path="/chgpersonEmpList.jsp"/>
+		</action>
+		<action name="chgpersonEmpListAF" path="/findChgpersonEmpMaintainListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.FindChgpersonEmpMaintainListAC">
+			<forward name="to_chgpersonemp_list" path="/showChgpersonEmpListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainChgpersonEmpMaintainListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.MaintainChgpersonEmpMaintainListAC">
+			<forward name="to_chgpersonemp_report" path="/chgpersonEmpList_cell.jsp"/>
+		</action>
+		<action name="chgpersonQueryAF" path="/chgpersonQueryForwardAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ChgpersonQueryForwardAC">
+			<forward name="chgpersonQueryShowAC"
+				path="/chgpersonQueryShowAC.do" />
+		</action>
+		<action name="chgpersonQueryAF" path="/chgpersonQueryFindAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ChgpersonQueryFindAC">
+			<forward name="chgpersonQueryShowAC"
+				path="/chgpersonQueryShowAC.do" />
+		</action>
+		<action name="chgpersonQueryAF" path="/chgpersonQueryShowAC"
+			scope="request"
+			type="org.xpup.hafmis.syscollection.querystatistics.chgbiz.chgperson.action.ChgpersonQueryShowAC">
+			<forward name="chgpersonquery" path="/chgpersonquery.jsp" />
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/chgbiz/chgperson/applicationContext.xml" />
+	</plug-in>
+</struts-config>

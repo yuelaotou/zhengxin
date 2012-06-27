@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/hafoperatorLogForwardAC.do" location="0,0" dimension="502,88" />
+  <StrutsActivity path="/hafoperatorLogShowAC.do" location="303,188" dimension="488,88" />
+  <StrutsActivity path="/hafoperatorLogFindAC.do" location="602,0" dimension="482,88" />
+  <StrutsActivity path="/hafoperatorLogMaintainAC.do" location="0,470" dimension="502,88" />
+  <StrutsActivity path="/hafoperatorLog.jsp" location="484,376" dimension="126,49" />
+  <StrutsActivity path="/hafoperatorLogPrintList.jsp" location="169,658" dimension="164,49" />
+  <StrutsTransition id="/hafoperatorLogForwardAC.do,goto,/hafoperatorLogShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="251,88" />
+      <AbsolutePoint location="251,138" />
+      <AbsolutePoint location="425,138" />
+      <AbsolutePoint location="425,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hafoperatorLogMaintainAC.do,goto_print,/hafoperatorLogPrintList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="251,558" />
+      <AbsolutePoint location="251,658" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hafoperatorLogFindAC.do,goto_showAC,/hafoperatorLogShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="843,88" />
+      <AbsolutePoint location="843,138" />
+      <AbsolutePoint location="669,138" />
+      <AbsolutePoint location="669,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/hafoperatorLogShowAC.do,success,/hafoperatorLog.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="547,276" />
+      <AbsolutePoint location="547,376" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

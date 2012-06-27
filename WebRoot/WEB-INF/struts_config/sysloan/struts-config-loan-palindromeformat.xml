@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	 <form-bean name="palindromeformatAF" type="org.xpup.hafmis.sysloan.dataready.palindromeformat.form.PalindromeformatAF"></form-bean>
+	 <form-bean name="palindromeFormulaPopAF" type="org.xpup.hafmis.sysloan.dataready.palindromeformat.form.PalindromeFormulaPopAF"></form-bean>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action name="palindromeformatAF" path="/palindromeformatShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.palindromeformat.action.PalindromeformatForwardURLAC">
+	  <forward name="to_palindromeformatShowAC" path="/to_palindromeformatShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="palindromeformatAF" path="/to_palindromeformatShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.palindromeformat.action.PalindromeformatShowAC">
+	  <forward name="to_palindromeformat_show" path="/dataready/palindromeformat/palindromeformat_show.jsp"></forward>
+	 </action>
+	 
+	 <action name="palindromeformatAF" path="/palindromeformatFindAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.palindromeformat.action.PalindromeformatFindAC">
+	  <forward name="to_palindromeformatShowAC" path="/to_palindromeformatShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="palindromeformatAF" path="/palindromeformatSaveAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.palindromeformat.action.PalindromeformatSaveAC">
+	  <forward name="to_palindromeformatShowAC" path="/to_palindromeformatShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="palindromeFormulaPopAF" path="/palindromeFormulaPopShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.palindromeformat.action.PalindromeFormulaPopShowAC">
+	  <forward name="to_formulaPop" path="/dataready/palindromeformat/formulaPop.jsp"></forward>
+	 </action>
+	 
+	 <action path="/test" scope="session" 
+	  type="org.xpup.hafmis.sysloan.common.biz.palindromeimpswitch.business.Test">
+	 </action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

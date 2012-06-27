@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loancallbackTaFindAAC.do" location="565,645" dimension="514,84" />
+  <StrutsActivity path="/loancallbackTaAheadAAC.do" location="0,645" dimension="520,84" />
+  <StrutsActivity path="/loancallbackTaForwardURLAC.do" location="5050,184" dimension="544,84" />
+  <StrutsActivity path="/loanSpecallbackTaForwardURLAC.do" location="4388,184" dimension="562,84" />
+  <StrutsActivity path="/loancallbackTaShowAC.do" location="4760,368" dimension="508,84" />
+  <StrutsActivity path="/loancallbackTaMaintainAC.do" location="3525,184" dimension="532,84" />
+  <StrutsActivity path="/loancallbackTaChangeMonthAC.do" location="4110,368" dimension="550,84" />
+  <StrutsActivity path="/loancallbackTaImportAC.do" location="5694,184" dimension="520,84" />
+  <StrutsActivity path="/loancallbackTbForwardURLAC.do" location="1563,184" dimension="544,84" />
+  <StrutsActivity path="/loancallbackTbFindAC.do" location="955,184" dimension="508,84" />
+  <StrutsActivity path="/loancallbackTbShowAC.do" location="1268,368" dimension="508,84" />
+  <StrutsActivity path="/loancallbackTbMaintainAC.do" location="2207,184" dimension="532,84" />
+  <StrutsActivity path="/loancallbackTbForwardURLWindowAC.do" location="284,0" dimension="580,84" />
+  <StrutsActivity path="/loancallbackTbShowWindowAC.do" location="302,184" dimension="544,84" />
+  <StrutsActivity path="/loancallbackTbPrintWindowAC.do" location="2839,184" dimension="550,84" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_jy.jsp" location="4542,552" dimension="316,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_cell.jsp" location="2635,386" dimension="328,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_import.jsp" location="3621,386" dimension="340,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_lb.jsp" location="1364,552" dimension="316,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_windowD.jsp" location="446,386" dimension="346,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallback_windowP.jsp" location="0,386" dimension="346,48" />
+  <StrutsActivity path="/loancallback/loancallback/loancallbackList_cell.jsp" location="3111,386" dimension="352,48" />
+  <StrutsActivity path="/loancallbackSomeBackAAC.do" />
+  <StrutsTransition id="/loancallbackTbForwardURLWindowAC.do,loancallbackTbShowWindowAC,/loancallbackTbShowWindowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="574,84" />
+      <AbsolutePoint location="574,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaForwardURLAC.do,loancallbackTaShowAC,/loancallbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5322,268" />
+      <AbsolutePoint location="5322,303" />
+      <AbsolutePoint location="5078,303" />
+      <AbsolutePoint location="5078,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaMaintainAC.do,loancallback_import,/loancallback/loancallback/loancallback_import.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3791,268" />
+      <AbsolutePoint location="3791,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbShowWindowAC.do,loancallback_lb,/loancallback/loancallback/loancallback_windowP.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="393,268" />
+      <AbsolutePoint location="393,303" />
+      <AbsolutePoint location="173,303" />
+      <AbsolutePoint location="173,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaMaintainAC.do,loancallback_cell,/loancallback/loancallback/loancallback_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3613,268" />
+      <AbsolutePoint location="3613,333" />
+      <AbsolutePoint location="2908,333" />
+      <AbsolutePoint location="2908,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbShowWindowAC.do,loancallback_jy,/loancallback/loancallback/loancallback_windowD.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="574,268" />
+      <AbsolutePoint location="574,303" />
+      <AbsolutePoint location="619,303" />
+      <AbsolutePoint location="619,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbShowAC.do,loancallback_lb,/loancallback/loancallback/loancallback_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1522,452" />
+      <AbsolutePoint location="1522,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbPrintWindowAC.do,loancallback_cell,/loancallback/loancallback/loancallback_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2977,268" />
+      <AbsolutePoint location="2977,303" />
+      <AbsolutePoint location="2799,303" />
+      <AbsolutePoint location="2799,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbFindAC.do,loancallbackTbShowAC,/loancallbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1209,268" />
+      <AbsolutePoint location="1209,303" />
+      <AbsolutePoint location="1459,303" />
+      <AbsolutePoint location="1459,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanSpecallbackTaForwardURLAC.do,loancallbackTaShowAC,/loancallbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4669,268" />
+      <AbsolutePoint location="4669,303" />
+      <AbsolutePoint location="4951,303" />
+      <AbsolutePoint location="4951,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaChangeMonthAC.do,loancallback_jy,/loancallback/loancallback/loancallback_jy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4385,452" />
+      <AbsolutePoint location="4385,502" />
+      <AbsolutePoint location="4621,502" />
+      <AbsolutePoint location="4621,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbForwardURLAC.do,loancallbackTbShowAC,/loancallbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1835,268" />
+      <AbsolutePoint location="1835,303" />
+      <AbsolutePoint location="1586,303" />
+      <AbsolutePoint location="1586,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbMaintainAC.do,loancallback_cell,/loancallback/loancallback/loancallback_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2606,268" />
+      <AbsolutePoint location="2606,303" />
+      <AbsolutePoint location="2690,303" />
+      <AbsolutePoint location="2690,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbPrintWindowAC.do,loancallbackList_cell,/loancallback/loancallback/loancallbackList_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3252,268" />
+      <AbsolutePoint location="3252,303" />
+      <AbsolutePoint location="3287,303" />
+      <AbsolutePoint location="3287,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaImportAC.do,loancallbackTaShowAC,/loancallbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5954,268" />
+      <AbsolutePoint location="5954,333" />
+      <AbsolutePoint location="5205,333" />
+      <AbsolutePoint location="5205,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbMaintainAC.do,loancallbackTbShowAC,/loancallbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2340,268" />
+      <AbsolutePoint location="2340,333" />
+      <AbsolutePoint location="1713,333" />
+      <AbsolutePoint location="1713,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTbShowWindowAC.do,loancallbackTbShowAC,/loancallbackTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="755,268" />
+      <AbsolutePoint location="755,333" />
+      <AbsolutePoint location="1332,333" />
+      <AbsolutePoint location="1332,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaShowAC.do,loancallback_jy,/loancallback/loancallback/loancallback_jy.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5014,452" />
+      <AbsolutePoint location="5014,502" />
+      <AbsolutePoint location="4779,502" />
+      <AbsolutePoint location="4779,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loancallbackTaMaintainAC.do,loancallbackTaShowAC,/loancallbackTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3968,268" />
+      <AbsolutePoint location="3968,333" />
+      <AbsolutePoint location="4824,333" />
+      <AbsolutePoint location="4824,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

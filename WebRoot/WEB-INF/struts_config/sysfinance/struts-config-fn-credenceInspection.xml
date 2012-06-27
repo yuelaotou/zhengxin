@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="credenceInspectionAF"
+			type="org.xpup.hafmis.sysfinance.accounthandle.credenceInspection.form.CredenceInspectionAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action path="/credenceInspectionForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceInspection.action.CredenceInspectionForwardAC">
+	  	<forward name="to_credenceInspection_show" path="/credenceInspectionShowAC.do"></forward>
+	 </action>
+	 <action  name="credenceInspectionAF" path="/credenceInspectionShowAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceInspection.action.CredenceInspectionShowAC">
+	 	<forward name="to_credenceInspection_show" path="/accounthandle/credenceInspection/credenceinspection_show.jsp"></forward>	 	                                                                                   
+	 </action>
+	 <action  name="credenceInspectionAF"
+		scope="request"
+	 	path="/credenceInspectionFindAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceInspection.action.CredenceInspectionFindAC">
+	 	<forward name="to_credenceInspection_show" path="/credenceInspectionShowAC.do"></forward>
+	 </action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

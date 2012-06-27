@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="loanFirstCheckShowAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanfirstcheck.form.LoanFirstCheckShowAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loanFirstCheckForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loanapply.loanfirstcheck.action.LoanFirstCheckForwardURLAC">
+			<forward name="loanFirstCheckShowAC"
+				path="/loanFirstCheckShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanFirstCheckShowAF" path="/loanFirstCheckShowAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanfirstcheck.action.LoanFirstCheckShowAC"
+			scope="request">
+			<forward name="to_loanfirstcheck_show"
+				path="/loanapply/loanfirstcheck/loanfirstcheck_show.jsp">
+			</forward>
+		</action>
+
+		<action name="loanFirstCheckShowAF" path="/loanFirstCheckFindAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanfirstcheck.action.LoanFirstCheckFindAC"
+			scope="request">
+			<forward name="loanFirstCheckShowAC"
+				path="/loanFirstCheckShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/loanFirstCheckMaintainAC"
+			type="org.xpup.hafmis.sysloan.loanapply.loanfirstcheck.action.LoanFirstCheckMaintainAC"
+			scope="request" parameter="method">
+			<forward name="loanFirstCheckShowAC"
+				path="/loanFirstCheckShowAC.do">
+			</forward>
+			<forward name="to_loanfirstcheck_show"
+				path="/loanapply/loanfirstcheck/loanfirstcheck_show.jsp">
+			</forward>
+		</action>
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

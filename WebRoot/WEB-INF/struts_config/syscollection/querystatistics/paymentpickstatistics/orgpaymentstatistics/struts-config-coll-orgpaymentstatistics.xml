@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF">
+		</form-bean>
+
+		<form-bean name="orgpaymentAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.form.OrgpaymentAF">
+		</form-bean>
+
+		<form-bean name="employeesAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.form.EmployeesAF">
+		</form-bean>
+
+
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+
+      <!-- ============单位缴存情况================= -->
+
+		<action name="orgpaymentAF" path="/orgpaymentShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.OrgpaymentForwardUrlAC">
+			<forward name="to_showAC" path="/to_showAC.do"></forward>
+		</action>
+		
+		<action name="orgpaymentAF" path="/to_showAC" scope="session" 
+		  type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.OrgpaymentstatisticsShowAC" >
+		  <forward name="to_showTajsp" path="/orgpaymentstatistics.jsp"></forward>
+		</action>
+
+		<action name="orgpaymentAF" path="/orgpaymentstatisticsFindAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.OrgpaymentstatisticsFindAC">
+			<forward name="to_orgpaymentstatisticsShowAC" path="/to_showAC.do"></forward>
+		</action>
+
+		<action name="idAF" path="/orgpaymentstatisticsPrintAC" scope="session"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.OrgpaymentstatisticsPrintAC">
+			<forward name="to_cell.jsp" path="/Orgpayment_cell.jsp"></forward>
+		</action>
+
+		<action path="/orgpaymentstatisticsFindAAC" scope="session"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.OrgpaymentstatisticsFindAAC">
+		</action>
+		
+		
+		<!-- ============职工缴存情况================= -->
+
+       <action name="orgpaymentAF" path="/emppaymentstatisticsShowAC" 
+         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmppaymentForwardUrlAC" >
+         <forward name="to_showTbAC" path="/to_showTbAC.do"></forward>
+       </action>
+       
+       <action name="orgpaymentAF" path="/to_showTbAC" 
+        type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmppaymentstatisticsShowAC" >
+        <forward name="to_EmppaymentTbShow" path="/emppaymentstatistics.jsp"></forward>
+       </action>
+ 
+       <action name="orgpaymentAF" path="/emppaymentstatisticsFindAC" scope="session" 
+         type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmppaymentstatisticsFindAC">
+         <forward name="to_emppaymentstatisticsShowAC" path="/to_showTbAC.do"></forward>
+       </action>
+       
+       <action name="idAF" path="/emppaymentstatisticsPrintAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmppaymentstatisticsPrintAC">
+			<forward name="to_cell.jsp" path="/emppaymentstatistics_cell.jsp"></forward>
+		</action>
+		<action path="/emppaymentstatisticsFindAAC" scope="session"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmppaymentstatisticsFindAAC">
+		</action>
+
+
+       <action name="employeesAF" path="/empListShowAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmpListShowAC">
+			<forward name="employees" path="/emppop.jsp"></forward>
+		</action>
+       <action name="employeesAF" path="/empListFindAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.paymentpickstatistics.orgpaymentstatistics.action.EmpListFindAC">
+			<forward name="show_employees" path="/empListShowAC.do"></forward>
+		</action>
+	</action-mappings>
+
+	<!-- ============================================ /action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/paymentpickstatistics/orgpaymentstatistics/applicationContext.xml" />
+	</plug-in>
+</struts-config>

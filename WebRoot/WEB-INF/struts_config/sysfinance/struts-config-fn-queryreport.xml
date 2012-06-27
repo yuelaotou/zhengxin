@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="queryReportAF"
+			type="org.xpup.hafmis.sysfinance.reportmng.financereport.queryreport.form.QueryReportAF" /> 
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	  <action name="queryReportAF" path="/queryReportForwardURLAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.queryreport.action.QueryReportForwardURLAC">
+	  <forward name="queryReportShowAC" path="/queryReportShowAC.do"></forward>
+	 </action>
+	
+	<action name="queryReportAF" path="/queryReportShowAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.queryreport.action.QueryReportShowAC">
+	  <forward name="to_queryreport_show" path="/reportmng/financereport/queryreport/queryReportShow.jsp"></forward>
+	 </action>
+	
+	 <action name="queryReportAF" path="/queryReportFindAC" 
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.queryreport.action.QueryReportFindAC">
+	  <forward name="queryReportShowAC" path="/queryReportShowAC.do"></forward>
+	 </action> 
+	
+	 <action name="queryReportAF" path="/queryReportMaintainAC" 
+	  parameter="method"
+	  type="org.xpup.hafmis.sysfinance.reportmng.financereport.queryreport.action.QueryReportMaintainAC">
+	  <forward name="to_queryreport_print" path="/reportmng/financereport/queryreport/queryReportList_cell.jsp"></forward>
+	 </action> 
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

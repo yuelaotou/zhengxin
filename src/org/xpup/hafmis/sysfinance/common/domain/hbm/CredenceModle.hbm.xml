@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.CredenceModle" 
+    table="FN120"
+>
+
+    <id
+        name="modleId"
+        type="integer"
+        column="MODLE_ID"
+    >
+        <generator class="sequence">
+	   <param name="sequence">SEQ_FN120</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        length="100"
+    />
+    <property
+        name="subjectCode"
+        type="java.lang.String"
+        column="SUBJECT_CODE"
+        length="100"
+    />
+    <property
+        name="subjectDirection"
+        type="java.lang.String"
+        column="SUBJECT_DIRECTION"
+        length="100"
+    />
+    <property
+        name="bizType"
+        type="java.lang.String"
+        column="BIZ_TYPE"
+        length="100"
+    />
+    <property
+        name="moneyType"
+        type="java.lang.String"
+        column="MONEY_TYPE"
+        length="100"
+    />
+    <property
+        name="summray"
+        type="java.lang.String"
+        column="SUMMRAY"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<!-- 公用 -->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+			<!-- 办理 -->
+		<form-bean name="badDebtDestroyTaAF"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.form.BadDebtDestroyTaAF" />
+		<form-bean name="badDebtDestroyTaImportAF"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.form.BadDebtDestroyTaImportAF" />
+			<!-- 维护 -->
+		<form-bean name="badDebtDestroyTbAF"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.form.BadDebtDestroyTbAF" />
+	</form-beans>
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<!-- 办理 -->
+		<action path="/badDebtDestroyTaFindAAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaFindAAC">
+		</action>
+		<action path="/badDebtDestroyTaForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaForwardURLAC">
+			<forward name="badDebtDestroyTaShowAC" path="/badDebtDestroyTaShowAC.do" />
+		</action>
+		<action name="badDebtDestroyTaAF" path="/badDebtDestroyTaShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaShowAC">
+			<forward name="baddebtdestroy_jy" path="/loancallback/baddebtdestroy/baddebtdestroy_jy.jsp" />
+		</action>
+		<action name="badDebtDestroyTaAF" path="/badDebtDestroyTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaMaintainAC">
+			<forward name="baddebtdestroy_import" path="/loancallback/baddebtdestroy/baddebtdestroy_import.jsp" />
+			<forward name="badDebtDestroyTaShowAC" path="/badDebtDestroyTaShowAC.do" />
+			<forward name="baddebtdestroy_cell" path="/loancallback/baddebtdestroy/baddebtdestroy_cell.jsp" />
+		</action>
+		<action path="/badDebtDestroyTaChangeMonthAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaChangeMonthAC">
+			<forward name="baddebtdestroy_jy" path="/loancallback/baddebtdestroy/baddebtdestroy_jy.jsp" />
+		</action>
+		<action name="badDebtDestroyTaImportAF" path="/badDebtDestroyTaImportAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTaImportAC">
+			<forward name="badDebtDestroyTaShowAC" path="/badDebtDestroyTaShowAC.do" />
+		</action>
+		<!-- 维护 -->
+		<action path="/badDebtDestroyTbForwardURLAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbForwardURLAC">
+			<forward name="badDebtDestroyTbShowAC" path="/badDebtDestroyTbShowAC.do" />
+		</action>
+		<action name="badDebtDestroyTbAF" path="/badDebtDestroyTbFindAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbFindAC">
+			<forward name="badDebtDestroyTbShowAC" path="/badDebtDestroyTbShowAC.do" />
+		</action>
+		<action name="badDebtDestroyTbAF" path="/badDebtDestroyTbShowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbShowAC">
+			<forward name="baddebtdestroy_lb" path="/loancallback/baddebtdestroy/baddebtdestroy_lb.jsp" />
+		</action>
+		<action name="idAF" path="/badDebtDestroyTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbMaintainAC">
+			<forward name="badDebtDestroyTbShowAC" path="/badDebtDestroyTbShowAC.do" />
+			<forward name="baddebtdestroy_cell" path="/loancallback/baddebtdestroy/baddebtdestroy_cell.jsp" />
+		</action>
+		<!-- 弹出窗口 -->
+		<action path="/badDebtDestroyTbForwardURLWindowAC"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbForwardURLWindowAC">
+			<forward name="badDebtDestroyTbShowWindowAC" path="/badDebtDestroyTbShowWindowAC.do" />
+		</action>
+		<action path="/badDebtDestroyTbShowWindowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbShowWindowAC">
+			<forward name="baddebtdestroy_window" path="/loancallback/baddebtdestroy/baddebtdestroy_window.jsp" />
+		</action>	
+		<action name="badDebtDestroyTaAF"  path="/badDebtDestroyTbPrintWindowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.loancallback.baddebtdestroy.action.BadDebtDestroyTbPrintWindowAC">
+			<forward name="baddebtdestroy_cell" path="/loancallback/baddebtdestroy/baddebtdestroy_cell.jsp" />
+		</action>	
+	</action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

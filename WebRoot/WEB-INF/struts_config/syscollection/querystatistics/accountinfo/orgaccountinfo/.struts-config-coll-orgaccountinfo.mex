@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgAccountInfoTaFindAC.do" location="50,50" dimension="658,84" />
+  <StrutsActivity path="/orgAccountInfoTaForwardURLAC.do" location="950,50" dimension="694,84" />
+  <StrutsActivity path="/orgAccountInfoTaShowAC.do" location="50,250" dimension="658,84" />
+  <StrutsActivity path="/orgAccountInfoTaMaintainAC.do" location="950,250" dimension="682,84" />
+  <StrutsActivity path="/orgAccountInfoTbShowAC.do" location="50,550" dimension="658,84" />
+  <StrutsActivity path="/orgAccountInfoTcShowAC.do" location="950,550" dimension="658,84" />
+  <StrutsActivity path="/orgAccountInfoTbForwardURLAC.do" location="650,750" dimension="694,84" />
+  <StrutsActivity path="/orgAccountInfoTcForwardURLAC.do" location="50,950" dimension="694,84" />
+  <StrutsActivity path="/orgaccountinfo_lb.jsp" location="950,450" dimension="172,48" />
+  <StrutsActivity path="/empaccount_cell.jsp" location="650,450" dimension="160,48" />
+  <StrutsActivity path="/orgaccountinfomonth_lb.jsp" location="50,750" dimension="202,48" />
+  <StrutsActivity path="/orgaccountinfoday_lb.jsp" location="350,750" dimension="190,48" />
+  <StrutsActivity path="/empaccount_day_List.jsp" location="50,450" dimension="184,48" />
+  <StrutsActivity path="/empaccount_List.jsp" location="350,450" dimension="160,48" />
+  <StrutsActivity path="/orgaccountinfo_cell.jsp" location="50,850" dimension="184,48" />
+  <StrutsActivity path="/orgAccountInfoTbMaintainAC.do" />
+  <StrutsActivity path="/orgAccountInfoTcMaintainAC.do" />
+  <StrutsTransition id="/orgAccountInfoTbForwardURLAC.do,to_showOrgAccountInfo,/orgAccountInfoTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="379,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTaMaintainAC.do,to_orgAccountprint,/orgaccountinfo_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1623,334" />
+      <AbsolutePoint location="1623,874" />
+      <AbsolutePoint location="234,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTaFindAC.do,to_showOrgAccountInfo,/orgAccountInfoTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="379,292" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTbShowAC.do,to_showOrgAccountInfo,/orgaccountinfomonth_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTbMaintainAC.do,to_orgAccountprint,/orgaccountinfo_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="142,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTcMaintainAC.do,to_orgAccountprint,/orgaccountinfo_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="142,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTcShowAC.do,to_showOrgAccountInfo,/orgaccountinfoday_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTaForwardURLAC.do,to_showOrgAccountInfo,/orgAccountInfoTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1297,134" />
+      <AbsolutePoint location="1297,179" />
+      <AbsolutePoint location="379,179" />
+      <AbsolutePoint location="379,250" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTaMaintainAC.do,to_empAccount_cell,/empaccount_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,292" />
+      <AbsolutePoint location="730,292" />
+      <AbsolutePoint location="730,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTcForwardURLAC.do,to_showOrgAccountInfo,/orgAccountInfoTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1279,592" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgAccountInfoTaShowAC.do,to_showOrgAccountInfo,/orgaccountinfo_lb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="379,292" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

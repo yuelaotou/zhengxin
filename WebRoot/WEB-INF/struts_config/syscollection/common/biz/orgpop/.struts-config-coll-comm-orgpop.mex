@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/orgpopTaFindAC.do" location="0,0" dimension="460,84" />
+  <StrutsActivity path="/orgpopTaShowAC.do" location="0,184" dimension="460,84" />
+  <StrutsActivity path="/orgpop_find.jsp" location="162,368" dimension="136,48" />
+  <StrutsTransition id="/orgpopTaShowAC.do,show_orgpop,/orgpop_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,268" />
+      <AbsolutePoint location="230,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/orgpopTaFindAC.do,show_orgpop,/orgpopTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="230,84" />
+      <AbsolutePoint location="230,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

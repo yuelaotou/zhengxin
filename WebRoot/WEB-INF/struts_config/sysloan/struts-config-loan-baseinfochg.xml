@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanapplytenewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTeNewAF" />
+		<form-bean name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyNewAF" />
+		<form-bean name="loanapplytbnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTbNewAF" />
+		<form-bean name="loanapplytcnewAF"
+			type="org.xpup.hafmis.sysloan.loanapply.loanapply.form.LoanapplyTcNewAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/baseinfochgtashowAC" name="loanapplytenewAF"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTaShowAC">
+			<forward name="baseinfochgta"
+				path="/contractchg/baseinfochg/baseinfochgta.jsp" />
+		</action>
+		<action name="loanapplytenewAF" path="/baseinfochgtafindAC"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTaFindAC">
+			<forward name="baseinfochgtashowAC"
+				path="/baseinfochgtashowAC.do" />
+		</action>
+		<action name="idAF" path="/baseinfochgtamaintainAC"
+			parameter="method"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTaMaintainAC">
+			<forward name="baseinfochgtbshowAC"
+				path="/baseinfochgtbshowAC.do" />
+		</action>
+		<action path="/baseinfochgtbshowAC" name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTbShowAC">
+			<forward name="baseinfochgtb"
+				path="/contractchg/baseinfochg/baseinfochgtb.jsp" />
+		</action>
+		<action path="/baseinfochgtbmaintainAC" parameter="method"
+			name="loanapplynewAF"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTbMaintainAC">
+			<forward name="baseinfochgtbshowAC"
+				path="/baseinfochgtbshowAC.do" />
+		</action>
+		<action path="/baseinfochgtcshowAC" scope="request"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTcShowAC">
+			<forward name="baseinfochgtc"
+				path="/contractchg/baseinfochg/baseinfochgtc.jsp" />
+
+		</action>
+		<action path="/baseinfochgTcTopMaintainAC" name="loanapplytbnewAF" scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTcTopMaintainAC">
+			<forward name="baseinfochgtcshowAC"
+				path="/baseinfochgtcshowAC.do" />
+
+		</action>
+		<action path="/baseinfochgTcDownMaintainAC" name="idAF" scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTcDownMaintainAC">
+			<forward name="baseinfochgtcshowAC"
+				path="/baseinfochgtcshowAC.do" />
+
+		</action>
+    <action path="/baseinfochgtcfindempinfoAAC" type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTcFindEmpInfoAAC" />
+    <action path="/baseinfochgtdshowAC" name="loanapplytcnewAF" type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTdShowAC">
+    <forward name="baseinfochgtd"
+				path="/contractchg/baseinfochg/baseinfochgtd.jsp" />
+    </action>
+    <action path="/baseinfochgtdmaintainAC" name="loanapplytcnewAF" parameter="method" type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgTdMaintainAC">
+    <forward name="baseinfochgtdshowAC"
+				path="/baseinfochgtdshowAC.do" />
+    </action>
+    <action path="/baseinfochgForwardURLAC" type="org.xpup.hafmis.sysloan.contractchg.baseinfochg.action.BaseinfochgForwardURLAC" >
+    <forward name="baseinfochgtashowAC"
+				path="/baseinfochgtashowAC.do" />
+    </action>
+
+
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

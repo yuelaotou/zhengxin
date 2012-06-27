@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+    <form-bean name="balanceinitializeAF" type="org.xpup.hafmis.sysfinance.treasurermng.balanceinitialize.form.BalanceinitializeAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+    <action 
+    	path="/balanceinitializeForwardAC" 
+    	type="org.xpup.hafmis.sysfinance.treasurermng.balanceinitialize.action.BalanceinitializeForwardAC">
+    <forward name="balanceinitializeShowAC" path="/balanceinitializeShowAC.do" />
+    </action>
+    
+    <action
+      path="/balanceinitializeShowAC"
+      type="org.xpup.hafmis.sysfinance.treasurermng.balanceinitialize.action.BalanceinitializeShowAC">
+    <forward name="to_balanceinitialize_new" path="/treasurermng/balanceinitialize/balanceinitialize_new.jsp" />
+    </action>
+    <action
+      name="balanceinitializeAF"
+      path="/balanceinitializeNewAC"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.treasurermng.balanceinitialize.action.BalanceinitializeNewAC">
+	<forward name="balanceinitializeShowAC" path="/balanceinitializeShowAC.do" />
+   </action>
+    
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		<form-bean name="loanXieYiAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanxieyi.form.LoanXieYiAF" />
+		<!-- =============================== window ============================-->
+		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action path="/loanXieYiForwardURLAC" scope="request"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanxieyi.action.LoanXieYiForwardURLAC">
+			<forward name="loanXieYiShowAC"
+				path="/loanXieYiShowAC.do">
+			</forward>
+		</action>
+
+		<action name="loanXieYiAF"
+			path="/loanXieYiShowAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanxieyi.action.LoanXieYiShowAC">
+			<forward name="to_loanXieYi_show"
+				path="/querystatistics/loanbackbyfund/loanxieyi/loanxieyi_show.jsp">
+			</forward>
+		</action>
+
+		<action name="loanXieYiAF"
+			path="/loanXieYiFindAC"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanxieyi.action.LoanXieYiFindAC"
+			scope="request">
+			<forward name="loanXieYiShowAC"
+				path="/loanXieYiShowAC.do">
+			</forward>
+		</action>
+
+		<action name="idAF" path="/loanXieYiMaintainAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.sysloan.querystatistics.loanbackbyfund.loanxieyi.action.LoanXieYiMaintainAC">
+			<forward name="loanXieYiShowAC"
+				path="/loanXieYiShowAC.do">
+			</forward>
+			<forward name="to_loanXieYi_print"
+				path="/querystatistics/loanbackbyfund/loanxieyi/loanxieyi_cell.jsp">
+			</forward>
+		</action>
+
+		<!-- =============================== window ============================-->
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

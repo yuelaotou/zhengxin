@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="collFnComparisonAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.CollFnComparisonAF"></form-bean>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF"/>
+		<form-bean name="collFnComparisonEmpInfoAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.CollFnComparisonEmpInfoAF"/>
+		<form-bean name="collFnComparisonEmpAccountAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.CollFnComparisonEmpAccountAF"/>
+		<form-bean name="collFnComparisonOrgAccountShowAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.CollFnComparisonOrgAccountShowAF"/>
+		<form-bean name="collFnComparisonEmpAccountPopAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.CollFnComparisonEmpAccountPopAF"/>
+		<form-bean name="empAccountPrintPopAF" type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.form.EmpAccountPrintPopAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+		<action path="/collFnComparisonForwardAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonForwardAC">
+				<forward name="to_collFnComparisonShowAC" path="/collFnComparisonShowAC.do"></forward>
+		</action>
+		<action path="/collFnComparisonShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonShowAC">
+				<forward name="to_collfncomparison_show" path="/collfncomparison_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonFindAC" 
+				name="collFnComparisonAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonFindAC">
+				<forward name="to_collFnComparisonShowAC" path="/collFnComparisonShowAC.do"></forward>
+		</action>
+		<action path="/collFnComparisonMaintainAC" 
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonMaintainAC"
+				parameter="method">
+				<forward name="to_collFnComparisonShowAC" path="/collFnComparisonShowAC.do"></forward>
+				<forward name="to_collFnComparisonEmpInfoShowAC" path="/collFnComparisonEmpInfoShowAC.do"></forward>
+				<forward name="to_collFnComparisonOrgAccountShowAC" path="/collFnComparisonOrgAccountShowAC.do"></forward>
+		</action>
+		<!-- 职工信息 -->
+		<action path="/collFnComparisonEmpInfoMaintainAC" 
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpInfoMaintainAC"
+				parameter="method">
+				<forward name="to_collFnComparisonEmpAccountShowAC" path="/collFnComparisonEmpAccountShowAC.do"></forward>
+				<forward name="to_collFnComparisonShowAC" path="/collFnComparisonShowAC.do"></forward>
+				<forward name="to_collfncomparisonempinfo_print" path="/collfncomparisonempinfo_print.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpInfoShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpInfoShowAC">
+				<forward name="to_collfncomparisonempinfo_show" path="/collfncomparisonempinfo_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpInfoFindAC"
+				name="collFnComparisonEmpInfoAF"
+				scope="request" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpInfoFindAC">
+				<forward name="to_collFnComparisonEmpInfoShowAC" path="/collFnComparisonEmpInfoShowAC.do"></forward>
+		</action>
+		<!-- 单位账 -->
+		<action path="/collFnComparisonOrgAccountForwardAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountForwardAC">
+				<forward name="to_collFnComparisonOrgAccountShowAC" path="/collFnComparisonOrgAccountShowAC.do"></forward>
+		</action>
+		<action name="idAF" path="/collFnComparisonOrgAccountMaintainAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountMaintainAC">
+				<forward name="to_findprintcondition" path="/collFnComparisonOrgAccountFindPrintConditionAC.do"></forward>
+		</action>
+		<action path="/collFnComparisonOrgAccountShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountShowAC">
+				<forward name="to_collfncomparisonorgaccount_show" path="/collfncomparisonorgaccount_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonOrgAccountFindAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountFindAC">
+				<forward name="to_collFnComparisonOrgAccountShowAC" path="/collFnComparisonOrgAccountShowAC.do"></forward>
+		</action>
+		<action path="/collFnComparisonOrgFindAC" 
+				name="collFnComparisonOrgAccountShowAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgFindAC">
+				<forward name="to_collFnOrgComparisonShowAC" path="/collFnComparisonOrgAccountShowAC.do"></forward>
+		</action>
+		<action path="/orgpopTaShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.OrgpopTaShowAC">
+				<forward name="to_orgpop_show" path="/orgpop.jsp"></forward>
+		</action>
+		<action path="/findOrgNameAAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.FindOrgNameAAC">
+		</action>
+		<action path="/collFnComparisonOrgAccountPrintAC" 
+				name="collFnComparisonOrgAccountShowAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountPrintAC">
+				<forward name="to_orgAccount_print" path="/collfncomparisonorgaccount_print.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonOrgAccountFindPrintConditionAC" 
+				name="collFnComparisonOrgAccountShowAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonOrgAccountFindPrintConditionAC">
+				<forward name="to_findprintconditon_show" path="/chooseCondition.jsp"></forward>
+		</action>
+		<action path="/orgpopTaFindAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.OrgpopTaFindAC">
+		</action>
+		<!-- 职工账 -->
+		<action path="/collFnComparisonEmpAccountMaintainAC" 
+				name="idAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpAccountMaintainAC"
+				parameter="method">
+				<forward name="to_collFnComparisonEmpInfoShowAC" path="/collFnComparisonEmpInfoShowAC.do"></forward>
+				<forward name="to_collFnComparisonEmpAccountShowAC" path="/collFnComparisonEmpAccountShowAC.do"></forward>
+				<forward name="to_collFnComparisonEmpAccount_print" path="/collfncomparisonorgaccount_print_1.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpAccountShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpAccountShowAC">
+				<forward name="to_collfncomparisonempaccount_show" path="/collfncomparisonempaccount_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpAccountFindAC" 
+				name="collFnComparisonEmpAccountAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpAccountFindAC">
+				<forward name="to_collFnComparisonEmpAccountShowAC" path="/collFnComparisonEmpAccountShowAC.do"></forward>
+		</action>
+		<action path="/collFnComparisonEmpAccountPopShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpAccountPopShowAC">
+				<forward name="to_collfncomparisonempaccountpop_show" path="/collfncomparisonempaccountpop_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpAccountPopAAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpAccountPopAAC">
+		</action>
+		<!-- 职工弹出 -->
+		<action path="/collFnComparisonEmpPopShowAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpPopShowAC">
+				<forward name="to_collfncomparisonemppop_show" path="/collfncomparisonemppop_show.jsp"></forward>
+		</action>
+		<action path="/collFnComparisonEmpPopForwardAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.CollFnComparisonEmpPopForwardAC">
+				<forward name="to_collFnComparisonEmpPopShowAC" path="/collFnComparisonEmpPopShowAC.do"></forward>
+				<forward name="to_collFnComparisonEmpAccountFindAC" path="/collFnComparisonEmpAccountFindAC.do"></forward>
+		</action>
+		
+		
+		<action path="/empAccountPrintPopForwardAC" 
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.EmpAccountPrintPopForwardAC">
+				<forward name="to_empaccountprintpop_show" path="/empaccountprintpop_show.jsp"></forward>
+		</action>
+		<action path="/empAccountPrintAC" 
+				name="empAccountPrintPopAF"
+				scope="request"
+				type="org.xpup.hafmis.syscollection.querystatistics.collfncomparison.action.EmpAccountPrintAC">
+				<forward name="to_empaccountprint_show" path="/empaccountprint_show.jsp"></forward>
+		</action>
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/collfncomparison/applicationContext.xml" />
+	</plug-in>
+</struts-config>

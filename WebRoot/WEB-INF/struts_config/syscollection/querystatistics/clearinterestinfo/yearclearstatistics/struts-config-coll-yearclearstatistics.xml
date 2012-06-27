@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="yearclearstatisticsListAF"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.form.YearclearstatisticsListAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+
+	<action-mappings>
+		<action name="yearclearstatisticsListAF" path="/yearclearForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.YearclearstatisticsForwardURLAC">
+			<forward name="to_yearclearstatistics_list" path="/showYearclearstatisticsListAC.do"/>
+		</action>
+		<action name="yearclearstatisticsListAF" path="/showYearclearstatisticsListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.ShowYearclearstatisticsListAC">
+			<forward name="to_yearclearstatistics_list" path="/yearclearstatisticsList.jsp"/>
+		</action>
+		<action name="yearclearstatisticsListAF" path="/findYearclearstatisticsListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.FindYearclearstatisticsListAC">
+			<forward name="to_yearclearstatistics_list" path="/showYearclearstatisticsListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainYearclearstatisticsListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.MaintainYearclearstatisticsListAC">
+			<forward name="to_yearclearstatistics_report" path="/yearclearstatisticsList_cell.jsp"/>
+			<forward name="to_interest_report" path="/yearclear_cell.jsp"/>
+			<forward name="yearclearlist_cell" path="/yearclearlist_cell.jsp"/>
+		</action>  
+		
+		
+		
+		
+		<action name="yearclearstatisticsListAF" path="/yearclearEmpListForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.YearclearEmpListForwardURLAC">
+			<forward name="to_yearclearEmp_list" path="/showYearclearEmpListAC.do"/>
+		</action>
+		<action name="yearclearstatisticsListAF" path="/showYearclearEmpListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.ShowYearclearEmpListAC">
+			<forward name="to_yearclearEmp_list" path="/yearclearEmpList.jsp"/>
+		</action>
+		<action name="yearclearstatisticsListAF" path="/findYearclearEmpListAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.FindYearclearEmpListAC">
+			<forward name="to_yearclearEmp_list" path="/showYearclearEmpListAC.do"/>
+		</action>
+		<action name="idAF" path="/maintainYearclearEmpListAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.MaintainYearclearEmpListAC">
+			<forward name="to_yearclearEmpList_report" path="/yearclearEmpList_cell.jsp"/>
+			<forward name="to_yearclearEmpList_back" path="/showYearclearstatisticsListAC.do"/>
+		</action>  
+		
+		
+		
+		<action name="yearclearstatisticsListAF" path="/yearclearEmpForwardURLAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.YearclearEmpForwardURLAC">
+			<forward name="to_yearclearEmp_list" path="/yearclearEmpAC.do"/>
+		</action>
+		<action name="yearclearstatisticsListAF" path="/yearclearEmpAC"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.ShowYearclearEmpAC">
+			<forward name="to_yearclearEmp_list" path="/yearclearEmp.jsp"/>
+		</action>
+		<action name="idAF" path="/maintainYearclearEmpAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.querystatistics.clearinterestinfo.yearclearstatistics.action.MaintainYearclearEmpAC">
+			<forward name="to_yearclearEmp_report" path="/yearclearEmp_cell.jsp"/>
+		</action>
+	
+	</action-mappings>
+
+	<!-- ============================================action config ========================================================-->
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/querystatistics/clearinterestinfo/yearclearstatistics/applicationContext.xml" />
+	</plug-in>
+</struts-config>

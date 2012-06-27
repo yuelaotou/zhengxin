@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.CongealInfo" 
+    table="PL210"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_PL210</param>
+	</generator>
+    </id>
+
+    <property
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="orgId"
+        type="java.math.BigDecimal"
+        column="ORG_ID"
+        length="22"
+    />
+    <property
+        name="empId"
+        type="java.math.BigDecimal"
+        column="EMP_ID"
+        length="22"
+    />
+    <property
+        name="empName"
+        type="java.lang.String"
+        column="EMP_NAME"
+        length="100"
+    />
+    <property
+        name="cardKind"
+        type="java.lang.String"
+        column="CARD_KIND"
+        length="100"
+    />
+    <property
+        name="cardNum"
+        type="java.lang.String"
+        column="CARD_NUM"
+        length="100"
+    />
+    <property
+        name="status"
+        type="java.lang.String"
+        column="STATUS"
+        length="100"
+    />
+    <property
+        name="type"
+        type="java.lang.String"
+        column="TYPE"
+        length="100"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    <property
+        name="personId"
+        type="java.lang.String"
+        column="PERSON_ID"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

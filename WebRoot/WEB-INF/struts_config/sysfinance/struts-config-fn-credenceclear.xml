@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<form-bean name="credenceclearAF"
+			type="org.xpup.hafmis.sysfinance.accounthandle.credenceclear.form.CredenceclearAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action path="/credenceclearForwardAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceclear.action.CredenceclearForwardAC">
+	  	<forward name="to_credenceclear_show" path="/credenceclearShowAC.do"></forward>
+	 </action>	 
+	 <action  name="credenceclearAF" path="/credenceclearShowAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceclear.action.CredenceclearShowAC">
+	 	<forward name="credenceclear_show" path="/accounthandle/credenceclear/credenceclear_show.jsp"></forward>
+	 	<forward name="sequenceacc_show" path="/accmng/sequenceacc/sequenceacc_show.jsp"></forward>
+	 </action>
+	 <action  name="credenceclearAF"
+		scope="request"
+	 	path="/credenceclearFindAC"
+	  	type="org.xpup.hafmis.sysfinance.accounthandle.credenceclear.action.CredenceclearFindAC">
+	 	<forward name="to_credenceclear_show" path="/credenceclearShowAC.do"></forward>
+	 </action>
+	 <action name="idAF" path="/credenceclearMaintainAC" 
+		parameter="method"
+		type="org.xpup.hafmis.sysfinance.accounthandle.credenceclear.action.CredenceclearMaintainAC" >
+		<forward name="to_credenceclear_show" path="/credenceclearShowAC.do"></forward>
+	</action>	
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>
+

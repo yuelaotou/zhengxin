@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->		
+		<form-bean name="ratemngAF"
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.form.RatemngAF" />
+			<form-bean name="rateShowAF"
+			type="org.xpup.hafmis.sysloan.dataready.rate.form.RateShowAF"/>	
+	</form-beans>
+
+
+	<!-- ============================================action config ========================================================-->
+	    <action-mappings>
+	    <action name="ratemngAF" path="/showRatemngListAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.action.ShowRatemngListAC">
+			<forward name="to_ratemng_list" path="/ratemng_List.jsp"/>
+		</action>
+		<action name="idAF" path="/ratemngMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.action.RatemngMaintainAC">
+			<forward name="showRatemngListAC" path="/showRatemngListAC.do"></forward>
+			<forward name="to_ratemng_add" path="/ratemng_new.jsp"></forward>
+		</action>
+		<action name="ratemngAF" path="/addRatemngMaintainAC"  parameter="method" 
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.action.AddRatemngMaintainAC">
+			<forward name="showRatemngListAC" path="/showRatemngListAC.do"></forward>
+			<forward name="to_ratemng_add" path="/ratemng_new.jsp"></forward>
+		</action>
+		<action name="rateShowAF"  path="/rateTaFindAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.action.RateTaFindAC">
+			<forward name="rateTaShowAC" path="/showRatemngListAC.do"/>
+		</action>
+		<action  path="/rateTaForwardUrlAC"
+			type="org.xpup.hafmis.syscollection.accounthandle.ratemng.action.RateTaForwardUrlAC">
+			<forward name="rateTaShowAC" path="/showRatemngListAC.do"/>
+		</action>
+       </action-mappings>
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accounthandle/ratemng/applicationContext.xml" />
+	</plug-in>
+</struts-config>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<root file="1">
+<file name="PalindromeImpSwitchHead" col="3"  space="0" row="2">
+     <column>
+	     <name>PayDate</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	  <column>
+	     <name>BankId</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+	     <column>
+	     <name>BizType</name>
+		 <typle>java.lang.String</typle>
+	 </column>
+</file>
+</root>

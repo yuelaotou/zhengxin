@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	    <!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF"/>
+		<!--	公共结束	-->			
+		<form-bean name="loanaccordNewAF"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.form.LoanaccordNewAF"/>
+		<form-bean name="loanaccordShowAF"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.form.LoanaccordShowAF"/>		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	     <action  path="/loanaccordInforAAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordInforAAC">
+		 </action>
+		 <action name="loanaccordNewAF" path="/loanaccordTaNewAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTaNewAC">
+			<forward name="to_loanaccord_new" path="/loanaccord/loanaccord/loanaccord_jy_show.jsp"/>
+			<forward name="loanaccordTaShowAC" path="/loanaccordTaShowAC.do"/>
+		</action>
+		 <action path="/loanaccordTaShowAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTaShowAC">
+			<forward name="to_loanaccord_new" path="/loanaccord/loanaccord/loanaccord_jy_show.jsp"/>
+		</action>
+		 <action path="/loanaccordTbForwardUrlAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTbForwardUrlAC">
+			<forward name="loanaccordTbShowAC" path="/loanaccordTbShowAC.do"/>
+		 </action>
+		 <action path="/loanaccordTbShowAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTbShowAC">
+			<forward name="to_loanaccord_tb_show" path="/loanaccord/loanaccord/loanaccord_lb_show.jsp"/>
+		</action>
+		<action name="loanaccordShowAF" path="/loanaccordTbFindAC"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTbFindAC">
+			<forward name="loanaccordTbShowAC" path="/loanaccordTbShowAC.do"/>
+		</action>
+		<action name="idAF" path="/loanaccordTbMaintainAC" parameter="method"
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTbMaintainAC">
+			<forward name="loanaccordTbShowAC" path="/loanaccordTbForwardUrlAC.do"/>
+			<forward name="to_loanaccord_print" path="/loanaccord/loanaccord/loanaccord_cell.jsp"></forward>
+			<forward name="loanaccordall_cell" path="/loanaccord/loanaccord/loanaccordall_cell.jsp"></forward>
+		</action>
+		<action path="/loanaccordTaPrintAC" 
+			type="org.xpup.hafmis.sysloan.loanaccord.loanaccord.action.LoanaccordTaPrintAC">
+			<forward name="loanaccordTaShowAC" path="/loanaccordTaShowAC.do"/>
+			<forward name="to_loanaccord_print" path="/loanaccord/loanaccord/loanaccord_cell.jsp"></forward>
+		</action>
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>

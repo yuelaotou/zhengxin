@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+<class 
+    name="PickHead" 
+    table="AA306"
+>
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_AA306</param>
+			</generator>
+    </id>
+    <property
+        name="noteNum"
+        type="java.lang.String"
+        column="NOTE_NUM"
+        length="50"
+    />
+    <property
+        name="docNum"
+        type="java.lang.String"
+        column="DOC_NUM"
+        length="50"
+    />
+    <property
+        name="settDate"
+        type="java.lang.String"
+        column="SETT_DATE"
+        length="8"
+    />
+    <property
+        name="pickSatatus"
+        type="java.math.BigDecimal"
+        column="PICK_SATATUS"
+        not-null="true"
+        length="22"
+    />
+
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="50"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="50"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="50"
+    />
+    <property
+        name="batchnum"
+        type="java.lang.String"
+        column="BATCH_NUM"
+        length="100"
+    />
+  
+    
+    <many-to-one name="org"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.Org" not-null="true" lazy="false">
+			<column name="ORG_ID" />
+	</many-to-one>
+
+	<property name="pickBalance" type="java.math.BigDecimal" formula="(select nvl(sum(t.pick_pre_balance+t.pick_cur_balance),0) from aa306 h,aa307 t where h.id = t.pickhead_id and h.id=id)"></property>
+	<property name="pickPersonCount" type="java.math.BigDecimal" formula="(select count(*) from aa307 t where t.pickhead_id=id)"></property>
+	<property name="distroyInterest" type="java.math.BigDecimal" formula="(select nvl(sum(t.pick_pre_interest+t.pick_cur_interest),0) from aa306 h,aa307 t where h.id = t.pickhead_id and h.id=id)"></property>
+	<property name="pickMoneyCount" type="java.math.BigDecimal" formula="(select nvl(sum(t.pick_pre_balance+t.pick_cur_balance+t.pick_pre_interest+t.pick_cur_interest),0) from aa306 h,aa307 t where h.id = t.pickhead_id and h.id=id)"></property>
+</class>
+</hibernate-mapping>

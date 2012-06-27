@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<!--	公共开始	-->
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->	
+		<form-bean name="endorsecontractTaAF" 
+		    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTaAF" />
+		<form-bean name="endorsecontractTbAF" 
+		    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTbAF" />
+		<form-bean name="endorsecontractTcAF" 
+		    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTcAF" />
+		<form-bean name="endorsecontractTdAF" 
+		    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTdAF" />
+		 <form-bean name="endorsecontractTeAF" 
+		    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTeAF" />
+   </form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	<!-- ==================借款合同信息========================== -->
+	 <action name="endorsecontractTaAF" path="/endorsecontractShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaForwardURLAC">
+	  <forward name="to_EndorsecontractTaShowAC" path="/to_EndorsecontractTaShowAC.do"></forward>
+	 </action>
+	 
+	  <action name="endorsecontractTaAF" path="/endorsecontractTaShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaShowAC">
+	  <forward name="to_endorsecontractTa" path="/loanapply/endorsecontract/endorsecontractTa.jsp"></forward>
+	 </action>
+	 
+	 <action name="endorsecontractTaAF" path="/to_EndorsecontractTaShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaShowAC">
+	  <forward name="to_endorsecontractTa" path="/loanapply/endorsecontract/endorsecontractTa.jsp"></forward>
+	 </action>
+	 
+	 <action name="endorsecontractTaAF" path="/endorsecontractTaFindAAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaFindAAC">
+	 </action>
+	 
+	 <action name="endorsecontractTaAF" path="/endorsecontractTaAccountAAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaAccountAAC">
+	 </action>
+	 
+	 <action name="endorsecontractTaAF" path="/endorsecontractTaXMLFindAAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaXMLFindAAC">
+	 </action>
+	 
+	 <action name="endorsecontractTaAF" path="/endorsecontractTaMaintainAC" scope="session" parameter="method" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTaMaintainAC">
+	  <forward name="to_endorsecontractTa" path="/to_EndorsecontractTaShowAC.do"></forward>
+	  <forward name="to_EndorsecontractTaShowAC" path="/to_EndorsecontractTaShowAC.do"></forward>
+	 </action>
+	 
+	  <action path="/endorsecontractBankIdTaFindAAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractBankIdTaAccountAAC">
+	 </action>
+	 
+	 <!-- ==================抵押合同信息========================== -->
+	 <action name="endorsecontractTbAF" path="/endorsecontractTbShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTbShowAC">
+	 <forward name="to_endorsecontractTb" path="/loanapply/endorsecontract/endorsecontractTb.jsp"></forward>
+	 </action>
+	 <!-- 
+	 <action name="endorsecontractTbAF" path="/endorsecontractTbFindAAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTbFindAAC">
+	 </action>
+	 -->
+	 <action name="endorsecontractTbAF" path="/endorsecontractTbTopmaintainAC" scope="session" parameter="method" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTbTopMaintainAC">
+	  <forward name="to_endorsecontractTb" path="/loanapply/endorsecontract/endorsecontractTb.jsp"></forward>
+	  <forward name="to_endorsecontractTbShowAC" path="/endorsecontractTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/endorsecontractTbDownmaintainAC" scope="session" parameter="method" 
+	  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTbDownMaintainAC">
+	  <forward name="to_endorsecontractTb" path="/loanapply/endorsecontract/endorsecontractTb.jsp"></forward>
+	  <forward name="to_endorsecontractTbShowAC" path="/endorsecontractTbShowAC.do"></forward>
+	 </action>
+	 
+	  <!-- ==================质押合同信息========================== -->
+	  <action name="endorsecontractTcAF" path="/endorsecontractTcShowAC" scope="session" 
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTcShowAC">
+	   <forward name="to_endorsecontractTc" path="/loanapply/endorsecontract/endorsecontractTc.jsp"></forward>
+	  </action>
+	  
+	  <action name="endorsecontractTcAF" path="/endorsecontractTcTopmaintainAC" scope="session" parameter="method" 
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTcTopMaintainAC">
+	   <forward name="to_endorsecontractTc" path="/loanapply/endorsecontract/endorsecontractTc.jsp"></forward>
+	   <forward name="to_endorsecontractTcShowAC" path="/endorsecontractTcShowAC.do"></forward>
+	  </action>
+	  
+	  <action name="idAF" path="/endorsecontractTcDownmaintainAC" scope="session" parameter="method" 
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTcDownMaintainAC">
+	   <forward name="to_endorsecontractTc" path="/loanapply/endorsecontract/endorsecontractTc.jsp"></forward>
+	   <forward name="to_endorsecontractTcShowAC" path="/endorsecontractTcShowAC.do"></forward>
+	  </action>
+	  
+	   <!-- ==================保证人信息========================== -->
+	   <action name="endorsecontractTdAF" path="/endorsecontractTdShowAC" scope="session" 
+	    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTdShowAC">
+	    <forward name="to_endorsecontractTd" path="/loanapply/endorsecontract/endorsecontractTd.jsp"></forward>
+	   </action>
+	   
+	   <action name="endorsecontractTdAF" path="/endorsecontractTdTopmaintainAC" scope="session" parameter="method" 
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTdTopMaintainAC">
+	   <forward name="to_endorsecontractTd" path="/loanapply/endorsecontract/endorsecontractTd.jsp"></forward>
+	   <forward name="to_endorsecontractTdShowAC" path="/endorsecontractTdShowAC.do"></forward>
+	   </action>
+	   
+	   <action name="idAF" path="/endorsecontractTdDownmaintainAC" scope="session" parameter="method" 
+	    type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTdDownMaintainAC">
+	    <forward name="to_endorsecontractTd" path="/loanapply/endorsecontract/endorsecontractTd.jsp"></forward>
+	    <forward name="to_endorsecontractTdShowAC" path="/endorsecontractTdShowAC.do"></forward>
+	   </action>
+	   
+	   <action name="idAF" path="/endorsecontractTdGotoEmpInfoShowAC" scope="session" parameter="method"
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTdGotoEmpInfoShowAC">
+	   <forward name="to_empAccount_list" path="/loanapply/endorsecontract/empaccount_List.jsp"></forward>
+	   </action>
+	   
+	    <action name="endorsecontractTdAF" path="/endorsecontractTdFindAAC" scope="session" 
+	   type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTdFindAAC">
+	  </action>
+	   
+	    <!-- ==================签订合同维护========================== -->
+	    <action name="endorsecontractTeAF" path="/endorsecontractTeShowAC" scope="session" 
+	     type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTeForwardURLAC">
+	     <forward name="to_EndorsecontractTeShowAC" path="/to_EndorsecontractTeShowAC.do"></forward>
+	    </action>
+	    
+	    <action name="endorsecontractTeAF" path="/to_EndorsecontractTeShowAC" scope="session" 
+	     type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTeShowAC">
+	     <forward name="to_endorsecontractTe" path="/loanapply/endorsecontract/endorsecontractTe.jsp"></forward>
+	    </action>
+	    <action name="endorsecontractTeAF" path="/endorsecontractTeFindAAC" scope="session" 
+		  type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTeFindAAC">
+		 </action>
+	    <action name="endorsecontractTeAF" path="/endorsecontractTeFindAC" scope="session" 
+	     type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTeFindAC">
+	     <forward name="to_endorsecontractTeShowAC" path="/to_EndorsecontractTeShowAC.do"></forward>
+	    </action>
+	    
+	    <action name="idAF" path="/endorsecontractTeMaintainAC" scope="request" parameter="method" 
+	     type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.action.EndorsecontractTeMaintainAC">
+	     <forward name="to_endorsecontractTaShowAC" path="/endorsecontractTaShowAC.do"></forward>
+	     <forward name="to_endorsecontractTeShowAC" path="/to_EndorsecontractTeShowAC.do"></forward>
+	     <forward name="to_endorsecontractTa_cell" path="/loanapply/endorsecontract/endorsecontractTa_cell.jsp"></forward>
+	     <forward name="to_endorsecontractTb_cell" path="/loanapply/endorsecontract/endorsecontractTb_cell.jsp"></forward>
+	     <forward name="to_endorsecontractTc_cell" path="/loanapply/endorsecontract/endorsecontractTc_cell.jsp"></forward>
+	     <forward name="to_endorsecontractTd_cell" path="/loanapply/endorsecontract/endorsecontractTd_cell.jsp"></forward>
+	     <forward name="to_endorsecontractTe" path="/to_EndorsecontractTeShowAC.do"></forward>
+	     <forward name="to_endorsecontractTe_cell" path="/loanapply/endorsecontract/endorsecontractTe_cell.jsp"></forward>
+	     
+	    </action>
+	</action-mappings>
+	
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	
+</struts-config>

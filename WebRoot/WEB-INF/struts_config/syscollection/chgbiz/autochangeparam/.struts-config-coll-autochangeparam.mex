@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/autoChangeParamShowAC.do" location="50,50" dimension="474,88" />
+  <StrutsActivity path="/autoChangeParamSaveAC.do" />
+  <StrutsActivity path="/autochangeparam_show.jsp" />
+  <StrutsTransition id="/autoChangeParamShowAC.do,to_autochangeparam_show,/autochangeparam_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="287,94" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/autoChangeParamSaveAC.do,to_autoChangeParamShowAC,/autoChangeParamShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="287,94" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

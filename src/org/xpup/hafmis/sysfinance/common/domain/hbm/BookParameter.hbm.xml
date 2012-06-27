@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.BookParameter" 
+    table="FN102"
+>
+
+    <id
+        name="paraId"
+        type="integer"
+        column="PARA_ID"
+    >
+     <generator class="sequence">
+	   <param name="sequence">SEQ_FN102</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramNum"
+        type="java.lang.String"
+        column="PARAM_NUM"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramDescrip"
+        type="java.lang.String"
+        column="PARAM_DESCRIP"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="paramValue"
+        type="java.lang.String"
+        column="PARAM_VALUE"
+        length="100"
+    />
+    <property
+        name="paramExplain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN"
+        length="100"
+    />
+    <property
+        name="paramExplainExplain"
+        type="java.lang.String"
+        column="PARAM_EXPLAIN_EXPLAIN"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

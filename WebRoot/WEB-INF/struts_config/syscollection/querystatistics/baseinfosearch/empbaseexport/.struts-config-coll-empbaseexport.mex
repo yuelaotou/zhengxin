@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/empBaseExportsForwardAC.do" location="0,0" dimension="676,84" />
+  <StrutsActivity path="/empBaseExportsExportsAC.do" location="950,50" dimension="676,84" />
+  <StrutsActivity path="/empbaseexport.jsp" location="264,184" dimension="148,48" />
+  <StrutsTransition id="/empBaseExportsExportsAC.do,empbaseexport,/empbaseexport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="338,208" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empBaseExportsForwardAC.do,empbaseexport,/empbaseexport.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="338,84" />
+      <AbsolutePoint location="338,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

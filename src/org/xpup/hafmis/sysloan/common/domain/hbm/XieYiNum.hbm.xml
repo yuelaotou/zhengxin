@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.XieYiNum" 
+    table="F_P_NUM"
+>
+
+    <id
+        name="paraId"
+        type="integer"
+        column="PARAID"
+    >
+    <generator class="sequence">
+		<param name="sequence">SEQ_F_P_NUM</param>
+	</generator>
+    </id>
+
+	 <property
+        name="office"
+        type="java.lang.String"
+        column="OFFICE"
+        length="100"
+    />
+    <property
+        name="year"
+        type="java.lang.String"
+        column="YEAR"
+        length="10"
+    />
+	 <property
+         name="xieyiNum_id"
+        type="java.lang.String"
+        column="XIEYI_NUM"
+        length="20"
+    />
+    <property
+         name="officeid"
+        type="java.lang.String"
+        column="OFFICE_ID"
+        length="4"
+    />
+    <property
+         name="type"
+        type="java.lang.String"
+        column="TYPE"
+        length="1"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>
+

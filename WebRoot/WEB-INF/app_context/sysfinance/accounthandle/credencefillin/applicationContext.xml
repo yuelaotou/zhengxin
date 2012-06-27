@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- Application context definition for collection's business layer. -->
+<beans>
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ======================== -->
+ 	<bean id="credenceFillinBS" parent="baseTransactionProxy">
+		<property name="target">
+			<bean
+				class="org.xpup.hafmis.sysfinance.accounthandle.credencefillin.business.CredenceFillinBS">
+				<property name="accountantCredenceDAO">
+					<ref bean="accountantCredenceDAO" />
+				</property>
+				<property name="securityDAO">
+					<ref bean="securityDAO" />
+				</property>
+				<property name="bookParameterDAO">
+					<ref bean="bookParameterDAO" />
+				</property>
+				<property name="subjectDAO">
+				<ref bean="subjectDAO" />
+				</property>
+				<property name="fnDocNumMaintainDAO">
+				<ref bean="fnDocNumMaintainDAO" />
+				</property>
+				<property name="organizationUnitDAO">
+					<ref bean="organizationUnitDAO" />
+				</property>
+				<property name="fnBizActivityLogDAO">
+					<ref bean="fnBizActivityLogDAO" />
+				</property>
+				<property name="fnOperateLogDAO">
+					<ref bean="fnOperateLogDAO" />
+				</property>
+				<property name="fnDocNumCancelDAO">
+					<ref bean="fnDocNumCancelDAO" />
+				</property>
+				<property name="bookDAO">
+					<ref bean="bookDAO" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
+

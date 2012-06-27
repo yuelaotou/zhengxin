@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscollection.common.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="AutoInfoPick" 
+    table="DA001"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_DA001</param>
+		</generator>
+    </id>
+    <property 
+		name="orgId"
+		type="integer"
+		column="ORG_ID"
+		not-null="true"
+	/>
+    <property
+        name="orgHeadId"
+        type="integer"
+        column="ORG_HEAD_ID"
+        not-null="true"
+        
+    />
+    
+     <property
+        name="centerHeadId"
+        type="integer"
+        column="CENTER_HEAD_ID"
+    />
+    
+    <property
+        name="type"
+        type="java.lang.String"
+        column="TYPE"
+        length="20"
+    />
+    <property
+        name="status"
+        type="java.lang.String"
+        column="STATUS"
+        length="20"
+    />
+    <property
+        name="payHeadId"
+        type="integer"
+        column="PAY_HEAD_ID"
+        
+    />
+    <property
+        name="orgBizDate"
+        type="java.sql.Timestamp"
+        column="ORG_BIZ_DATE"
+     />
+    <property
+        name="centerBizDate"
+        type="java.sql.Timestamp"
+        column="CENTER_BIZ_DATE"
+     />
+	<property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+    
+</class>
+</hibernate-mapping>

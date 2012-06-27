@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/personAddPayTaShowAC.do" location="1338,264" dimension="508,84" />
+  <StrutsActivity path="/personAddPayTaFindInforAAC.do" location="0,1279" dimension="544,84" />
+  <StrutsActivity path="/personaddpayEmpTaFindAAC.do" location="589,1279" dimension="532,84" />
+  <StrutsActivity path="/personAddPayTaMaintainAC.do" location="2570,0" dimension="532,84" />
+  <StrutsActivity path="/personAddPayTaAddAC.do" location="1968,0" dimension="502,84" />
+  <StrutsActivity path="/personAddPayTaImportAC.do" location="704,0" dimension="520,84" />
+  <StrutsActivity path="/personAddPayTbShowAC.do" location="4618,264" dimension="508,84" />
+  <StrutsActivity path="/empaddpayTbFindAC.do" location="5174,0" dimension="490,84" />
+  <StrutsActivity path="/empAddPayTbMaintainAC.do" location="3211,0" dimension="514,84" />
+  <StrutsActivity path="/personaddpayTbWindowShowAC.do" location="329,725" dimension="544,84" />
+  <StrutsActivity path="/personaddpayTbMXPrintAC.do" location="3832,0" dimension="526,84" />
+  <StrutsActivity path="/personaddpayTaForwardUrlAC.do" location="1324,0" dimension="544,84" />
+  <StrutsActivity path="/personaddpayTbForwardUrlAC.do" location="4530,0" dimension="544,84" />
+  <StrutsActivity path="/personaddpayTbWindowForwardAC.do" location="0,541" dimension="562,84" />
+  <StrutsActivity path="/personAddPayTaExportAC.do" location="662,541" dimension="520,84" />
+  <StrutsActivity path="/personaddpayTbPickupdataWindowShowAC.do" location="0,1002" dimension="604,84" />
+  <StrutsActivity path="/personaddpayTbPickupdataWindowSureAC.do" location="0,0" dimension="604,84" />
+  <StrutsActivity path="/personaddpayTbPickupdataWindowAAC.do" location="649,1002" dimension="586,84" />
+  <StrutsActivity path="/personaddpay_show.jsp" location="1506,448" dimension="172,48" />
+  <StrutsActivity path="/personaddpay_new.jsp" location="2303,282" dimension="166,48" />
+  <StrutsActivity path="/emp_tdpz_cell.jsp" location="3135,282" dimension="148,48" />
+  <StrutsActivity path="/personaddpay_imports.jsp" location="2762,282" dimension="190,48" />
+  <StrutsActivity path="/personaddpay_maintain.jsp" location="4774,448" dimension="196,48" />
+  <StrutsActivity path="/personaddpay_print.jsp" location="3703,282" dimension="178,48" />
+  <StrutsActivity path="/personaddpay_lb_cell.jsp" location="3383,282" dimension="190,48" />
+  <StrutsActivity path="/personaddpay_detail.jsp" location="509,909" dimension="184,48" />
+  <StrutsActivity path="/empaddpay_qc_cell_1.jsp" location="4334,282" dimension="184,48" />
+  <StrutsActivity path="/empaddpay_qc_cell.jsp" location="3985,282" dimension="172,48" />
+  <StrutsActivity path="/personaddpay_pickupdatawindow_show.jsp" location="165,1186" dimension="274,48" />
+  <StrutsActivity path="/modify_monthPay.jsp" location="1250,550" dimension="160,48" />
+  <StrutsActivity path="/monthpayModifyAC.do" />
+  <StrutsTransition id="/personAddPayTbShowAC.do,to_personAddPayMaintain_show.jsp,/personaddpay_maintain.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4872,348" />
+      <AbsolutePoint location="4872,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaAddAC.do,personAddPayTaShowAC,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2093,84" />
+      <AbsolutePoint location="2093,114" />
+      <AbsolutePoint location="1635,114" />
+      <AbsolutePoint location="1635,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,emp_tdpz_cell,/emp_tdpz_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3263,84" />
+      <AbsolutePoint location="3263,234" />
+      <AbsolutePoint location="3246,234" />
+      <AbsolutePoint location="3246,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTaForwardUrlAC.do,personaddpayTaShow,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1596,84" />
+      <AbsolutePoint location="1596,114" />
+      <AbsolutePoint location="1550,114" />
+      <AbsolutePoint location="1550,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaMaintainAC.do,emp_tdpz_cell,/emp_tdpz_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3035,84" />
+      <AbsolutePoint location="3035,114" />
+      <AbsolutePoint location="3172,114" />
+      <AbsolutePoint location="3172,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbMXPrintAC.do,to_print.jsp,/personaddpay_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3919,84" />
+      <AbsolutePoint location="3919,144" />
+      <AbsolutePoint location="3837,144" />
+      <AbsolutePoint location="3837,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaImportAC.do,personAddPayTaShowAC,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="964,84" />
+      <AbsolutePoint location="964,114" />
+      <AbsolutePoint location="1465,114" />
+      <AbsolutePoint location="1465,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbPickupdataWindowSureAC.do,to_personaddpayta_show,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="302,84" />
+      <AbsolutePoint location="302,144" />
+      <AbsolutePoint location="1381,144" />
+      <AbsolutePoint location="1381,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbForwardUrlAC.do,personaddpayTbShow,/personAddPayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4802,84" />
+      <AbsolutePoint location="4802,114" />
+      <AbsolutePoint location="4872,114" />
+      <AbsolutePoint location="4872,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaMaintainAC.do,to_personAddPay_add.jsp,/personaddpay_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2769,84" />
+      <AbsolutePoint location="2769,174" />
+      <AbsolutePoint location="2427,174" />
+      <AbsolutePoint location="2427,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,to_print.jsp,/personaddpay_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3365,84" />
+      <AbsolutePoint location="3365,144" />
+      <AbsolutePoint location="3748,144" />
+      <AbsolutePoint location="3748,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaExportAC.do,personaddpayTbShow,/personaddpayTbWindowShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="922,625" />
+      <AbsolutePoint location="922,675" />
+      <AbsolutePoint location="737,675" />
+      <AbsolutePoint location="737,725" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/monthpayModifyAC.do,show_paymentList,/personAddPayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="4872,306" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empaddpayTbFindAC.do,to_personAddPayMaintain_show,/personAddPayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="5419,84" />
+      <AbsolutePoint location="5419,114" />
+      <AbsolutePoint location="5041,114" />
+      <AbsolutePoint location="5041,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbPickupdataWindowShowAC.do,to_personaddpay_pickupdatawindow_show,/personaddpay_pickupdatawindow_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="302,1086" />
+      <AbsolutePoint location="302,1186" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,modify_monthPay,/modify_monthPay.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3335,84" />
+      <AbsolutePoint location="3335,574" />
+      <AbsolutePoint location="1410,574" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaMaintainAC.do,personAddPayTaShowAC,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2636,84" />
+      <AbsolutePoint location="2636,144" />
+      <AbsolutePoint location="1719,144" />
+      <AbsolutePoint location="1719,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbMXPrintAC.do,empaddpay_qc_cell,/empaddpay_qc_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4095,84" />
+      <AbsolutePoint location="4095,144" />
+      <AbsolutePoint location="4071,144" />
+      <AbsolutePoint location="4071,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaAddAC.do,to_personAddPay_add.jsp,/personaddpay_new.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2344,84" />
+      <AbsolutePoint location="2344,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaMaintainAC.do,to_personaddpay_imports,/personaddpay_imports.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2902,84" />
+      <AbsolutePoint location="2902,114" />
+      <AbsolutePoint location="2857,114" />
+      <AbsolutePoint location="2857,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,personaddpay_lb_cell,/personaddpay_lb_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3468,84" />
+      <AbsolutePoint location="3468,114" />
+      <AbsolutePoint location="3478,114" />
+      <AbsolutePoint location="3478,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbWindowShowAC.do,to_detail.jsp,/personaddpay_detail.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="601,809" />
+      <AbsolutePoint location="601,909" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,to_personAddPayMaintain_show,/personAddPayTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3571,84" />
+      <AbsolutePoint location="3571,114" />
+      <AbsolutePoint location="4702,114" />
+      <AbsolutePoint location="4702,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personAddPayTaShowAC.do,to_personaddpay_show.jsp,/personaddpay_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1592,348" />
+      <AbsolutePoint location="1592,448" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbMXPrintAC.do,empaddpay_qc_cell_1,/empaddpay_qc_cell_1.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4270,84" />
+      <AbsolutePoint location="4270,144" />
+      <AbsolutePoint location="4426,144" />
+      <AbsolutePoint location="4426,282" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/personaddpayTbWindowForwardAC.do,personaddpayTbShow,/personaddpayTbWindowShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="281,625" />
+      <AbsolutePoint location="281,675" />
+      <AbsolutePoint location="465,675" />
+      <AbsolutePoint location="465,725" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/empAddPayTbMaintainAC.do,personAddPayTaShowAC,/personAddPayTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3246,84" />
+      <AbsolutePoint location="3246,204" />
+      <AbsolutePoint location="1804,204" />
+      <AbsolutePoint location="1804,264" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

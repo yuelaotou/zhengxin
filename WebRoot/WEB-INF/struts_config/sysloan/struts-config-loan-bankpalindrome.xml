@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	 <form-bean name="bankpalindromeAF" type="org.xpup.hafmis.sysloan.dataready.bankpalindrome.form.BankpalindromeAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	 <action name="bankpalindromeAF" path="/bankpalindromeShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.bankpalindrome.action.BankpalindromeForwardURLAC">
+	  <forward name="to_bankpalindromeShowAC" path="/to_bankpalindromeShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="bankpalindromeAF" path="/to_bankpalindromeShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.bankpalindrome.action.BankpalindromeShowAC">
+	  <forward name="to_bankpalindrome_show" path="/dataready/bankpalindrome/bankpalindrome_show.jsp"></forward>
+	 </action>
+	 
+	 <action name="bankpalindromeAF" path="/bankpalindromeFindAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.bankpalindrome.action.BankpalindromeFindAC">
+	  <forward name="to_bankpalindromeShowAC" path="/to_bankpalindromeShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="bankpalindromeAF" path="/bankpalindromeSaveAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.dataready.bankpalindrome.action.BankpalindromeSaveAC">
+	  <forward name="to_bankpalindromeShowAC" path="/to_bankpalindromeShowAC.do"></forward>
+	 </action>
+	</action-mappings>
+	
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

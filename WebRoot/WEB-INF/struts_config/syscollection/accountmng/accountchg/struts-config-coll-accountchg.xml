@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="orgChgAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.form.OrgChgAF" />
+			<form-bean name="orgChgListAF"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.form.OrgChgListAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action  name="orgChgAF" path="/orgchgforwardURLAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgForwardURLAC">
+			<forward name="to_orgchg_list"
+				path="/orgchgshowAC.do">
+			</forward>
+		</action>
+	<action  name="orgChgAF" path="/orgchgshowAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgShowAC">
+			<forward name="to_org_cha_new"
+				path="/organization_change_new.jsp">
+			</forward>
+		</action>
+		<action name="orgChgAF" path="/orgInfo_chg_save"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgSaveAC">		
+			<forward name="show_orgchg"
+				path="/orgchashowlistAC.do">
+			</forward>
+			<forward name="to_org_cha_new"
+				path="/organization_change_new.jsp">
+			</forward>
+			</action>
+			<action  name="orgChgListAF" path="/find_organizations_chg"    
+			scope="request" 
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgFindInfoAC">
+			<forward name="show_orgchg_list"
+				path="/orgchashowlistAC.do">
+			</forward>
+			</action>
+			<action  name="orgChgListAF" path="/orgChgPrintInfoAC"    
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgPrintInfoAC">
+			<forward name="printorgchginfo"
+				path="/printorgchginfo_cell.jsp">
+			</forward>
+			</action>
+	  	<action  name="orgChgListAF" path="/orgchashowlistAC"    
+			scope="request"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgShowListAC">
+			<forward name="orgchg_showlist"
+				path="/org_chg_list.jsp">
+			</forward>
+			</action>
+				<action  name="orgChgAF" path="/orgchgFindInforAAC"
+			scope="request" parameter="method"
+			type="org.xpup.hafmis.syscollection.accountmng.accountchg.action.OrgChgFindAAC">		
+			</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/accountmng/accountchg/applicationContext.xml" />
+	</plug-in>
+		<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validation/validator-rules.xml,/WEB-INF/validation/demo/validation.xml" />
+	</plug-in>
+</struts-config>

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<subclass name="ChgPaymentSalaryBase"
+		extends="org.xpup.hafmis.syscollection.common.domain.entity.ChgPaymentHead"
+		discriminator-value="A" dynamic-insert="true" dynamic-update="true"
+		select-before-update="true">
+		<!--  //合计：调整人数oldSalaryBaseSum //调整前工资基数oldSalaryBase;//调整后工资基数salaryBase;//单位缴额orgPaySum;//职工缴额empPaySum;//缴额合计totalAmount;//调整前总缴额oldPaySum;//调整后总缴额paySum-->
+
+		<property name="oldSalaryBaseSum" type="integer"
+			formula="(select count(*) from AA203 e where e.CHNG_HEAD_ID=id and ID=e.CHNG_HEAD_ID and e.PAY_STATUS IN (1,3,4))" />
+
+		<property name="olddSalaryBase" type="java.lang.Double"
+			formula="(select sum(e.OLD_SALARY_BASE) from AA203 e where e.CHNG_HEAD_ID=ID and e.PAY_STATUS IN (1,3,4))" />
+
+		<property name="salaryBase" type="java.lang.Double"
+			formula="(select sum(e.SALARY_BASE) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+
+		<property name="orgPaySum" type="java.lang.Double"
+			formula="(select sum(e.ORG_PAY) from AA203 e where  e.CHNG_HEAD_ID=ID )" />
+
+		<property name="empPaySum" type="java.lang.Double"
+			formula="(select sum(e.EMP_PAY) from AA203 e where e.CHNG_HEAD_ID=ID)" />
+
+		<property name="totalAmount" type="java.lang.Double"
+			formula="(select (sum(e.EMP_PAY)+sum(e.ORG_PAY)) from AA203 e where e.CHNG_HEAD_ID=ID )" />
+
+
+		<property name="salaryBaseSum" type="java.lang.Double"
+			formula="(select (nvl(sum(OLD_SALARYBASE + sum(e.SALARY_BASE-e.OLD_SALARY_BASE)),0)) from AA203 e where e.PAY_STATUS IN (1,3,4) and  e.CHNG_HEAD_ID=ID  group by old_salarybase  ) " />
+
+		<property name="paySum" type="java.lang.Double"
+			formula="(select (nvl(sum(OLD_PAYMENT+sum(e.ORG_PAY+e.EMP_PAY-e.OLD_ORG_PAY-e.OLD_EMP_PAY)),0)) from AA203 e where e.PAY_STATUS in(1,3,4) and  e.CHNG_HEAD_ID=ID  group by OLD_PAYMENT )" />
+			
+		<property name="orgRate" type="java.lang.Double"
+			formula="(select distinct e.reservea_a from AA203 e where e.CHNG_HEAD_ID =ID)" />
+		<property name="empRate" type="java.lang.Double"
+			formula="(select distinct e.reservea_b from AA203 e where e.CHNG_HEAD_ID =ID)" />
+		<!-- 合计字段结束 -->
+	</subclass>
+</hibernate-mapping>

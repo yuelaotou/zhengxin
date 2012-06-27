@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.BorrowerLoanInfo" 
+    table="PL115"
+>
+
+    <id
+        name="contractId"
+        type="java.lang.String"
+        column="CONTRACT_ID"
+    >
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="loanMoney"
+        type="java.math.BigDecimal"
+        column="LOAN_MONEY"
+        not-null="true"
+        length="15"
+    />
+    <property
+        name="loanTimeLimit"
+        type="java.lang.String"
+        column="LOAN_TIME_LIMIT"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanMode"
+        type="java.lang.String"
+        column="LOAN_MODE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanMonthRate"
+        type="java.math.BigDecimal"
+        column="LOAN_MONTH_RATE"
+        not-null="true"
+        length="8"
+    />
+    <property
+        name="corpusInterest"
+        type="java.math.BigDecimal"
+        column="CORPUS_INTEREST"
+        length="15"
+    />
+    <property
+        name="loanRateType"
+        type="java.lang.String"
+        column="LOAN_RATE_TYPE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanPoundage"
+        type="java.math.BigDecimal"
+        column="LOAN_POUNDAGE"
+        length="15"
+    />
+    <property
+        name="firstLoanMoney"
+        type="java.math.BigDecimal"
+        column="FIRST_LOAN_MONEY"
+        length="15"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="reserveaA"
+        type="java.lang.String"
+        column="RESERVEA_A"
+        length="100"
+    />
+    <property
+        name="reserveaB"
+        type="java.lang.String"
+        column="RESERVEA_B"
+        length="100"
+    />
+    <property
+        name="reserveaC"
+        type="java.lang.String"
+        column="RESERVEA_C"
+        length="100"
+    />
+
+    <property
+        name="photoUrl"
+        type="java.lang.String"
+        column="PHOTO_URL"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

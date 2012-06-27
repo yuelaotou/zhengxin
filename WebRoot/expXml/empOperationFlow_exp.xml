@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<root file="1">
+
+<file name="EmpOperationFlowExport" col="12"  space="0" row="-1">
+	 <column>noteNum</column>
+	 <column>docNum</column>
+     <column>orgid</column>
+	 <column>orgname</column>
+	 <column>empid</column>
+	 <column>empname</column>
+	 <column>opType</column>
+	 <column>opDate</column>
+	 <column>opMoney</column>
+	 <column>opInterest</column>
+	 <column>opDirection</column>
+     <column>opStatus</column>
+</file>
+
+</root>

@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysloan.common.domain.entity.LoanRateType" 
+    table="PL001_1"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+		<param name="sequence">SEQ_PL001_1</param>
+	</generator>
+    </id>
+
+    <property
+        name="loanRateType"
+        type="java.lang.String"
+        column="LOAN_RATE_TYPE"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanRateExplain"
+        type="java.lang.String"
+        column="LOAN_RATE_EXPLAIN"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="loanRateDate"
+        type="java.lang.String"
+        column="LOAN_RATE_DATE"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

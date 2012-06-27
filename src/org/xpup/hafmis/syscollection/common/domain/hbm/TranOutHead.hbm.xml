@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping
+	package="org.xpup.hafmis.syscollection.common.domain.entity">
+	<!-- 
+		Created by Middlegen Hibernate plugin
+		
+		http://boss.bekk.no/boss/middlegen/
+		http://hibernate.sourceforge.net/
+	-->
+
+	<class name="TranOutHead" table="AA309">
+
+		<id name="id" type="integer" column="ID">
+
+			<generator class="sequence">
+				<param name="sequence">SEQ_AA309</param>
+			</generator>
+		</id>
+		<property name="noteNum" type="java.lang.String"
+			column="NOTE_NUM" length="50" />
+
+
+
+
+
+		<property name="persons" type="java.math.BigDecimal"
+			formula="(select count(*) from  aa310 e where e.TRAN_OUT_HEAD_ID=id)" />
+
+		<property name="salary" type="java.math.BigDecimal"
+			formula="(select sum(t.pre_balance+t.cur_balance) from aa310 t where t.TRAN_OUT_HEAD_ID=id)">
+		</property>
+
+		<property name="interest" type="java.math.BigDecimal"
+			formula="(select sum(t.pre_interest+t.cur_interest) from aa310 t where t.TRAN_OUT_HEAD_ID=id)">
+		</property>
+
+		<property name="sumSalary" type="java.math.BigDecimal"
+			formula="(select sum(t.pre_balance+t.cur_balance+t.pre_interest+t.cur_interest) from aa310 t where t.TRAN_OUT_HEAD_ID=id)">
+		</property>
+
+
+
+		<property name="docNum" type="java.lang.String" column="DOC_NUM"
+			length="50" />
+		<property name="settDate" type="java.lang.String"
+			column="SETT_DATE" length="8" />
+		<property name="tranStatus" type="java.math.BigDecimal"
+			column="TRAN_STATUS" not-null="true" length="22" />
+
+		<property name="reserveaA" type="java.lang.String"
+			column="RESERVEA_A" length="50" />
+		<property name="reserveaB" type="java.lang.String"
+			column="RESERVEA_B" length="50" />
+		<property name="reserveaC" type="java.lang.String"
+			column="RESERVEA_C" length="50" />
+		<many-to-one name="tranInOrg" 
+			class="org.xpup.hafmis.syscollection.common.domain.entity.TranInOrg"
+			lazy="false" cascade="save-update,persist" not-null="false">
+			<column name="IN_ORG_ID" />
+		</many-to-one>
+
+		<many-to-one name="tranOutOrg"
+			class="org.xpup.hafmis.syscollection.common.domain.entity.TranOutOrg"
+			not-null="true" lazy="false">
+			<column name="OUT_ORG_ID" />
+		</many-to-one>
+
+
+	</class>
+</hibernate-mapping>
+
+
+
+
+
+
+
+
+
+

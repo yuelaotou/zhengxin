@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/issuenoticeTaShowAC.do" location="128,204" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTaForwardAC.do" location="0,0" dimension="496,84" />
+  <StrutsActivity path="/issuenoticeTaSaveAC.do" location="706,204" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTaFindAAC.do" location="0,1403" dimension="484,84" />
+  <StrutsActivity path="/issuenoticeTaPrintAC.do" location="1284,204" dimension="484,84" />
+  <StrutsActivity path="/issuenoticeTbForwardAC.do" location="2705,0" dimension="496,84" />
+  <StrutsActivity path="/issuenoticeTbShowAC.do" location="3024,204" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTbFindAC.do" location="3301,0" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTbDeleteAC.do" location="3879,0" dimension="496,84" />
+  <StrutsActivity path="/issuenoticeTbMaintainAC.do" location="1985,0" dimension="502,84" />
+  <StrutsActivity path="/issuenoticeTcForwardAC.do" location="0,942" dimension="496,84" />
+  <StrutsActivity path="/issuenoticeTcShowAC.do" location="596,1126" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTcFindAC.do" location="596,942" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTcMaintainAC.do" location="1174,942" dimension="502,84" />
+  <StrutsActivity path="/issuenoticeTdForwardAC.do" location="0,481" dimension="496,84" />
+  <StrutsActivity path="/issuenoticeTdShowAC.do" location="596,665" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTdFindAC.do" location="596,481" dimension="478,84" />
+  <StrutsActivity path="/issuenoticeTdMaintainAC.do" location="1174,481" dimension="502,84" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticeta_show.jsp" location="695,388" dimension="310,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticeta_print.jsp" location="1489,388" dimension="316,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticetb_show.jsp" location="3108,388" dimension="310,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticetblist_print.jsp" location="1868,222" dimension="340,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticetb_print.jsp" location="2308,222" dimension="316,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticefin_show.jsp" location="677,1310" dimension="316,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticefin_chen_show.jsp" location="662,849" dimension="346,48" />
+  <StrutsActivity path="/loanapply/issuenotice/issuenoticefin_chen_print.jsp" location="1374,683" dimension="352,48" />
+  <StrutsTransition id="/issuenoticeTaSaveAC.do,issuenotice_show,/loanapply/issuenotice/issuenoticeta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="945,288" />
+      <AbsolutePoint location="945,338" />
+      <AbsolutePoint location="850,338" />
+      <AbsolutePoint location="850,388" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbShowAC.do,to_issuenoticetb_show,/loanapply/issuenotice/issuenoticetb_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3263,288" />
+      <AbsolutePoint location="3263,388" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbMaintainAC.do,to_issuenoticetblist_print,/loanapply/issuenotice/issuenoticetblist_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2173,84" />
+      <AbsolutePoint location="2173,144" />
+      <AbsolutePoint location="2038,144" />
+      <AbsolutePoint location="2038,222" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTaShowAC.do,to_loanerlogoutta_show,/loanapply/issuenotice/issuenoticeta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="367,288" />
+      <AbsolutePoint location="367,338" />
+      <AbsolutePoint location="746,338" />
+      <AbsolutePoint location="746,388" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbFindAC.do,issuenoticetb_show,/issuenoticeTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3540,84" />
+      <AbsolutePoint location="3540,114" />
+      <AbsolutePoint location="3323,114" />
+      <AbsolutePoint location="3323,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbMaintainAC.do,to_issuenoticetb_print,/loanapply/issuenotice/issuenoticetb_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2298,84" />
+      <AbsolutePoint location="2298,174" />
+      <AbsolutePoint location="2466,174" />
+      <AbsolutePoint location="2466,222" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbMaintainAC.do,issuenoticeTaShowAC,/issuenoticeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2047,84" />
+      <AbsolutePoint location="2047,114" />
+      <AbsolutePoint location="487,114" />
+      <AbsolutePoint location="487,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTdMaintainAC.do,to_issuenoticetd_print,/loanapply/issuenotice/issuenoticefin_chen_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1550,565" />
+      <AbsolutePoint location="1550,683" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbMaintainAC.do,issuenoticetb_show,/issuenoticeTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2424,84" />
+      <AbsolutePoint location="2424,144" />
+      <AbsolutePoint location="3084,144" />
+      <AbsolutePoint location="3084,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTaPrintAC.do,issuenotice_show,/loanapply/issuenotice/issuenoticeta_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1405,288" />
+      <AbsolutePoint location="1405,338" />
+      <AbsolutePoint location="953,338" />
+      <AbsolutePoint location="953,388" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTdMaintainAC.do,issuenoticetd_show,/issuenoticeTdShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1299,565" />
+      <AbsolutePoint location="1299,615" />
+      <AbsolutePoint location="994,615" />
+      <AbsolutePoint location="994,665" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTdForwardAC.do,issuenoticetd_show,/issuenoticeTdShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,565" />
+      <AbsolutePoint location="248,615" />
+      <AbsolutePoint location="675,615" />
+      <AbsolutePoint location="675,665" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTdShowAC.do,to_issuenoticetd_show,/loanapply/issuenotice/issuenoticefin_chen_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,749" />
+      <AbsolutePoint location="835,849" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTcShowAC.do,to_issuenoticetc_show,/loanapply/issuenotice/issuenoticefin_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,1210" />
+      <AbsolutePoint location="835,1310" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbDeleteAC.do,issuenoticetb_show,/issuenoticeTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4127,84" />
+      <AbsolutePoint location="4127,144" />
+      <AbsolutePoint location="3442,144" />
+      <AbsolutePoint location="3442,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTdFindAC.do,issuenoticetd_show,/issuenoticeTdShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,565" />
+      <AbsolutePoint location="835,665" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTcFindAC.do,issuenoticetc_show,/issuenoticeTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="835,1026" />
+      <AbsolutePoint location="835,1126" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTbForwardAC.do,issuenoticetb_show,/issuenoticeTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2953,84" />
+      <AbsolutePoint location="2953,114" />
+      <AbsolutePoint location="3203,114" />
+      <AbsolutePoint location="3203,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTaForwardAC.do,issuenoticeta_show,/issuenoticeTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,84" />
+      <AbsolutePoint location="248,204" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTaPrintAC.do,issuenoticeta_print,/loanapply/issuenotice/issuenoticeta_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1647,288" />
+      <AbsolutePoint location="1647,388" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTcForwardAC.do,issuenoticetc_show,/issuenoticeTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="248,1026" />
+      <AbsolutePoint location="248,1076" />
+      <AbsolutePoint location="675,1076" />
+      <AbsolutePoint location="675,1126" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/issuenoticeTcMaintainAC.do,issuenoticetc_show,/issuenoticeTcShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1425,1026" />
+      <AbsolutePoint location="1425,1076" />
+      <AbsolutePoint location="994,1076" />
+      <AbsolutePoint location="994,1126" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+	<form-bean name="paramAF"
+			type="org.xpup.hafmis.sysloan.dataready.param.form.ParamAF" />	
+	<form-bean name="aheadReturnParamAF"
+			type="org.xpup.hafmis.sysloan.dataready.param.form.AheadReturnParamAF" />		
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<!-- ============================================param ========================================================-->
+	<action name="paramAF" 
+		scope="request"
+		path="/paramShowAC" type="org.xpup.hafmis.sysloan.dataready.param.action.ParamShowAC">
+      <forward name="to_param_show" path="/dataready/param/param_show.jsp" />
+    </action>
+    <action name="paramAF" 
+    	scope="request"
+    	path="/paramSaveAC" type="org.xpup.hafmis.sysloan.dataready.param.action.ParamSaveAC">
+      <forward name="param_show" path="/paramShowAC.do" />
+    </action>
+    <action name="paramAF" 
+		scope="request"
+		path="/paramCheckLoanFlowAAC" type="org.xpup.hafmis.sysloan.dataready.param.action.ParamCheckLoanFlowAAC">
+    </action>
+    <!-- ======================================aheadreturnparam =================================================-->
+    <action name="aheadReturnParamAF" 
+    		scope="request"
+    		path="/aheadReturnParamShowAC" type="org.xpup.hafmis.sysloan.dataready.param.action.AheadReturnParamShowAC">
+      <forward name="to_aheadreturnparam_show" path="/dataready/param/aheadreturnparam_show.jsp" />
+    </action>
+    <action name="aheadReturnParamAF" 
+    		scope="request"
+    		path="/aheadReturnParamSaveAC" type="org.xpup.hafmis.sysloan.dataready.param.action.AheadReturnParamSaveAC">
+      <forward name="aheadreturnparam_show" path="/aheadReturnParamShowAC.do" />
+    </action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

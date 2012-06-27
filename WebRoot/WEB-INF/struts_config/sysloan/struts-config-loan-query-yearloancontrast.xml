@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<!--	公共开始	-->
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<!--	公共结束	-->
+		 
+		<form-bean name="yearLoanContrastAF"
+			type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.yearloancontrast.form.YearLoanContrastAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		
+		<action path="/yearLoanContrastShowAC" 
+		        scope="session" 
+		        type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.yearloancontrast.action.YearLoanContrastForwardURLAC">
+		        <forward name="to_yearLoanContrastShowAC" path="/to_yearLoanContrastShowAC.do"></forward>
+		</action>
+		<action path="/to_yearLoanContrastShowAC" 
+		        scope="session" 
+		        type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.yearloancontrast.action.YearLoanContrastShowAC">
+		        <forward name="to_yearLoanContrast_show" path="/querystatistics/querystatistics/yearloancontrast/yearLoanContrast_show.jsp"></forward>
+		</action>
+		<action path="/yearLoanContrastFindAC" 
+		        name="yearLoanContrastAF"
+		        scope="session" 
+		        type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.yearloancontrast.action.YearLoanContrastFindAC">
+		        <forward name="to_yearLoanContrastShowAC" path="/to_yearLoanContrastShowAC.do"></forward>
+		</action>
+		<action path="/yearLoanContrastPrintAC" 
+		        name="yearLoanContrastAF"
+		        scope="session" 
+		        type="org.xpup.hafmis.sysloan.querystatistics.querystatistics.yearloancontrast.action.YearLoanContrastPrintAC">
+		        <forward name="to_yearLoanContrast_cell" path="/querystatistics/querystatistics/yearloancontrast/yearLoanContrast_cell.jsp"></forward>
+		</action>
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

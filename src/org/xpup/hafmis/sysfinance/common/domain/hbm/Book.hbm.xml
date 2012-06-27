@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="org.xpup.hafmis.sysfinance.common.domain.entity.Book" 
+    table="FN101"
+>
+
+    <id
+        name="bookFlowId"
+        type="integer"
+        column="BOOK_FLOW_ID"
+    >
+    <generator class="sequence">
+	   <param name="sequence">SEQ_FN101</param>
+	</generator>
+    </id>
+
+    <property
+        name="bookId"
+        type="java.lang.String"
+        column="BOOK_ID"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="bookName"
+        type="java.lang.String"
+        column="BOOK_NAME"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="foundTime"
+        type="java.sql.Timestamp"
+        column="FOUND_TIME"
+        length="7"
+    />
+    <property
+        name="foundPerson"
+        type="java.lang.String"
+        column="FOUND_PERSON"
+        length="100"
+    />
+    <property
+        name="useYearmonth"
+        type="java.lang.String"
+        column="USE_YEARMONTH"
+        length="6"
+    />
+    <property
+        name="usePerson"
+        type="java.lang.String"
+        column="USE_PERSON"
+        length="100"
+    />
+    <property
+        name="bookSt"
+        type="java.lang.String"
+        column="BOOK_ST"
+        not-null="true"
+        length="100"
+    />
+    <property
+        name="reserveA"
+        type="java.lang.String"
+        column="RESERVE_A"
+        length="100"
+    />
+    <property
+        name="reserveB"
+        type="java.lang.String"
+        column="RESERVE_B"
+        length="100"
+    />
+    <property
+        name="reserveC"
+        type="java.lang.String"
+        column="RESERVE_C"
+        length="100"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

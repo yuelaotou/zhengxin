@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="settleincanddecAF"
+			type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.form.SettleincanddecAF" />			
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action path="/settleincanddecForwardURLAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.action.SettleincanddecForwardURLAC">
+			<forward name="to_show_settleincanddec"
+				path="/settleincanddecShowAC.do" />
+		</action>
+		<action name="settleincanddecAF"
+			path="/settleincanddecShowAC"
+			type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.action.SettleincanddecShowAC">
+			<forward name="to_show_settleincanddec"
+				path="/bookmng/settleincanddec/settleincanddec_show.jsp" />
+		</action>						
+		<action name="settleincanddecAF" path="/settleincanddecSaveAC" 
+			type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.action.SettleincanddecSaveAC">
+			<forward name="to_show_settleincanddec"
+				path="/settleincanddecShowAC.do" />
+		</action>	
+		 <action path="/settleincanddecCheckSubjectcodeAAC" 
+	  type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.action.SettleincanddecCheckSubjectcodeAAC">
+	 </action> 
+		<action name="idAF" path="/settleincanddecDeleteAC" 
+								  
+			type="org.xpup.hafmis.sysfinance.bookmng.settleincanddec.action.SettleincanddecDeleteAC">
+			<forward name="to_show_settleincanddec"
+				path="/settleincanddecShowAC.do" />
+		</action>			
+	</action-mappings>
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>
+

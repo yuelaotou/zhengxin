@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/chgslarybaseTaForwardURLAC.do" location="50,650" dimension="544,84" />
+  <StrutsActivity path="/chgslarybaseTaShowAC.do" location="950,150" dimension="508,84" />
+  <StrutsActivity path="/chgslarybaseTaMaintainAC.do" location="50,250" dimension="532,84" />
+  <StrutsActivity path="/chgslarybaseTaFindAAC.do" location="50,450" dimension="514,84" />
+  <StrutsActivity path="/chgslarybaseTbForwardURLAC.do" location="650,650" dimension="640,84" />
+  <StrutsActivity path="/chgslarybaseTbShowAC.do" location="950,850" dimension="604,84" />
+  <StrutsActivity path="/chgslarybaseTbMaintainAC.do" location="50,1050" dimension="628,84" />
+  <StrutsActivity path="/chgslarybaseTbFindAAC.do" location="50,1250" dimension="610,84" />
+  <StrutsActivity path="/chgslarybase_list.jsp" location="650,150" dimension="172,48" />
+  <StrutsActivity path="/chgslarybase_list_cell.jsp" location="950,350" dimension="202,48" />
+  <StrutsActivity path="/chgslarybase_tblist.jsp" location="650,850" dimension="184,48" />
+  <StrutsActivity path="/chgslarybase_tblist_cell.jsp" location="950,1150" dimension="214,48" />
+  <StrutsActivity path="/chgslarybase_new.jsp" location="650,250" dimension="166,48" />
+  <StrutsActivity path="/chgslarybase_imports.jsp" location="650,350" dimension="190,48" />
+  <StrutsActivity path="/demoList.jsp" location="650,450" dimension="118,48" />
+  <StrutsActivity path="/demo_imports.jsp" location="950,450" dimension="142,48" />
+  <StrutsActivity path="/demoadd.jsp" location="650,550" dimension="112,48" />
+  <StrutsActivity path="/demo_cell.jsp" location="950,550" dimension="124,48" />
+  <StrutsActivity path="/chgslarybaseTaShowAC" location="650,950" dimension="166,48" />
+  <StrutsTransition id="/chgslarybaseTbShowAC.do,to_chgslarybase_tblist.jsp,/chgslarybase_tblist.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,883" />
+      <AbsolutePoint location="834,883" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTaMaintainAC.do,to_chgslarybase_list_cell.jsp,/chgslarybase_list_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="582,313" />
+      <AbsolutePoint location="1051,313" />
+      <AbsolutePoint location="1051,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTaForwardURLAC.do,chgslarybaseTaShowAC.do,/chgslarybaseTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="322,650" />
+      <AbsolutePoint location="322,613" />
+      <AbsolutePoint location="1234,613" />
+      <AbsolutePoint location="1234,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTbForwardURLAC.do,chgslarybaseTbShowAC.do,/chgslarybaseTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="970,734" />
+      <AbsolutePoint location="970,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTbMaintainAC.do,to_chgslarybase_tblist_cell.jsp,/chgslarybase_tblist_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="678,1092" />
+      <AbsolutePoint location="1057,1092" />
+      <AbsolutePoint location="1057,1150" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTbFindAAC.do,chgslarybaseTbShowAC.do,/chgslarybaseTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="0,0" />
+      <AbsolutePoint location="1252,892" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTaFindAAC.do,chgslarybaseTaShowAC.do,/chgslarybaseTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="564,513" />
+      <AbsolutePoint location="1204,513" />
+      <AbsolutePoint location="1204,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/chgslarybaseTaShowAC.do,to_chgslarybase_list.jsp,/chgslarybase_list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,183" />
+      <AbsolutePoint location="822,183" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

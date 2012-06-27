@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/bankForwardAC.do" location="0,0" dimension="400,84" />
+  <StrutsActivity path="/showBankAC.do" location="333,184" dimension="382,84" />
+  <StrutsActivity path="/bankMaintainAC.do" location="500,0" dimension="406,84" />
+  <StrutsActivity path="/bankAddAC.do" location="1006,0" dimension="376,84" />
+  <StrutsActivity path="/bankOfficeAC.do" location="1482,0" dimension="394,84" />
+  <StrutsActivity path="/dataready/bank/bank_show.jsp" location="528,368" dimension="214,48" />
+  <StrutsActivity path="/dataready/bank/bank_add.jsp" location="1206,202" dimension="208,48" />
+  <StrutsTransition id="/bankMaintainAC.do,to_bank_show,/dataready/bank/bank_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="703,84" />
+      <AbsolutePoint location="703,119" />
+      <AbsolutePoint location="772,119" />
+      <AbsolutePoint location="772,318" />
+      <AbsolutePoint location="688,318" />
+      <AbsolutePoint location="688,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/showBankAC.do,to_bank_show,/dataready/bank/bank_show.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="524,268" />
+      <AbsolutePoint location="524,318" />
+      <AbsolutePoint location="581,318" />
+      <AbsolutePoint location="581,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankMaintainAC.do,to_bank_add,/dataready/bank/bank_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="838,84" />
+      <AbsolutePoint location="838,119" />
+      <AbsolutePoint location="1241,119" />
+      <AbsolutePoint location="1241,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankMaintainAC.do,showBankAC,/showBankAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="567,84" />
+      <AbsolutePoint location="567,119" />
+      <AbsolutePoint location="524,119" />
+      <AbsolutePoint location="524,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankAddAC.do,to_bank_add,/dataready/bank/bank_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1288,84" />
+      <AbsolutePoint location="1288,119" />
+      <AbsolutePoint location="1310,119" />
+      <AbsolutePoint location="1310,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankOfficeAC.do,to_bank_add,/dataready/bank/bank_add.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1679,84" />
+      <AbsolutePoint location="1679,119" />
+      <AbsolutePoint location="1379,119" />
+      <AbsolutePoint location="1379,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankAddAC.do,showBankAC,/showBankAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1100,84" />
+      <AbsolutePoint location="1100,149" />
+      <AbsolutePoint location="651,149" />
+      <AbsolutePoint location="651,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/bankForwardAC.do,showBankAC,/showBankAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="200,84" />
+      <AbsolutePoint location="200,119" />
+      <AbsolutePoint location="397,119" />
+      <AbsolutePoint location="397,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

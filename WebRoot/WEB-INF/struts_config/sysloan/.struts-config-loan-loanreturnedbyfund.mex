@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/loanreturnedbyfundTaForwardAC.do" location="0,184" dimension="580,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaShowAC.do" location="149,368" dimension="562,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaFindAAC.do" location="637,1051" dimension="568,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaMainTianAC.do" location="3800,0" dimension="586,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaBorrowerNameFindAAC.do" location="619,645" dimension="640,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaAssiFindAAC.do" location="0,1051" dimension="592,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaAssiFindAACA.do" location="0,922" dimension="598,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaAssiFindAACB.do" location="643,922" dimension="598,84" />
+  <StrutsActivity path="/loanreturnedbyfundTaTaPrintAC.do" location="1311,368" dimension="580,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbForwardAC.do" location="1916,184" dimension="580,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbShowAC.do" location="2382,368" dimension="562,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbMainTianAC.do" location="1107,184" dimension="586,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbFindAC.do" location="2596,184" dimension="562,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbDeleteAC.do" location="3258,184" dimension="574,84" />
+  <StrutsActivity path="/loanreturnedbyfundTbRevertAC.do" location="0,645" dimension="574,84" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfund.jsp" location="254,552" dimension="352,48" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfundinfo.jsp" location="3932,202" dimension="376,48" />
+  <StrutsActivity path="/loancallback/bankexports/bankexports_cell.jsp" location="4408,202" dimension="316,48" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfundta_print.jsp" location="1401,552" dimension="400,48" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtb.jsp" location="2481,552" dimension="364,48" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtb_print.jsp" location="811,386" dimension="400,48" />
+  <StrutsActivity path="/loanapply/loanreturnedbyfund/loanreturnedbyfundtbconcel_print.jsp" location="69,829" dimension="436,48" />
+  <StrutsTransition id="/loanreturnedbyfundTbRevertAC.do,loanreturnedbyfundTaTbRevertPrint,/loanapply/loanreturnedbyfund/loanreturnedbyfundtbconcel_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="287,729" />
+      <AbsolutePoint location="287,829" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaMainTianAC.do,to_showloanreturnedbyfundTa,/loanreturnedbyfundTaForwardAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3898,84" />
+      <AbsolutePoint location="3898,134" />
+      <AbsolutePoint location="290,134" />
+      <AbsolutePoint location="290,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbMainTianAC.do,to_showloanreturnedbyfundTb_print,/loanapply/loanreturnedbyfund/loanreturnedbyfundtb_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1327,268" />
+      <AbsolutePoint location="1327,333" />
+      <AbsolutePoint location="1011,333" />
+      <AbsolutePoint location="1011,386" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaForwardAC.do,to_showloanreturnedbyfundTa,/loanreturnedbyfundTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="290,268" />
+      <AbsolutePoint location="290,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbForwardAC.do,to_showloanreturnedbyfundTb,/loanreturnedbyfundTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2206,268" />
+      <AbsolutePoint location="2206,303" />
+      <AbsolutePoint location="2593,303" />
+      <AbsolutePoint location="2593,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbMainTianAC.do,to_showloanreturnedbyfundTb,/loanreturnedbyfundTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1620,268" />
+      <AbsolutePoint location="1620,333" />
+      <AbsolutePoint location="2452,333" />
+      <AbsolutePoint location="2452,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbDeleteAC.do,to_showloanreturnedbyfundTb,/loanreturnedbyfundTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="3545,268" />
+      <AbsolutePoint location="3545,333" />
+      <AbsolutePoint location="2874,333" />
+      <AbsolutePoint location="2874,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaShowAC.do,to_showloanreturnedbyfundTa,/loanapply/loanreturnedbyfund/loanreturnedbyfund.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="430,452" />
+      <AbsolutePoint location="430,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaMainTianAC.do,to_printloanreturnedbyfundTa,/loanapply/loanreturnedbyfund/loanreturnedbyfundinfo.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4093,84" />
+      <AbsolutePoint location="4093,134" />
+      <AbsolutePoint location="4120,134" />
+      <AbsolutePoint location="4120,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbShowAC.do,to_showloanreturnedbyfundTb,/loanapply/loanreturnedbyfund/loanreturnedbyfundtb.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2663,452" />
+      <AbsolutePoint location="2663,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaTaPrintAC.do,loanreturnedbyfundTaTaPrint,/loanapply/loanreturnedbyfund/loanreturnedbyfundta_print.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1601,452" />
+      <AbsolutePoint location="1601,552" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbFindAC.do,to_showloanreturnedbyfundTb,/loanreturnedbyfundTbShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2877,268" />
+      <AbsolutePoint location="2877,303" />
+      <AbsolutePoint location="2733,303" />
+      <AbsolutePoint location="2733,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTaMainTianAC.do,bankexports_cell,/loancallback/bankexports/bankexports_cell.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="4289,84" />
+      <AbsolutePoint location="4289,134" />
+      <AbsolutePoint location="4566,134" />
+      <AbsolutePoint location="4566,202" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbMainTianAC.do,to_print,/loanreturnedbyfundTaTaPrintAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1473,268" />
+      <AbsolutePoint location="1473,303" />
+      <AbsolutePoint location="1601,303" />
+      <AbsolutePoint location="1601,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/loanreturnedbyfundTbMainTianAC.do,to_showloanreturnedbyfundTa,/loanreturnedbyfundTaShowAC.do,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1180,268" />
+      <AbsolutePoint location="1180,303" />
+      <AbsolutePoint location="571,303" />
+      <AbsolutePoint location="571,368" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

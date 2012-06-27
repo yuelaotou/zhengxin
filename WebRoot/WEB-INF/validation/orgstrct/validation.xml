@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+<form-validation>
+
+  <formset>
+    <form name="ouptAF">
+      <field property="oupt.name" depends="required,maxlength">
+        <arg key="ouptAF.oupt.name.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="oupt.innerName" depends="required,maxlength">
+        <arg key="ouptAF.oupt.innerName.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="oupt.description" depends="maxlength">
+        <arg key="ouptAF.oupt.description.displayname" position="0" bundle="orgstrct"/>
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    
+    <form name="ouptItemAF">
+      <field property="ouptItem.name" depends="required,maxlength">
+        <arg key="ouptItemAF.ouptItem.name.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="ouptItem.innerName" depends="required,maxlength">
+        <arg key="ouptItemAF.ouptItem.innerName.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="ouptItem.value" depends="maxlength">
+        <arg key="ouptItemAF.ouptItem.value.displayname" position="0" bundle="orgstrct"/>
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    
+    <form name="orgUnitAF">
+      <field property="orgUnit.name" depends="required,maxlength">
+        <arg key="orgUnitAF.orgUnit.name.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>50</var-value>
+        </var>
+      </field>
+      <field property="orgUnit.position" depends="integer,required,maxlength">
+        <arg key="orgUnitAF.orgUnit.position.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>4</var-value>
+        </var>
+      </field>
+      <field property="orgUnit.description" depends="maxlength">
+        <arg key="orgUnitAF.orgUnit.description.displayname" position="0" bundle="orgstrct"/>
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+    </form>
+    
+    <form name="hafEmployeeAF">
+      <field property="hafEmployee.username" depends="required,maxlength">
+        <arg key="hafEmployeeAF.hafEmployee.username.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="hafEmployee.realName" depends="required,maxlength">
+        <arg key="hafEmployeeAF.hafEmployee.realName.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+      <field property="hafEmployee.email" depends="email,maxlength">
+        <arg key="hafEmployeeAF.hafEmployee.email.displayname" position="0" bundle="orgstrct"/>
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="hafEmployee.organizationUnit.name" depends="required">
+        <arg key="hafEmployeeAF.hafEmployee.organizationUnit.name.displayname" position="0" bundle="orgstrct" />
+      </field>
+     <!-- <field property="hafEmployee.bizDate" depends="required,maxlength">
+        <arg key="hafEmployeeAF.hafEmployee.bizDate.displayname" position="0" bundle="orgstrct" />
+         <var>
+          <var-name>maxlength</var-name>
+          <var-value>8</var-value>
+        </var>
+      </field> --> 
+    </form>
+    
+    <form name="hafRoleAF">
+      <field property="hafRole.name" depends="required,maxlength">
+        <arg key="hafRoleAF.hafRole.name.displayname" position="0" bundle="orgstrct" />
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>20</var-value>
+        </var>
+      </field>
+	  <field property="hafRole.description" depends="maxlength">
+        <arg key="hafRoleAF.hafRole.description.displayname" position="0" bundle="orgstrct"/>
+        <arg name="maxlength" key="${var:maxlength}" resource="false" position="1"/>
+        <var>
+          <var-name>maxlength</var-name>
+          <var-value>100</var-value>
+        </var>
+      </field>
+      <field property="hafRole.organizationUnit.name" depends="required">
+        <arg key="hafRoleAF.hafRole.organizationUnit.name.displayname" position="0" bundle="orgstrct" />
+      </field>
+    </form>
+    
+  </formset>
+  
+</form-validation>

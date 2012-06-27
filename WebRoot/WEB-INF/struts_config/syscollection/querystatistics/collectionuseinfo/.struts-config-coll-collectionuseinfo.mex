@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/cumulativeinfoAjaxAC.do" location="0,0" dimension="592,84" />
+  <StrutsActivity path="/collectionuseinfoFindAC.do" location="692,0" dimension="610,84" />
+  <StrutsActivity path="/collectionuseinfoForwardAC.do" location="1402,0" dimension="628,84" />
+  <StrutsActivity path="/defineFormulaForwardAC.do" location="0,277" dimension="604,84" />
+  <StrutsActivity path="/defineFormulaSaveAC.do" location="704,277" dimension="586,84" />
+  <StrutsActivity path="/to_collectionuseinfo_find.jsp" location="887,184" dimension="220,48" />
+  <StrutsActivity path="/defineFormula.jsp" location="575,461" dimension="148,48" />
+  <StrutsTransition id="/defineFormulaSaveAC.do,defineFormula,/defineFormula.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="997,361" />
+      <AbsolutePoint location="997,411" />
+      <AbsolutePoint location="686,411" />
+      <AbsolutePoint location="686,461" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collectionuseinfoFindAC.do,to_collectionuseinfo_find,/to_collectionuseinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="997,84" />
+      <AbsolutePoint location="997,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/cumulativeinfoAjaxAC.do,to_cumulativeinfo_find,/to_collectionuseinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="296,84" />
+      <AbsolutePoint location="296,134" />
+      <AbsolutePoint location="923,134" />
+      <AbsolutePoint location="923,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/defineFormulaForwardAC.do,defineFormula,/defineFormula.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="302,361" />
+      <AbsolutePoint location="302,411" />
+      <AbsolutePoint location="612,411" />
+      <AbsolutePoint location="612,461" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/collectionuseinfoForwardAC.do,to_collectionuseinfo_find,/to_collectionuseinfo_find.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1716,84" />
+      <AbsolutePoint location="1716,134" />
+      <AbsolutePoint location="1070,134" />
+      <AbsolutePoint location="1070,184" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

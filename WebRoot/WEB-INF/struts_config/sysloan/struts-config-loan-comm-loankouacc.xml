@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>		
+	 <form-bean name="loanKouAccpopAF"
+	     type="org.xpup.hafmis.sysloan.common.biz.loankouaccpop.form.LoanKouAccpopAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	<action name="loanKouAccpopAF" path="/loanKouAccpopFindAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.common.biz.loankouaccpop.action.LoanKouAccpopFindAC">
+	 	<forward name="loankouaccpop_show" path="/loanKouAccpopShowAC.do"></forward>
+	 </action>
+	 
+	<action name="loanKouAccpopAF" path="/loanKouAccpopShowAC" scope="session"
+	  	type="org.xpup.hafmis.sysloan.common.biz.loankouaccpop.action.LoanKouAccpopShowAC">
+	 	<forward name="to_loankouaccpop_list" path="/common/biz/loankouaccpop/loankouaccpop_list.jsp"></forward>
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+		
+</struts-config>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF" type="org.xpup.hafmis.common.form.IdAF" />
+		
+		<form-bean name="summaryNewAF" type="org.xpup.hafmis.sysfinance.bookmng.summary.form.SummaryNewAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+    <action 
+    	path="/summaryForWardAC" 
+    	type="org.xpup.hafmis.sysfinance.bookmng.summary.action.SummaryForWardAC">
+    <forward name="summaryShowAC" path="/summaryShowAC.do" />
+    </action>
+    
+    <action 
+    	path="/summaryShowAC" 
+    	type="org.xpup.hafmis.sysfinance.bookmng.summary.action.SummaryShowAC">
+    <forward name="to_summary_show" path="/bookmng/summary/summary_show.jsp" />
+	</action>
+	
+	<action
+      path="/summaryNewAC"
+      name="summaryNewAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.bookmng.summary.action.SummaryNewAC">
+    <forward name="summaryShowAC" path="/summaryShowAC.do" />
+    </action> 
+     
+    <action
+      path="/summaryMainTainAC"
+      name="idAF"
+      parameter="method"
+      scope="request"
+      type="org.xpup.hafmis.sysfinance.bookmng.summary.action.SummaryMainTainAC">
+	<forward name="summaryShowAC" path="/summaryShowAC.do" />
+    </action>  
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+
+</struts-config>

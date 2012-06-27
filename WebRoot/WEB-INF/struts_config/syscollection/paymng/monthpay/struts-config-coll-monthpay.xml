@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>
+		<form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+		<form-bean name="monthpayJYAF"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.form.MonthpayJYAF" />
+		<form-bean name="monthpayTbFindAF"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.form.MonthpayTbFindAF" />
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+		<action name="monthpayJYAF" path="/monthpayTaFindAAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTaFindAAC">
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTaForwardUrlAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTaForwardUrlAC">
+			<forward name="show_monthpay" path="/monthpayTaShowAC.do" />
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTaShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTaShowAC">
+			<forward name="show_monthpay" path="/monthpay_jy.jsp" />
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTaMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTaMaintainAC">
+			<forward name="show_monthpay" path="/monthpayTaForwardUrlAC.do" />
+			<forward name="show_monthpay_jsp" path="/monthpay_jy.jsp" />
+			<forward name="show_print" path="/monthpay_cell.jsp" />
+		</action>
+		<action name="monthpayTbFindAF"
+			path="/monthpayTbFindAC" scope="request"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbFindAC">
+			<forward name="show_payment" path="/monthpayTbShowAC.do">
+			</forward>
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTbForwardUrlAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbForwardUrlAC">
+			<forward name="show_monthpay" path="/monthpayTbShowAC.do" />
+		</action>
+		<action path="/monthpayTbShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbShowAC">
+			<forward name="show_paymentList" path="/monthpay_lb.jsp" />
+		</action>
+		<action name="idAF" path="/monthpayTbMaintainAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbMaintainAC">
+			<forward name="show_paymentList" path="/monthpayTbShowAC.do" />
+			<forward name="show_print" path="/monthpay_cell.jsp" />
+			<forward name="monthpay_lb_cell" path="/monthpay_lb_cell.jsp" />
+			<forward name="modify_monthPay" path="/modify_monthPay.jsp" />
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTbWindowShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowShowAC">
+			<forward name="show_monthpay" path="/monthpay_org.jsp" />
+		</action>
+		<action name="monthpayJYAF" path="/monthpayTbWindowMaintainAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowMaintainAC">
+			<forward name="show_print" path="/monthpay_cell.jsp" />
+			<forward name="show_print_1" path="/monthpay_cell_1.jsp" />
+		</action>
+		<action path="/monthpayTbWindowMXShowAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowMXShowAC">
+			<forward name="show_tail" path="/monthpay_lb_mx.jsp" />
+		</action>
+		<action  name="monthpayJYAF" path="/monthpayTbWindowMXPrintAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowMXPrintAC">
+			<forward name="show_print" path="/monthpay_mx_cell.jsp" />
+		</action>
+		
+		
+		<action name="monthpayJYAF" path="/monthpayTbWindowMXForwardURLAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowMXForwardURLAC">
+			<forward name="show_monthpay" path="/monthpayTbWindowMXShowAC.do" />
+		</action>
+		<action path="/monthpayAutoOverPayAAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayAutoOverPayAAC">
+		</action>
+		<action path="/monthpayTbWindowMXExportAC"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayTbWindowMXExportAC">
+			<forward name="monthpayTbWindowMXShowAC" path="/monthpayTbWindowMXShowAC.do" />
+		</action>
+		<action name="monthpayJYAF" path="/monthpayModifyAC" scope="request"
+			parameter="method"
+			type="org.xpup.hafmis.syscollection.paymng.monthpay.action.MonthpayModifyAC">
+			<forward name="show_paymentList" path="/monthpayTbShowAC.do" />
+		</action>
+	</action-mappings>
+	
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+	<plug-in
+		className="org.springframework.web.struts.ContextLoaderPlugIn">
+		<set-property property="contextConfigLocation"
+			value="/WEB-INF/app_context/syscollection/paymng/monthpay/applicationContext.xml" />
+	</plug-in>
+</struts-config>

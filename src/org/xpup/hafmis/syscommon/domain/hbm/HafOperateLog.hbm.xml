@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping package="org.xpup.hafmis.syscommon.domain.entity">
+<!-- 
+    Created by Middlegen Hibernate plugin
+
+    http://boss.bekk.no/boss/middlegen/
+    http://hibernate.sourceforge.net/
+-->
+
+<class 
+    name="HafOperateLog" 
+    table="BA003"
+>
+
+    <id
+        name="id"
+        type="integer"
+        column="ID"
+    >
+        <generator class="sequence">
+				<param name="sequence">SEQ_BA003</param>
+			</generator>
+    </id>
+
+    <property
+        name="opSys"
+        type="integer"
+        column="OP_SYS"
+        not-null="true"
+        length="22"
+    />
+    <property
+        name="opModel"
+        type="java.lang.String"
+        column="OP_MODEL"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="opButton"
+        type="java.lang.String"
+        column="OP_BUTTON"
+        not-null="true"
+        length="50"
+    />
+    <property
+        name="opBizId"
+        type="integer"
+        column="OP_BIZ_ID"
+        length="22"
+    />
+    <property
+        name="opIp"
+        type="java.lang.String"
+        column="OP_IP"
+        not-null="true"
+        length="20"
+    />
+    <property
+        name="orgId"
+        type="integer"
+        column="ORG_ID"
+        length="22"
+    />
+    <property
+        name="opTime"
+        type="java.sql.Timestamp"
+        column="OP_TIME"
+        not-null="true"
+        length="7"
+    />
+    <property
+        name="operator"
+        type="java.lang.String"
+        column="OPERATOR"
+        not-null="true"
+        length="20"
+    />
+
+    <!-- associations -->
+
+</class>
+</hibernate-mapping>

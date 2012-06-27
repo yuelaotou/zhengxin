@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+	<data-sources />
+
+	<!-- ===========================================form config ==========================================================-->
+	<form-beans>	
+	<!--	公共开始	-->
+	  <form-bean name="idAF"
+			type="org.xpup.hafmis.common.form.IdAF" />
+	<!--	公共结束	-->	
+	  <form-bean name="assurepledgechgTaAF" 
+	        type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.form.AssurepledgechgTaAF"/>	
+	  <form-bean name="endorsecontractTbAF" 
+	        type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTbAF"/>
+	  <form-bean name="endorsecontractTcAF" 
+	        type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTcAF"/>
+	  <form-bean name="endorsecontractTdAF" 
+	        type="org.xpup.hafmis.sysloan.loanapply.endorsecontract.form.EndorsecontractTdAF"/>
+	</form-beans>
+
+	<!-- ============================================action config ========================================================-->
+	<action-mappings>
+	
+	 <action name="assurepledgechgTaAF" path="/assurepledgechgShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTaForwardURLAC">
+	  <forward name="to_AssurepledgechgTaShowAC" path="/assurepledgechgTaShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="assurepledgechgTaAF" path="/assurepledgechgTaShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTaShowAC">
+	  <forward name="to_assurepledgechgTa" path="/contractchg/assurepledgechg/assurepledgechgTa.jsp"></forward>
+	 </action>
+	 
+	 <action name="assurepledgechgTaAF" path="/assurepledgechgTaFindAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTaFindAC">
+	  <forward name="to_assurepledgechgTaShowAC" path="/assurepledgechgTaShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/assurepledgechgTaMaintainAC" scope="session" parameter="method" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTaMaintainAC">
+	  <forward name="to_assurepledgechgTbShowAC" path="/assurepledgechgTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="assurepledgechgTaAF" path="/assurepledgechgTbShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTbShowAC">
+	  <forward name="to_assurepledgechgTb" path="/contractchg/assurepledgechg/assurepledgechgTb.jsp"></forward>
+	 </action>
+	 
+	 <action name="endorsecontractTbAF" path="/assurepledgechgTbTopMaintainAC" parameter="method" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTbTopMaintainAC">
+	  <forward name="to_assurepledgechgTb" path="/contractchg/assurepledgechg/assurepledgechgTb.jsp"></forward>
+	  <forward name="to_endorsecontractTbShowAC" path="/assurepledgechgTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/assurepledgechgTbDownmaintainAC" parameter="method" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTbDownmaintainAC">
+	  <forward name="to_assurepledgechgTb" path="/contractchg/assurepledgechg/assurepledgechgTb.jsp"></forward>
+	   <forward name="to_endorsecontractTbShowAC" path="/assurepledgechgTbShowAC.do"></forward>
+	 </action>
+	 
+	 <action path="/assurepledgechgTcShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTcShowAC">
+	  <forward name="to_assurepledgechgTc" path="/contractchg/assurepledgechg/assurepledgechgTc.jsp"></forward>
+	 </action>
+	 
+	 <action name="endorsecontractTcAF" path="/assurepledgechgTcTopMaintainAC" parameter="method" scope="request" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTcTopMaintainAC">
+	  <forward name="to_assurepledgechgTc" path="/contractchg/assurepledgechg/assurepledgechgTc.jsp"></forward>
+	  <forward name="to_assurepledgechgTcShowAC" path="/assurepledgechgTcShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/assurepledgechgTcDownmaintainAC" parameter="method" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTcDownmaintainAC">
+	  <forward name="to_assurepledgechgTc" path="/contractchg/assurepledgechg/assurepledgechgTc.jsp"></forward>
+	  <forward name="to_assurepledgechgTcShowAC" path="/assurepledgechgTcShowAC.do"></forward>
+	 </action>
+	 
+	 <action path="/assurepledgechgTdShowAC" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTdShowAC">
+	  <forward name="to_assurepledgechgTd" path="/contractchg/assurepledgechg/assurepledgechgTd.jsp"></forward>
+	 </action>
+	 
+	 <action name="endorsecontractTdAF" path="/assurepledgechgTdTopMaintainAC" parameter="method" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTdTopMaintainAC">
+	  <forward name="to_assurepledgechgTd" path="/contractchg/assurepledgechg/assurepledgechgTd.jsp"></forward>
+	  <forward name="to_assurepledgechgTdShowAC" path="/assurepledgechgTdShowAC.do"></forward>
+	 </action>
+	 
+	 <action name="idAF" path="/assurepledgechgTdDownmaintainAC" parameter="method" scope="session" 
+	  type="org.xpup.hafmis.sysloan.contractchg.assurepledgechg.action.AssurepledgechgTdDownmaintainAC">
+	  <forward name="to_assurepledgechgTd" path="/contractchg/assurepledgechg/assurepledgechgTd.jsp"></forward>
+	  <forward name="to_assurepledgechgTdShowAC" path="/assurepledgechgTdShowAC.do"></forward>
+	 </action>
+	 
+	</action-mappings>
+
+
+	<message-resources
+		parameter="org.xpup.hafmis.syscollection.message-resources-syscollection" />
+</struts-config>
